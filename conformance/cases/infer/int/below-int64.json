@@ -1,0 +1,44 @@
+{
+ "id": "infer/int/below-int64",
+ "function": "read_csv_typed",
+ "note": "Below int64 min: text fallback.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n-9223372036854775809,r0\n1,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "-9223372036854775809",
+     "r0"
+    ],
+    [
+     "1",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     "-9223372036854775809",
+     "r0"
+    ],
+    [
+     "1",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

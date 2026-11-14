@@ -1,0 +1,49 @@
+{
+ "id": "validate/null/v1.1.0/ProjectInfo",
+ "function": "validate_pmo",
+ "note": "each property of ProjectInfo set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_name",
+   "valid"
+  ]
+ },
+ "warnings": []
+}

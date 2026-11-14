@@ -1,0 +1,98 @@
+{
+ "id": "read_counts/pytest/custom_column_names",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_custom_column_names",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "sample_id",
+    "raw_count"
+   ],
+   "dtypes": {
+    "sample_id": "object",
+    "raw_count": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000
+    ],
+    [
+     "sample2",
+     2000
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "sample_id",
+    "locus",
+    "pipeline_stage",
+    "counts"
+   ],
+   "dtypes": {
+    "sample_id": "object",
+    "locus": "object",
+    "pipeline_stage": "object",
+    "counts": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "demultiplexed",
+     100
+    ],
+    [
+     "sample1",
+     "target1",
+     "denoised",
+     80
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run",
+  "library_sample_name_col": "sample_id",
+  "target_name_col": "locus",
+  "total_raw_count_col": "raw_count",
+  "stage_col": "pipeline_stage",
+  "read_count_col": "counts"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 100
+         },
+         {
+          "stage": "denoised",
+          "reads": 80
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000
+     }
+    ],
+    "bioinformatics_run_name": "test_run"
+   }
+  ]
+ },
+ "warnings": []
+}

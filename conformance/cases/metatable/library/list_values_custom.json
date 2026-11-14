@@ -1,0 +1,89 @@
+{
+ "id": "metatable/library/list_values_custom",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Custom list columns and delimiter in the library builder",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers",
+    "fastqs_loc"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object",
+    "fastqs_loc": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "a|b",
+     "x|y"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "c",
+     "z"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "alternate_identifiers_col": "alternate_identifiers",
+  "fastqs_loc_col": "fastqs_loc",
+  "list_values_library_values": [
+   "alternate_identifiers",
+   "fastqs_loc"
+  ],
+  "list_values_library_values_delimiter": "|"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "a",
+     "b"
+    ],
+    "fastqs_loc": [
+     "x",
+     "y"
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "c"
+    ],
+    "fastqs_loc": [
+     "z"
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

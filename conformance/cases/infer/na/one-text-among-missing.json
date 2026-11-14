@@ -1,0 +1,68 @@
+{
+ "id": "infer/na/one-text-among-missing",
+ "function": "read_csv_typed",
+ "note": "One text cell in an otherwise missing column: object, the cell kept as text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n,r0\nNA,r1\nx,r2\n,r3\nNaN,r4\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ],
+    [
+     "",
+     "r3"
+    ],
+    [
+     "NaN",
+     "r4"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ],
+    [
+     null,
+     "r3"
+    ],
+    [
+     null,
+     "r4"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

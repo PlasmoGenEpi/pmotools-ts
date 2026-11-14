@@ -1,0 +1,450 @@
+{
+ "id": "mhap/pseudocigar_reuses_location",
+ "function": "mhap_table_to_pmo",
+ "note": "Python test with_pseudocigar: chrom comes from chrom_col, genome_id defaults to genome_id.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "bioinf_run",
+    "chrom",
+    "start",
+    "end",
+    "cig"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "bioinf_run": "object",
+    "chrom": "object",
+    "start": "int64",
+    "end": "int64",
+    "cig": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "ACTG",
+     10,
+     "run1",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample1",
+     "target2",
+     "TTTT",
+     100,
+     "run1",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample1",
+     "target3",
+     "GGG",
+     10,
+     "run1",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample2",
+     "target1",
+     "ACTG",
+     1,
+     "run2",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTT",
+     12,
+     "run2",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTA",
+     53,
+     "run2",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample2",
+     "target3",
+     "AAG",
+     73,
+     "run2",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample3",
+     "target1",
+     "ATTG",
+     76,
+     "run1",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample3",
+     "target2",
+     "TTTA",
+     6,
+     "run1",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample4",
+     "target1",
+     "ACTG",
+     297,
+     "run2",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTG",
+     123,
+     "run3",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTA",
+     1,
+     "run3",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ],
+    [
+     "sample5",
+     "target3",
+     "GGG",
+     17,
+     "run3",
+     "chr1",
+     100,
+     150,
+     "8M"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "chrom_col": "chrom",
+  "start_col": "start",
+  "end_col": "end",
+  "pseudocigar_col": "cig",
+  "pseudocigar_start_col": "start",
+  "pseudocigar_end_col": "end"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "ACTG",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       },
+       {
+        "seq": "ATTG",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       },
+       {
+        "seq": "ATTA",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 100,
+       "end": 150
+      }
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "TTTT",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       },
+       {
+        "seq": "TTTA",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 100,
+       "end": 150
+      }
+     },
+     {
+      "target_name": "target3",
+      "microhaplotypes": [
+       {
+        "seq": "GGG",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       },
+       {
+        "seq": "AAG",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 100,
+          "end": 150
+         }
+        }
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 100,
+       "end": 150
+      }
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "sample1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 100
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 12
+          },
+          {
+           "mhap_id": 1,
+           "reads": 53
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 73
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample3",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 76
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 6
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample4",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 297
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample5",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 123
+          },
+          {
+           "mhap_id": 2,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 17
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,138 @@
+{
+ "id": "read_counts/pytest/basic_wide",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_basic_functionality_wide_format / test_wide_format_melt_conversion",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "additional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "additional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     "info2"
+    ],
+    [
+     "sample3",
+     1500,
+     "info3"
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "demultiplexed",
+    "denoised",
+    "filtered"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "demultiplexed": "int64",
+    "denoised": "int64",
+    "filtered": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     100,
+     80,
+     60
+    ],
+    [
+     "sample2",
+     "target1",
+     200,
+     150,
+     120
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run",
+  "stage_col": [
+   "demultiplexed",
+   "denoised",
+   "filtered"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 100
+         },
+         {
+          "stage": "denoised",
+          "reads": 80
+         },
+         {
+          "stage": "filtered",
+          "reads": 60
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 200
+         },
+         {
+          "stage": "denoised",
+          "reads": 150
+         },
+         {
+          "stage": "filtered",
+          "reads": 120
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample3",
+      "total_raw_count": 1500
+     }
+    ],
+    "bioinformatics_run_name": "test_run"
+   }
+  ]
+ },
+ "warnings": []
+}

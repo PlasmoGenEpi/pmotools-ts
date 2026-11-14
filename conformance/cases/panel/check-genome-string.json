@@ -1,0 +1,16 @@
+{
+ "id": "panel/check-genome-string",
+ "function": "check_genome_info",
+ "note": "A string is neither dict nor list.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": "genome_info"
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "genome_info must be a dict or list, but got str"
+ },
+ "warnings": []
+}

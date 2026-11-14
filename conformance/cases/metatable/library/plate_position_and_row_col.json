@@ -1,0 +1,63 @@
+{
+ "id": "metatable/library/plate_position_and_row_col",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Position and row/col together are an error",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "well",
+    "r",
+    "c"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "well": "object",
+    "r": "object",
+    "c": "int64"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "A1",
+     "A",
+     1
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "B1",
+     "B",
+     1
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "library_prep_plate_position_col": "well",
+  "library_prep_plate_row_col": "r",
+  "library_prep_plate_col_col": "c"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Plate position can be specified using either row and col, or position, but not both."
+ },
+ "warnings": []
+}

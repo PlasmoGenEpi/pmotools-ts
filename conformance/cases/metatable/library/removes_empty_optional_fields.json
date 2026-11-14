@@ -1,0 +1,102 @@
+{
+ "id": "metatable/library/removes_empty_optional_fields",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_removes_empty_optional_fields",
+ "divergence": "pmotools-ts omits alternate_identifiers for sample2 and sample3, whose cells are blank. Python writes [\"\"] for both, which fails the schema item pattern.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers",
+    "experiment_accession",
+    "fastqs_loc"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object",
+    "experiment_accession": "object",
+    "fastqs_loc": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "ID1",
+     "EXP001",
+     null
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "",
+     null,
+     "/path/to/fastqs"
+    ],
+    [
+     "sample3_MH_run1",
+     "run1",
+     "sample3",
+     "MH",
+     null,
+     "EXP003",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "alternate_identifiers_col": "alternate_identifiers",
+  "experiment_accession_col": "experiment_accession",
+  "fastqs_loc_col": "fastqs_loc"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "ID1"
+    ],
+    "experiment_accession": "EXP001"
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     ""
+    ],
+    "fastqs_loc": "/path/to/fastqs"
+   },
+   {
+    "library_sample_name": "sample3_MH_run1",
+    "specimen_name": "sample3",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     ""
+    ],
+    "experiment_accession": "EXP003"
+   }
+  ]
+ },
+ "warnings": []
+}

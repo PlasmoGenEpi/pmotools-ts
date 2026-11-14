@@ -1,0 +1,146 @@
+{
+ "id": "mhap/additional_falsy_values",
+ "function": "mhap_table_to_pmo",
+ "note": "Representative extra columns drop falsy values (0, '', False); detected extra columns keep them.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "a",
+    "b",
+    "c"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "a": "object",
+    "b": "object",
+    "c": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     0,
+     0,
+     "keep"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     "",
+     "",
+     null
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     false,
+     false,
+     "x"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_representative_mhap_cols": [
+   "a",
+   "c"
+  ],
+  "additional_mhap_detected_cols": [
+   "b",
+   "c"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A",
+        "c": "keep"
+       },
+       {
+        "seq": "G",
+        "c": "x"
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1,
+           "b": 0,
+           "c": "keep"
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2,
+           "b": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3,
+           "b": false,
+           "c": "x"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

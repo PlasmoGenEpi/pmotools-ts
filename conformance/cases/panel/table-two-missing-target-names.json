@@ -1,0 +1,46 @@
+{
+ "id": "panel/table-two-missing-target-names",
+ "function": "panel_info_table_to_pmo",
+ "note": "Two missing names count as duplicates of each other.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     null,
+     "CTA",
+     "TGG"
+    ],
+    [
+     null,
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following target_ids are duplicated: [None]"
+ },
+ "warnings": []
+}

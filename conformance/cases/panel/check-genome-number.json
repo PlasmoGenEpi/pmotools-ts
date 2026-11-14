@@ -1,0 +1,16 @@
+{
+ "id": "panel/check-genome-number",
+ "function": "check_genome_info",
+ "note": "A number is neither dict nor list.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": 5
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "genome_info must be a dict or list, but got int"
+ },
+ "warnings": []
+}

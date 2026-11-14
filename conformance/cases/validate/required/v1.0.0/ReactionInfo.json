@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/ReactionInfo",
+ "function": "validate_pmo",
+ "note": "each required property of ReactionInfo removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/panel_info/0/reactions/0/panel_targets"
+   },
+   {
+    "remove": "/panel_info/0/reactions/0/reaction_name"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /panel_info/0/reactions/0",
+   "invalid: required at /panel_info/0/reactions/0"
+  ]
+ },
+ "warnings": []
+}

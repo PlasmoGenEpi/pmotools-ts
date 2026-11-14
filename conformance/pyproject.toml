@@ -1,0 +1,12 @@
+[project]
+name = "pmotools-ts-oracle"
+version = "0.0.0"
+description = "Runs pmotools-python to generate the expected outputs that pmotools-ts is tested against"
+requires-python = ">=3.12,<3.14"
+# pandas/numpy match what the stlite build of the PMO Builder app actually ran.
+dependencies = [
+    "pmotools==1.2.2",
+    "pandas==2.3.1",
+    "numpy==2.2.5",
+    "openpyxl>=3.1.5",
+]

@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/ProjectInfo",
+ "function": "validate_pmo",
+ "note": "each required property of ProjectInfo removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/project_info/0/project_name"
+   },
+   {
+    "remove": "/project_info/0/project_description"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /project_info/0",
+   "invalid: required at /project_info/0"
+  ]
+ },
+ "warnings": []
+}

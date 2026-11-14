@@ -1,0 +1,168 @@
+{
+ "id": "merge/python-slim-no-specimen-meta",
+ "function": "merge_to_pmo",
+ "note": "test_slim_build_pmo: minimal records with a library-to-specimen key.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "specimen_info": [
+   {
+    "specimen_name": "specimen1"
+   }
+  ],
+  "library_sample_info": [
+   {
+    "library_sample_name": "lib1",
+    "panel_name": "panel1",
+    "specimen_name": "specimen1"
+   }
+  ],
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ATGCATGC"
+     },
+     "reverse_primer": {
+      "seq": "GCATGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "ATGCATGC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "lib1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 42
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "pmo_header": {
+    "pmo_version": "1.1.0",
+    "creation_date": "2026-11-13",
+    "generation_method": {
+     "program_name": "pmotools-python",
+     "program_version": "1.2.2"
+    }
+   },
+   "library_sample_info": [
+    {
+     "library_sample_name": "lib1",
+     "specimen_id": 0,
+     "panel_id": 0
+    }
+   ],
+   "specimen_info": [
+    {
+     "specimen_name": "specimen1"
+    }
+   ],
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ATGCATGC"
+     },
+     "reverse_primer": {
+      "seq": "GCATGCAT"
+     }
+    }
+   ],
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": [
+       {
+        "seq": "ATGCATGC"
+       }
+      ],
+      "target_id": 0
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 42
+          }
+         ]
+        }
+       ],
+       "library_sample_id": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": true,
+  "error": null
+ }
+}

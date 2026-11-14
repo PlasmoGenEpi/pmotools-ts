@@ -1,0 +1,20 @@
+{
+ "id": "panel/merge-missing-target-info",
+ "function": "merge_panel_info_dicts",
+ "note": "A dict without target_info raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": []
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "panel_info_dict missing 'target_info'."
+ },
+ "warnings": []
+}

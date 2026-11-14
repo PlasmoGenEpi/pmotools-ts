@@ -1,0 +1,58 @@
+{
+ "id": "metatable/specimen/plate_position_uppercase",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_plate_info_position_parsing_uppercase",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "plate_position",
+    "plate_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "plate_position": "object",
+    "plate_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A01",
+     "Plate1"
+    ],
+    [
+     "sample2",
+     "H11",
+     "Plate1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_name_col": "plate_name",
+  "storage_plate_position_col": "plate_position"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "storage_plate_info": {
+     "plate_name": "Plate1",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "sample2",
+    "storage_plate_info": {
+     "plate_name": "Plate1",
+     "plate_row": "H",
+     "plate_col": 11
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,42 @@
+{
+ "id": "metatable/specimen/plate_position_with_row_only",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Row without column is checked before position",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "w",
+    "r"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "w": "object",
+    "r": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A1",
+     "A"
+    ],
+    [
+     "sample2",
+     "B2",
+     "B"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_position_col": "w",
+  "storage_plate_row_col": "r"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "If either plate row or column is set, then both must be."
+ },
+ "warnings": []
+}

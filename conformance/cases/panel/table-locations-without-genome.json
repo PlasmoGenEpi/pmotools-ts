@@ -1,0 +1,88 @@
+{
+ "id": "panel/table-locations-without-genome",
+ "function": "panel_info_table_to_pmo",
+ "note": "Locations without genome info raise.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "fwd_start",
+    "fwd_end",
+    "rev_start",
+    "rev_end",
+    "insert_start",
+    "insert_end",
+    "chrom"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "fwd_start": "int64",
+    "fwd_end": "int64",
+    "rev_start": "int64",
+    "rev_end": "int64",
+    "insert_start": "int64",
+    "insert_end": "int64",
+    "chrom": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     1,
+     4,
+     8,
+     11,
+     4,
+     8,
+     "chr1"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     11,
+     14,
+     18,
+     21,
+     14,
+     18,
+     "chr1"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     21,
+     24,
+     28,
+     31,
+     24,
+     28,
+     "chr2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "forward_primers_start_col": "fwd_start",
+  "forward_primers_end_col": "fwd_end",
+  "reverse_primers_start_col": "rev_start",
+  "reverse_primers_end_col": "rev_end",
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "chrom_col": "chrom",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "insert_location is provided for target1 but no targeted_genomes is not provided."
+ },
+ "warnings": []
+}

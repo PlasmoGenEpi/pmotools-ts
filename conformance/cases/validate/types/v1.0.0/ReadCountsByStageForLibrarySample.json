@@ -1,0 +1,271 @@
+{
+ "id": "validate/types/v1.0.0/ReadCountsByStageForLibrarySample",
+ "function": "validate_pmo",
+ "note": "each property of ReadCountsByStageForLibrarySample (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: pattern at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "valid",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/library_sample_id",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: pattern at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "valid",
+   "valid",
+   "invalid: minimum at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "valid",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/total_raw_count"
+  ]
+ },
+ "warnings": []
+}

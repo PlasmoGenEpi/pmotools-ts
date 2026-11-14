@@ -1,0 +1,26 @@
+{
+ "id": "infer/shape/no-rows",
+ "function": "read_csv_typed",
+ "note": "A header with no rows: no cells to type.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,b\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "b"
+   ],
+   "dtypes": {
+    "a": "object",
+    "b": "object"
+   },
+   "raw": [],
+   "rows": []
+  }
+ },
+ "warnings": []
+}

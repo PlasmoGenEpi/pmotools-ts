@@ -1,0 +1,39 @@
+{
+ "id": "validate/null/v1.0.0/PrimerInfo",
+ "function": "validate_pmo",
+ "note": "each property of PrimerInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/seq",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "valid",
+   "invalid: type at /target_info/0/reverse_primer/seq"
+  ]
+ },
+ "warnings": []
+}

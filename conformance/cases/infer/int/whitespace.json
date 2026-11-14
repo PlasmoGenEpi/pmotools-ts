@@ -1,0 +1,68 @@
+{
+ "id": "infer/int/whitespace",
+ "function": "read_csv_typed",
+ "note": "ASCII whitespace around a number is ignored.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n 1,r0\n2 ,r1\n  3  ,r2\n\t4\t,r3\n\u000b5\f,r4\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     " 1",
+     "r0"
+    ],
+    [
+     "2 ",
+     "r1"
+    ],
+    [
+     "  3  ",
+     "r2"
+    ],
+    [
+     "\t4\t",
+     "r3"
+    ],
+    [
+     "\u000b5\f",
+     "r4"
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "r0"
+    ],
+    [
+     2,
+     "r1"
+    ],
+    [
+     3,
+     "r2"
+    ],
+    [
+     4,
+     "r3"
+    ],
+    [
+     5,
+     "r4"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

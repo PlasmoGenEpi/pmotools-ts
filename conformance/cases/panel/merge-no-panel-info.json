@@ -1,0 +1,42 @@
+{
+ "id": "panel/merge-no-panel-info",
+ "function": "merge_panel_info_dicts",
+ "note": "A dict without panel_info contributes targets only.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "target_info": [
+     {
+      "target_name": "a",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [],
+   "target_info": [
+    {
+     "target_name": "a",
+     "forward_primer": {
+      "seq": "A"
+     },
+     "reverse_primer": {
+      "seq": "C"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

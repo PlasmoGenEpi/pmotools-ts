@@ -1,0 +1,58 @@
+{
+ "id": "metatable/library/empty_names_removed",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "In the library builder specimen_name and panel_name are optional fields, so empty strings are removed",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "",
+     "MH"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1"
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "sequencing_info_name": "run1"
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,76 @@
+{
+ "id": "infer/bool/spellings",
+ "function": "read_csv_typed",
+ "note": "The six accepted spellings make a bool column.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nTrue,r0\nTRUE,r1\ntrue,r2\nFalse,r3\nFALSE,r4\nfalse,r5\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "bool",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "True",
+     "r0"
+    ],
+    [
+     "TRUE",
+     "r1"
+    ],
+    [
+     "true",
+     "r2"
+    ],
+    [
+     "False",
+     "r3"
+    ],
+    [
+     "FALSE",
+     "r4"
+    ],
+    [
+     "false",
+     "r5"
+    ]
+   ],
+   "rows": [
+    [
+     true,
+     "r0"
+    ],
+    [
+     true,
+     "r1"
+    ],
+    [
+     true,
+     "r2"
+    ],
+    [
+     false,
+     "r3"
+    ],
+    [
+     false,
+     "r4"
+    ],
+    [
+     false,
+     "r5"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

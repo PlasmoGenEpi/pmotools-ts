@@ -1,0 +1,74 @@
+{
+ "id": "read_counts/wide/missing_stage_column",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "pandas melt raises KeyError for a missing value column",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10
+    ],
+    [
+     "s2",
+     20
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "b",
+    "a"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "b": "int64",
+    "a": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t2",
+     1,
+     4
+    ],
+    [
+     "s1",
+     "t1",
+     2,
+     5
+    ],
+    [
+     "s2",
+     "t1",
+     3,
+     6
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "stage_col": [
+   "b",
+   "zz"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "\"The following id_vars or value_vars are not present in the DataFrame: ['zz']\""
+ },
+ "warnings": []
+}

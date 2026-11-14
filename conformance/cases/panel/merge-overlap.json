@@ -1,0 +1,188 @@
+{
+ "id": "panel/merge-overlap",
+ "function": "merge_panel_info_dicts",
+ "note": "The Python test's overlapping panels: target2 is shared.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "panel1",
+      "reactions": [
+       {
+        "reaction_name": "1",
+        "panel_targets": [
+         0,
+         1,
+         2
+        ]
+       }
+      ]
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "target1",
+      "forward_primer": {
+       "seq": "CTT"
+      },
+      "reverse_primer": {
+       "seq": "GTT"
+      }
+     },
+     {
+      "target_name": "target2",
+      "forward_primer": {
+       "seq": "CTA"
+      },
+      "reverse_primer": {
+       "seq": "TGG"
+      }
+     },
+     {
+      "target_name": "target3",
+      "forward_primer": {
+       "seq": "TTG"
+      },
+      "reverse_primer": {
+       "seq": "ATT"
+      }
+     }
+    ]
+   },
+   {
+    "panel_info": [
+     {
+      "panel_name": "panel2",
+      "reactions": [
+       {
+        "reaction_name": "1",
+        "panel_targets": [
+         0,
+         1
+        ]
+       }
+      ]
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "target2",
+      "forward_primer": {
+       "seq": "CTA"
+      },
+      "reverse_primer": {
+       "seq": "TGG"
+      }
+     },
+     {
+      "target_name": "target5",
+      "forward_primer": {
+       "seq": "TTG"
+      },
+      "reverse_primer": {
+       "seq": "ATT"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "1",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "panel_name": "panel2",
+     "reactions": [
+      {
+       "reaction_name": "1",
+       "panel_targets": [
+        1,
+        3
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    },
+    {
+     "target_name": "target5",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

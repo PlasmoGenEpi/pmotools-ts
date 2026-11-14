@@ -1,0 +1,47 @@
+{
+ "id": "read_counts/names/duplicate_number_and_text",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Python sees 1 and '1' as different samples",
+ "divergence": "pmotools-ts writes library sample, target, stage and run names as strings and compares them as strings (AGENTS.md: names are compared and written as strings), so numeric names come out as text and 1 matches '1'. Here that makes 1 and '1' duplicates, so pmotools-ts throws.",
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     1,
+     1
+    ],
+    [
+     "1",
+     2
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": 1,
+      "total_raw_count": 1
+     },
+     {
+      "library_sample_name": "1",
+      "total_raw_count": 2
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

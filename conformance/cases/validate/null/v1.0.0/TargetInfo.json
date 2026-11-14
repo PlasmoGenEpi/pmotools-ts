@@ -1,0 +1,54 @@
+{
+ "id": "validate/null/v1.0.0/TargetInfo",
+ "function": "validate_pmo",
+ "note": "each property of TargetInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /target_info/0/forward_primer",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /target_info/0/reverse_primer",
+   "valid",
+   "invalid: type at /target_info/0/target_name"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,139 @@
+{
+ "id": "metatable/library/all_new_fields",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_with_all_new_fields",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers",
+    "experiment_accession",
+    "fastqs_loc",
+    "run_accession",
+    "parasite_density",
+    "parasite_density_method",
+    "library_prep_plate_col",
+    "library_prep_plate_name",
+    "library_prep_plate_row"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object",
+    "experiment_accession": "object",
+    "fastqs_loc": "object",
+    "run_accession": "object",
+    "parasite_density": "int64",
+    "parasite_density_method": "object",
+    "library_prep_plate_col": "int64",
+    "library_prep_plate_name": "object",
+    "library_prep_plate_row": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "ID1",
+     "EXP001",
+     "/path/to/fastqs1",
+     "RUN001",
+     10,
+     "qPCR",
+     1,
+     "plate1",
+     "A"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "ID2",
+     "EXP002",
+     "/path/to/fastqs2",
+     "RUN002",
+     100,
+     "microscopy",
+     2,
+     "plate1",
+     "B"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "alternate_identifiers_col": "alternate_identifiers",
+  "experiment_accession_col": "experiment_accession",
+  "fastqs_loc_col": "fastqs_loc",
+  "run_accession_col": "run_accession",
+  "parasite_density_col": "parasite_density",
+  "parasite_density_method_col": "parasite_density_method",
+  "library_prep_plate_col_col": "library_prep_plate_col",
+  "library_prep_plate_name_col": "library_prep_plate_name",
+  "library_prep_plate_row_col": "library_prep_plate_row"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "ID1"
+    ],
+    "experiment_accession": "EXP001",
+    "fastqs_loc": "/path/to/fastqs1",
+    "run_accession": "RUN001",
+    "library_prep_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 1
+    },
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": 10,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "ID2"
+    ],
+    "experiment_accession": "EXP002",
+    "fastqs_loc": "/path/to/fastqs2",
+    "run_accession": "RUN002",
+    "library_prep_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 2
+    },
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": 100,
+      "parasite_density_method": "microscopy"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,188 @@
+{
+ "id": "infer/na/default-strings-text",
+ "function": "read_csv_typed",
+ "note": "Default NA strings become missing in a text column too.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nx,r0\n,r1\n#N/A,r2\n#N/A N/A,r3\n#NA,r4\n-1.#IND,r5\n-1.#QNAN,r6\n-NaN,r7\n-nan,r8\n1.#IND,r9\n1.#QNAN,r10\n<NA>,r11\nN/A,r12\nNA,r13\nNULL,r14\nNaN,r15\nNone,r16\nn/a,r17\nnan,r18\nnull,r19\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "x",
+     "r0"
+    ],
+    [
+     "",
+     "r1"
+    ],
+    [
+     "#N/A",
+     "r2"
+    ],
+    [
+     "#N/A N/A",
+     "r3"
+    ],
+    [
+     "#NA",
+     "r4"
+    ],
+    [
+     "-1.#IND",
+     "r5"
+    ],
+    [
+     "-1.#QNAN",
+     "r6"
+    ],
+    [
+     "-NaN",
+     "r7"
+    ],
+    [
+     "-nan",
+     "r8"
+    ],
+    [
+     "1.#IND",
+     "r9"
+    ],
+    [
+     "1.#QNAN",
+     "r10"
+    ],
+    [
+     "<NA>",
+     "r11"
+    ],
+    [
+     "N/A",
+     "r12"
+    ],
+    [
+     "NA",
+     "r13"
+    ],
+    [
+     "NULL",
+     "r14"
+    ],
+    [
+     "NaN",
+     "r15"
+    ],
+    [
+     "None",
+     "r16"
+    ],
+    [
+     "n/a",
+     "r17"
+    ],
+    [
+     "nan",
+     "r18"
+    ],
+    [
+     "null",
+     "r19"
+    ]
+   ],
+   "rows": [
+    [
+     "x",
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     null,
+     "r2"
+    ],
+    [
+     null,
+     "r3"
+    ],
+    [
+     null,
+     "r4"
+    ],
+    [
+     null,
+     "r5"
+    ],
+    [
+     null,
+     "r6"
+    ],
+    [
+     null,
+     "r7"
+    ],
+    [
+     null,
+     "r8"
+    ],
+    [
+     null,
+     "r9"
+    ],
+    [
+     null,
+     "r10"
+    ],
+    [
+     null,
+     "r11"
+    ],
+    [
+     null,
+     "r12"
+    ],
+    [
+     null,
+     "r13"
+    ],
+    [
+     null,
+     "r14"
+    ],
+    [
+     null,
+     "r15"
+    ],
+    [
+     null,
+     "r16"
+    ],
+    [
+     null,
+     "r17"
+    ],
+    [
+     null,
+     "r18"
+    ],
+    [
+     null,
+     "r19"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

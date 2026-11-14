@@ -1,0 +1,56 @@
+{
+ "id": "infer/options/inf-na",
+ "function": "read_csv_typed",
+ "note": "'inf' as NA matches every infinity spelling numerically.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\ninf,r0\nINF,r1\n2,r2\n",
+  "na_values": [
+   "inf"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "inf",
+     "r0"
+    ],
+    [
+     "INF",
+     "r1"
+    ],
+    [
+     "2",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     2.0,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

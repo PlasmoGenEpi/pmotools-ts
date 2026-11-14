@@ -1,0 +1,88 @@
+{
+ "id": "read_counts/counts/string_counts",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "int() parses integer strings, with whitespace, sign and underscores",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "10"
+    ],
+    [
+     "s2",
+     " 2_0 "
+    ],
+    [
+     "s3",
+     "-7"
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "stage": "object",
+    "read_count": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t",
+     "x",
+     "+5"
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "s1",
+      "total_raw_count": 10,
+      "read_counts_for_targets": [
+       {
+        "target_name": "t",
+        "stages": [
+         {
+          "stage": "x",
+          "reads": 5
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "s2",
+      "total_raw_count": 20
+     },
+     {
+      "library_sample_name": "s3",
+      "total_raw_count": -7
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

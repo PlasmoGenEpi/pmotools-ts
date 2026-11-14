@@ -1,0 +1,113 @@
+{
+ "id": "panel/merge-number-and-string-names",
+ "function": "merge_panel_info_dicts",
+ "note": "Target names 1 and \"1\" are different dict keys in Python.",
+ "divergence": "pmotools-ts compares and writes names as strings: one target named \"1\", both panels point at index 0, no warning.",
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "p",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": 1,
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   },
+   {
+    "panel_info": [
+     {
+      "panel_name": "q",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "1",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "p",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "panel_name": "q",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": 1,
+     "forward_primer": {
+      "seq": "A"
+     },
+     "reverse_primer": {
+      "seq": "C"
+     }
+    },
+    {
+     "target_name": "1",
+     "forward_primer": {
+      "seq": "A"
+     },
+     "reverse_primer": {
+      "seq": "C"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

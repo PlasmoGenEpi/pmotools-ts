@@ -1,0 +1,82 @@
+{
+ "id": "metatable/library/parasite_density",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_with_parasite_density",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "parasite_density",
+    "parasite_density_method"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "parasite_density": "int64",
+    "parasite_density_method": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     10,
+     "qPCR"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     100,
+     "microscopy"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "parasite_density_col": "parasite_density",
+  "parasite_density_method_col": "parasite_density_method"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": 10,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": 100,
+      "parasite_density_method": "microscopy"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

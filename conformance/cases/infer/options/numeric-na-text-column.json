@@ -1,0 +1,64 @@
+{
+ "id": "infer/options/numeric-na-text-column",
+ "function": "read_csv_typed",
+ "note": "In a text column only the string and its 'N.0' form match.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n0,r0\n00,r1\nfoo,r2\n0.0,r3\n",
+  "na_values": [
+   "0"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "0",
+     "r0"
+    ],
+    [
+     "00",
+     "r1"
+    ],
+    [
+     "foo",
+     "r2"
+    ],
+    [
+     "0.0",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     "00",
+     "r1"
+    ],
+    [
+     "foo",
+     "r2"
+    ],
+    [
+     null,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

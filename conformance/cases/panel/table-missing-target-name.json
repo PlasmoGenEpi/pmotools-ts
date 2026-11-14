@@ -1,0 +1,90 @@
+{
+ "id": "panel/table-missing-target-name",
+ "function": "panel_info_table_to_pmo",
+ "note": "A missing (None) target name is written as null.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     null,
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": null,
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,52 @@
+{
+ "id": "infer/float/int-and-float",
+ "function": "read_csv_typed",
+ "note": "Ints beside a float become float64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n2.5,r0\n2,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "2.5",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     2.5,
+     "r0"
+    ],
+    [
+     2.0,
+     "r1"
+    ],
+    [
+     1.0,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

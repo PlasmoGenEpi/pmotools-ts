@@ -1,0 +1,61 @@
+{
+ "id": "infer/options/no-na-strings",
+ "function": "read_csv_typed",
+ "note": "With no NA strings, empty and NA cells are text, and 'nan' is not a number.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n,r0\nNA,r1\nnan,r2\n1,r3\n",
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "nan",
+     "r2"
+    ],
+    [
+     "1",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     "",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "nan",
+     "r2"
+    ],
+    [
+     "1",
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

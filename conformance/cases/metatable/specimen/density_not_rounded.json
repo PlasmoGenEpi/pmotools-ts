@@ -1,0 +1,60 @@
+{
+ "id": "metatable/specimen/density_not_rounded",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Density is read from the frame, not from the JSON round trip, so it keeps full precision",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d",
+    "m"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "float64",
+    "m": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     0.3333333333333333,
+     "qPCR"
+    ],
+    [
+     "sample2",
+     0.6666666666666666,
+     "qPCR"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d",
+  "parasite_density_method_col": "m"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 0.3333333333333333,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 0.6666666666666666,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

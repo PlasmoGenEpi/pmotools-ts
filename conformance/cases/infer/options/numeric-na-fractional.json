@@ -1,0 +1,56 @@
+{
+ "id": "infer/options/numeric-na-fractional",
+ "function": "read_csv_typed",
+ "note": "A fractional NA string has no extra string forms.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1.5,r0\n1.50,r1\nfoo,r2\n",
+  "na_values": [
+   "1.5"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1.5",
+     "r0"
+    ],
+    [
+     "1.50",
+     "r1"
+    ],
+    [
+     "foo",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     "1.50",
+     "r1"
+    ],
+    [
+     "foo",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

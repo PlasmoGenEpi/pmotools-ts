@@ -1,0 +1,52 @@
+{
+ "id": "infer/float/infinity-with-text",
+ "function": "read_csv_typed",
+ "note": "Infinity strings in a text column stay text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nInfinity,r0\n-inf,r1\nx,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "Infinity",
+     "r0"
+    ],
+    [
+     "-inf",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "Infinity",
+     "r0"
+    ],
+    [
+     "-inf",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

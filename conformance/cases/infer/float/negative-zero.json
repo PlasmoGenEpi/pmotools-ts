@@ -1,0 +1,52 @@
+{
+ "id": "infer/float/negative-zero",
+ "function": "read_csv_typed",
+ "note": "-0 in a float64 column is negative zero.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n-0,r0\n-0.0,r1\n1.5,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "-0",
+     "r0"
+    ],
+    [
+     "-0.0",
+     "r1"
+    ],
+    [
+     "1.5",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     -0.0,
+     "r0"
+    ],
+    [
+     -0.0,
+     "r1"
+    ],
+    [
+     1.5,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,17 @@
+{
+ "id": "read_counts/pytest/total_not_a_table",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_input_validation: total_raw_count_table is a string",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "total_raw_count_table": "not_a_dataframe",
+  "bioinformatics_run_name": "test_run"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "total_raw_count_table must be a pandas DataFrame."
+ },
+ "warnings": []
+}

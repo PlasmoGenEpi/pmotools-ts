@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/DetectedMicrohaplotypes",
+ "function": "validate_pmo",
+ "note": "each required property of DetectedMicrohaplotypes removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/detected_microhaplotypes/0/bioinformatics_run_id"
+   },
+   {
+    "remove": "/detected_microhaplotypes/0/library_samples"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /detected_microhaplotypes/0",
+   "invalid: required at /detected_microhaplotypes/0"
+  ]
+ },
+ "warnings": []
+}

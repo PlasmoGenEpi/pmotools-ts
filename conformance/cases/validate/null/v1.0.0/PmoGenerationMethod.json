@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.0.0/PmoGenerationMethod",
+ "function": "validate_pmo",
+ "note": "each property of PmoGenerationMethod set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_version"
+  ]
+ },
+ "warnings": []
+}

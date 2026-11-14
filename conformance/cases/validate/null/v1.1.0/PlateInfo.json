@@ -1,0 +1,49 @@
+{
+ "id": "validate/null/v1.1.0/PlateInfo",
+ "function": "validate_pmo",
+ "note": "each property of PlateInfo set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info/plate_col",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info/plate_name",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info/plate_row",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /specimen_info/0/storage_plate_info/plate_col",
+   "invalid: type at /specimen_info/0/storage_plate_info/plate_name",
+   "invalid: type at /specimen_info/0/storage_plate_info/plate_row"
+  ]
+ },
+ "warnings": []
+}

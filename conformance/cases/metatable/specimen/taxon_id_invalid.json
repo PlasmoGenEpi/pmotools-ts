@@ -1,0 +1,96 @@
+{
+ "id": "metatable/specimen/taxon_id_invalid",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A taxon ID part that is not a whole number is written as a string by Python",
+ "divergence": "pmotools-ts throws metatable/invalid-taxon-id for a part int() would reject ('5833;5855' in row 1). Python writes the strings, which fail its own schema.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "object",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "5833",
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1"
+    ],
+    [
+     "sample2",
+     "5833;5855",
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2"
+    ],
+    [
+     "sample3",
+     "5855",
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     "5833"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     "5833;5855"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2"
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     "5855"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3"
+   }
+  ]
+ },
+ "warnings": []
+}

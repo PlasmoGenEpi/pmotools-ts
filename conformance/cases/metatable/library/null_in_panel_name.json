@@ -1,0 +1,48 @@
+{
+ "id": "metatable/library/null_in_panel_name",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_fails_with_null_in_required_columns: panel_name",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     null
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following columns contain null values: ['panel_name']"
+ },
+ "warnings": []
+}

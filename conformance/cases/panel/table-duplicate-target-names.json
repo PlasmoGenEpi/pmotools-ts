@@ -1,0 +1,51 @@
+{
+ "id": "panel/table-duplicate-target-names",
+ "function": "panel_info_table_to_pmo",
+ "note": "A repeated target name raises.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ],
+    [
+     "target1",
+     "TTT",
+     "GGG"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following target_ids are duplicated: ['target1']"
+ },
+ "warnings": []
+}

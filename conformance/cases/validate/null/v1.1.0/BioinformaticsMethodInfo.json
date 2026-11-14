@@ -1,0 +1,24 @@
+{
+ "id": "validate/null/v1.1.0/BioinformaticsMethodInfo",
+ "function": "validate_pmo",
+ "note": "each property of BioinformaticsMethodInfo set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /bioinformatics_methods_info/0/methods"
+  ]
+ },
+ "warnings": []
+}

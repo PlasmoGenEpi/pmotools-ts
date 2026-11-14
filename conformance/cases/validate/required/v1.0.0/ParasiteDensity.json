@@ -1,0 +1,35 @@
+{
+ "id": "validate/required/v1.0.0/ParasiteDensity",
+ "function": "validate_pmo",
+ "note": "each required property of ParasiteDensity removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method"
+   },
+   {
+    "remove": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density"
+   },
+   {
+    "remove": "/specimen_info/0/parasite_density_info/0/parasite_density_method"
+   },
+   {
+    "remove": "/specimen_info/0/parasite_density_info/0/parasite_density"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /library_sample_info/0/qpcr_parasite_density_info/0",
+   "invalid: required at /library_sample_info/0/qpcr_parasite_density_info/0",
+   "invalid: required at /specimen_info/0/parasite_density_info/0",
+   "invalid: required at /specimen_info/0/parasite_density_info/0"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.0.0/PanelInfo",
+ "function": "validate_pmo",
+ "note": "each property of PanelInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/panel_info/0/panel_name",
+    "value": null
+   },
+   {
+    "set": "/panel_info/0/reactions",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /panel_info/0/panel_name",
+   "invalid: type at /panel_info/0/reactions"
+  ]
+ },
+ "warnings": []
+}

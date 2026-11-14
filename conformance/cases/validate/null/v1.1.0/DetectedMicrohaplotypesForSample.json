@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.1.0/DetectedMicrohaplotypesForSample",
+ "function": "validate_pmo",
+ "note": "each property of DetectedMicrohaplotypesForSample set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/detected_microhaplotypes/0/library_samples/0/library_sample_id",
+    "value": null
+   },
+   {
+    "set": "/detected_microhaplotypes/0/library_samples/0/target_results",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /detected_microhaplotypes/0/library_samples/0/library_sample_id",
+   "invalid: type at /detected_microhaplotypes/0/library_samples/0/target_results"
+  ]
+ },
+ "warnings": []
+}

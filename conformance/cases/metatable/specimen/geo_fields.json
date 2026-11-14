@@ -1,0 +1,104 @@
+{
+ "id": "metatable/specimen/geo_fields",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_specimen_info_table_to_pmo_with_geo_fields",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "geo_admin1",
+    "geo_admin2",
+    "geo_admin3",
+    "lat_lon"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "geo_admin1": "object",
+    "geo_admin2": "object",
+    "geo_admin3": "object",
+    "lat_lon": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "2023-03-29",
+     "Eswatini",
+     "RegGenE8",
+     "Lubombo",
+     "Sithobela",
+     "CABRINI MINISTRIES HEALTH CARE",
+     ""
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "2023-03-20",
+     "Eswatini",
+     "RegGenE8",
+     "Lubombo",
+     "Sithobela",
+     "SITHOBELA RURAL HEALTH CENTER",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "geo_admin1_col": "geo_admin1",
+  "geo_admin2_col": "geo_admin2",
+  "geo_admin3_col": "geo_admin3",
+  "lat_lon_col": "lat_lon"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023-03-29",
+    "collection_country": "Eswatini",
+    "project_name": "RegGenE8",
+    "geo_admin1": "Lubombo",
+    "geo_admin2": "Sithobela",
+    "geo_admin3": "CABRINI MINISTRIES HEALTH CARE"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023-03-20",
+    "collection_country": "Eswatini",
+    "project_name": "RegGenE8",
+    "geo_admin1": "Lubombo",
+    "geo_admin2": "Sithobela",
+    "geo_admin3": "SITHOBELA RURAL HEALTH CENTER"
+   }
+  ]
+ },
+ "warnings": []
+}

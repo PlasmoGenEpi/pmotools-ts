@@ -1,0 +1,303 @@
+{
+ "id": "read_counts/examples/mad4hatter_demultiplexed_one_stage",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Wide format with a single stage column, first 12 rows of mad4hatter_demultiplexed_example.csv. SRR26819303 and SRR26819507 each repeat a locus and Python keeps the last count; pmotools-ts also warns read-counts/duplicate-stages",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "SampleID",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "SampleID": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "SRR26819553",
+     1000
+    ],
+    [
+     "SRR26819207",
+     1000
+    ],
+    [
+     "SRR26819545",
+     1000
+    ],
+    [
+     "SRR26819527",
+     1000
+    ],
+    [
+     "SRR26819214",
+     1000
+    ],
+    [
+     "SRR26819303",
+     1000
+    ],
+    [
+     "SRR26819211",
+     1000
+    ],
+    [
+     "SRR26819507",
+     1000
+    ],
+    [
+     "SRR26819151",
+     1000
+    ],
+    [
+     "SRR26819397",
+     1000
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "SampleID",
+    "Locus",
+    "Reads"
+   ],
+   "dtypes": {
+    "SampleID": "object",
+    "Locus": "object",
+    "Reads": "int64"
+   },
+   "rows": [
+    [
+     "SRR26819553",
+     "Pf3D7_01_v3-145388-145662-1A",
+     13
+    ],
+    [
+     "SRR26819207",
+     "Pf3D7_01_v3-145388-145662-1A",
+     4
+    ],
+    [
+     "SRR26819545",
+     "Pf3D7_01_v3-145388-145662-1A",
+     22
+    ],
+    [
+     "SRR26819527",
+     "Pf3D7_01_v3-145388-145662-1A",
+     1
+    ],
+    [
+     "SRR26819214",
+     "Pf3D7_01_v3-145388-145662-1A",
+     14
+    ],
+    [
+     "SRR26819303",
+     "Pf3D7_01_v3-145388-145662-1A",
+     13
+    ],
+    [
+     "SRR26819303",
+     "Pf3D7_01_v3-145388-145662-1A",
+     15
+    ],
+    [
+     "SRR26819211",
+     "Pf3D7_01_v3-145388-145662-1A",
+     21
+    ],
+    [
+     "SRR26819507",
+     "Pf3D7_01_v3-145388-145662-1A",
+     7
+    ],
+    [
+     "SRR26819507",
+     "Pf3D7_01_v3-145388-145662-1A",
+     11
+    ],
+    [
+     "SRR26819151",
+     "Pf3D7_01_v3-145388-145662-1A",
+     3
+    ],
+    [
+     "SRR26819397",
+     "Pf3D7_01_v3-145388-145662-1A",
+     72
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "demux_run",
+  "library_sample_name_col": "SampleID",
+  "target_name_col": "Locus",
+  "stage_col": [
+   "Reads"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "SRR26819553",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 13
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819207",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 4
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819545",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 22
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819527",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819214",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 14
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819303",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 15
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819211",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 21
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819507",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 11
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819151",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 3
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819397",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 72
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "demux_run"
+   }
+  ]
+ },
+ "warnings": []
+}

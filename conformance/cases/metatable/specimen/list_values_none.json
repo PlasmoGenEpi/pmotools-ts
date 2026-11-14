@@ -1,0 +1,59 @@
+{
+ "id": "metatable/specimen/list_values_none",
+ "function": "specimen_info_table_to_pmo",
+ "note": "list_values None crashes Python with TypeError (iterating None)",
+ "divergence": "pmotools-ts treats a null list_values as no list columns. Python raises TypeError from a bug.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "list_values_specimen_values": null
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "'NoneType' object is not iterable"
+ },
+ "warnings": []
+}

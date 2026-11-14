@@ -1,0 +1,550 @@
+{
+ "id": "merge/python-schema-integration-full",
+ "function": "merge_to_pmo",
+ "note": "test_schema_validation_integration full toy PMO (panel with a genome, so targeted_genomes passes through).",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "specimen_info": [
+   {
+    "specimen_name": "specimen1",
+    "specimen_taxon_id": [
+     5900
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2024-01-01",
+    "collection_country": "Wonderland",
+    "project_name": "Test Project",
+    "alternate_identifiers": [
+     "ALT1",
+     "ALT2"
+    ],
+    "drug_usage": [
+     "DrugX"
+    ],
+    "env_broad_scale": "Urban",
+    "env_local_scale": "Clinic",
+    "env_medium": "Blood",
+    "host_age": 35,
+    "host_sex": "female",
+    "lat_lon": "37.77,-122.42",
+    "specimen_collect_device": "venipuncture",
+    "specimen_comments": [
+     "no issues"
+    ],
+    "specimen_store_loc": "Freezer 1",
+    "custom_note": "Important specimen",
+    "parasite_density_info": [
+     {
+      "parasite_density": 1200,
+      "parasite_density_method": "microscopy"
+     }
+    ]
+   }
+  ],
+  "library_sample_info": [
+   {
+    "library_sample_name": "lib1",
+    "specimen_name": "specimen1",
+    "panel_name": "panel1",
+    "sequencing_info_name": "seq_run1",
+    "run_accession": "ACC123",
+    "library_note": "High quality",
+    "library_prep_plate_info": {
+     "plate_name": "PlateA",
+     "plate_row": "B",
+     "plate_col": 3
+    }
+   }
+  ],
+  "sequencing_info": [
+   {
+    "sequencing_info_name": "seq_run1",
+    "seq_platform": "ILLUMINA",
+    "seq_instrument_model": "NextSeq 2000",
+    "library_layout": "PAIRED",
+    "library_strategy": "AMPLICON",
+    "library_source": "GENOMIC",
+    "library_selection": "PCR",
+    "library_kit": "MiSeq Reagent Kit v3",
+    "seq_center": "UCSF Core",
+    "seq_date": "2024-01-15",
+    "nucl_acid_amp": "https://example.org/amp",
+    "nucl_acid_ext": "https://example.org/ext"
+   }
+  ],
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "rxn1",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "gene_name": "geneA",
+     "target_attributes": [
+      "marker1",
+      "marker2"
+     ],
+     "amplicon_length": 250,
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 110,
+      "end": 149,
+      "strand": "+",
+      "ref_seq": "ATGCGCTA"
+     },
+     "forward_primer": {
+      "seq": "ATGCATGC",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 100,
+       "end": 107,
+       "strand": "+"
+      }
+     },
+     "reverse_primer": {
+      "seq": "GCATGCAT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 157,
+       "start": 150,
+       "strand": "+"
+      }
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "TestGenome",
+     "genome_version": "v1.0",
+     "taxon_id": [
+      9999
+     ],
+     "url": "https://example.org/genome",
+     "chromosomes": [
+      "chr1"
+     ],
+     "gff_url": "https://example.org/genome.gff"
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "ATGCATGC",
+        "microhaplotype_name": "mh1",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 120,
+          "end": 127
+         }
+        },
+        "quality": "ABCD",
+        "custom_annotation": "custom",
+        "masking": [
+         {
+          "seq_start": 1,
+          "seq_segment_size": 2,
+          "replacement_size": 2
+         }
+        ]
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 120,
+       "end": 127,
+       "ref_seq": "ATGC",
+       "strand": "+"
+      }
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "lib1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 42,
+           "umis": 10,
+           "custom_detected": "det-note"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": "run1"
+    }
+   ]
+  },
+  "bioinfo_method_info": [
+   {
+    "methods": [
+     {
+      "program": "Cutadapt",
+      "program_version": "v1.0.0"
+     },
+     {
+      "program": "DADA2",
+      "program_version": "v1.0.0"
+     },
+     {
+      "program": "CustomFilter",
+      "program_version": "v2.0.0"
+     }
+    ]
+   }
+  ],
+  "bioinfo_run_info": [
+   {
+    "bioinformatics_run_name": "run1",
+    "bioinformatics_methods_id": 0,
+    "run_date": "2024-02-01",
+    "run_comments": "First batch"
+   }
+  ],
+  "project_info": [
+   {
+    "project_name": "Test Project",
+    "project_description": "Toy project for schema validation.",
+    "project_type": "Surveillance",
+    "project_contributors": [
+     "Alice",
+     "Bob"
+    ],
+    "BioProject_accession": "PRJNA12345"
+   }
+  ],
+  "read_counts_by_stage_info": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "lib1",
+      "total_raw_count": 1000,
+      "library_comment": "primary run",
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "RawReads",
+          "reads": 800,
+          "quality_score": 0.98,
+          "coverage_depth": 150
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "run1"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "pmo_header": {
+    "pmo_version": "1.1.0",
+    "creation_date": "2026-11-13",
+    "generation_method": {
+     "program_name": "pmotools-python",
+     "program_version": "1.2.2"
+    }
+   },
+   "library_sample_info": [
+    {
+     "library_sample_name": "lib1",
+     "run_accession": "ACC123",
+     "library_note": "High quality",
+     "library_prep_plate_info": {
+      "plate_name": "PlateA",
+      "plate_row": "B",
+      "plate_col": 3
+     },
+     "specimen_id": 0,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    }
+   ],
+   "specimen_info": [
+    {
+     "specimen_name": "specimen1",
+     "specimen_taxon_id": [
+      5900
+     ],
+     "host_taxon_id": 9606,
+     "collection_date": "2024-01-01",
+     "collection_country": "Wonderland",
+     "alternate_identifiers": [
+      "ALT1",
+      "ALT2"
+     ],
+     "drug_usage": [
+      "DrugX"
+     ],
+     "env_broad_scale": "Urban",
+     "env_local_scale": "Clinic",
+     "env_medium": "Blood",
+     "host_age": 35,
+     "host_sex": "female",
+     "lat_lon": "37.77,-122.42",
+     "specimen_collect_device": "venipuncture",
+     "specimen_comments": [
+      "no issues"
+     ],
+     "specimen_store_loc": "Freezer 1",
+     "custom_note": "Important specimen",
+     "parasite_density_info": [
+      {
+       "parasite_density": 1200,
+       "parasite_density_method": "microscopy"
+      }
+     ],
+     "project_id": 0
+    }
+   ],
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "rxn1",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "gene_name": "geneA",
+     "target_attributes": [
+      "marker1",
+      "marker2"
+     ],
+     "amplicon_length": 250,
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 110,
+      "end": 149,
+      "strand": "+",
+      "ref_seq": "ATGCGCTA"
+     },
+     "forward_primer": {
+      "seq": "ATGCATGC",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 100,
+       "end": 107,
+       "strand": "+"
+      }
+     },
+     "reverse_primer": {
+      "seq": "GCATGCAT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 157,
+       "start": 150,
+       "strand": "+"
+      }
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "TestGenome",
+     "genome_version": "v1.0",
+     "taxon_id": [
+      9999
+     ],
+     "url": "https://example.org/genome",
+     "chromosomes": [
+      "chr1"
+     ],
+     "gff_url": "https://example.org/genome.gff"
+    }
+   ],
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": [
+       {
+        "seq": "ATGCATGC",
+        "microhaplotype_name": "mh1",
+        "pseudocigar": {
+         "pseudocigar_seq": "8M",
+         "ref_loc": {
+          "genome_id": 0,
+          "chrom": "chr1",
+          "start": 120,
+          "end": 127
+         }
+        },
+        "quality": "ABCD",
+        "custom_annotation": "custom",
+        "masking": [
+         {
+          "seq_start": 1,
+          "seq_segment_size": 2,
+          "replacement_size": 2
+         }
+        ]
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 120,
+       "end": 127,
+       "ref_seq": "ATGC",
+       "strand": "+"
+      },
+      "target_id": 0
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 42,
+           "umis": 10,
+           "custom_detected": "det-note"
+          }
+         ]
+        }
+       ],
+       "library_sample_id": 0
+      }
+     ],
+     "bioinformatics_run_id": 0
+    }
+   ],
+   "sequencing_info": [
+    {
+     "sequencing_info_name": "seq_run1",
+     "seq_platform": "ILLUMINA",
+     "seq_instrument_model": "NextSeq 2000",
+     "library_layout": "PAIRED",
+     "library_strategy": "AMPLICON",
+     "library_source": "GENOMIC",
+     "library_selection": "PCR",
+     "library_kit": "MiSeq Reagent Kit v3",
+     "seq_center": "UCSF Core",
+     "seq_date": "2024-01-15",
+     "nucl_acid_amp": "https://example.org/amp",
+     "nucl_acid_ext": "https://example.org/ext"
+    }
+   ],
+   "bioinformatics_methods_info": [
+    {
+     "methods": [
+      {
+       "program": "Cutadapt",
+       "program_version": "v1.0.0"
+      },
+      {
+       "program": "DADA2",
+       "program_version": "v1.0.0"
+      },
+      {
+       "program": "CustomFilter",
+       "program_version": "v2.0.0"
+      }
+     ]
+    }
+   ],
+   "bioinformatics_run_info": [
+    {
+     "bioinformatics_run_name": "run1",
+     "bioinformatics_methods_id": 0,
+     "run_date": "2024-02-01",
+     "run_comments": "First batch"
+    }
+   ],
+   "project_info": [
+    {
+     "project_name": "Test Project",
+     "project_description": "Toy project for schema validation.",
+     "project_type": "Surveillance",
+     "project_contributors": [
+      "Alice",
+      "Bob"
+     ],
+     "BioProject_accession": "PRJNA12345"
+    }
+   ],
+   "read_counts_by_stage": [
+    {
+     "read_counts_by_library_sample_by_stage": [
+      {
+       "total_raw_count": 1000,
+       "library_comment": "primary run",
+       "read_counts_for_targets": [
+        {
+         "stages": [
+          {
+           "stage": "RawReads",
+           "reads": 800,
+           "quality_score": 0.98,
+           "coverage_depth": 150
+          }
+         ],
+         "target_id": 0
+        }
+       ],
+       "library_sample_id": 0
+      }
+     ],
+     "bioinformatics_run_id": 0
+    }
+   ]
+  }
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": true,
+  "error": null
+ }
+}

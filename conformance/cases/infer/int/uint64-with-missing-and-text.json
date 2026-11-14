@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/uint64-with-missing-and-text",
+ "function": "read_csv_typed",
+ "note": "uint64 with text: the usual text fallback, so NA strings do become missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775808,r0\nNA,r1\nx,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

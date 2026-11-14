@@ -1,0 +1,45 @@
+{
+ "id": "infer/options/no-na-strings-number",
+ "function": "read_csv_typed",
+ "note": "With no NA strings, a plain number column is still int64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1,r0\n2,r1\n",
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "r0"
+    ],
+    [
+     2,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

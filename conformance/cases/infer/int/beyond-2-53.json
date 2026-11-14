@@ -1,0 +1,44 @@
+{
+ "id": "infer/int/beyond-2-53",
+ "function": "read_csv_typed",
+ "note": "int64 above 2**53: exact in Python, nearest double in JavaScript.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9007199254740993,r0\n1,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9007199254740993",
+     "r0"
+    ],
+    [
+     "1",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     9007199254740993,
+     "r0"
+    ],
+    [
+     1,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

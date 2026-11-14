@@ -1,0 +1,68 @@
+{
+ "id": "read_counts/pytest/missing_reads_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_missing_columns: no target_name column",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "additional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "additional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     "info2"
+    ],
+    [
+     "sample3",
+     1500,
+     "info3"
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "wrong_col",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "wrong_col": "object",
+    "stage": "object",
+    "read_count": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "demultiplexed",
+     100
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing required columns in reads_by_stage_table: ['target_name']"
+ },
+ "warnings": []
+}

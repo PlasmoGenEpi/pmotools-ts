@@ -1,0 +1,22 @@
+{
+ "id": "read_counts/empty/totals_without_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": null,
+ "divergence": "A pmotools-ts Table with no rows has no columns, so an empty table cannot carry a run-name column or required columns. pmotools-ts skips column checks on empty tables, which matches Python for a header-only CSV but not for a DataFrame with no columns at all. pmotools-ts returns one run with no samples.",
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [],
+   "dtypes": {},
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "r1"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing required columns in total_raw_count_table: ['library_sample_name', 'total_raw_count']"
+ },
+ "warnings": []
+}

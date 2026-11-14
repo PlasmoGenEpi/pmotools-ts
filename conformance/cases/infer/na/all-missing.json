@@ -1,0 +1,50 @@
+{
+ "id": "infer/na/all-missing",
+ "function": "read_csv_typed",
+ "note": "A column with only missing values is float64, all missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,b,z\n,NA,r0\nnan,,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "b",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "b": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "",
+     "NA",
+     "r0"
+    ],
+    [
+     "nan",
+     "",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     null,
+     "r0"
+    ],
+    [
+     null,
+     null,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

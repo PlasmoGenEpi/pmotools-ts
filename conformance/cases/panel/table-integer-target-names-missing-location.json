@@ -1,0 +1,70 @@
+{
+ "id": "panel/table-integer-target-names-missing-location",
+ "function": "panel_info_table_to_pmo",
+ "note": "Integer names with a missing location crash the warning's ', '.join with TypeError.",
+ "divergence": "pmotools-ts writes names as strings, warns about target 2, and returns the result; Python crashes building the warning text.",
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "insert_start",
+    "insert_end",
+    "chrom"
+   ],
+   "dtypes": {
+    "target_name": "int64",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "insert_start": "float64",
+    "insert_end": "int64",
+    "chrom": "object"
+   },
+   "rows": [
+    [
+     1,
+     "CTT",
+     "GTT",
+     4.0,
+     8,
+     "chr1"
+    ],
+    [
+     2,
+     "CTA",
+     "TGG",
+     null,
+     18,
+     "chr1"
+    ],
+    [
+     3,
+     "TTG",
+     "ATT",
+     24.0,
+     28,
+     "chr1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833
+  },
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "chrom_col": "chrom",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "sequence item 0: expected str instance, int found"
+ },
+ "warnings": []
+}

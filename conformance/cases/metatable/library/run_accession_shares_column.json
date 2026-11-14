@@ -1,0 +1,68 @@
+{
+ "id": "metatable/library/run_accession_shares_column",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "run_accession_col is not in the uniqueness check, so it may share a column with experiment_accession; the later mapping (run_accession) wins",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "acc"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "acc": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "A1"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "A2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "experiment_accession_col": "acc",
+  "run_accession_col": "acc"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "run_accession": "A1"
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "run_accession": "A2"
+   }
+  ]
+ },
+ "warnings": []
+}

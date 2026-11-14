@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.1.0/StageReadCounts",
+ "function": "validate_pmo",
+ "note": "each property of StageReadCounts set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages/0/reads",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages/0/stage",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages/0/reads",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages/0/stage"
+  ]
+ },
+ "warnings": []
+}

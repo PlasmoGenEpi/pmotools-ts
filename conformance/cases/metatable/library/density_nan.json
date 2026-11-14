@@ -1,0 +1,75 @@
+{
+ "id": "metatable/library/density_nan",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "A NaN density is written as NaN in Python",
+ "divergence": "pmotools-ts omits the density entry when the density is missing. Python writes parasite_density: NaN, which is not valid JSON.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "d"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "d": "float64"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     null
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     5.0
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "parasite_density_col": "d"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": "__NaN__"
+     }
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": 5.0
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

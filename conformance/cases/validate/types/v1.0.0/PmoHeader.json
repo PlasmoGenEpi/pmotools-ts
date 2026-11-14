@@ -1,0 +1,271 @@
+{
+ "id": "validate/types/v1.0.0/PmoHeader",
+ "function": "validate_pmo",
+ "note": "each property of PmoHeader (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/pmo_header/creation_date",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": true
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": false
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": []
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header/creation_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": true
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": false
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": []
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": true
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": false
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": []
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: pattern at /pmo_header/creation_date",
+   "invalid: pattern at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "invalid: type at /pmo_header/creation_date",
+   "valid",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: anyOf at /pmo_header/generation_method",
+   "invalid: type at /pmo_header/pmo_version",
+   "valid",
+   "invalid: pattern at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version",
+   "invalid: type at /pmo_header/pmo_version"
+  ]
+ },
+ "warnings": []
+}

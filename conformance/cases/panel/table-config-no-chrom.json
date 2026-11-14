@@ -1,0 +1,89 @@
+{
+ "id": "panel/table-config-no-chrom",
+ "function": "panel_info_table_to_pmo",
+ "note": "Insert columns without chrom_col.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "fwd_start",
+    "fwd_end",
+    "rev_start",
+    "rev_end",
+    "insert_start",
+    "insert_end",
+    "chrom"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "fwd_start": "int64",
+    "fwd_end": "int64",
+    "rev_start": "int64",
+    "rev_end": "int64",
+    "insert_start": "int64",
+    "insert_end": "int64",
+    "chrom": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     1,
+     4,
+     8,
+     11,
+     4,
+     8,
+     "chr1"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     11,
+     14,
+     18,
+     21,
+     14,
+     18,
+     "chr1"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     21,
+     24,
+     28,
+     31,
+     24,
+     28,
+     "chr2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833
+  },
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Errors with location column configuration:\n- If including location information (any of forward_primers_start_col, forward_primers_end_col, reverse_primers_start_col, reverse_primers_end_col, insert_start_col, insert_end_col) chrom_col must be set."
+ },
+ "warnings": []
+}

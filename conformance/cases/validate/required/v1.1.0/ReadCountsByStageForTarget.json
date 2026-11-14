@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.1.0/ReadCountsByStageForTarget",
+ "function": "validate_pmo",
+ "note": "each required property of ReadCountsByStageForTarget removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/target_id"
+   },
+   {
+    "remove": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0",
+   "invalid: required at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0"
+  ]
+ },
+ "warnings": []
+}

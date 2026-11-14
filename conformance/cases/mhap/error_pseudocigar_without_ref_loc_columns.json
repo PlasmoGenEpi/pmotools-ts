@@ -1,0 +1,141 @@
+{
+ "id": "mhap/error_pseudocigar_without_ref_loc_columns",
+ "function": "mhap_table_to_pmo",
+ "note": "Python test pseudocigar_without_ref_loc_columns_raises.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "bioinf_run",
+    "cig"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "bioinf_run": "object",
+    "cig": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "ACTG",
+     10,
+     "run1",
+     "8M"
+    ],
+    [
+     "sample1",
+     "target2",
+     "TTTT",
+     100,
+     "run1",
+     "8M"
+    ],
+    [
+     "sample1",
+     "target3",
+     "GGG",
+     10,
+     "run1",
+     "8M"
+    ],
+    [
+     "sample2",
+     "target1",
+     "ACTG",
+     1,
+     "run2",
+     "8M"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTT",
+     12,
+     "run2",
+     "8M"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTA",
+     53,
+     "run2",
+     "8M"
+    ],
+    [
+     "sample2",
+     "target3",
+     "AAG",
+     73,
+     "run2",
+     "8M"
+    ],
+    [
+     "sample3",
+     "target1",
+     "ATTG",
+     76,
+     "run1",
+     "8M"
+    ],
+    [
+     "sample3",
+     "target2",
+     "TTTA",
+     6,
+     "run1",
+     "8M"
+    ],
+    [
+     "sample4",
+     "target1",
+     "ACTG",
+     297,
+     "run2",
+     "8M"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTG",
+     123,
+     "run3",
+     "8M"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTA",
+     1,
+     "run3",
+     "8M"
+    ],
+    [
+     "sample5",
+     "target3",
+     "GGG",
+     17,
+     "run3",
+     "8M"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "pseudocigar_col": "cig"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "pseudocigar_col is set, so a Pseudocigar ref_loc must be constructable: set a chromosome (pseudocigar_chrom_col, or chrom_col together with start_col and end_col), pseudocigar_start_col, and pseudocigar_end_col."
+ },
+ "warnings": []
+}

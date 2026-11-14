@@ -1,0 +1,30 @@
+{
+ "id": "panel/table-empty-with-columns",
+ "function": "panel_info_table_to_pmo",
+ "note": "A table with columns and no rows: Python raises (KeyError from the groupby on an empty frame).",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'target_name'"
+ },
+ "warnings": []
+}

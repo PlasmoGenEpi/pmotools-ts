@@ -1,0 +1,271 @@
+{
+ "id": "metatable/specimen/float_rounding_many",
+ "function": "specimen_info_table_to_pmo",
+ "note": "pandas' ujson double encoder: 10 decimals with its own half-way rule, %.10g outside [1e-15, 1e16]",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "x"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "x": "float64"
+   },
+   "rows": [
+    [
+     "s0",
+     0.1
+    ],
+    [
+     "s1",
+     0.3333333333333333
+    ],
+    [
+     "s2",
+     0.6666666666666666
+    ],
+    [
+     "s3",
+     -0.3333333333333333
+    ],
+    [
+     "s4",
+     0.5
+    ],
+    [
+     "s5",
+     12.0
+    ],
+    [
+     "s6",
+     -0.0
+    ],
+    [
+     "s7",
+     1e-05
+    ],
+    [
+     "s8",
+     1.5e-05
+    ],
+    [
+     "s9",
+     0.000123456789012345
+    ],
+    [
+     "s10",
+     123456.123456789
+    ],
+    [
+     "s11",
+     99999999999.99998
+    ],
+    [
+     "s12",
+     123456789012.5
+    ],
+    [
+     "s13",
+     1000000000000000.2
+    ],
+    [
+     "s14",
+     1e+16
+    ],
+    [
+     "s15",
+     1.0000000000000002e+16
+    ],
+    [
+     "s16",
+     1.234e+17
+    ],
+    [
+     "s17",
+     1e+20
+    ],
+    [
+     "s18",
+     1e-11
+    ],
+    [
+     "s19",
+     4.9e-11
+    ],
+    [
+     "s20",
+     6e-11
+    ],
+    [
+     "s21",
+     5e-10
+    ],
+    [
+     "s22",
+     1.5e-10
+    ],
+    [
+     "s23",
+     2.5e-10
+    ],
+    [
+     "s24",
+     0.99999999999
+    ],
+    [
+     "s25",
+     9.99999999995
+    ],
+    [
+     "s26",
+     1.00000000005
+    ],
+    [
+     "s27",
+     1e-16
+    ],
+    [
+     "s28",
+     2.5e-16
+    ],
+    [
+     "s29",
+     -1.23456789012e-20
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_specimen_cols": [
+   "x"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "s0",
+    "x": 0.1
+   },
+   {
+    "specimen_name": "s1",
+    "x": 0.3333333333
+   },
+   {
+    "specimen_name": "s2",
+    "x": 0.6666666667
+   },
+   {
+    "specimen_name": "s3",
+    "x": -0.3333333333
+   },
+   {
+    "specimen_name": "s4",
+    "x": 0.5
+   },
+   {
+    "specimen_name": "s5",
+    "x": 12.0
+   },
+   {
+    "specimen_name": "s6",
+    "x": 0.0
+   },
+   {
+    "specimen_name": "s7",
+    "x": 1e-05
+   },
+   {
+    "specimen_name": "s8",
+    "x": 1.5e-05
+   },
+   {
+    "specimen_name": "s9",
+    "x": 0.0001234568
+   },
+   {
+    "specimen_name": "s10",
+    "x": 123456.123456789
+   },
+   {
+    "specimen_name": "s11",
+    "x": 99999999999.99998
+   },
+   {
+    "specimen_name": "s12",
+    "x": 123456789012.5
+   },
+   {
+    "specimen_name": "s13",
+    "x": 1000000000000000.2
+   },
+   {
+    "specimen_name": "s14",
+    "x": 1e+16
+   },
+   {
+    "specimen_name": "s15",
+    "x": 1e+16
+   },
+   {
+    "specimen_name": "s16",
+    "x": 1.234e+17
+   },
+   {
+    "specimen_name": "s17",
+    "x": 1e+20
+   },
+   {
+    "specimen_name": "s18",
+    "x": 0.0
+   },
+   {
+    "specimen_name": "s19",
+    "x": 0.0
+   },
+   {
+    "specimen_name": "s20",
+    "x": 1e-10
+   },
+   {
+    "specimen_name": "s21",
+    "x": 5e-10
+   },
+   {
+    "specimen_name": "s22",
+    "x": 2e-10
+   },
+   {
+    "specimen_name": "s23",
+    "x": 2e-10
+   },
+   {
+    "specimen_name": "s24",
+    "x": 1.0
+   },
+   {
+    "specimen_name": "s25",
+    "x": 10.0
+   },
+   {
+    "specimen_name": "s26",
+    "x": 1.0000000001
+   },
+   {
+    "specimen_name": "s27",
+    "x": 1e-16
+   },
+   {
+    "specimen_name": "s28",
+    "x": 2.5e-16
+   },
+   {
+    "specimen_name": "s29",
+    "x": -1.23456789e-20
+   }
+  ]
+ },
+ "warnings": []
+}

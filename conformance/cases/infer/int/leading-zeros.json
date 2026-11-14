@@ -1,0 +1,60 @@
+{
+ "id": "infer/int/leading-zeros",
+ "function": "read_csv_typed",
+ "note": "Leading zeros are dropped.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n001,r0\n0042,r1\n00,r2\n7,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "001",
+     "r0"
+    ],
+    [
+     "0042",
+     "r1"
+    ],
+    [
+     "00",
+     "r2"
+    ],
+    [
+     "7",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "r0"
+    ],
+    [
+     42,
+     "r1"
+    ],
+    [
+     0,
+     "r2"
+    ],
+    [
+     7,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,78 @@
+{
+ "id": "read_counts/wide/read_count_column_exists",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "melt refuses a value_name that is already a column",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10
+    ],
+    [
+     "s2",
+     20
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "b",
+    "a",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "b": "int64",
+    "a": "int64",
+    "read_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t2",
+     1,
+     4,
+     0
+    ],
+    [
+     "s1",
+     "t1",
+     2,
+     5,
+     0
+    ],
+    [
+     "s2",
+     "t1",
+     3,
+     6,
+     0
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "stage_col": [
+   "b"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "value_name (read_count) cannot match an element in the DataFrame columns."
+ },
+ "warnings": []
+}

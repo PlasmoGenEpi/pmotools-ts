@@ -1,0 +1,44 @@
+{
+ "id": "infer/int/long-with-missing",
+ "function": "read_csv_typed",
+ "note": "A 19-digit int in a float64 column keeps only 17 significant digits.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1234567890123456789,r0\nNA,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1234567890123456789",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     1.2345678901234568e+18,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

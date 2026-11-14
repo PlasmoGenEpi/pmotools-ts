@@ -1,0 +1,57 @@
+{
+ "id": "infer/options/custom-only",
+ "function": "read_csv_typed",
+ "note": "A custom list replaces the defaults.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nmissing,r0\nNA,r1\n1,r2\n",
+  "na_values": [
+   "missing",
+   "NA"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "missing",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     1.0,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

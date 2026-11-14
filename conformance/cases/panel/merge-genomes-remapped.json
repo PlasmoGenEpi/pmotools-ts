@@ -1,0 +1,273 @@
+{
+ "id": "panel/merge-genomes-remapped",
+ "function": "merge_panel_info_dicts",
+ "note": "Genomes are deduplicated by content and genome_ids remapped; an id with no genome stays as it is.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "pA",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0,
+         1
+        ]
+       }
+      ]
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     },
+     {
+      "name": "DD2",
+      "url": "somthingelse.com",
+      "genome_version": "2",
+      "taxon_id": 5833
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "t1",
+      "forward_primer": {
+       "seq": "AA"
+      },
+      "reverse_primer": {
+       "seq": "CC"
+      },
+      "insert_location": {
+       "genome_id": 1,
+       "chrom": "chr1",
+       "start": 5,
+       "end": 9
+      }
+     },
+     {
+      "target_name": "t2",
+      "forward_primer": {
+       "seq": "GG",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "start": 1,
+        "end": 3
+       }
+      },
+      "reverse_primer": {
+       "seq": "TT",
+       "location": {
+        "genome_id": 1,
+        "chrom": "chr1",
+        "start": 10,
+        "end": 12
+       }
+      }
+     }
+    ]
+   },
+   {
+    "panel_info": [
+     {
+      "panel_name": "pB",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         1,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "DD2",
+      "url": "somthingelse.com",
+      "genome_version": "2",
+      "taxon_id": 5833
+     },
+     {
+      "name": "HB3",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "t3",
+      "forward_primer": {
+       "seq": "AT"
+      },
+      "reverse_primer": {
+       "seq": "CG"
+      },
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 5,
+       "end": 9
+      }
+     },
+     {
+      "target_name": "t4",
+      "forward_primer": {
+       "seq": "GA",
+       "location": {
+        "genome_id": 1,
+        "chrom": "chr1",
+        "start": 1,
+        "end": 3
+       }
+      },
+      "reverse_primer": {
+       "seq": "TA",
+       "location": {
+        "genome_id": 7,
+        "chrom": "chr1",
+        "start": 10,
+        "end": 12
+       }
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "pA",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "panel_name": "pB",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        3,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "t1",
+     "forward_primer": {
+      "seq": "AA"
+     },
+     "reverse_primer": {
+      "seq": "CC"
+     },
+     "insert_location": {
+      "genome_id": 1,
+      "chrom": "chr1",
+      "start": 5,
+      "end": 9
+     }
+    },
+    {
+     "target_name": "t2",
+     "forward_primer": {
+      "seq": "GG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 3
+      }
+     },
+     "reverse_primer": {
+      "seq": "TT",
+      "location": {
+       "genome_id": 1,
+       "chrom": "chr1",
+       "start": 10,
+       "end": 12
+      }
+     }
+    },
+    {
+     "target_name": "t3",
+     "forward_primer": {
+      "seq": "AT"
+     },
+     "reverse_primer": {
+      "seq": "CG"
+     },
+     "insert_location": {
+      "genome_id": 1,
+      "chrom": "chr1",
+      "start": 5,
+      "end": 9
+     }
+    },
+    {
+     "target_name": "t4",
+     "forward_primer": {
+      "seq": "GA",
+      "location": {
+       "genome_id": 2,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 3
+      }
+     },
+     "reverse_primer": {
+      "seq": "TA",
+      "location": {
+       "genome_id": 7,
+       "chrom": "chr1",
+       "start": 10,
+       "end": 12
+      }
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    },
+    {
+     "name": "DD2",
+     "url": "somthingelse.com",
+     "genome_version": "2",
+     "taxon_id": 5833
+    },
+    {
+     "name": "HB3",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

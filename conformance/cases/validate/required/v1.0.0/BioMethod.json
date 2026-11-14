@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/BioMethod",
+ "function": "validate_pmo",
+ "note": "each required property of BioMethod removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/bioinformatics_methods_info/0/methods/0/program_version"
+   },
+   {
+    "remove": "/bioinformatics_methods_info/0/methods/0/program"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /bioinformatics_methods_info/0/methods/0",
+   "invalid: required at /bioinformatics_methods_info/0/methods/0"
+  ]
+ },
+ "warnings": []
+}

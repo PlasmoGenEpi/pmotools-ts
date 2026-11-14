@@ -1,0 +1,33 @@
+{
+ "id": "metatable/specimen/density_missing_column",
+ "function": "specimen_info_table_to_pmo",
+ "note": "The density column does not exist: pandas KeyError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object"
+   },
+   "rows": [
+    [
+     "sample1"
+    ],
+    [
+     "sample2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "density"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'density'"
+ },
+ "warnings": []
+}

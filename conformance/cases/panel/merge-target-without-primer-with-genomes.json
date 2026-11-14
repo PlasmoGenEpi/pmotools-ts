@@ -1,0 +1,53 @@
+{
+ "id": "panel/merge-target-without-primer-with-genomes",
+ "function": "merge_panel_info_dicts",
+ "note": "With genomes Python copies a target without forward_primer through unchecked.",
+ "divergence": "pmotools-ts throws panel/malformed-target: every target it returns has both primers, as its types and the PMO schema require.",
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "x",
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [],
+   "target_info": [
+    {
+     "target_name": "x",
+     "reverse_primer": {
+      "seq": "C"
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

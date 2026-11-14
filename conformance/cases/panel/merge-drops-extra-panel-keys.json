@@ -1,0 +1,78 @@
+{
+ "id": "panel/merge-drops-extra-panel-keys",
+ "function": "merge_panel_info_dicts",
+ "note": "Only panel_name, reactions, reaction_name and panel_targets survive; a panel without reactions gets an empty list; target extras are kept.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "p",
+      "note": "x",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0
+        ],
+        "extra": 1
+       }
+      ]
+     },
+     {
+      "panel_name": "q"
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "a",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      },
+      "extra_key": null
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "p",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "panel_name": "q",
+     "reactions": []
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "a",
+     "forward_primer": {
+      "seq": "A"
+     },
+     "reverse_primer": {
+      "seq": "C"
+     },
+     "extra_key": null
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

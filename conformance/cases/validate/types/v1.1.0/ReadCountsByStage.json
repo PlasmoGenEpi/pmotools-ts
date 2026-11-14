@@ -1,0 +1,187 @@
+{
+ "id": "validate/types/v1.1.0/ReadCountsByStage",
+ "function": "validate_pmo",
+ "note": "each property of ReadCountsByStage (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: pattern at /read_counts_by_stage/0/bioinformatics_run_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /read_counts_by_stage/0/bioinformatics_run_id",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "valid",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage"
+  ]
+ },
+ "warnings": []
+}

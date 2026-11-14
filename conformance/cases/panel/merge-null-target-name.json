@@ -1,0 +1,31 @@
+{
+ "id": "panel/merge-null-target-name",
+ "function": "merge_panel_info_dicts",
+ "note": "A target whose target_name is None raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [],
+    "target_info": [
+     {
+      "target_name": null,
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Each target_info entry must include a 'target_name'."
+ },
+ "warnings": []
+}

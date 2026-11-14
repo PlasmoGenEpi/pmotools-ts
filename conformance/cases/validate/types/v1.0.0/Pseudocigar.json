@@ -1,0 +1,271 @@
+{
+ "id": "validate/types/v1.0.0/Pseudocigar",
+ "function": "validate_pmo",
+ "note": "each property of Pseudocigar (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar"
+  ]
+ },
+ "warnings": []
+}

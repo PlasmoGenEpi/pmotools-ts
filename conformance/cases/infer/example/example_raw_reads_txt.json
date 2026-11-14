@@ -1,0 +1,53 @@
+{
+ "id": "infer/example/example_raw_reads_txt",
+ "function": "read_example_table",
+ "note": "conformance/data/tables/example_raw_reads.txt read the way the app reads it.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "file": "example_raw_reads.txt"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "sample",
+    "raw_count"
+   ],
+   "dtypes": {
+    "sample": "object",
+    "raw_count": "int64"
+   },
+   "row_count": 3,
+   "raw": [
+    [
+     "SRR26819135",
+     "10"
+    ],
+    [
+     "SRR26819139",
+     "7"
+    ],
+    [
+     "SRR26819141",
+     "25"
+    ]
+   ],
+   "rows": [
+    [
+     "SRR26819135",
+     10
+    ],
+    [
+     "SRR26819139",
+     7
+    ],
+    [
+     "SRR26819141",
+     25
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

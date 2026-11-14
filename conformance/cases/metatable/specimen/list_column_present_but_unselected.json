@@ -1,0 +1,62 @@
+{
+ "id": "metatable/specimen/list_column_present_but_unselected",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A table column named like a list field but not selected makes Python look it up in the record: KeyError",
+ "divergence": "pmotools-ts only listifies fields the record has, and returns the records. Python raises KeyError from a bug.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "drug_usage"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "drug_usage": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "AL"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "DP"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'drug_usage'"
+ },
+ "warnings": []
+}

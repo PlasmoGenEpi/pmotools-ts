@@ -1,0 +1,60 @@
+{
+ "id": "infer/int/uint64-with-missing",
+ "function": "read_csv_typed",
+ "note": "uint64 with a missing cell: left as the original strings, NA strings included.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775808,r0\nNA,r1\n,r2\n2,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "",
+     "r2"
+    ],
+    [
+     "2",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "",
+     "r2"
+    ],
+    [
+     "2",
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

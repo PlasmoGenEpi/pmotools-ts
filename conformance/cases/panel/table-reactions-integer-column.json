@@ -1,0 +1,52 @@
+{
+ "id": "panel/table-reactions-integer-column",
+ "function": "panel_info_table_to_pmo",
+ "note": "An integer reaction column has no .str accessor, so Python raises AttributeError.",
+ "divergence": "pmotools-ts reads reaction names as strings and returns reactions \"1\" and \"2\"; Python crashes.",
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "pool"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "pool": "int64"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     1
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     2
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     1
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reaction_name_col": "pool",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "AttributeError",
+  "message": "Can only use .str accessor with string values!"
+ },
+ "warnings": []
+}

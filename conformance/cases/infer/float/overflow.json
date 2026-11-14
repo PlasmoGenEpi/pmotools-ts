@@ -1,0 +1,44 @@
+{
+ "id": "infer/float/overflow",
+ "function": "read_csv_typed",
+ "note": "A value that overflows to infinity is not a number: text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1.8e308,r0\n1,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1.8e308",
+     "r0"
+    ],
+    [
+     "1",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     "1.8e308",
+     "r0"
+    ],
+    [
+     "1",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

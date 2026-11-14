@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/Pseudocigar",
+ "function": "validate_pmo",
+ "note": "each required property of Pseudocigar removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq"
+   },
+   {
+    "remove": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: required at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/int64-limits",
+ "function": "read_csv_typed",
+ "note": "The int64 range stays int64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775807,r0\n-9223372036854775808,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775807",
+     "r0"
+    ],
+    [
+     "-9223372036854775808",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     9223372036854775807,
+     "r0"
+    ],
+    [
+     -9223372036854775808,
+     "r1"
+    ],
+    [
+     1,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

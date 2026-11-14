@@ -1,0 +1,39 @@
+{
+ "id": "validate/null/v1.0.0/ProteinVariant",
+ "function": "validate_pmo",
+ "note": "each property of ProteinVariant set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/alternative_gene_name",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/gene_name",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location"
+  ]
+ },
+ "warnings": []
+}

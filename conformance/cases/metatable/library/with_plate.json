@@ -1,0 +1,97 @@
+{
+ "id": "metatable/library/with_plate",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_with_plate",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "library_prep_plate_col",
+    "library_prep_plate_name",
+    "library_prep_plate_row",
+    "alternate_identifiers"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "library_prep_plate_col": "int64",
+    "library_prep_plate_name": "object",
+    "library_prep_plate_row": "object",
+    "alternate_identifiers": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     1,
+     "plate1",
+     "A",
+     "positive_control,3D7"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     2,
+     "plate1",
+     "B",
+     "sample2_MH_run1_repooled"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "library_prep_plate_name_col": "library_prep_plate_name",
+  "library_prep_plate_col_col": "library_prep_plate_col",
+  "library_prep_plate_row_col": "library_prep_plate_row",
+  "alternate_identifiers_col": "alternate_identifiers"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "positive_control",
+     "3D7"
+    ],
+    "library_prep_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "sample2_MH_run1_repooled"
+    ],
+    "library_prep_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 2
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

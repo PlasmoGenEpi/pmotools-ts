@@ -1,0 +1,17 @@
+{
+ "id": "merge/errors-missing-required-fields-all",
+ "function": "merge_to_pmo",
+ "note": "Empty panel and mhap info.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {},
+  "mhap_info": {}
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing required fields for panel_target_info or mhap_info: ['panel_info', 'target_info', 'representative_microhaplotypes', 'detected_microhaplotypes']"
+ },
+ "warnings": []
+}

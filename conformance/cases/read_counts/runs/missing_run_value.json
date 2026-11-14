@@ -1,0 +1,54 @@
+{
+ "id": "read_counts/runs/missing_run_value",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Python writes an entry named NaN with no samples and loses sample b",
+ "divergence": "Python writes a bare NaN run name, which is not valid JSON, and silently loses the rows. pmotools-ts throws PmoError read-counts/missing-name.",
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "r"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "r": "object"
+   },
+   "rows": [
+    [
+     "a",
+     1,
+     "x"
+    ],
+    [
+     "b",
+     2,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "r"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "a",
+      "total_raw_count": 1
+     }
+    ],
+    "bioinformatics_run_name": "x"
+   },
+   {
+    "read_counts_by_library_sample_by_stage": [],
+    "bioinformatics_run_name": "__NaN__"
+   }
+  ]
+ },
+ "warnings": []
+}

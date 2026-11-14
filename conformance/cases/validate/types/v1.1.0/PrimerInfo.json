@@ -1,0 +1,187 @@
+{
+ "id": "validate/types/v1.1.0/PrimerInfo",
+ "function": "validate_pmo",
+ "note": "each property of PrimerInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/forward_primer/location",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/forward_primer/seq",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: anyOf at /target_info/0/forward_primer/location",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: pattern at /target_info/0/forward_primer/seq",
+   "invalid: pattern at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq",
+   "invalid: type at /target_info/0/forward_primer/seq"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,63 @@
+{
+ "id": "merge/errors-representative-target-without-name",
+ "function": "merge_to_pmo",
+ "note": "A representative target has no target_name (Python KeyError).",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": []
+     }
+    ]
+   },
+   "detected_microhaplotypes": []
+  },
+  "specimen_info": [],
+  "library_sample_info": []
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'target_name'"
+ },
+ "warnings": []
+}

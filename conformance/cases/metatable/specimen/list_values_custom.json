@@ -1,0 +1,118 @@
+{
+ "id": "metatable/specimen/list_values_custom",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A custom delimiter and list columns: an additional column and a scalar field can be listified",
+ "divergence": "pmotools-ts omits extra for sample2, whose additional cell is missing; Python writes [\"\"]. A blank cell in any list column is dropped, whether or not the field is optional.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "drug_usage",
+    "extra",
+    "geo_admin1"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "drug_usage": "object",
+    "extra": "object",
+    "geo_admin1": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "AL;DP",
+     "x;y",
+     "R1;R2"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "AL",
+     null,
+     "R3"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "drug_usage_col": "drug_usage",
+  "geo_admin1_col": "geo_admin1",
+  "additional_specimen_cols": [
+   "extra"
+  ],
+  "list_values_specimen_values": [
+   "drug_usage",
+   "extra",
+   "geo_admin1"
+  ],
+  "list_values_specimen_values_delimiter": ";"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": 5833,
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "drug_usage": [
+     "AL",
+     "DP"
+    ],
+    "geo_admin1": [
+     "R1",
+     "R2"
+    ],
+    "extra": [
+     "x",
+     "y"
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": 5833,
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "drug_usage": [
+     "AL"
+    ],
+    "geo_admin1": [
+     "R3"
+    ],
+    "extra": [
+     ""
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

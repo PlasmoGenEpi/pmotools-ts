@@ -1,0 +1,691 @@
+{
+ "id": "validate/types/v1.0.0/RepresentativeMicrohaplotype",
+ "function": "validate_pmo",
+ "note": "each property of RepresentativeMicrohaplotype (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations/0",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+   "valid",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+   "valid",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+   "valid",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq"
+  ]
+ },
+ "warnings": []
+}

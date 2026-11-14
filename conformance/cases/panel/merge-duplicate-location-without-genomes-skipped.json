@@ -1,0 +1,87 @@
+{
+ "id": "panel/merge-duplicate-location-without-genomes-skipped",
+ "function": "merge_panel_info_dicts",
+ "note": "A repeated target is skipped before the location check, so its location without genomes does not raise.",
+ "divergence": "pmotools-ts also warns panel/conflicting-target-definition, since the second n1 differs from the first.",
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "pN",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "n1",
+      "forward_primer": {
+       "seq": "AA"
+      },
+      "reverse_primer": {
+       "seq": "CC"
+      }
+     }
+    ]
+   },
+   {
+    "panel_info": [],
+    "target_info": [
+     {
+      "target_name": "n1",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      },
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 2
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "pN",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "n1",
+     "forward_primer": {
+      "seq": "AA"
+     },
+     "reverse_primer": {
+      "seq": "CC"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

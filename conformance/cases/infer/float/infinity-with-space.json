@@ -1,0 +1,44 @@
+{
+ "id": "infer/float/infinity-with-space",
+ "function": "read_csv_typed",
+ "note": "Unlike digits, an infinity with surrounding space is not a number.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n inf,r0\n2,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     " inf",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     " inf",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

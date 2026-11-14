@@ -1,0 +1,83 @@
+{
+ "id": "metatable/specimen/duplicate_names_with_plate_and_density",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Duplicate specimen names are kept; each duplicate gets the plate and density of the first row with that name",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "w",
+    "d"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "w": "object",
+    "d": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "A1",
+     1
+    ],
+    [
+     "s1",
+     "B2",
+     2
+    ],
+    [
+     "s2",
+     "C3",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_position_col": "w",
+  "parasite_density_col": "d"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "s1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 1
+     }
+    ],
+    "storage_plate_info": {
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "s1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 1
+     }
+    ],
+    "storage_plate_info": {
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "s2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 3
+     }
+    ],
+    "storage_plate_info": {
+     "plate_row": "C",
+     "plate_col": 3
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,355 @@
+{
+ "id": "validate/types/v1.1.0/ParasiteDensity",
+ "function": "validate_pmo",
+ "note": "each property of ParasiteDensity (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+   "valid",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "valid",
+   "valid",
+   "invalid: minimum at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method"
+  ]
+ },
+ "warnings": []
+}

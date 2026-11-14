@@ -1,0 +1,113 @@
+{
+ "id": "panel/table-locations-all-missing-without-genome",
+ "function": "panel_info_table_to_pmo",
+ "note": "Every insert location is missing, so no location is written and the missing genome is not an error.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "insert_start",
+    "insert_end",
+    "chrom"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "insert_start": "object",
+    "insert_end": "int64",
+    "chrom": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     null,
+     8,
+     "chr1"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     null,
+     18,
+     "chr1"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     null,
+     28,
+     "chr1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "chrom_col": "chrom",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": [
+  {
+   "category": "UserWarning",
+   "message": "Insert location information was not added for the following targets that had empty fields: target1, target2, target3"
+  }
+ ]
+}

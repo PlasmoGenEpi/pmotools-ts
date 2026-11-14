@@ -1,0 +1,176 @@
+{
+ "id": "mhap/code_point_order",
+ "function": "mhap_table_to_pmo",
+ "note": "Text keys sort by code point: 'B' < '_' < 'a' < 'b', 't10' < 'tB'.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "b",
+     "tb",
+     "A",
+     1
+    ],
+    [
+     "B",
+     "tB",
+     "C",
+     2
+    ],
+    [
+     "a",
+     "ta",
+     "G",
+     3
+    ],
+    [
+     "_",
+     "t_",
+     "T",
+     4
+    ],
+    [
+     "b",
+     "t10",
+     "TT",
+     5
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t10",
+      "microhaplotypes": [
+       {
+        "seq": "TT"
+       }
+      ]
+     },
+     {
+      "target_name": "tB",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ]
+     },
+     {
+      "target_name": "t_",
+      "microhaplotypes": [
+       {
+        "seq": "T"
+       }
+      ]
+     },
+     {
+      "target_name": "ta",
+      "microhaplotypes": [
+       {
+        "seq": "G"
+       }
+      ]
+     },
+     {
+      "target_name": "tb",
+      "microhaplotypes": [
+       {
+        "seq": "A"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "B",
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "_",
+       "target_results": [
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 4
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "a",
+       "target_results": [
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "b",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 5
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

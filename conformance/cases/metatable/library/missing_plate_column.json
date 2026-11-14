@@ -1,0 +1,49 @@
+{
+ "id": "metatable/library/missing_plate_column",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "A missing plate column is a pandas KeyError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "library_prep_plate_name_col": "plate"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'plate'"
+ },
+ "warnings": []
+}

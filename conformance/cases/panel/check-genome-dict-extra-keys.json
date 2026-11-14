@@ -1,0 +1,24 @@
+{
+ "id": "panel/check-genome-dict-extra-keys",
+ "function": "check_genome_info",
+ "note": "Extra keys and null values are fine.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833,
+   "chromosomes": [
+    "chr1"
+   ],
+   "gff_url": null
+  }
+ },
+ "result": {
+  "kind": "ok",
+  "value": null
+ },
+ "warnings": []
+}

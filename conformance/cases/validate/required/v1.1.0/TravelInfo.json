@@ -1,0 +1,31 @@
+{
+ "id": "validate/required/v1.1.0/TravelInfo",
+ "function": "validate_pmo",
+ "note": "each required property of TravelInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/specimen_info/0/travel_out_six_month/0/travel_country"
+   },
+   {
+    "remove": "/specimen_info/0/travel_out_six_month/0/travel_start_date"
+   },
+   {
+    "remove": "/specimen_info/0/travel_out_six_month/0/travel_end_date"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /specimen_info/0/travel_out_six_month/0",
+   "invalid: required at /specimen_info/0/travel_out_six_month/0",
+   "invalid: required at /specimen_info/0/travel_out_six_month/0"
+  ]
+ },
+ "warnings": []
+}

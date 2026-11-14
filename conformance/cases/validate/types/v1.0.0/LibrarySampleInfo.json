@@ -1,0 +1,859 @@
+{
+ "id": "validate/types/v1.0.0/LibrarySampleInfo",
+ "function": "validate_pmo",
+ "note": "each property of LibrarySampleInfo (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "valid",
+   "invalid: type at /library_sample_info/0/alternate_identifiers/0",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "invalid: type at /library_sample_info/0/alternate_identifiers",
+   "valid",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "invalid: type at /library_sample_info/0/experiment_accession",
+   "valid",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "invalid: type at /library_sample_info/0/fastqs_loc",
+   "valid",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: pattern at /library_sample_info/0/panel_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /library_sample_info/0/panel_id",
+   "valid",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "valid",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "valid",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info",
+   "valid",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/run_accession",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: pattern at /library_sample_info/0/sequencing_info_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /library_sample_info/0/sequencing_info_id",
+   "valid",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/sequencing_info_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: pattern at /library_sample_info/0/specimen_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /library_sample_info/0/specimen_id",
+   "valid",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id",
+   "invalid: type at /library_sample_info/0/specimen_id"
+  ]
+ },
+ "warnings": []
+}

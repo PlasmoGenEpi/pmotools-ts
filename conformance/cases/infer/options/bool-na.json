@@ -1,0 +1,48 @@
+{
+ "id": "infer/options/bool-na",
+ "function": "read_csv_typed",
+ "note": "A boolean spelling as NA, the rest still becomes bool (with missing).",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nTrue,r0\nFalse,r1\n",
+  "na_values": [
+   "True"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "True",
+     "r0"
+    ],
+    [
+     "False",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     false,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,2623 @@
+{
+ "id": "validate/types/v1.1.0/SpecimenInfo",
+ "function": "validate_pmo",
+ "note": "each property of SpecimenInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/host_subject_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "valid",
+   "invalid: type at /specimen_info/0/alternate_identifiers/0",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "invalid: type at /specimen_info/0/alternate_identifiers",
+   "valid",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "invalid: type at /specimen_info/0/blood_meal",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_country",
+   "valid",
+   "invalid: pattern at /specimen_info/0/collection_date",
+   "invalid: pattern at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "invalid: type at /specimen_info/0/collection_date",
+   "valid",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "valid",
+   "invalid: type at /specimen_info/0/drug_usage/0",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "invalid: type at /specimen_info/0/drug_usage",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "invalid: type at /specimen_info/0/env_broad_scale",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "invalid: type at /specimen_info/0/env_local_scale",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "invalid: type at /specimen_info/0/env_medium",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "invalid: type at /specimen_info/0/geo_admin1",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "invalid: type at /specimen_info/0/geo_admin2",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "invalid: type at /specimen_info/0/geo_admin3",
+   "valid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "invalid: type at /specimen_info/0/gravid",
+   "valid",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: pattern at /specimen_info/0/gravidity",
+   "valid",
+   "valid",
+   "invalid: minimum at /specimen_info/0/gravidity",
+   "valid",
+   "invalid: type at /specimen_info/0/gravidity",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: type at /specimen_info/0/gravidity",
+   "invalid: type at /specimen_info/0/gravidity",
+   "valid",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "invalid: type at /specimen_info/0/has_travel_out_six_month",
+   "valid",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: pattern at /specimen_info/0/host_age",
+   "valid",
+   "valid",
+   "invalid: minimum at /specimen_info/0/host_age",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: type at /specimen_info/0/host_age",
+   "invalid: type at /specimen_info/0/host_age",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "invalid: type at /specimen_info/0/host_sex",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: minimum at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "invalid: type at /specimen_info/0/host_subject_name",
+   "valid",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: pattern at /specimen_info/0/host_taxon_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /specimen_info/0/host_taxon_id",
+   "valid",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "valid",
+   "invalid: pattern at /specimen_info/0/lat_lon",
+   "invalid: pattern at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "invalid: type at /specimen_info/0/lat_lon",
+   "valid",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "valid",
+   "invalid: type at /specimen_info/0/parasite_density_info/0",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "invalid: type at /specimen_info/0/parasite_density_info",
+   "valid",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: pattern at /specimen_info/0/project_id",
+   "valid",
+   "valid",
+   "invalid: minimum at /specimen_info/0/project_id",
+   "valid",
+   "invalid: type at /specimen_info/0/project_id",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: type at /specimen_info/0/project_id",
+   "invalid: type at /specimen_info/0/project_id",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "invalid: type at /specimen_info/0/specimen_accession",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "invalid: type at /specimen_info/0/specimen_collect_device",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_comments/0",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_comments",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "valid",
+   "invalid: pattern at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "invalid: type at /specimen_info/0/specimen_store_loc",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "valid",
+   "valid",
+   "invalid: pattern at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "invalid: type at /specimen_info/0/specimen_type",
+   "valid",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "invalid: anyOf at /specimen_info/0/storage_plate_info",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "invalid: type at /specimen_info/0/travel_out_six_month",
+   "valid",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "valid",
+   "invalid: type at /specimen_info/0/treatment_status/0",
+   "invalid: type at /specimen_info/0/treatment_status",
+   "invalid: type at /specimen_info/0/treatment_status"
+  ]
+ },
+ "warnings": []
+}

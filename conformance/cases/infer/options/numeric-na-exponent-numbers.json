@@ -1,0 +1,56 @@
+{
+ "id": "infer/options/numeric-na-exponent-numbers",
+ "function": "read_csv_typed",
+ "note": "'1e2' as NA matches the number 100.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n100,r0\n1e2,r1\n2,r2\n",
+  "na_values": [
+   "1e2"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "100",
+     "r0"
+    ],
+    [
+     "1e2",
+     "r1"
+    ],
+    [
+     "2",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     2.0,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

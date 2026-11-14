@@ -1,0 +1,143 @@
+{
+ "id": "read_counts/pytest/additional_target_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_additional_target_columns",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "additional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "additional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     "info2"
+    ],
+    [
+     "sample3",
+     1500,
+     "info3"
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count",
+    "quality_score",
+    "coverage_depth"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "stage": "object",
+    "read_count": "int64",
+    "quality_score": "float64",
+    "coverage_depth": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "demultiplexed",
+     100,
+     0.95,
+     50
+    ],
+    [
+     "sample1",
+     "target1",
+     "denoised",
+     80,
+     0.98,
+     40
+    ],
+    [
+     "sample2",
+     "target1",
+     "demultiplexed",
+     200,
+     0.92,
+     100
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run",
+  "additional_target_cols": [
+   "quality_score",
+   "coverage_depth"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 100,
+          "quality_score": 0.95,
+          "coverage_depth": 50
+         },
+         {
+          "stage": "denoised",
+          "reads": 80,
+          "quality_score": 0.98,
+          "coverage_depth": 40
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 200,
+          "quality_score": 0.92,
+          "coverage_depth": 100
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample3",
+      "total_raw_count": 1500
+     }
+    ],
+    "bioinformatics_run_name": "test_run"
+   }
+  ]
+ },
+ "warnings": []
+}

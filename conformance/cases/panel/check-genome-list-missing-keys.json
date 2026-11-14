@@ -1,0 +1,27 @@
+{
+ "id": "panel/check-genome-list-missing-keys",
+ "function": "check_genome_info",
+ "note": "A list element missing keys.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": [
+   {
+    "name": "3D7",
+    "url": "somthing.com",
+    "genome_version": "1",
+    "taxon_id": 5833
+   },
+   {
+    "name": "3D7",
+    "taxon_id": 1
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "genome_info[1] missing required keys: url, genome_version"
+ },
+ "warnings": []
+}

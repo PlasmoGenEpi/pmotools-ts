@@ -1,0 +1,60 @@
+{
+ "id": "read_counts/examples/raw_reads_only",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Only the total-raw-count table: no read_counts_for_targets",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "sample",
+    "raw_count"
+   ],
+   "dtypes": {
+    "sample": "object",
+    "raw_count": "int64"
+   },
+   "rows": [
+    [
+     "SRR26819135",
+     10
+    ],
+    [
+     "SRR26819139",
+     7
+    ],
+    [
+     "SRR26819141",
+     25
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "run1",
+  "library_sample_name_col": "sample",
+  "total_raw_count_col": "raw_count"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "SRR26819135",
+      "total_raw_count": 10
+     },
+     {
+      "library_sample_name": "SRR26819139",
+      "total_raw_count": 7
+     },
+     {
+      "library_sample_name": "SRR26819141",
+      "total_raw_count": 25
+     }
+    ],
+    "bioinformatics_run_name": "run1"
+   }
+  ]
+ },
+ "warnings": []
+}

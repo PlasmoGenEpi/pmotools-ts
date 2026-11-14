@@ -1,0 +1,52 @@
+{
+ "id": "infer/bool/fallback-01",
+ "function": "read_csv_typed",
+ "note": "'yes' is not a boolean, so every cell stays text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nTrue,r0\nFalse,r1\nyes,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "True",
+     "r0"
+    ],
+    [
+     "False",
+     "r1"
+    ],
+    [
+     "yes",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "True",
+     "r0"
+    ],
+    [
+     "False",
+     "r1"
+    ],
+    [
+     "yes",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

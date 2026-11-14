@@ -1,0 +1,44 @@
+{
+ "id": "infer/float/whole-float",
+ "function": "read_csv_typed",
+ "note": "1.0 makes the column float64 even though it is whole.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1.0,r0\n2,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1.0",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     1.0,
+     "r0"
+    ],
+    [
+     2.0,
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

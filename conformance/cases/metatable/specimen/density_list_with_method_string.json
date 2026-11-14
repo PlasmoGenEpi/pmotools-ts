@@ -1,0 +1,53 @@
+{
+ "id": "metatable/specimen/density_list_with_method_string",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Density list with a method string is a TypeError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "density1",
+    "method1",
+    "density2",
+    "method2"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "density1": "int64",
+    "method1": "object",
+    "density2": "int64",
+    "method2": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     15,
+     "qPCR",
+     10,
+     "microscopy"
+    ],
+    [
+     "sample2",
+     107,
+     "qPCR",
+     100,
+     "microscopy"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": [
+   "density1",
+   "density2"
+  ],
+  "parasite_density_method_col": "method1"
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "If parasite_density_col is a list, parasite_density_method_col must be a list or None."
+ },
+ "warnings": []
+}

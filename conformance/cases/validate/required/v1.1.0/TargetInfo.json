@@ -1,0 +1,31 @@
+{
+ "id": "validate/required/v1.1.0/TargetInfo",
+ "function": "validate_pmo",
+ "note": "each required property of TargetInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/target_info/0/target_name"
+   },
+   {
+    "remove": "/target_info/0/forward_primer"
+   },
+   {
+    "remove": "/target_info/0/reverse_primer"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /target_info/0",
+   "invalid: required at /target_info/0",
+   "invalid: required at /target_info/0"
+  ]
+ },
+ "warnings": []
+}

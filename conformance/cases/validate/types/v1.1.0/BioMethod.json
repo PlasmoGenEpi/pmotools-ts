@@ -1,0 +1,439 @@
+{
+ "id": "validate/types/v1.1.0/BioMethod",
+ "function": "validate_pmo",
+ "note": "each property of BioMethod (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/additional_argument",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_description",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_url",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/program_version",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "valid",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument/0",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/additional_argument",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "valid",
+   "invalid: pattern at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program",
+   "valid",
+   "valid",
+   "invalid: pattern at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_description",
+   "valid",
+   "valid",
+   "invalid: pattern at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_url",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "valid",
+   "invalid: pattern at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0/program_version"
+  ]
+ },
+ "warnings": []
+}

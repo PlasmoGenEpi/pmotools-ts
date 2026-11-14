@@ -1,0 +1,100 @@
+{
+ "id": "infer/na/near-misses",
+ "function": "read_csv_typed",
+ "note": "Matching is exact: case and surrounding spaces matter, so these stay text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nnone,r0\nNull,r1\n NA,r2\nNA ,r3\nna,r4\nNAN,r5\nnil,r6\n-,r7\n1,r8\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "none",
+     "r0"
+    ],
+    [
+     "Null",
+     "r1"
+    ],
+    [
+     " NA",
+     "r2"
+    ],
+    [
+     "NA ",
+     "r3"
+    ],
+    [
+     "na",
+     "r4"
+    ],
+    [
+     "NAN",
+     "r5"
+    ],
+    [
+     "nil",
+     "r6"
+    ],
+    [
+     "-",
+     "r7"
+    ],
+    [
+     "1",
+     "r8"
+    ]
+   ],
+   "rows": [
+    [
+     "none",
+     "r0"
+    ],
+    [
+     "Null",
+     "r1"
+    ],
+    [
+     " NA",
+     "r2"
+    ],
+    [
+     "NA ",
+     "r3"
+    ],
+    [
+     "na",
+     "r4"
+    ],
+    [
+     "NAN",
+     "r5"
+    ],
+    [
+     "nil",
+     "r6"
+    ],
+    [
+     "-",
+     "r7"
+    ],
+    [
+     "1",
+     "r8"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

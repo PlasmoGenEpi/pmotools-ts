@@ -1,0 +1,150 @@
+{
+ "id": "metatable/specimen/removes_empty_optional_fields",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_specimen_info_table_to_pmo_removes_empty_optional_fields",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "lat_lon",
+    "host_age",
+    "host_sex",
+    "geo_admin1"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "lat_lon": "object",
+    "host_age": "float64",
+    "host_sex": "object",
+    "geo_admin1": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "",
+     null,
+     "M",
+     null
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "-25.123,31.456",
+     25.0,
+     "",
+     "Province1"
+    ],
+    [
+     "sample3",
+     5833,
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3",
+     null,
+     null,
+     null,
+     ""
+    ],
+    [
+     "sample4",
+     5833,
+     9606,
+     "01/02/2023",
+     "Tanzania",
+     "project4",
+     "-1.234,36.789",
+     30.0,
+     "F",
+     "Province2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "lat_lon_col": "lat_lon",
+  "host_age_col": "host_age",
+  "host_sex_col": "host_sex",
+  "geo_admin1_col": "geo_admin1"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "host_sex": "M"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "geo_admin1": "Province1",
+    "host_age": 25.0,
+    "lat_lon": "-25.123,31.456"
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3"
+   },
+   {
+    "specimen_name": "sample4",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Tanzania",
+    "project_name": "project4",
+    "geo_admin1": "Province2",
+    "host_age": 30.0,
+    "host_sex": "F",
+    "lat_lon": "-1.234,36.789"
+   }
+  ]
+ },
+ "warnings": []
+}

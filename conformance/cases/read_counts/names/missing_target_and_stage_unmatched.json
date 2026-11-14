@@ -1,0 +1,86 @@
+{
+ "id": "read_counts/names/missing_target_and_stage_unmatched",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Missing names on a dropped row do not matter",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10
+    ],
+    [
+     "s2",
+     20
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "stage": "object",
+    "read_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t",
+     "x",
+     1
+    ],
+    [
+     "zz",
+     null,
+     null,
+     2
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "s1",
+      "total_raw_count": 10,
+      "read_counts_for_targets": [
+       {
+        "target_name": "t",
+        "stages": [
+         {
+          "stage": "x",
+          "reads": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "s2",
+      "total_raw_count": 20
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

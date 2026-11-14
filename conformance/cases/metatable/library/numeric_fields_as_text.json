@@ -1,0 +1,93 @@
+{
+ "id": "metatable/library/numeric_fields_as_text",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "A qPCR density from a text column: Python writes the density strings",
+ "divergence": "pmotools-ts throws metatable/invalid-number for parasite_density 'not measured' in row 1. Python writes the strings, which fail its own schema.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "d",
+    "r",
+    "c"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "d": "object",
+    "r": "object",
+    "c": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "150",
+     "A",
+     "3"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "not measured",
+     "B",
+     " 4 "
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "parasite_density_col": "d",
+  "library_prep_plate_row_col": "r",
+  "library_prep_plate_col_col": "c"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "library_prep_plate_info": {
+     "plate_row": "A",
+     "plate_col": 3
+    },
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": "150"
+     }
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "library_prep_plate_info": {
+     "plate_row": "B",
+     "plate_col": 4
+    },
+    "qpcr_parasite_density_info": [
+     {
+      "parasite_density": "not measured"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

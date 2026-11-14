@@ -1,0 +1,52 @@
+{
+ "id": "infer/na/one-bool-among-missing",
+ "function": "read_csv_typed",
+ "note": "One boolean in an otherwise missing column: object holding a bool and missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n,r0\nTRUE,r1\nNA,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "",
+     "r0"
+    ],
+    [
+     "TRUE",
+     "r1"
+    ],
+    [
+     "NA",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     true,
+     "r1"
+    ],
+    [
+     null,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,23 @@
+{
+ "id": "validate/required/v1.1.0/RepresentativeMicrohaplotypes",
+ "function": "validate_pmo",
+ "note": "each required property of RepresentativeMicrohaplotypes removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/representative_microhaplotypes/targets"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /representative_microhaplotypes"
+  ]
+ },
+ "warnings": []
+}

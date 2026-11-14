@@ -1,0 +1,64 @@
+{
+ "id": "infer/options/numeric-na-exponent",
+ "function": "read_csv_typed",
+ "note": "'1e3' as NA also matches the strings '1000' and '1000.0'.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1000,r0\n1000.0,r1\n1e3,r2\nfoo,r3\n",
+  "na_values": [
+   "1e3"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1000",
+     "r0"
+    ],
+    [
+     "1000.0",
+     "r1"
+    ],
+    [
+     "1e3",
+     "r2"
+    ],
+    [
+     "foo",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     null,
+     "r2"
+    ],
+    [
+     "foo",
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

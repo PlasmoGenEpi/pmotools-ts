@@ -1,0 +1,34 @@
+{
+ "id": "validate/null/v1.1.0/PmoHeader",
+ "function": "validate_pmo",
+ "note": "each property of PmoHeader set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/pmo_header/creation_date",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/generation_method",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/pmo_version",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: type at /pmo_header/pmo_version"
+  ]
+ },
+ "warnings": []
+}

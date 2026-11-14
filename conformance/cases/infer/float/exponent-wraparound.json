@@ -1,0 +1,68 @@
+{
+ "id": "infer/float/exponent-wraparound",
+ "function": "read_csv_typed",
+ "note": "pandas accumulates the exponent in a 32-bit int, which wraps.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1e4294967296,r0\n1e4294967295,r1\n1e2147483648,r2\n1e-4294967296,r3\n2,r4\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1e4294967296",
+     "r0"
+    ],
+    [
+     "1e4294967295",
+     "r1"
+    ],
+    [
+     "1e2147483648",
+     "r2"
+    ],
+    [
+     "1e-4294967296",
+     "r3"
+    ],
+    [
+     "2",
+     "r4"
+    ]
+   ],
+   "rows": [
+    [
+     1.0,
+     "r0"
+    ],
+    [
+     0.1,
+     "r1"
+    ],
+    [
+     0.0,
+     "r2"
+    ],
+    [
+     1.0,
+     "r3"
+    ],
+    [
+     2.0,
+     "r4"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

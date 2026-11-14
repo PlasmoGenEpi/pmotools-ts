@@ -1,0 +1,16 @@
+{
+ "id": "validate/files/minimum_pmo_example_2.json.gz__v1.0.0",
+ "function": "validate_pmo",
+ "note": "example file minimum_pmo_example_2.json.gz against schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "file": "minimum_pmo_example_2.json.gz"
+ },
+ "result": {
+  "kind": "ok",
+  "value": "valid"
+ },
+ "warnings": []
+}

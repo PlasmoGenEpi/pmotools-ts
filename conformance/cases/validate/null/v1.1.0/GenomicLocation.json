@@ -1,0 +1,334 @@
+{
+ "id": "validate/null/v1.1.0/GenomicLocation",
+ "function": "validate_pmo",
+ "note": "each property of GenomicLocation set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/strand",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/strand",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/strand",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/strand",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/chrom",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/end",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/start",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/strand",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/end",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/start",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location/strand",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/end",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/start",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/strand",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/chrom",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/end",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/start",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/strand",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/start",
+   "valid",
+   "valid",
+   "invalid: type at /target_info/0/forward_primer/location/chrom",
+   "invalid: type at /target_info/0/forward_primer/location/end",
+   "invalid: type at /target_info/0/forward_primer/location/genome_id",
+   "valid",
+   "invalid: type at /target_info/0/forward_primer/location/start",
+   "valid",
+   "valid",
+   "invalid: type at /target_info/0/insert_location/chrom",
+   "invalid: type at /target_info/0/insert_location/end",
+   "invalid: type at /target_info/0/insert_location/genome_id",
+   "valid",
+   "invalid: type at /target_info/0/insert_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location/chrom",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location/end",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location/genome_id",
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /target_info/0/reverse_primer/location/chrom",
+   "invalid: type at /target_info/0/reverse_primer/location/end",
+   "invalid: type at /target_info/0/reverse_primer/location/genome_id",
+   "valid",
+   "invalid: type at /target_info/0/reverse_primer/location/start",
+   "valid"
+  ]
+ },
+ "warnings": []
+}

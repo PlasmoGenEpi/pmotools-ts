@@ -1,0 +1,103 @@
+{
+ "id": "validate/types/v1.1.0/BioinformaticsMethodInfo",
+ "function": "validate_pmo",
+ "note": "each property of BioinformaticsMethodInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "valid",
+   "invalid: type at /bioinformatics_methods_info/0/methods/0",
+   "invalid: type at /bioinformatics_methods_info/0/methods",
+   "invalid: type at /bioinformatics_methods_info/0/methods"
+  ]
+ },
+ "warnings": []
+}

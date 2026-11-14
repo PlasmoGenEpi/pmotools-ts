@@ -1,0 +1,67 @@
+{
+ "id": "panel/merge-no-genomes",
+ "function": "merge_panel_info_dicts",
+ "note": "No genomes anywhere: no targeted_genomes key.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "pN",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "n1",
+      "forward_primer": {
+       "seq": "AA"
+      },
+      "reverse_primer": {
+       "seq": "CC"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "pN",
+     "reactions": [
+      {
+       "reaction_name": "r",
+       "panel_targets": [
+        0
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "n1",
+     "forward_primer": {
+      "seq": "AA"
+     },
+     "reverse_primer": {
+      "seq": "CC"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,16 @@
+{
+ "id": "panel/check-genome-null",
+ "function": "check_genome_info",
+ "note": "None is neither dict nor list.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": null
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "genome_info must be a dict or list, but got NoneType"
+ },
+ "warnings": []
+}

@@ -1,0 +1,271 @@
+{
+ "id": "validate/types/v1.0.0/PlateInfo",
+ "function": "validate_pmo",
+ "note": "each property of PlateInfo (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_col",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/plate_row",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: anyOf at /library_sample_info/0/library_prep_plate_info",
+   "valid",
+   "valid",
+   "invalid: minimum at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "valid",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_col",
+   "valid",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_name",
+   "valid",
+   "invalid: pattern at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: pattern at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row",
+   "invalid: type at /library_sample_info/0/library_prep_plate_info/plate_row"
+  ]
+ },
+ "warnings": []
+}

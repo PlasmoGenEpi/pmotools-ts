@@ -1,0 +1,51 @@
+{
+ "id": "panel/table-genome-missing-key",
+ "function": "panel_info_table_to_pmo",
+ "note": "A genome dict without url is rejected.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "genome_version": "1",
+   "taxon_id": 1
+  },
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "genome_info[0] missing required keys: url"
+ },
+ "warnings": []
+}

@@ -1,0 +1,43 @@
+{
+ "id": "panel/merge-panel-target-out-of-range",
+ "function": "merge_panel_info_dicts",
+ "note": "A panel target index past the end of target_info raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "p",
+      "reactions": [
+       {
+        "reaction_name": "r",
+        "panel_targets": [
+         3
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "a",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "IndexError",
+  "message": "list index out of range"
+ },
+ "warnings": []
+}

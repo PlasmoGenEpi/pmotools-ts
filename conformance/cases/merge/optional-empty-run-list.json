@@ -1,0 +1,138 @@
+{
+ "id": "merge/optional-empty-run-list",
+ "function": "merge_to_pmo",
+ "note": "The app passes an empty run list when methods exist but no runs were saved; the detected run names then do not resolve.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": "run1"
+    }
+   ]
+  },
+  "bioinfo_method_info": [
+   {
+    "bioinformatics_method_name": "mad4hatter",
+    "methods": [
+     {
+      "program": "mad4hatter",
+      "program_version": "v0.1.8"
+     }
+    ]
+   }
+  ],
+  "bioinfo_run_info": []
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following fields were found in one table and not another:\nBioinformatics run names in Detected Microhaplotypes not in Bioinformatic Run Info: ['run1']\n"
+ },
+ "warnings": []
+}

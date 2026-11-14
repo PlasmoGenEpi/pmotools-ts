@@ -1,0 +1,182 @@
+{
+ "id": "mhap/pseudocigar_full",
+ "function": "mhap_table_to_pmo",
+ "note": "Pseudocigar with its own chrom column, ref_seq, strand, description and genome id; missing pseudocigar is left out.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "cig",
+    "pchrom",
+    "pstart",
+    "pend",
+    "pref",
+    "pstrand",
+    "pdesc"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "cig": "object",
+    "pchrom": "object",
+    "pstart": "int64",
+    "pend": "int64",
+    "pref": "object",
+    "pstrand": "object",
+    "pdesc": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "1M",
+     "p1",
+     1,
+     5,
+     "ACGT",
+     "+",
+     "by hand"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     null,
+     "p2",
+     2,
+     6,
+     null,
+     "-",
+     "tool"
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "3M",
+     "p3",
+     3,
+     7,
+     "TTTT",
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "pseudocigar_col": "cig",
+  "pseudocigar_chrom_col": "pchrom",
+  "pseudocigar_start_col": "pstart",
+  "pseudocigar_end_col": "pend",
+  "pseudocigar_ref_seq_col": "pref",
+  "pseudocigar_strand_col": "pstrand",
+  "pseudocigar_generation_description_col": "pdesc",
+  "pseudocigar_genome_id": 4,
+  "genome_id": 1
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A",
+        "pseudocigar": {
+         "pseudocigar_seq": "1M",
+         "ref_loc": {
+          "genome_id": 4,
+          "chrom": "p1",
+          "start": 1,
+          "end": 5,
+          "ref_seq": "ACGT",
+          "strand": "+"
+         },
+         "pseudocigar_generation_description": "by hand"
+        }
+       },
+       {
+        "seq": "G",
+        "pseudocigar": {
+         "pseudocigar_seq": "3M",
+         "ref_loc": {
+          "genome_id": 4,
+          "chrom": "p3",
+          "start": 3,
+          "end": 7,
+          "ref_seq": "TTTT"
+         }
+        }
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

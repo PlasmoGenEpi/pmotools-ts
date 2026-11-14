@@ -1,0 +1,129 @@
+{
+ "id": "metatable/specimen/storage_plate_row_col_all",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Plate rows are stripped and upper-cased; columns are coerced to int from strings and floats",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "r",
+    "c",
+    "p"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "r": "object",
+    "c": "object",
+    "p": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "a",
+     "3",
+     "PL"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     " b ",
+     4.0,
+     "PL"
+    ],
+    [
+     "sample3",
+     5833,
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3",
+     "c",
+     " 5 ",
+     "PL"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "storage_plate_name_col": "p",
+  "storage_plate_row_col": "r",
+  "storage_plate_col_col": "c"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "storage_plate_info": {
+     "plate_name": "PL",
+     "plate_row": "A",
+     "plate_col": 3
+    }
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "storage_plate_info": {
+     "plate_name": "PL",
+     "plate_row": "B",
+     "plate_col": 4
+    }
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3",
+    "storage_plate_info": {
+     "plate_name": "PL",
+     "plate_row": "C",
+     "plate_col": 5
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

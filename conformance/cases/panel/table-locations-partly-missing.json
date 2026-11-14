@@ -1,0 +1,161 @@
+{
+ "id": "panel/table-locations-partly-missing",
+ "function": "panel_info_table_to_pmo",
+ "note": "The Python test's partly missing locations: one warning per location kind.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "target_start",
+    "target_end",
+    "insert_start",
+    "insert_end",
+    "chrom"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "target_start": "float64",
+    "target_end": "object",
+    "insert_start": "float64",
+    "insert_end": "int64",
+    "chrom": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     1.0,
+     null,
+     2.0,
+     3,
+     "chrom1"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     null,
+     null,
+     null,
+     3,
+     "chrom1"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     1.0,
+     null,
+     null,
+     3,
+     "chrom1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833
+  },
+  "forward_primers_start_col": "target_start",
+  "forward_primers_end_col": "insert_start",
+  "reverse_primers_start_col": "insert_end",
+  "reverse_primers_end_col": "target_end",
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "chrom_col": "chrom",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chrom1",
+      "start": 2,
+      "end": 3
+     },
+     "forward_primer": {
+      "seq": "CTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chrom1",
+       "start": 1,
+       "end": 2
+      }
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": [
+  {
+   "category": "UserWarning",
+   "message": "Insert location information was not added for the following targets that had empty fields: target2, target3"
+  },
+  {
+   "category": "UserWarning",
+   "message": "Forward primer location information was not added for the following targets that had empty fields: target2, target3"
+  },
+  {
+   "category": "UserWarning",
+   "message": "Reverse primer location information was not added for the following targets that had empty fields: target1, target2, target3"
+  }
+ ]
+}

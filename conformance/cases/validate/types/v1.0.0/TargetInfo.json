@@ -1,0 +1,607 @@
+{
+ "id": "validate/types/v1.0.0/TargetInfo",
+ "function": "validate_pmo",
+ "note": "each property of TargetInfo (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/forward_primer",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/gene_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/insert_location",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/markers_of_interest",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/reverse_primer",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/target_attributes",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/target_name",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: type at /target_info/0/forward_primer",
+   "invalid: required at /target_info/0/forward_primer",
+   "invalid: required at /target_info/0/forward_primer",
+   "valid",
+   "valid",
+   "invalid: pattern at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "invalid: type at /target_info/0/gene_name",
+   "valid",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "invalid: anyOf at /target_info/0/insert_location",
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/markers_of_interest",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: type at /target_info/0/reverse_primer",
+   "invalid: required at /target_info/0/reverse_primer",
+   "invalid: required at /target_info/0/reverse_primer",
+   "valid",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "valid",
+   "invalid: type at /target_info/0/target_attributes/0",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_attributes",
+   "invalid: type at /target_info/0/target_name",
+   "valid",
+   "invalid: pattern at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name",
+   "invalid: type at /target_info/0/target_name"
+  ]
+ },
+ "warnings": []
+}

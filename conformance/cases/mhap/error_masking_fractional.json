@@ -1,0 +1,68 @@
+{
+ "id": "mhap/error_masking_fractional",
+ "function": "mhap_table_to_pmo",
+ "note": "A fractional masking value raises.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "ms",
+    "mz",
+    "mr"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "ms": "float64",
+    "mz": "int64",
+    "mr": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     5.5,
+     1,
+     1
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     5.5,
+     1,
+     1
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     7.5,
+     1,
+     1
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "masking_seq_start_col": "ms",
+  "masking_seq_segment_size_col": "mz",
+  "masking_replacement_size_col": "mr"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "invalid literal for int() with base 10: '5.5'"
+ },
+ "warnings": []
+}

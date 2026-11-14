@@ -1,0 +1,24 @@
+{
+ "id": "panel/check-genome-list-non-dict",
+ "function": "check_genome_info",
+ "note": "A list element that is not a dict.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": [
+   {
+    "name": "3D7",
+    "url": "somthing.com",
+    "genome_version": "1",
+    "taxon_id": 5833
+   },
+   "not_a_dict"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "genome_info[1] must be a dict, but got str"
+ },
+ "warnings": []
+}

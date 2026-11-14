@@ -1,0 +1,34 @@
+{
+ "id": "validate/null/v1.1.0/Pseudocigar",
+ "function": "validate_pmo",
+ "note": "each property of Pseudocigar set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_generation_description",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/pseudocigar_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc"
+  ]
+ },
+ "warnings": []
+}

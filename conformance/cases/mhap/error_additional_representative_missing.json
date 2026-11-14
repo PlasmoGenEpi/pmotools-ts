@@ -1,0 +1,53 @@
+{
+ "id": "mhap/error_additional_representative_missing",
+ "function": "mhap_table_to_pmo",
+ "note": "Missing representative extra column raises ValueError.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_representative_mhap_cols": [
+   "nope"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing additional columns: {'nope'}"
+ },
+ "warnings": []
+}

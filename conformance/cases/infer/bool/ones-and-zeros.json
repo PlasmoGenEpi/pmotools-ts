@@ -1,0 +1,52 @@
+{
+ "id": "infer/bool/ones-and-zeros",
+ "function": "read_csv_typed",
+ "note": "1 and 0 are ints, not booleans.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1,r0\n0,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1",
+     "r0"
+    ],
+    [
+     "0",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "r0"
+    ],
+    [
+     0,
+     "r1"
+    ],
+    [
+     1,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

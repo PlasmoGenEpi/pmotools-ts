@@ -1,0 +1,45 @@
+{
+ "id": "infer/example/example_contributors_txt",
+ "function": "read_example_table",
+ "note": "conformance/data/tables/example_contributors.txt read the way the app reads it.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "file": "example_contributors.txt"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "ma",
+    "Unnamed: 1"
+   ],
+   "dtypes": {
+    "ma": "object",
+    "Unnamed: 1": "float64"
+   },
+   "row_count": 2,
+   "raw": [
+    [
+     "nick",
+     null
+    ],
+    [
+     "kathryn",
+     null
+    ]
+   ],
+   "rows": [
+    [
+     "nick",
+     null
+    ],
+    [
+     "kathryn",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,43 @@
+{
+ "id": "validate/required/v1.0.0/SpecimenInfo",
+ "function": "validate_pmo",
+ "note": "each required property of SpecimenInfo removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/specimen_info/0/specimen_name"
+   },
+   {
+    "remove": "/specimen_info/0/specimen_taxon_id"
+   },
+   {
+    "remove": "/specimen_info/0/host_taxon_id"
+   },
+   {
+    "remove": "/specimen_info/0/collection_date"
+   },
+   {
+    "remove": "/specimen_info/0/collection_country"
+   },
+   {
+    "remove": "/specimen_info/0/project_id"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /specimen_info/0",
+   "invalid: required at /specimen_info/0",
+   "invalid: required at /specimen_info/0",
+   "invalid: required at /specimen_info/0",
+   "invalid: required at /specimen_info/0",
+   "invalid: required at /specimen_info/0"
+  ]
+ },
+ "warnings": []
+}

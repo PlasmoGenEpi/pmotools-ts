@@ -1,0 +1,60 @@
+{
+ "id": "metatable/specimen/density_method_nan",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A missing method that is NaN rather than None is written as NaN",
+ "divergence": "pmotools-ts omits parasite_density_method when the method is missing. Python writes parasite_density_method: NaN, which is not valid JSON.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d",
+    "m"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "int64",
+    "m": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     10,
+     "qPCR"
+    ],
+    [
+     "sample2",
+     20,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d",
+  "parasite_density_method_col": "m"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 10,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 20,
+      "parasite_density_method": "__NaN__"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

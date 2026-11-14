@@ -1,0 +1,430 @@
+{
+ "id": "panel/merge-builder-output",
+ "function": "merge_panel_info_dicts",
+ "note": "Two panels built by panel_info_table_to_pmo with different genome lists, as the app merges saved panels.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [
+     {
+      "panel_name": "panelA",
+      "reactions": [
+       {
+        "reaction_name": "full",
+        "panel_targets": [
+         0,
+         1,
+         2
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "target1",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 4,
+       "end": 8
+      },
+      "forward_primer": {
+       "seq": "CTT",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "start": 1,
+        "end": 4
+       }
+      },
+      "reverse_primer": {
+       "seq": "GTT",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "end": 11,
+        "start": 8
+       }
+      }
+     },
+     {
+      "target_name": "target2",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 14,
+       "end": 18
+      },
+      "forward_primer": {
+       "seq": "CTA",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "start": 11,
+        "end": 14
+       }
+      },
+      "reverse_primer": {
+       "seq": "TGG",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "end": 21,
+        "start": 18
+       }
+      }
+     },
+     {
+      "target_name": "target3",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 24,
+       "end": 28
+      },
+      "forward_primer": {
+       "seq": "TTG",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "start": 21,
+        "end": 24
+       }
+      },
+      "reverse_primer": {
+       "seq": "ATT",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "end": 31,
+        "start": 28
+       }
+      }
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     }
+    ]
+   },
+   {
+    "panel_info": [
+     {
+      "panel_name": "panelB",
+      "reactions": [
+       {
+        "reaction_name": "r1",
+        "panel_targets": [
+         0,
+         2
+        ]
+       },
+       {
+        "reaction_name": "r2",
+        "panel_targets": [
+         1,
+         2
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "target3",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 24,
+       "end": 28
+      },
+      "forward_primer": {
+       "seq": "TTG",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "start": 21,
+        "end": 24
+       }
+      },
+      "reverse_primer": {
+       "seq": "ATT",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "end": 31,
+        "start": 28
+       }
+      }
+     },
+     {
+      "target_name": "target4",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 14,
+       "end": 18
+      },
+      "forward_primer": {
+       "seq": "GGG",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "start": 11,
+        "end": 14
+       }
+      },
+      "reverse_primer": {
+       "seq": "AAA",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "end": 21,
+        "start": 18
+       }
+      }
+     },
+     {
+      "target_name": "target5",
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 24,
+       "end": 28
+      },
+      "forward_primer": {
+       "seq": "CCC",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "start": 21,
+        "end": 24
+       }
+      },
+      "reverse_primer": {
+       "seq": "TTT",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr2",
+        "end": 31,
+        "start": 28
+       }
+      }
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "3D7",
+      "url": "somthing.com",
+      "genome_version": "1",
+      "taxon_id": 5833
+     },
+     {
+      "name": "DD2",
+      "url": "somthingelse.com",
+      "genome_version": "2",
+      "taxon_id": 5833
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "panelA",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "panel_name": "panelB",
+     "reactions": [
+      {
+       "reaction_name": "r1",
+       "panel_targets": [
+        2,
+        4
+       ]
+      },
+      {
+       "reaction_name": "r2",
+       "panel_targets": [
+        3,
+        4
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 4,
+      "end": 8
+     },
+     "forward_primer": {
+      "seq": "CTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 4
+      }
+     },
+     "reverse_primer": {
+      "seq": "GTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 11,
+       "start": 8
+      }
+     }
+    },
+    {
+     "target_name": "target2",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 14,
+      "end": 18
+     },
+     "forward_primer": {
+      "seq": "CTA",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 11,
+       "end": 14
+      }
+     },
+     "reverse_primer": {
+      "seq": "TGG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 21,
+       "start": 18
+      }
+     }
+    },
+    {
+     "target_name": "target3",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr2",
+      "start": 24,
+      "end": 28
+     },
+     "forward_primer": {
+      "seq": "TTG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 21,
+       "end": 24
+      }
+     },
+     "reverse_primer": {
+      "seq": "ATT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "end": 31,
+       "start": 28
+      }
+     }
+    },
+    {
+     "target_name": "target4",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 14,
+      "end": 18
+     },
+     "forward_primer": {
+      "seq": "GGG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 11,
+       "end": 14
+      }
+     },
+     "reverse_primer": {
+      "seq": "AAA",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 21,
+       "start": 18
+      }
+     }
+    },
+    {
+     "target_name": "target5",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr2",
+      "start": 24,
+      "end": 28
+     },
+     "forward_primer": {
+      "seq": "CCC",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 21,
+       "end": 24
+      }
+     },
+     "reverse_primer": {
+      "seq": "TTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "end": 31,
+       "start": 28
+      }
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    },
+    {
+     "name": "DD2",
+     "url": "somthingelse.com",
+     "genome_version": "2",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

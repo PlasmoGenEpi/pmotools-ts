@@ -1,0 +1,63 @@
+{
+ "id": "metatable/library/density_errors_unequal",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Unequal density and method lists",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "d1",
+    "m1"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "d1": "int64",
+    "m1": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     1,
+     "a"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     2,
+     "b"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "parasite_density_col": [
+   "d1"
+  ],
+  "parasite_density_method_col": [
+   "m1",
+   "m1"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "If both parasite_density_col and parasite_density_method_col are lists, they must be the same length."
+ },
+ "warnings": []
+}

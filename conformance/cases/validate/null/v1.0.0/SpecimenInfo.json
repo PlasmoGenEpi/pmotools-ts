@@ -1,0 +1,174 @@
+{
+ "id": "validate/null/v1.0.0/SpecimenInfo",
+ "function": "validate_pmo",
+ "note": "each property of SpecimenInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/specimen_info/0/alternate_identifiers",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/blood_meal",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/collection_country",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/collection_date",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/drug_usage",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_broad_scale",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_local_scale",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/env_medium",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin1",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin2",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/geo_admin3",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/gravid",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/gravidity",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/has_travel_out_six_month",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_age",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_sex",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_subject_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/host_taxon_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/lat_lon",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/project_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_accession",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_collect_device",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_comments",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_name",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_store_loc",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_taxon_id",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/specimen_type",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/treatment_status",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/collection_country",
+   "invalid: type at /specimen_info/0/collection_date",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/host_taxon_id",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/project_id",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_name",
+   "valid",
+   "invalid: type at /specimen_info/0/specimen_taxon_id",
+   "valid",
+   "valid",
+   "valid",
+   "valid"
+  ]
+ },
+ "warnings": []
+}

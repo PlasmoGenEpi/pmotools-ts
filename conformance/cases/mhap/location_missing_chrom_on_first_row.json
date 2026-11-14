@@ -1,0 +1,146 @@
+{
+ "id": "mhap/location_missing_chrom_on_first_row",
+ "function": "mhap_table_to_pmo",
+ "note": "No mhap_location when the target's first row has no chrom; missing ref_seq is left out.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "chrom",
+    "start",
+    "end",
+    "ref"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "chrom": "object",
+    "start": "int64",
+    "end": "int64",
+    "ref": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     null,
+     10,
+     11,
+     "AC"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     "c2",
+     20,
+     21,
+     null
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "c1",
+     30,
+     31,
+     "AG"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "chrom_col": "chrom",
+  "start_col": "start",
+  "end_col": "end",
+  "ref_seq_col": "ref"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A"
+       },
+       {
+        "seq": "G"
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ],
+      "mhap_location": {
+       "genome_id": 0,
+       "chrom": "c2",
+       "start": 20,
+       "end": 21
+      }
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

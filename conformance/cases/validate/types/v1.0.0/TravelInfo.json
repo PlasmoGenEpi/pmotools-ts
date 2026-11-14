@@ -1,0 +1,691 @@
+{
+ "id": "validate/types/v1.0.0/TravelInfo",
+ "function": "validate_pmo",
+ "note": "each property of TravelInfo (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": true
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": false
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": []
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "valid",
+   "valid",
+   "invalid: minimum at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/bed_net_usage",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin1",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin2",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/geo_admin3",
+   "valid",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/lat_lon",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "valid",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: pattern at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date"
+  ]
+ },
+ "warnings": []
+}

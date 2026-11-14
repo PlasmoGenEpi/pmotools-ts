@@ -1,0 +1,59 @@
+{
+ "id": "metatable/specimen/density_method_none",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A missing method that is None is omitted",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d",
+    "m"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "int64",
+    "m": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     10,
+     "qPCR"
+    ],
+    [
+     "sample2",
+     20,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d",
+  "parasite_density_method_col": "m"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 10,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 20
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

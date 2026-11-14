@@ -1,0 +1,58 @@
+{
+ "id": "metatable/specimen/plate_row_col_blank_cells",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_plate_info_row_col_skips_blank_cells",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "plate_row",
+    "plate_col",
+    "plate_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "plate_row": "object",
+    "plate_col": "float64",
+    "plate_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A",
+     1.0,
+     "Plate1"
+    ],
+    [
+     "sample2",
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_name_col": "plate_name",
+  "storage_plate_row_col": "plate_row",
+  "storage_plate_col_col": "plate_col"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "storage_plate_info": {
+     "plate_name": "Plate1",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "sample2"
+   }
+  ]
+ },
+ "warnings": []
+}

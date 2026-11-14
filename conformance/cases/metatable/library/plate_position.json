@@ -1,0 +1,97 @@
+{
+ "id": "metatable/library/plate_position",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Library prep plate from a position column, with a blank position",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "well",
+    "plate"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "well": "object",
+    "plate": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "a01",
+     "P"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     null,
+     "P"
+    ],
+    [
+     "sample3_MH_run1",
+     "run1",
+     "sample3",
+     "MH",
+     "H12",
+     "P"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "library_prep_plate_name_col": "plate",
+  "library_prep_plate_position_col": "well"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "library_prep_plate_info": {
+     "plate_name": "P",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "library_prep_plate_info": {
+     "plate_name": "P"
+    }
+   },
+   {
+    "library_sample_name": "sample3_MH_run1",
+    "specimen_name": "sample3",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "library_prep_plate_info": {
+     "plate_name": "P",
+     "plate_row": "H",
+     "plate_col": 12
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

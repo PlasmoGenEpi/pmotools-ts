@@ -1,0 +1,20 @@
+{
+ "id": "panel/check-genome-dict",
+ "function": "check_genome_info",
+ "note": "A complete genome dict passes.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833
+  }
+ },
+ "result": {
+  "kind": "ok",
+  "value": null
+ },
+ "warnings": []
+}

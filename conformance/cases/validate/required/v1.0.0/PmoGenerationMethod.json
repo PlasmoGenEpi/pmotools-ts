@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.0.0/PmoGenerationMethod",
+ "function": "validate_pmo",
+ "note": "each required property of PmoGenerationMethod removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/pmo_header/generation_method/program_version"
+   },
+   {
+    "remove": "/pmo_header/generation_method/program_name"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /pmo_header/generation_method",
+   "invalid: required at /pmo_header/generation_method"
+  ]
+ },
+ "warnings": []
+}

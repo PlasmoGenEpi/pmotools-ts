@@ -1,0 +1,22 @@
+{
+ "id": "metatable/specimen/not_a_table",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_specimen_info_table_to_pmo_fails_without_df",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "contents": "test",
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "contents must be a pandas DataFrame."
+ },
+ "warnings": []
+}

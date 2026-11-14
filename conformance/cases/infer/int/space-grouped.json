@@ -1,0 +1,44 @@
+{
+ "id": "infer/int/space-grouped",
+ "function": "read_csv_typed",
+ "note": "Space-grouped digits are not a number.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1 000,r0\n2,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1 000",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     "1 000",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

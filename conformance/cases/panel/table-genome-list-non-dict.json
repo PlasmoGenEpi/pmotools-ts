@@ -1,0 +1,55 @@
+{
+ "id": "panel/table-genome-list-non-dict",
+ "function": "panel_info_table_to_pmo",
+ "note": "A non-dict genome in the list is rejected.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": [
+   {
+    "name": "3D7",
+    "url": "somthing.com",
+    "genome_version": "1",
+    "taxon_id": 5833
+   },
+   "not_a_dict"
+  ],
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "TypeError",
+  "message": "genome_info[1] must be a dict, but got str"
+ },
+ "warnings": []
+}

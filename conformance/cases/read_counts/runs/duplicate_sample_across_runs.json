@@ -1,0 +1,77 @@
+{
+ "id": "read_counts/runs/duplicate_sample_across_runs",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Duplicate names are checked per run, so one sample may appear in several runs",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "bioinformatics_run_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "bioinformatics_run_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "run1"
+    ],
+    [
+     "sample2",
+     2000,
+     "run1"
+    ],
+    [
+     "sample1",
+     1500,
+     "run2"
+    ],
+    [
+     "sample2",
+     2500,
+     "run2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "bioinformatics_run_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000
+     }
+    ],
+    "bioinformatics_run_name": "run1"
+   },
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1500
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2500
+     }
+    ],
+    "bioinformatics_run_name": "run2"
+   }
+  ]
+ },
+ "warnings": []
+}

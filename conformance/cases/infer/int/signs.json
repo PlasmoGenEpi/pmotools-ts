@@ -1,0 +1,60 @@
+{
+ "id": "infer/int/signs",
+ "function": "read_csv_typed",
+ "note": "Signs are accepted; -0 is 0 in int64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n+5,r0\n-5,r1\n-0,r2\n+0,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "+5",
+     "r0"
+    ],
+    [
+     "-5",
+     "r1"
+    ],
+    [
+     "-0",
+     "r2"
+    ],
+    [
+     "+0",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     5,
+     "r0"
+    ],
+    [
+     -5,
+     "r1"
+    ],
+    [
+     0,
+     "r2"
+    ],
+    [
+     0,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

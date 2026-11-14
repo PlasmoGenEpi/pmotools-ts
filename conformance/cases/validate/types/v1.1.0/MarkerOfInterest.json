@@ -1,0 +1,187 @@
+{
+ "id": "validate/types/v1.1.0/MarkerOfInterest",
+ "function": "validate_pmo",
+ "note": "each property of MarkerOfInterest (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": "1"
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": ""
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": -1
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": true
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": false
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": []
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": {}
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations/0",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/associations",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: required at /target_info/0/markers_of_interest/0/marker_location",
+   "invalid: required at /target_info/0/markers_of_interest/0/marker_location"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,62 @@
+{
+ "id": "read_counts/empty/reads_with_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": null,
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10
+    ],
+    [
+     "s2",
+     20
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "float64",
+    "target_name": "float64",
+    "stage": "float64",
+    "read_count": "float64"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "s1",
+      "total_raw_count": 10
+     },
+     {
+      "library_sample_name": "s2",
+      "total_raw_count": 20
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

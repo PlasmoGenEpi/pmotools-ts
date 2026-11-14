@@ -1,0 +1,74 @@
+{
+ "id": "metatable/specimen/density_list_without_methods",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Density list and no methods: entries have no parasite_density_method",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "density1",
+    "method1",
+    "density2",
+    "method2"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "density1": "int64",
+    "method1": "object",
+    "density2": "int64",
+    "method2": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     15,
+     "qPCR",
+     10,
+     "microscopy"
+    ],
+    [
+     "sample2",
+     107,
+     "qPCR",
+     100,
+     "microscopy"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": [
+   "density1",
+   "density2"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 15
+     },
+     {
+      "parasite_density": 10
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 107
+     },
+     {
+      "parasite_density": 100
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,400 @@
+{
+ "id": "metatable/specimen/all_columns",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Every specimen option set, each from a non-default column name, plus two additional columns. specimen_taxon_id from a string column gives string elements.",
+ "divergence": "pmotools-ts writes specimen_taxon_id as integers ([5833], [5833, 5855], [5833]). Python writes strings, which fail its own schema.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "name",
+    "taxon",
+    "host_taxon",
+    "date",
+    "country",
+    "project",
+    "alt_ids",
+    "blood_meal",
+    "drugs",
+    "env_broad",
+    "env_local",
+    "env_medium",
+    "admin1",
+    "admin2",
+    "admin3",
+    "gravid",
+    "gravidity",
+    "travelled",
+    "age",
+    "sex",
+    "subject",
+    "latlon",
+    "density",
+    "density_method",
+    "accession",
+    "plate",
+    "well",
+    "device",
+    "comments",
+    "store",
+    "type",
+    "treatment",
+    "extra_number",
+    "extra_text"
+   ],
+   "dtypes": {
+    "name": "object",
+    "taxon": "object",
+    "host_taxon": "int64",
+    "date": "object",
+    "country": "object",
+    "project": "object",
+    "alt_ids": "object",
+    "blood_meal": "bool",
+    "drugs": "object",
+    "env_broad": "object",
+    "env_local": "object",
+    "env_medium": "object",
+    "admin1": "object",
+    "admin2": "object",
+    "admin3": "object",
+    "gravid": "bool",
+    "gravidity": "int64",
+    "travelled": "bool",
+    "age": "float64",
+    "sex": "object",
+    "subject": "object",
+    "latlon": "object",
+    "density": "float64",
+    "density_method": "object",
+    "accession": "object",
+    "plate": "object",
+    "well": "object",
+    "device": "object",
+    "comments": "object",
+    "store": "object",
+    "type": "object",
+    "treatment": "object",
+    "extra_number": "float64",
+    "extra_text": "object"
+   },
+   "rows": [
+    [
+     "S1",
+     "5833",
+     9606,
+     "2023-01-02",
+     "Ghana",
+     "P1",
+     "a1,a2",
+     true,
+     "AL",
+     "lowlands",
+     "rural",
+     "blood",
+     "R1",
+     "D1",
+     "C1",
+     false,
+     0,
+     false,
+     3.5,
+     "F",
+     "H1",
+     "5.6,-0.2",
+     1200.5,
+     "qPCR",
+     "SAMN1",
+     "PL1",
+     "A01",
+     "DBS",
+     "ok",
+     "UCSF",
+     "field_sample",
+     "cured",
+     1.5,
+     "x"
+    ],
+    [
+     "S2",
+     "5833,5855",
+     9606,
+     "2023-01",
+     "Kenya",
+     "P1",
+     "b1",
+     false,
+     "AL,DP",
+     "highlands",
+     "urban",
+     "blood",
+     "R2",
+     "D2",
+     "C2",
+     true,
+     2,
+     false,
+     40.0,
+     "M",
+     "H2",
+     "-1.3,36.8",
+     30.0,
+     "microscopy",
+     "SAMN2",
+     "PL1",
+     "b12",
+     "whole blood",
+     "re-run,low volume",
+     "UCSF",
+     "positive_control",
+     "failed,reinfected",
+     2.0,
+     "y"
+    ],
+    [
+     "S3",
+     "5833",
+     9606,
+     "2023",
+     "Mali",
+     "P2",
+     "c1",
+     true,
+     "none",
+     "lowlands",
+     "rural",
+     "blood",
+     "R3",
+     "D3",
+     "C3",
+     false,
+     1,
+     true,
+     0.25,
+     "F",
+     "H3",
+     "12.6,-8.0",
+     0.0,
+     "qPCR",
+     "SAMN3",
+     "PL2",
+     "H7",
+     "DBS",
+     "ok",
+     "MRC",
+     "field_sample",
+     "cured",
+     3.0,
+     "z"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "name",
+  "specimen_taxon_id_col": "taxon",
+  "host_taxon_id_col": "host_taxon",
+  "collection_date_col": "date",
+  "collection_country_col": "country",
+  "project_name_col": "project",
+  "alternate_identifiers_col": "alt_ids",
+  "blood_meal_col": "blood_meal",
+  "drug_usage_col": "drugs",
+  "env_broad_scale_col": "env_broad",
+  "env_local_scale_col": "env_local",
+  "env_medium_col": "env_medium",
+  "geo_admin1_col": "admin1",
+  "geo_admin2_col": "admin2",
+  "geo_admin3_col": "admin3",
+  "gravid_col": "gravid",
+  "gravidity_col": "gravidity",
+  "has_travel_out_six_month_col": "travelled",
+  "host_age_col": "age",
+  "host_sex_col": "sex",
+  "host_subject_name_col": "subject",
+  "lat_lon_col": "latlon",
+  "parasite_density_col": "density",
+  "parasite_density_method_col": "density_method",
+  "specimen_accession_col": "accession",
+  "storage_plate_name_col": "plate",
+  "storage_plate_position_col": "well",
+  "specimen_collect_device_col": "device",
+  "specimen_comments_col": "comments",
+  "specimen_store_loc_col": "store",
+  "specimen_type_col": "type",
+  "treatment_status_col": "treatment",
+  "additional_specimen_cols": [
+   "extra_number",
+   "extra_text"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "S1",
+    "specimen_taxon_id": [
+     "5833"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023-01-02",
+    "collection_country": "Ghana",
+    "project_name": "P1",
+    "alternate_identifiers": [
+     "a1",
+     "a2"
+    ],
+    "drug_usage": [
+     "AL"
+    ],
+    "blood_meal": true,
+    "gravid": false,
+    "gravidity": 0,
+    "has_travel_out_six_month": false,
+    "env_broad_scale": "lowlands",
+    "env_local_scale": "rural",
+    "env_medium": "blood",
+    "geo_admin1": "R1",
+    "geo_admin2": "D1",
+    "geo_admin3": "C1",
+    "host_age": 3.5,
+    "host_sex": "F",
+    "host_subject_name": "H1",
+    "lat_lon": "5.6,-0.2",
+    "specimen_accession": "SAMN1",
+    "specimen_type": "field_sample",
+    "treatment_status": [
+     "cured"
+    ],
+    "specimen_collect_device": "DBS",
+    "specimen_comments": [
+     "ok"
+    ],
+    "specimen_store_loc": "UCSF",
+    "extra_number": 1.5,
+    "extra_text": "x",
+    "parasite_density_info": [
+     {
+      "parasite_density": 1200.5,
+      "parasite_density_method": "qPCR"
+     }
+    ],
+    "storage_plate_info": {
+     "plate_name": "PL1",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "S2",
+    "specimen_taxon_id": [
+     "5833",
+     "5855"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023-01",
+    "collection_country": "Kenya",
+    "project_name": "P1",
+    "alternate_identifiers": [
+     "b1"
+    ],
+    "drug_usage": [
+     "AL",
+     "DP"
+    ],
+    "blood_meal": false,
+    "gravid": true,
+    "gravidity": 2,
+    "has_travel_out_six_month": false,
+    "env_broad_scale": "highlands",
+    "env_local_scale": "urban",
+    "env_medium": "blood",
+    "geo_admin1": "R2",
+    "geo_admin2": "D2",
+    "geo_admin3": "C2",
+    "host_age": 40.0,
+    "host_sex": "M",
+    "host_subject_name": "H2",
+    "lat_lon": "-1.3,36.8",
+    "specimen_accession": "SAMN2",
+    "specimen_type": "positive_control",
+    "treatment_status": [
+     "failed",
+     "reinfected"
+    ],
+    "specimen_collect_device": "whole blood",
+    "specimen_comments": [
+     "re-run",
+     "low volume"
+    ],
+    "specimen_store_loc": "UCSF",
+    "extra_number": 2.0,
+    "extra_text": "y",
+    "parasite_density_info": [
+     {
+      "parasite_density": 30.0,
+      "parasite_density_method": "microscopy"
+     }
+    ],
+    "storage_plate_info": {
+     "plate_name": "PL1",
+     "plate_row": "B",
+     "plate_col": 12
+    }
+   },
+   {
+    "specimen_name": "S3",
+    "specimen_taxon_id": [
+     "5833"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023",
+    "collection_country": "Mali",
+    "project_name": "P2",
+    "alternate_identifiers": [
+     "c1"
+    ],
+    "drug_usage": [
+     "none"
+    ],
+    "blood_meal": true,
+    "gravid": false,
+    "gravidity": 1,
+    "has_travel_out_six_month": true,
+    "env_broad_scale": "lowlands",
+    "env_local_scale": "rural",
+    "env_medium": "blood",
+    "geo_admin1": "R3",
+    "geo_admin2": "D3",
+    "geo_admin3": "C3",
+    "host_age": 0.25,
+    "host_sex": "F",
+    "host_subject_name": "H3",
+    "lat_lon": "12.6,-8.0",
+    "specimen_accession": "SAMN3",
+    "specimen_type": "field_sample",
+    "treatment_status": [
+     "cured"
+    ],
+    "specimen_collect_device": "DBS",
+    "specimen_comments": [
+     "ok"
+    ],
+    "specimen_store_loc": "MRC",
+    "extra_number": 3.0,
+    "extra_text": "z",
+    "parasite_density_info": [
+     {
+      "parasite_density": 0.0,
+      "parasite_density_method": "qPCR"
+     }
+    ],
+    "storage_plate_info": {
+     "plate_name": "PL2",
+     "plate_row": "H",
+     "plate_col": 7
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

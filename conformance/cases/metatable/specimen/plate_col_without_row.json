@@ -1,0 +1,49 @@
+{
+ "id": "metatable/specimen/plate_col_without_row",
+ "function": "specimen_info_table_to_pmo",
+ "note": "The mirror of test_add_plate_info_fails_with_row_and_without_col",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "plate_position",
+    "plate_row",
+    "plate_col",
+    "plate_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "plate_position": "object",
+    "plate_row": "object",
+    "plate_col": "int64",
+    "plate_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A01",
+     "A",
+     1,
+     "Plate1"
+    ],
+    [
+     "sample2",
+     "H19",
+     "h",
+     10,
+     "Plate1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_col_col": "plate_col"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "If either plate row or column is set, then both must be."
+ },
+ "warnings": []
+}

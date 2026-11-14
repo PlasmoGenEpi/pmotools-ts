@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/uint64-with-negative",
+ "function": "read_csv_typed",
+ "note": "uint64 with a negative int: left as the original strings.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775808,r0\n-1,r1\n2,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "-1",
+     "r1"
+    ],
+    [
+     "2",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "-1",
+     "r1"
+    ],
+    [
+     "2",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

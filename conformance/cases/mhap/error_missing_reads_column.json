@@ -1,0 +1,46 @@
+{
+ "id": "mhap/error_missing_reads_column",
+ "function": "mhap_table_to_pmo",
+ "note": "reads_col not in the table.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A"
+    ],
+    [
+     "s1",
+     "t2",
+     "C"
+    ],
+    [
+     "s2",
+     "t1",
+     "G"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reads_col": "Reads"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'reads'"
+ },
+ "warnings": []
+}

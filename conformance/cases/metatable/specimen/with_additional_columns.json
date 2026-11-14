@@ -1,0 +1,94 @@
+{
+ "id": "metatable/specimen/with_additional_columns",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_specimen_info_table_to_pmo_with_additional_columns",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "special_field_1",
+    "special_field_2"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "special_field_1": "object",
+    "special_field_2": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "something",
+     "this"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "something_else",
+     "that"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "additional_specimen_cols": [
+   "special_field_1",
+   "special_field_2"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "special_field_1": "something",
+    "special_field_2": "this"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "special_field_1": "something_else",
+    "special_field_2": "that"
+   }
+  ]
+ },
+ "warnings": []
+}

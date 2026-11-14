@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.0.0/ReadCountsByStage",
+ "function": "validate_pmo",
+ "note": "each property of ReadCountsByStage set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/read_counts_by_stage/0/bioinformatics_run_id",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /read_counts_by_stage/0/bioinformatics_run_id",
+   "invalid: type at /read_counts_by_stage/0/read_counts_by_library_sample_by_stage"
+  ]
+ },
+ "warnings": []
+}

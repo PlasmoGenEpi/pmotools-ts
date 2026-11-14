@@ -1,0 +1,187 @@
+{
+ "id": "validate/types/v1.1.0/ReactionInfo",
+ "function": "validate_pmo",
+ "note": "each property of ReactionInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": null
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": "1"
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": ""
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 1
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 0
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": -1
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 1.0
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 1.5
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 1e+300
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": true
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": false
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": []
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": {}
+   },
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": null
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": "1"
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": ""
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 1
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 0
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": -1
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 1.0
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 1.5
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": true
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": false
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": []
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": {}
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "valid",
+   "valid",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "valid",
+   "invalid: pattern at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name"
+  ]
+ },
+ "warnings": []
+}

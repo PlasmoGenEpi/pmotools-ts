@@ -1,0 +1,153 @@
+{
+ "id": "mhap/unsorted_targets",
+ "function": "mhap_table_to_pmo",
+ "note": "Targets out of order in the input: mhaps_target_id must index the sorted representative targets.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "sB",
+     "t3",
+     "CCC",
+     303
+    ],
+    [
+     "sB",
+     "t1",
+     "AAA",
+     101
+    ],
+    [
+     "sB",
+     "t2",
+     "GGG",
+     202
+    ],
+    [
+     "sA",
+     "t2",
+     "GGT",
+     205
+    ],
+    [
+     "sA",
+     "t3",
+     "CCC",
+     306
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "AAA"
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "GGG"
+       },
+       {
+        "seq": "GGT"
+       }
+      ]
+     },
+     {
+      "target_name": "t3",
+      "microhaplotypes": [
+       {
+        "seq": "CCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "sA",
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 205
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 306
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sB",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 101
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 202
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 303
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

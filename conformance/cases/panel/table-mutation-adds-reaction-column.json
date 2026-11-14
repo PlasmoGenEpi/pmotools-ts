@@ -1,0 +1,52 @@
+{
+ "id": "panel/table-mutation-adds-reaction-column",
+ "function": "panel_info_table_to_pmo_mutation_probe",
+ "note": "Probe: Python adds a 'reaction' column to the caller's DataFrame when reaction_name_col is not given.",
+ "divergence": "pmotools-ts never mutates the caller's table; the test checks the rows are unchanged after the call.",
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns_after_call": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "reaction"
+   ]
+  }
+ },
+ "warnings": []
+}

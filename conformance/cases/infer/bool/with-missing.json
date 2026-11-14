@@ -1,0 +1,60 @@
+{
+ "id": "infer/bool/with-missing",
+ "function": "read_csv_typed",
+ "note": "Booleans with missing cells: object holding bools and missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\ntrue,r0\nNA,r1\nFalse,r2\n,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "true",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "False",
+     "r2"
+    ],
+    [
+     "",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     true,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     false,
+     "r2"
+    ],
+    [
+     null,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

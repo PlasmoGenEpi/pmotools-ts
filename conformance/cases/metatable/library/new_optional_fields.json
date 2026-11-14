@@ -1,0 +1,90 @@
+{
+ "id": "metatable/library/new_optional_fields",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_with_new_optional_fields",
+ "divergence": "pmotools-ts omits alternate_identifiers for sample2, whose cell is an empty string. Python writes [\"\"], which fails the schema item pattern.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers",
+    "experiment_accession",
+    "fastqs_loc",
+    "run_accession"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object",
+    "experiment_accession": "object",
+    "fastqs_loc": "object",
+    "run_accession": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "ID1,ID2",
+     "EXP001",
+     null,
+     "RUN001"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "",
+     null,
+     "/path/to/fastqs",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "alternate_identifiers_col": "alternate_identifiers",
+  "experiment_accession_col": "experiment_accession",
+  "fastqs_loc_col": "fastqs_loc",
+  "run_accession_col": "run_accession"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "ID1",
+     "ID2"
+    ],
+    "experiment_accession": "EXP001",
+    "run_accession": "RUN001"
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     ""
+    ],
+    "fastqs_loc": "/path/to/fastqs"
+   }
+  ]
+ },
+ "warnings": []
+}

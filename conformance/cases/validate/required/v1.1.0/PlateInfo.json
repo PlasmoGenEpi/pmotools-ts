@@ -1,0 +1,43 @@
+{
+ "id": "validate/required/v1.1.0/PlateInfo",
+ "function": "validate_pmo",
+ "note": "each required property of PlateInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/library_sample_info/0/library_prep_plate_info/plate_name"
+   },
+   {
+    "remove": "/library_sample_info/0/library_prep_plate_info/plate_row"
+   },
+   {
+    "remove": "/library_sample_info/0/library_prep_plate_info/plate_col"
+   },
+   {
+    "remove": "/specimen_info/0/storage_plate_info/plate_name"
+   },
+   {
+    "remove": "/specimen_info/0/storage_plate_info/plate_row"
+   },
+   {
+    "remove": "/specimen_info/0/storage_plate_info/plate_col"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /library_sample_info/0/library_prep_plate_info",
+   "invalid: required at /library_sample_info/0/library_prep_plate_info",
+   "invalid: required at /library_sample_info/0/library_prep_plate_info",
+   "invalid: required at /specimen_info/0/storage_plate_info",
+   "invalid: required at /specimen_info/0/storage_plate_info",
+   "invalid: required at /specimen_info/0/storage_plate_info"
+  ]
+ },
+ "warnings": []
+}

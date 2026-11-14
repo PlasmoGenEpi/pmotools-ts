@@ -1,0 +1,64 @@
+{
+ "id": "infer/options/text-columns",
+ "function": "read_csv_typed",
+ "note": "Text columns keep their strings; NA strings still become missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,b,c\n001,True,1.50\nNA,,x\n2,False,\n",
+  "text_columns": [
+   "a",
+   "b"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "b",
+    "c"
+   ],
+   "dtypes": {
+    "a": "object",
+    "b": "object",
+    "c": "object"
+   },
+   "raw": [
+    [
+     "001",
+     "True",
+     "1.50"
+    ],
+    [
+     "NA",
+     "",
+     "x"
+    ],
+    [
+     "2",
+     "False",
+     ""
+    ]
+   ],
+   "rows": [
+    [
+     "001",
+     "True",
+     "1.50"
+    ],
+    [
+     null,
+     null,
+     "x"
+    ],
+    [
+     "2",
+     "False",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

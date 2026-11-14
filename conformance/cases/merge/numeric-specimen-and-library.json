@@ -1,0 +1,127 @@
+{
+ "id": "merge/numeric-specimen-and-library",
+ "function": "merge_to_pmo",
+ "note": "Numeric specimen and library sample names from the metadata builders.",
+ "divergence": "Python looks names up with str(name) on the referring record but the raw value on the referenced record, so any numeric name (a specimen or library sample called 101) never resolves and the merge fails. pmotools-ts compares names as strings on both sides (AGENTS.md: names are compared and written as strings), so the merge succeeds. Records the merge creates itself carry names as strings.",
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": 101,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 5
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": 102,
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 6
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "specimen_info": [
+   {
+    "specimen_name": 1
+   },
+   {
+    "specimen_name": 2
+   }
+  ],
+  "library_sample_info": [
+   {
+    "library_sample_name": 101,
+    "specimen_name": 1,
+    "panel_name": "panel1"
+   },
+   {
+    "library_sample_name": 102,
+    "specimen_name": 2,
+    "panel_name": "panel1"
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following fields were found in one table and not another:\nSpecimen names in Library Sample Info not in Specimen Info: ['2', '1']\nLibrary Sample names in Detected Microhaplotypes not in Library Sample Info: ['102', '101']\n"
+ },
+ "warnings": []
+}

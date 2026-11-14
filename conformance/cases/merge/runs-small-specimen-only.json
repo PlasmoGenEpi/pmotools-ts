@@ -1,0 +1,155 @@
+{
+ "id": "merge/runs-small-specimen-only",
+ "function": "merge_to_pmo",
+ "note": "samp_B is in runs r1 and r2; specimen info only.",
+ "divergence": "When no library-sample info is supplied, Python checks for duplicate library sample names across all bioinformatics runs together and raises 'Duplicate library sample names', so one library sample analysed in two runs cannot be merged. pmotools-ts checks duplicates within each run only and creates one library-sample (and specimen) record per distinct name, in first-seen order.",
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": "r1"
+    },
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_C",
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 4
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": "r2"
+    }
+   ]
+  },
+  "specimen_info": [
+   {
+    "specimen_name": "samp_A",
+    "collection_country": "Kenya"
+   },
+   {
+    "specimen_name": "samp_B",
+    "collection_country": "Kenya"
+   },
+   {
+    "specimen_name": "samp_C",
+    "collection_country": "Kenya"
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Duplicate library sample names found: ['samp_B']"
+ },
+ "warnings": []
+}

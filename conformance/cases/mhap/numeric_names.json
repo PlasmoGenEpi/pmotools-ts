@@ -1,0 +1,157 @@
+{
+ "id": "mhap/numeric_names",
+ "function": "mhap_table_to_pmo",
+ "note": "Integer target, sample and run names: groups sort numerically (2 < 10), runs in first-seen order.",
+ "divergence": "pmotools-ts writes target_name, library_sample_name and bioinformatics_run_name as strings (the PMO schema types them as strings, and names are compared as strings in pmotools-ts). Groups are still ordered as pandas orders them. The test compares against the Python value with those names converted to strings.",
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "run"
+   ],
+   "dtypes": {
+    "library_sample_name": "int64",
+    "target_name": "int64",
+    "seq": "object",
+    "reads": "int64",
+    "run": "int64"
+   },
+   "rows": [
+    [
+     10,
+     2,
+     "A",
+     1,
+     7
+    ],
+    [
+     9,
+     10,
+     "C",
+     2,
+     7
+    ],
+    [
+     100,
+     1,
+     "G",
+     3,
+     5
+    ],
+    [
+     10,
+     10,
+     "T",
+     4,
+     7
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "run"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": 1,
+      "microhaplotypes": [
+       {
+        "seq": "G"
+       }
+      ]
+     },
+     {
+      "target_name": 2,
+      "microhaplotypes": [
+       {
+        "seq": "A"
+       }
+      ]
+     },
+     {
+      "target_name": 10,
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       },
+       {
+        "seq": "T"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": 9,
+       "target_results": [
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": 10,
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 4
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": 7
+    },
+    {
+     "library_samples": [
+      {
+       "library_sample_name": 100,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": 5
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

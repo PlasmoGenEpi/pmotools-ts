@@ -1,0 +1,28 @@
+{
+ "id": "panel/merge-target-without-primer-no-genomes",
+ "function": "merge_panel_info_dicts",
+ "note": "Without genomes Python reads target['forward_primer'] and raises KeyError when it is absent.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [],
+    "target_info": [
+     {
+      "target_name": "x",
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'forward_primer'"
+ },
+ "warnings": []
+}

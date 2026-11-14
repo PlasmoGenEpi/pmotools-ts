@@ -1,0 +1,34 @@
+{
+ "id": "validate/null/v1.0.0/BioinformaticsRunInfo",
+ "function": "validate_pmo",
+ "note": "each property of BioinformaticsRunInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_run_info/0/bioinformatics_methods_id",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_run_info/0/bioinformatics_run_name",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_run_info/0/run_date",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /bioinformatics_run_info/0/bioinformatics_methods_id",
+   "invalid: type at /bioinformatics_run_info/0/bioinformatics_run_name",
+   "valid"
+  ]
+ },
+ "warnings": []
+}

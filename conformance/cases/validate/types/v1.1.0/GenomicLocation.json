@@ -1,0 +1,607 @@
+{
+ "id": "validate/types/v1.1.0/GenomicLocation",
+ "function": "validate_pmo",
+ "note": "each property of GenomicLocation (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/chrom",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/end",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/genome_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/start",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/strand",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/alt_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/chrom",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/mhap_location",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/end",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/mhap_location",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/genome_id",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/ref_seq",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: anyOf at /representative_microhaplotypes/targets/0/mhap_location",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/start",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand",
+   "invalid: type at /representative_microhaplotypes/targets/0/mhap_location/strand"
+  ]
+ },
+ "warnings": []
+}

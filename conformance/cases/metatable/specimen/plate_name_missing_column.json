@@ -1,0 +1,33 @@
+{
+ "id": "metatable/specimen/plate_name_missing_column",
+ "function": "specimen_info_table_to_pmo",
+ "note": "The plate name column does not exist: pandas KeyError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object"
+   },
+   "rows": [
+    [
+     "sample1"
+    ],
+    [
+     "sample2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_name_col": "plate"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'plate'"
+ },
+ "warnings": []
+}

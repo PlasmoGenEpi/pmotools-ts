@@ -1,0 +1,51 @@
+{
+ "id": "metatable/specimen/plate_position_leading_zeros",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Any number of leading zeros, surrounding whitespace allowed",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "w"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "w": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A010"
+    ],
+    [
+     "sample2",
+     " c0003 "
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_position_col": "w"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "storage_plate_info": {
+     "plate_row": "A",
+     "plate_col": 10
+    }
+   },
+   {
+    "specimen_name": "sample2",
+    "storage_plate_info": {
+     "plate_row": "C",
+     "plate_col": 3
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

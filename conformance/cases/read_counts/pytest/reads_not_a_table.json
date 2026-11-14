@@ -1,0 +1,47 @@
+{
+ "id": "read_counts/pytest/reads_not_a_table",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_input_validation: reads_by_stage_table is a string",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "additional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "additional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     "info2"
+    ],
+    [
+     "sample3",
+     1500,
+     "info3"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reads_by_stage_table": "not_a_dataframe",
+  "bioinformatics_run_name": "test_run"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "reads_by_stage_table must be a pandas DataFrame or None."
+ },
+ "warnings": []
+}

@@ -1,0 +1,276 @@
+{
+ "id": "merge/optional-specimen-only",
+ "function": "merge_to_pmo",
+ "note": "Python test_merge_to_pmo_specimen_info_matching_names_passes: specimen info alone; library samples are created from the detected microhaplotypes.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "specimen_info": [
+   {
+    "specimen_name": "samp_A",
+    "collection_country": "Kenya"
+   },
+   {
+    "specimen_name": "samp_B",
+    "collection_country": "Kenya"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "pmo_header": {
+    "pmo_version": "1.1.0",
+    "creation_date": "2026-11-13",
+    "generation_method": {
+     "program_name": "pmotools-python",
+     "program_version": "1.2.2"
+    }
+   },
+   "library_sample_info": [
+    {
+     "library_sample_name": "samp_A",
+     "specimen_id": 0,
+     "panel_id": 0
+    },
+    {
+     "library_sample_name": "samp_B",
+     "specimen_id": 1,
+     "panel_id": 0
+    }
+   ],
+   "specimen_info": [
+    {
+     "specimen_name": "samp_A",
+     "collection_country": "Kenya"
+    },
+    {
+     "specimen_name": "samp_B",
+     "collection_country": "Kenya"
+    }
+   ],
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ],
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ],
+      "target_id": 0
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ],
+      "target_id": 1
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ],
+       "library_sample_id": 0
+      },
+      {
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ],
+       "library_sample_id": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": true,
+  "error": null
+ }
+}

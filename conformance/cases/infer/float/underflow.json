@@ -1,0 +1,76 @@
+{
+ "id": "infer/float/underflow",
+ "function": "read_csv_typed",
+ "note": "Tiny values become subnormals or zero; they never fail.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1e-400,r0\n4.9e-324,r1\n2e-324,r2\n1e-320,r3\n0.0e-999,r4\n1,r5\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1e-400",
+     "r0"
+    ],
+    [
+     "4.9e-324",
+     "r1"
+    ],
+    [
+     "2e-324",
+     "r2"
+    ],
+    [
+     "1e-320",
+     "r3"
+    ],
+    [
+     "0.0e-999",
+     "r4"
+    ],
+    [
+     "1",
+     "r5"
+    ]
+   ],
+   "rows": [
+    [
+     0.0,
+     "r0"
+    ],
+    [
+     5e-324,
+     "r1"
+    ],
+    [
+     0.0,
+     "r2"
+    ],
+    [
+     1e-320,
+     "r3"
+    ],
+    [
+     0.0,
+     "r4"
+    ],
+    [
+     1.0,
+     "r5"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,220 @@
+{
+ "id": "panel/table-locations-strand-ref-seq",
+ "function": "panel_info_table_to_pmo",
+ "note": "Strand goes on the insert and both primers; ref_seq only on the insert; missing ones are left out.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "fwd_start",
+    "fwd_end",
+    "rev_start",
+    "rev_end",
+    "insert_start",
+    "insert_end",
+    "chrom",
+    "strand",
+    "ref_seq"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "fwd_start": "int64",
+    "fwd_end": "int64",
+    "rev_start": "int64",
+    "rev_end": "int64",
+    "insert_start": "int64",
+    "insert_end": "int64",
+    "chrom": "object",
+    "strand": "object",
+    "ref_seq": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     1,
+     4,
+     8,
+     11,
+     4,
+     8,
+     "chr1",
+     "+",
+     "ACGT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     11,
+     14,
+     18,
+     21,
+     14,
+     18,
+     "chr1",
+     "-",
+     null
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     21,
+     24,
+     28,
+     31,
+     24,
+     28,
+     "chr2",
+     null,
+     "TTTT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "genome_info": {
+   "name": "3D7",
+   "url": "somthing.com",
+   "genome_version": "1",
+   "taxon_id": 5833
+  },
+  "strand_col": "strand",
+  "ref_seq_col": "ref_seq",
+  "forward_primers_start_col": "fwd_start",
+  "forward_primers_end_col": "fwd_end",
+  "reverse_primers_start_col": "rev_start",
+  "reverse_primers_end_col": "rev_end",
+  "insert_start_col": "insert_start",
+  "insert_end_col": "insert_end",
+  "chrom_col": "chrom",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 4,
+      "end": 8,
+      "strand": "+",
+      "ref_seq": "ACGT"
+     },
+     "forward_primer": {
+      "seq": "CTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 4,
+       "strand": "+"
+      }
+     },
+     "reverse_primer": {
+      "seq": "GTT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 11,
+       "start": 8,
+       "strand": "+"
+      }
+     }
+    },
+    {
+     "target_name": "target2",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr1",
+      "start": 14,
+      "end": 18,
+      "strand": "-"
+     },
+     "forward_primer": {
+      "seq": "CTA",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 11,
+       "end": 14,
+       "strand": "-"
+      }
+     },
+     "reverse_primer": {
+      "seq": "TGG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "end": 21,
+       "start": 18,
+       "strand": "-"
+      }
+     }
+    },
+    {
+     "target_name": "target3",
+     "insert_location": {
+      "genome_id": 0,
+      "chrom": "chr2",
+      "start": 24,
+      "end": 28,
+      "ref_seq": "TTTT"
+     },
+     "forward_primer": {
+      "seq": "TTG",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "start": 21,
+       "end": 24
+      }
+     },
+     "reverse_primer": {
+      "seq": "ATT",
+      "location": {
+       "genome_id": 0,
+       "chrom": "chr2",
+       "end": 31,
+       "start": 28
+      }
+     }
+    }
+   ],
+   "targeted_genomes": [
+    {
+     "name": "3D7",
+     "url": "somthing.com",
+     "genome_version": "1",
+     "taxon_id": 5833
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

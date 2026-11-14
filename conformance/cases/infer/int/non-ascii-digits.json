@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/non-ascii-digits",
+ "function": "read_csv_typed",
+ "note": "Only ASCII digits count.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n١٢,r0\n１２,r1\n3,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "١٢",
+     "r0"
+    ],
+    [
+     "１２",
+     "r1"
+    ],
+    [
+     "3",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "١٢",
+     "r0"
+    ],
+    [
+     "１２",
+     "r1"
+    ],
+    [
+     "3",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,136 @@
+{
+ "id": "metatable/specimen/host_fields",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_specimen_info_table_to_pmo_with_host_fields",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "host_age",
+    "host_sex",
+    "host_subject_name",
+    "gravid",
+    "gravidity"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "host_age": "float64",
+    "host_sex": "object",
+    "host_subject_name": "object",
+    "gravid": "object",
+    "gravidity": "float64"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     25.0,
+     "M",
+     "SUB001",
+     true,
+     2.0
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     null,
+     "F",
+     "",
+     null,
+     null
+    ],
+    [
+     "sample3",
+     5833,
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3",
+     30.0,
+     "",
+     "SUB003",
+     false,
+     0.0
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "host_age_col": "host_age",
+  "host_sex_col": "host_sex",
+  "host_subject_name_col": "host_subject_name",
+  "gravid_col": "gravid",
+  "gravidity_col": "gravidity"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "gravid": true,
+    "gravidity": 2.0,
+    "host_age": 25.0,
+    "host_sex": "M",
+    "host_subject_name": "SUB001"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "host_sex": "F"
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3",
+    "gravid": false,
+    "gravidity": 0.0,
+    "host_age": 30.0,
+    "host_subject_name": "SUB003"
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,43 @@
+{
+ "id": "metatable/library/null_in_several",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "test_library_sample_info_table_to_pmo_fails_with_null_in_required_columns: several",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     null,
+     "MH"
+    ],
+    [
+     null,
+     "sample2",
+     "MH"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "The following columns contain null values: ['library_sample_name', 'specimen_name']"
+ },
+ "warnings": []
+}

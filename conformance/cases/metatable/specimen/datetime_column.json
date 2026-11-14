@@ -1,0 +1,78 @@
+{
+ "id": "metatable/specimen/datetime_column",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A datetime column is written by to_json as an ISO string with milliseconds",
+ "divergence": "Rows cannot hold datetimes. The oracle records the dates as 2024-01-02T00:00:00 strings and pmotools-ts writes string cells unchanged, while Python writes 2024-01-02T00:00:00.000. Callers should pass dates as strings in the form they want written.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "datetime64[ns]",
+    "collection_country": "object",
+    "project_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "2024-01-02T00:00:00",
+     "Mozambique",
+     "project1"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "2023-12-31T00:00:00",
+     "Ghana",
+     "project2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2024-01-02T00:00:00.000",
+    "collection_country": "Mozambique",
+    "project_name": "project1"
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "2023-12-31T00:00:00.000",
+    "collection_country": "Ghana",
+    "project_name": "project2"
+   }
+  ]
+ },
+ "warnings": []
+}

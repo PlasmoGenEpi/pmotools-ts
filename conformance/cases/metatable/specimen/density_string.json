@@ -1,0 +1,53 @@
+{
+ "id": "metatable/specimen/density_string",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Density values are passed through without conversion",
+ "divergence": "pmotools-ts parses text densities the way float() does and throws metatable/invalid-number for 'n/a' in row 1. Python writes the strings, which fail its own schema (parasite_density is a number).",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "10"
+    ],
+    [
+     "sample2",
+     "n/a"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": "10"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": "n/a"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

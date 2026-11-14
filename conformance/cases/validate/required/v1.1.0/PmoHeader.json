@@ -1,0 +1,23 @@
+{
+ "id": "validate/required/v1.1.0/PmoHeader",
+ "function": "validate_pmo",
+ "note": "each required property of PmoHeader removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/pmo_header/pmo_version"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /pmo_header"
+  ]
+ },
+ "warnings": []
+}

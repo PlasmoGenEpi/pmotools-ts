@@ -1,0 +1,67 @@
+{
+ "id": "metatable/library/numeric_names",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Numeric library, sequencing, specimen and panel names",
+ "divergence": "pmotools-ts writes library_sample_name, sequencing_info_name, specimen_name and panel_name as strings. Python writes numbers, which fail the schema's string type. run_accession stays a number.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "run_accession"
+   ],
+   "dtypes": {
+    "library_sample_name": "int64",
+    "sequencing_info_name": "int64",
+    "specimen_name": "int64",
+    "panel_name": "int64",
+    "run_accession": "int64"
+   },
+   "rows": [
+    [
+     1,
+     3,
+     10,
+     4,
+     5
+    ],
+    [
+     2,
+     3,
+     20,
+     4,
+     6
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "run_accession_col": "run_accession"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": 1,
+    "specimen_name": 10,
+    "panel_name": 4,
+    "sequencing_info_name": 3,
+    "run_accession": 5
+   },
+   {
+    "library_sample_name": 2,
+    "specimen_name": 20,
+    "panel_name": 4,
+    "sequencing_info_name": 3,
+    "run_accession": 6
+   }
+  ]
+ },
+ "warnings": []
+}

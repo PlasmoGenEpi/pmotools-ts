@@ -1,0 +1,84 @@
+{
+ "id": "read_counts/runs/numeric_run_values",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": null,
+ "divergence": "pmotools-ts writes library sample, target, stage and run names as strings and compares them as strings (AGENTS.md: names are compared and written as strings), so numeric names come out as text and 1 matches '1'.",
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "r"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "r": "int64"
+   },
+   "rows": [
+    [
+     "a",
+     1,
+     1
+    ],
+    [
+     "b",
+     2,
+     2
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count",
+    "r"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "stage": "object",
+    "read_count": "int64",
+    "r": "object"
+   },
+   "rows": [
+    [
+     "a",
+     "t",
+     "s",
+     1,
+     "1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "r"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "a",
+      "total_raw_count": 1
+     }
+    ],
+    "bioinformatics_run_name": 1
+   },
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "b",
+      "total_raw_count": 2
+     }
+    ],
+    "bioinformatics_run_name": 2
+   }
+  ]
+ },
+ "warnings": []
+}

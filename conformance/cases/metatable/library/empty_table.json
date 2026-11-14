@@ -1,0 +1,34 @@
+{
+ "id": "metatable/library/empty_table",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "No rows, no records",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "float64",
+    "sequencing_info_name": "float64",
+    "specimen_name": "float64",
+    "panel_name": "float64"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": []
+ },
+ "warnings": []
+}

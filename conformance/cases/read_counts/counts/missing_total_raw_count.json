@@ -1,0 +1,35 @@
+{
+ "id": "read_counts/counts/missing_total_raw_count",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "int(NaN) fails",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "float64"
+   },
+   "rows": [
+    [
+     "s1",
+     10.0
+    ],
+    [
+     "s2",
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "cannot convert float NaN to integer"
+ },
+ "warnings": []
+}

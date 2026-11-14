@@ -1,0 +1,68 @@
+{
+ "id": "mhap/masking_float_column",
+ "function": "mhap_table_to_pmo",
+ "note": "A numeric masking column with a missing value is float64, so str() gives '5.0' and int() raises.",
+ "divergence": "pmotools-ts accepts whole numbers in masking columns regardless of dtype (5.0 is 5), so microhaplotypes A (t1) and C (t2) get masking [{5, 1, 1}] and G (t1) has none. Python's ValueError comes from str() of a float, not from bad input.",
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "ms",
+    "mz",
+    "mr"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "ms": "float64",
+    "mz": "float64",
+    "mr": "float64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     5.0,
+     1.0,
+     1.0
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     5.0,
+     1.0,
+     1.0
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "masking_seq_start_col": "ms",
+  "masking_seq_segment_size_col": "mz",
+  "masking_replacement_size_col": "mr"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "invalid literal for int() with base 10: '5.0'"
+ },
+ "warnings": []
+}

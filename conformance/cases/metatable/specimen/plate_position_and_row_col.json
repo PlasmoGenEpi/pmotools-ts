@@ -1,0 +1,52 @@
+{
+ "id": "metatable/specimen/plate_position_and_row_col",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_plate_info_fails_with_position_and_row_col",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "plate_position",
+    "plate_row",
+    "plate_col",
+    "plate_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "plate_position": "object",
+    "plate_row": "object",
+    "plate_col": "int64",
+    "plate_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "A01",
+     "A",
+     1,
+     "Plate1"
+    ],
+    [
+     "sample2",
+     "H19",
+     "h",
+     10,
+     "Plate1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "storage_plate_name_col": "plate_name",
+  "storage_plate_row_col": "plate_row",
+  "storage_plate_col_col": "plate_col",
+  "storage_plate_position_col": "plate_position"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Plate position can be specified using either row and col, or position, but not both."
+ },
+ "warnings": []
+}

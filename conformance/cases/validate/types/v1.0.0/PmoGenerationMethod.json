@@ -1,0 +1,187 @@
+{
+ "id": "validate/types/v1.0.0/PmoGenerationMethod",
+ "function": "validate_pmo",
+ "note": "each property of PmoGenerationMethod (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": true
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": false
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": []
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header/generation_method/program_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": null
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": true
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": false
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": []
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header/generation_method/program_version",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "valid",
+   "invalid: pattern at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_name",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "valid",
+   "invalid: pattern at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version",
+   "invalid: type at /pmo_header/generation_method/program_version"
+  ]
+ },
+ "warnings": []
+}

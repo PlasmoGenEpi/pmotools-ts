@@ -1,0 +1,47 @@
+{
+ "id": "read_counts/additional/named_total_raw_count",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "An additional column named total_raw_count replaces the count",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "raw",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "raw": "int64",
+    "total_raw_count": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     5,
+     "x"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "total_raw_count_col": "raw",
+  "additional_library_sample_cols": [
+   "total_raw_count"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "s1",
+      "total_raw_count": "x"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

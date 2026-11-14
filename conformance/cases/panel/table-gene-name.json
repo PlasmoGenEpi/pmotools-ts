@@ -1,0 +1,97 @@
+{
+ "id": "panel/table-gene-name",
+ "function": "panel_info_table_to_pmo",
+ "note": "gene_name is dropped when missing or empty.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "gene"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "gene": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "PfCRT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     null
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "gene_name_col": "gene",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "gene_name": "PfCRT",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

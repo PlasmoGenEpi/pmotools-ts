@@ -1,0 +1,44 @@
+{
+ "id": "infer/float/malformed-02",
+ "function": "read_csv_typed",
+ "note": "'++5' is not a number, so the column is text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n++5,r0\n2,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "++5",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     "++5",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

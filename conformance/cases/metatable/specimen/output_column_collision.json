@@ -1,0 +1,57 @@
+{
+ "id": "metatable/specimen/output_column_collision",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Renaming 'name' to specimen_name collides with the unselected specimen_name column: to_json ValueError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "name"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "a"
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "b"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "name"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "DataFrame columns must be unique for orient='records'."
+ },
+ "warnings": []
+}

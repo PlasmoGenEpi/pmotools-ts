@@ -1,0 +1,109 @@
+{
+ "id": "panel/table-target-attributes-two-char-delimiter",
+ "function": "panel_info_table_to_pmo",
+ "note": "Attributes use str.split, so a two-character delimiter is literal.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "attrs"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "attrs": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "a, b"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     "a,b"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "c, d, e"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "target_attributes_col": "attrs",
+  "target_attributes_col_delimiter": ", ",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "target_attributes": [
+      "a",
+      "b"
+     ],
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "target_attributes": [
+      "a,b"
+     ],
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "target_attributes": [
+      "c",
+      "d",
+      "e"
+     ],
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,62 @@
+{
+ "id": "mhap/error_location_columns_incomplete",
+ "function": "mhap_table_to_pmo",
+ "note": "ref_seq_col and chrom_col without start_col/end_col.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "chrom",
+    "ref"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "chrom": "object",
+    "ref": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "c",
+     "A"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     "c",
+     "A"
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "c",
+     "A"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "chrom_col": "chrom",
+  "ref_seq_col": "ref"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "If any location columns set (chrom_col, start_col, end_col, ref_seq_col, strand_col), then all required ones must be (chrom_col, start_col, end_col)."
+ },
+ "warnings": []
+}

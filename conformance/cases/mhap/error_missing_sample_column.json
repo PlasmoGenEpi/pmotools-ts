@@ -1,0 +1,46 @@
+{
+ "id": "mhap/error_missing_sample_column",
+ "function": "mhap_table_to_pmo",
+ "note": "library_sample_name_col not in the table.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "t1",
+     "A",
+     1
+    ],
+    [
+     "t2",
+     "C",
+     2
+    ],
+    [
+     "t1",
+     "G",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "SampleID"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'library_sample_name'"
+ },
+ "warnings": []
+}

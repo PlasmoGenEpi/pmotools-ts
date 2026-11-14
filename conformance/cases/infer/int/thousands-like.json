@@ -1,0 +1,44 @@
+{
+ "id": "infer/int/thousands-like",
+ "function": "read_csv_typed",
+ "note": "A thousands separator is not understood: the column stays text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n\"1,000\",r0\n2,r1\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1,000",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ],
+   "rows": [
+    [
+     "1,000",
+     "r0"
+    ],
+    [
+     "2",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

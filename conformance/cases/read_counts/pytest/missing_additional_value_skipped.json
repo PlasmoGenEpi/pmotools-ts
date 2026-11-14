@@ -1,0 +1,56 @@
+{
+ "id": "read_counts/pytest/missing_additional_value_skipped",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_missing_values_handling: a missing additional value is left out",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "optional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "optional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_library_sample_cols": [
+   "optional_info"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000,
+      "optional_info": "info1"
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

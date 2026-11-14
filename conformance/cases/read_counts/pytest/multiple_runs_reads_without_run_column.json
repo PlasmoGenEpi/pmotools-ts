@@ -1,0 +1,149 @@
+{
+ "id": "read_counts/pytest/multiple_runs_reads_without_run_column",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_multiple_runs_reads_table_without_run_column: reads apply to every run",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "bioinformatics_run_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "bioinformatics_run_name": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "run1"
+    ],
+    [
+     "sample2",
+     2000,
+     "run1"
+    ],
+    [
+     "sample1",
+     1500,
+     "run2"
+    ],
+    [
+     "sample2",
+     2500,
+     "run2"
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "stage": "object",
+    "read_count": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "demultiplexed",
+     100
+    ],
+    [
+     "sample2",
+     "target1",
+     "demultiplexed",
+     200
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "bioinformatics_run_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 100
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 200
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "run1"
+   },
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "sample1",
+      "total_raw_count": 1500,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 100
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "sample2",
+      "total_raw_count": 2500,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 200
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "run2"
+   }
+  ]
+ },
+ "warnings": []
+}

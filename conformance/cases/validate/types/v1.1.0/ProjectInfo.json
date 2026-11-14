@@ -1,0 +1,523 @@
+{
+ "id": "validate/types/v1.1.0/ProjectInfo",
+ "function": "validate_pmo",
+ "note": "each property of ProjectInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/BioProject_accession",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/project_collector_chief_scientist",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/project_contributors",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/project_description",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/project_name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": null
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": "1"
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": ""
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 1
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 0
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": -1
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": true
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": false
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": []
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": {}
+   },
+   {
+    "set": "/project_info/0/project_type",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: pattern at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "invalid: type at /project_info/0/BioProject_accession",
+   "valid",
+   "valid",
+   "invalid: pattern at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "invalid: type at /project_info/0/project_collector_chief_scientist",
+   "valid",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "valid",
+   "invalid: type at /project_info/0/project_contributors/0",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_contributors",
+   "invalid: type at /project_info/0/project_description",
+   "valid",
+   "valid",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_description",
+   "invalid: type at /project_info/0/project_name",
+   "valid",
+   "invalid: pattern at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "invalid: type at /project_info/0/project_name",
+   "valid",
+   "valid",
+   "invalid: pattern at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type",
+   "invalid: type at /project_info/0/project_type"
+  ]
+ },
+ "warnings": []
+}

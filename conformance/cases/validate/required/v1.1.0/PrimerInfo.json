@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.1.0/PrimerInfo",
+ "function": "validate_pmo",
+ "note": "each required property of PrimerInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/target_info/0/forward_primer/seq"
+   },
+   {
+    "remove": "/target_info/0/reverse_primer/seq"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /target_info/0/forward_primer",
+   "invalid: required at /target_info/0/reverse_primer"
+  ]
+ },
+ "warnings": []
+}

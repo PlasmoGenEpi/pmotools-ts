@@ -1,0 +1,53 @@
+{
+ "id": "metatable/library/specimen_and_panel_unset",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "specimen_name_col and panel_name_col set to None are neither checked nor written",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "specimen_name_col": null,
+  "panel_name_col": null
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1"
+   },
+   {
+    "library_sample_name": "sample2_MH_run1"
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,53 @@
+{
+ "id": "panel/table-target-attributes-empty-delimiter",
+ "function": "panel_info_table_to_pmo",
+ "note": "An empty attribute delimiter makes str.split raise.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "attrs"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "attrs": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "a,b"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     "c"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "d"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "target_attributes_col": "attrs",
+  "target_attributes_col_delimiter": "",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "empty separator"
+ },
+ "warnings": []
+}

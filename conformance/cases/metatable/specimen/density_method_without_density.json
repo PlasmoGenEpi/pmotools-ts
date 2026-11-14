@@ -1,0 +1,37 @@
+{
+ "id": "metatable/specimen/density_method_without_density",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_parasite_density_fails_with_no_density",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "method1"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "method1": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "qPCR"
+    ],
+    [
+     "sample2",
+     "qPCR"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_method_col": "method1"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "parasite_density_method_col is set but parasite_density_col is None. Cannot proceed."
+ },
+ "warnings": []
+}

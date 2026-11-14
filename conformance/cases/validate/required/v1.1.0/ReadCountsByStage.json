@@ -1,0 +1,23 @@
+{
+ "id": "validate/required/v1.1.0/ReadCountsByStage",
+ "function": "validate_pmo",
+ "note": "each required property of ReadCountsByStage removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /read_counts_by_stage/0"
+  ]
+ },
+ "warnings": []
+}

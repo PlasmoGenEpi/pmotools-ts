@@ -1,0 +1,23 @@
+{
+ "id": "validate/required/v1.1.0/BioinformaticsMethodInfo",
+ "function": "validate_pmo",
+ "note": "each required property of BioinformaticsMethodInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/bioinformatics_methods_info/0/methods"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /bioinformatics_methods_info/0"
+  ]
+ },
+ "warnings": []
+}

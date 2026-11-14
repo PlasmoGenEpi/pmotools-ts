@@ -1,0 +1,60 @@
+{
+ "id": "infer/na/short-rows",
+ "function": "read_csv_typed",
+ "note": "Fields missing from short rows are missing in every dtype.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,b,c\n1,x,True\n2\n3,y\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "b",
+    "c"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "b": "object",
+    "c": "object"
+   },
+   "raw": [
+    [
+     "1",
+     "x",
+     "True"
+    ],
+    [
+     "2",
+     null,
+     null
+    ],
+    [
+     "3",
+     "y",
+     null
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "x",
+     true
+    ],
+    [
+     2,
+     null,
+     null
+    ],
+    [
+     3,
+     "y",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

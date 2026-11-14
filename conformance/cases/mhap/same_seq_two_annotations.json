@@ -1,0 +1,120 @@
+{
+ "id": "mhap/same_seq_two_annotations",
+ "function": "mhap_table_to_pmo",
+ "note": "Deduplication is over every selected column: seq A appears twice (warning) and detected rows point at the last copy.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "alt"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "alt": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "x"
+    ],
+    [
+     "s1",
+     "t1",
+     "A",
+     2,
+     "y"
+    ],
+    [
+     "s2",
+     "t1",
+     "C",
+     3,
+     "x"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "alt_annotations_col": "alt"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A",
+        "alt_annotations": "x"
+       },
+       {
+        "seq": "A",
+        "alt_annotations": "y"
+       },
+       {
+        "seq": "C",
+        "alt_annotations": "x"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 1
+          },
+          {
+           "mhap_id": 1,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": [
+  {
+   "category": "UserWarning",
+   "message": "Duplicate (target, asv) combinations found:\ntarget_name  seq\nt1           A      2\ndtype: int64"
+  }
+ ]
+}

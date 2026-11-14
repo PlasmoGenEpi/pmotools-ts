@@ -1,0 +1,123 @@
+{
+ "id": "mhap/run_name_not_a_column",
+ "function": "mhap_table_to_pmo",
+ "note": "bioinformatics_run_name that is not a column is used as the literal run name.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "run"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "run": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "r9"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     "r9"
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "r9"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "run1"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A"
+       },
+       {
+        "seq": "G"
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_name": "run1"
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

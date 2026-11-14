@@ -1,0 +1,41 @@
+{
+ "id": "mhap/empty_table",
+ "function": "mhap_table_to_pmo",
+ "note": "No rows: no targets and one detected entry with no samples.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "float64",
+    "target_name": "float64",
+    "seq": "float64",
+    "reads": "float64"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "run1"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": []
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [],
+     "bioinformatics_run_name": "run1"
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

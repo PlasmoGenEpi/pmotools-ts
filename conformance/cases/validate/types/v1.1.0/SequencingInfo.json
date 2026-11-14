@@ -1,0 +1,1363 @@
+{
+ "id": "validate/types/v1.1.0/SequencingInfo",
+ "function": "validate_pmo",
+ "note": "each property of SequencingInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_kit",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_layout",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_screen",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_selection",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_source",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/library_strategy",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_amp_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/nucl_acid_ext_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/pcr_cond",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/seq_center",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/seq_date",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/seq_instrument_model",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/seq_platform",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info/0/sequencing_info_name",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_kit",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "invalid: type at /sequencing_info/0/library_layout",
+   "valid",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_screen",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_selection",
+   "invalid: type at /sequencing_info/0/library_source",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_source",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "invalid: type at /sequencing_info/0/library_strategy",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_amp",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_amp_date",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_ext",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: pattern at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "invalid: type at /sequencing_info/0/nucl_acid_ext_date",
+   "valid",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "invalid: type at /sequencing_info/0/pcr_cond",
+   "valid",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "invalid: type at /sequencing_info/0/seq_center",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/seq_date",
+   "invalid: pattern at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_date",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_instrument_model",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/seq_platform",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "valid",
+   "invalid: pattern at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name",
+   "invalid: type at /sequencing_info/0/sequencing_info_name"
+  ]
+ },
+ "warnings": []
+}

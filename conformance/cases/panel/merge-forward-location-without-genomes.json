@@ -1,0 +1,37 @@
+{
+ "id": "panel/merge-forward-location-without-genomes",
+ "function": "merge_panel_info_dicts",
+ "note": "A forward primer location without targeted_genomes raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [],
+    "target_info": [
+     {
+      "target_name": "x",
+      "forward_primer": {
+       "seq": "A",
+       "location": {
+        "genome_id": 0,
+        "chrom": "chr1",
+        "start": 1,
+        "end": 2
+       }
+      },
+      "reverse_primer": {
+       "seq": "C"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "targetx has forward primer location but no targeted_genomes information is included"
+ },
+ "warnings": []
+}

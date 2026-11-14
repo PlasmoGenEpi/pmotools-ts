@@ -1,0 +1,54 @@
+{
+ "id": "mhap/error_additional_detected_original_name",
+ "function": "mhap_table_to_pmo",
+ "note": "A detected extra column named by its pre-rename name ('Reads') is missing.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "Reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "Reads": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reads_col": "Reads",
+  "additional_mhap_detected_cols": [
+   "Reads"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing additional columns: {'Reads'}"
+ },
+ "warnings": []
+}

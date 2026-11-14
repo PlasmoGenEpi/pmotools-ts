@@ -1,0 +1,469 @@
+{
+ "id": "validate/extra/v1.1.0",
+ "function": "validate_pmo",
+ "note": "an unknown property on every object, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/bioinformatics_methods_info/0/methods/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/bioinformatics_run_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/detected_microhaplotypes/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/detected_microhaplotypes/0/library_samples/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/detected_microhaplotypes/0/library_samples/0/target_results/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/detected_microhaplotypes/0/library_samples/0/target_results/0/mhaps/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/library_sample_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/panel_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/panel_info/0/reactions/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/pmo_header/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/pmo_header/generation_method/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/project_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/read_counts_by_stage/0/read_counts_by_library_sample_by_stage/0/read_counts_for_targets/0/stages/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/mhap_location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/codon_genomic_location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants/0/protein_location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar/ref_loc/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/sequencing_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/specimen_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/specimen_info/0/storage_plate_info/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/forward_primer/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/forward_primer/location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/insert_location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/reverse_primer/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/target_info/0/reverse_primer/location/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/not_in_schema",
+    "value": {
+     "any": [
+      1,
+      "x"
+     ]
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid"
+  ]
+ },
+ "warnings": []
+}

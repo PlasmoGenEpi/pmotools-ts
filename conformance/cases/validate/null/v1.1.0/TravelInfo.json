@@ -1,0 +1,59 @@
+{
+ "id": "validate/null/v1.1.0/TravelInfo",
+ "function": "validate_pmo",
+ "note": "each property of TravelInfo set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/bed_net_usage",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin1",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin2",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/geo_admin3",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/lat_lon",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_country",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_end_date",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/travel_out_six_month/0/travel_start_date",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_country",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_end_date",
+   "invalid: type at /specimen_info/0/travel_out_six_month/0/travel_start_date"
+  ]
+ },
+ "warnings": []
+}

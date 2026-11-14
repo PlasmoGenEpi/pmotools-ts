@@ -1,0 +1,125 @@
+{
+ "id": "metatable/specimen/numeric_fields_as_text",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Integer and number fields from text columns are written as strings by Python",
+ "divergence": "pmotools-ts parses host_taxon_id, gravidity and plate_col as int() would, and host_age and parasite_density as float() would, and writes numbers. Python writes the strings it was given (except plate_col, which it already passes through int()), which fail its own schema.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "gravidity",
+    "host_age",
+    "density",
+    "r",
+    "c"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "object",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "gravidity": "object",
+    "host_age": "object",
+    "density": "object",
+    "r": "object",
+    "c": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     "9606",
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     "0",
+     "3.5",
+     "1200.5",
+     "A",
+     "1"
+    ],
+    [
+     "sample2",
+     5833,
+     " 9606 ",
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "2",
+     " 40 ",
+     "1e3",
+     "B",
+     " 12 "
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "gravidity_col": "gravidity",
+  "host_age_col": "host_age",
+  "parasite_density_col": "density",
+  "storage_plate_row_col": "r",
+  "storage_plate_col_col": "c"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": "9606",
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "gravidity": "0",
+    "host_age": "3.5",
+    "parasite_density_info": [
+     {
+      "parasite_density": "1200.5"
+     }
+    ],
+    "storage_plate_info": {
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": " 9606 ",
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "gravidity": "2",
+    "host_age": " 40 ",
+    "parasite_density_info": [
+     {
+      "parasite_density": "1e3"
+     }
+    ],
+    "storage_plate_info": {
+     "plate_row": "B",
+     "plate_col": 12
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

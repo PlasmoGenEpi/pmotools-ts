@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/uint64",
+ "function": "read_csv_typed",
+ "note": "Above int64 max and within uint64: uint64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775808,r0\n18446744073709551615,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "uint64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "18446744073709551615",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     9223372036854775808,
+     "r0"
+    ],
+    [
+     18446744073709551615,
+     "r1"
+    ],
+    [
+     1,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

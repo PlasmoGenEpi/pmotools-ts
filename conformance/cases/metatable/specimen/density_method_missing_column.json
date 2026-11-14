@@ -1,0 +1,38 @@
+{
+ "id": "metatable/specimen/density_method_missing_column",
+ "function": "specimen_info_table_to_pmo",
+ "note": "The density method column does not exist: pandas KeyError",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     1
+    ],
+    [
+     "sample2",
+     2
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d",
+  "parasite_density_method_col": "m"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'m'"
+ },
+ "warnings": []
+}

@@ -1,0 +1,137 @@
+{
+ "id": "panel/table-additional-columns",
+ "function": "panel_info_table_to_pmo",
+ "note": "Additional columns keep missing values as null and convert numpy scalars.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "text",
+    "count",
+    "score",
+    "flag",
+    "mixed"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "text": "object",
+    "count": "int64",
+    "score": "float64",
+    "flag": "bool",
+    "mixed": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "a",
+     1,
+     1.5,
+     true,
+     1
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     null,
+     2,
+     null,
+     false,
+     "two"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "",
+     3,
+     3.0,
+     true,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_target_info_cols": [
+   "text",
+   "count",
+   "score",
+   "flag",
+   "mixed"
+  ],
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "text": "a",
+     "count": 1,
+     "score": 1.5,
+     "flag": true,
+     "mixed": 1,
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "text": null,
+     "count": 2,
+     "score": null,
+     "flag": false,
+     "mixed": "two",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "text": "",
+     "count": 3,
+     "score": 3.0,
+     "flag": true,
+     "mixed": null,
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

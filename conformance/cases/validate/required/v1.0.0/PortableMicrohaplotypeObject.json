@@ -1,0 +1,67 @@
+{
+ "id": "validate/required/v1.0.0/PortableMicrohaplotypeObject",
+ "function": "validate_pmo",
+ "note": "each required property of PortableMicrohaplotypeObject removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/library_sample_info"
+   },
+   {
+    "remove": "/specimen_info"
+   },
+   {
+    "remove": "/sequencing_info"
+   },
+   {
+    "remove": "/panel_info"
+   },
+   {
+    "remove": "/target_info"
+   },
+   {
+    "remove": "/targeted_genomes"
+   },
+   {
+    "remove": "/representative_microhaplotypes"
+   },
+   {
+    "remove": "/bioinformatics_methods_info"
+   },
+   {
+    "remove": "/bioinformatics_run_info"
+   },
+   {
+    "remove": "/detected_microhaplotypes"
+   },
+   {
+    "remove": "/project_info"
+   },
+   {
+    "remove": "/pmo_header"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)",
+   "invalid: required at (root)"
+  ]
+ },
+ "warnings": []
+}

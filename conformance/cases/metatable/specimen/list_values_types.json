@@ -1,0 +1,130 @@
+{
+ "id": "metatable/specimen/list_values_types",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Strings are split without trimming or dropping empty parts; numbers are wrapped",
+ "divergence": "pmotools-ts writes specimen_taxon_id as integers ([5833], [5833, 5855], [5855]). Python writes strings, which fail its own schema. drug_usage is split as in Python.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "drug_usage",
+    "alternate_identifiers"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "object",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "drug_usage": "object",
+    "alternate_identifiers": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     "5833",
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     " AL , DP",
+     1
+    ],
+    [
+     "sample2",
+     "5833,5855",
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     "AL,,DP",
+     2
+    ],
+    [
+     "sample3",
+     "5855",
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3",
+     "AL",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "drug_usage_col": "drug_usage",
+  "alternate_identifiers_col": "alternate_identifiers"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     "5833"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "alternate_identifiers": [
+     1
+    ],
+    "drug_usage": [
+     " AL ",
+     " DP"
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     "5833",
+     "5855"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "alternate_identifiers": [
+     2
+    ],
+    "drug_usage": [
+     "AL",
+     "",
+     "DP"
+    ]
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     "5855"
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3",
+    "alternate_identifiers": [
+     3
+    ],
+    "drug_usage": [
+     "AL"
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

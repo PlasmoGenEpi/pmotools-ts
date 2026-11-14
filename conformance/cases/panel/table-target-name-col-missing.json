@@ -1,0 +1,47 @@
+{
+ "id": "panel/table-target-name-col-missing",
+ "function": "panel_info_table_to_pmo",
+ "note": "A target name column that is not in the table.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "target_name_col": "name",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'name'"
+ },
+ "warnings": []
+}

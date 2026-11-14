@@ -1,0 +1,23 @@
+{
+ "id": "validate/required/v1.1.0/MarkerOfInterest",
+ "function": "validate_pmo",
+ "note": "each required property of MarkerOfInterest removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/target_info/0/markers_of_interest/0/marker_location"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /target_info/0/markers_of_interest/0"
+  ]
+ },
+ "warnings": []
+}

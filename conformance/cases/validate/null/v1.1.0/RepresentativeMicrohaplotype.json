@@ -1,0 +1,59 @@
+{
+ "id": "validate/null/v1.1.0/RepresentativeMicrohaplotype",
+ "function": "validate_pmo",
+ "note": "each property of RepresentativeMicrohaplotype set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/alt_annotations",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_protein_variants",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/associated_seq_variants",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/microhaplotype_name",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/pseudocigar",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/quality",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/seq",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/seq"
+  ]
+ },
+ "warnings": []
+}

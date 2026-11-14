@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.0.0/MarkerOfInterest",
+ "function": "validate_pmo",
+ "note": "each property of MarkerOfInterest set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/target_info/0/markers_of_interest/0/associations",
+    "value": null
+   },
+   {
+    "set": "/target_info/0/markers_of_interest/0/marker_location",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /target_info/0/markers_of_interest/0/marker_location"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,39 @@
+{
+ "id": "read_counts/names/missing_samples_in_totals_duplicated",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "duplicated() treats two NaN names as the same name",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     1
+    ],
+    [
+     null,
+     2
+    ],
+    [
+     null,
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Duplicate library sample names found in total_raw_count_table:\n  library_sample_name  total_raw_count\n1                 NaN                2\n2                 NaN                3"
+ },
+ "warnings": []
+}

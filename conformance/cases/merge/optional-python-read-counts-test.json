@@ -1,0 +1,173 @@
+{
+ "id": "merge/optional-python-read-counts-test",
+ "function": "merge_to_pmo",
+ "note": "Python test_merge_to_pmo_with_read_counts_by_stage: empty methods list, so no bioinformatics_methods_info in the output.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "specimen_info": [
+   {
+    "specimen_name": "spec1",
+    "project_name": "proj1"
+   }
+  ],
+  "library_sample_info": [
+   {
+    "library_sample_name": "lib1",
+    "specimen_name": "spec1",
+    "sequencing_info_name": "seq1",
+    "panel_name": "panel1"
+   }
+  ],
+  "sequencing_info": [
+   {
+    "sequencing_info_name": "seq1"
+   }
+  ],
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1"
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1"
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": []
+     }
+    ]
+   },
+   "detected_microhaplotypes": []
+  },
+  "bioinfo_method_info": [],
+  "bioinfo_run_info": [
+   {
+    "bioinformatics_run_name": "run1"
+   }
+  ],
+  "project_info": [
+   {
+    "project_name": "proj1"
+   }
+  ],
+  "read_counts_by_stage_info": [
+   {
+    "bioinformatics_run_name": "run1",
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "lib1",
+      "total_raw_count": 1000,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "read_count": 100
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "pmo_header": {
+    "pmo_version": "1.1.0",
+    "creation_date": "2026-11-13",
+    "generation_method": {
+     "program_name": "pmotools-python",
+     "program_version": "1.2.2"
+    }
+   },
+   "library_sample_info": [
+    {
+     "library_sample_name": "lib1",
+     "specimen_id": 0,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    }
+   ],
+   "specimen_info": [
+    {
+     "specimen_name": "spec1",
+     "project_id": 0
+    }
+   ],
+   "panel_info": [
+    {
+     "panel_name": "panel1"
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1"
+    }
+   ],
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": [],
+      "target_id": 0
+     }
+    ]
+   },
+   "detected_microhaplotypes": [],
+   "sequencing_info": [
+    {
+     "sequencing_info_name": "seq1"
+    }
+   ],
+   "bioinformatics_run_info": [
+    {
+     "bioinformatics_run_name": "run1"
+    }
+   ],
+   "project_info": [
+    {
+     "project_name": "proj1"
+    }
+   ],
+   "read_counts_by_stage": [
+    {
+     "read_counts_by_library_sample_by_stage": [
+      {
+       "total_raw_count": 1000,
+       "read_counts_for_targets": [
+        {
+         "stages": [
+          {
+           "stage": "demultiplexed",
+           "read_count": 100
+          }
+         ],
+         "target_id": 0
+        }
+       ],
+       "library_sample_id": 0
+      }
+     ],
+     "bioinformatics_run_id": 0
+    }
+   ]
+  }
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": false,
+  "error": "'forward_primer' is a required property"
+ }
+}

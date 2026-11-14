@@ -1,0 +1,115 @@
+{
+ "id": "mhap/mixed_number_and_string_name",
+ "function": "mhap_table_to_pmo",
+ "note": "A target column holding both 10 and '10': pandas keeps two targets that serialise to the same name.",
+ "divergence": "pmotools-ts compares names as strings, so 10 and '10' are one target named '10' with microhaplotypes A, C, G; Python emits two targets, 10 and '10'.",
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10,
+     "A",
+     1
+    ],
+    [
+     "s1",
+     "10",
+     "C",
+     2
+    ],
+    [
+     "s2",
+     10,
+     "G",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": 10,
+      "microhaplotypes": [
+       {
+        "seq": "A"
+       },
+       {
+        "seq": "G"
+       }
+      ]
+     },
+     {
+      "target_name": "10",
+      "microhaplotypes": [
+       {
+        "seq": "C"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

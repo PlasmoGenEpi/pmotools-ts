@@ -1,0 +1,16 @@
+{
+ "id": "panel/check-genome-empty-dict",
+ "function": "check_genome_info",
+ "note": "An empty dict is missing every key.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": {}
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "genome_info missing required keys: genome_version, url, name, taxon_id"
+ },
+ "warnings": []
+}

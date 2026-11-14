@@ -1,0 +1,49 @@
+{
+ "id": "read_counts/pytest/missing_additional_library_sample_column",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_additional_columns_validation",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "additional_info"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "additional_info": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000,
+     "info1"
+    ],
+    [
+     "sample2",
+     2000,
+     "info2"
+    ],
+    [
+     "sample3",
+     1500,
+     "info3"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run",
+  "additional_library_sample_cols": [
+   "nonexistent_column"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing additional columns: {'nonexistent_column'}"
+ },
+ "warnings": []
+}

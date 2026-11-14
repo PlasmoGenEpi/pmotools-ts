@@ -1,0 +1,74 @@
+{
+ "id": "mhap/error_pseudocigar_row_missing_ref_loc",
+ "function": "mhap_table_to_pmo",
+ "note": "A row with a pseudocigar but no ref_loc start raises.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "cig",
+    "pchrom",
+    "pstart",
+    "pend"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "cig": "object",
+    "pchrom": "object",
+    "pstart": "float64",
+    "pend": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "1M",
+     "p1",
+     1.0,
+     5
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     "2M",
+     "p2",
+     null,
+     6
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "3M",
+     "p3",
+     3.0,
+     7
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "pseudocigar_col": "cig",
+  "pseudocigar_chrom_col": "pchrom",
+  "pseudocigar_start_col": "pstart",
+  "pseudocigar_end_col": "pend"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "pseudocigar present for target t2, seq C but its ref_loc chrom/start/end is missing"
+ },
+ "warnings": []
+}

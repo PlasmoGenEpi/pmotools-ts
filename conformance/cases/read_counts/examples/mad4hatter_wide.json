@@ -1,0 +1,405 @@
+{
+ "id": "read_counts/examples/mad4hatter_wide",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Wide format from the first four loci of four samples in mad4hatter_amplicon_coverage.txt; the fourth sample is not in the totals and is dropped",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "SampleID",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "SampleID": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "SRR26819135",
+     2403
+    ],
+    [
+     "SRR26819139",
+     1893
+    ],
+    [
+     "SRR26819141",
+     1857
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "SampleID",
+    "Locus",
+    "Reads",
+    "OutputDada2",
+    "OutputPostprocessing"
+   ],
+   "dtypes": {
+    "SampleID": "object",
+    "Locus": "object",
+    "Reads": "int64",
+    "OutputDada2": "int64",
+    "OutputPostprocessing": "int64"
+   },
+   "rows": [
+    [
+     "SRR26819135",
+     "Pf3D7_01_v3-145388-145662-1A",
+     54,
+     54,
+     54
+    ],
+    [
+     "SRR26819135",
+     "Pf3D7_01_v3-162867-163115-1A",
+     400,
+     398,
+     398
+    ],
+    [
+     "SRR26819135",
+     "Pf3D7_01_v3-181512-181761-1A",
+     266,
+     266,
+     266
+    ],
+    [
+     "SRR26819135",
+     "Pf3D7_01_v3-455794-456054-1A",
+     81,
+     80,
+     80
+    ],
+    [
+     "SRR26819139",
+     "Pf3D7_01_v3-145388-145662-1A",
+     28,
+     28,
+     28
+    ],
+    [
+     "SRR26819139",
+     "Pf3D7_01_v3-162867-163115-1A",
+     316,
+     312,
+     312
+    ],
+    [
+     "SRR26819139",
+     "Pf3D7_01_v3-181512-181761-1A",
+     217,
+     216,
+     216
+    ],
+    [
+     "SRR26819139",
+     "Pf3D7_01_v3-455794-456054-1A",
+     70,
+     70,
+     70
+    ],
+    [
+     "SRR26819141",
+     "Pf3D7_01_v3-145388-145662-1A",
+     50,
+     50,
+     50
+    ],
+    [
+     "SRR26819141",
+     "Pf3D7_01_v3-162867-163115-1A",
+     282,
+     275,
+     275
+    ],
+    [
+     "SRR26819141",
+     "Pf3D7_01_v3-181512-181761-1A",
+     199,
+     199,
+     199
+    ],
+    [
+     "SRR26819141",
+     "Pf3D7_01_v3-455794-456054-1A",
+     88,
+     88,
+     88
+    ],
+    [
+     "SRR26819151",
+     "Pf3D7_01_v3-145388-145662-1A",
+     3,
+     3,
+     3
+    ],
+    [
+     "SRR26819151",
+     "Pf3D7_01_v3-162867-163115-1A",
+     111,
+     100,
+     100
+    ],
+    [
+     "SRR26819151",
+     "Pf3D7_01_v3-181512-181761-1A",
+     204,
+     204,
+     204
+    ],
+    [
+     "SRR26819151",
+     "Pf3D7_01_v3-455794-456054-1A",
+     4,
+     4,
+     4
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "mad4hatter_run",
+  "library_sample_name_col": "SampleID",
+  "target_name_col": "Locus",
+  "stage_col": [
+   "Reads",
+   "OutputDada2",
+   "OutputPostprocessing"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "SRR26819135",
+      "total_raw_count": 2403,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 54
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 54
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 54
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-162867-163115-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 400
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 398
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 398
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-181512-181761-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 266
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 266
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 266
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-455794-456054-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 81
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 80
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 80
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819139",
+      "total_raw_count": 1893,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 28
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 28
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 28
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-162867-163115-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 316
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 312
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 312
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-181512-181761-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 217
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 216
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 216
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-455794-456054-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 70
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 70
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 70
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "SRR26819141",
+      "total_raw_count": 1857,
+      "read_counts_for_targets": [
+       {
+        "target_name": "Pf3D7_01_v3-145388-145662-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 50
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 50
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 50
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-162867-163115-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 282
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 275
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 275
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-181512-181761-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 199
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 199
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 199
+         }
+        ]
+       },
+       {
+        "target_name": "Pf3D7_01_v3-455794-456054-1A",
+        "stages": [
+         {
+          "stage": "Reads",
+          "reads": 88
+         },
+         {
+          "stage": "OutputDada2",
+          "reads": 88
+         },
+         {
+          "stage": "OutputPostprocessing",
+          "reads": 88
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "mad4hatter_run"
+   }
+  ]
+ },
+ "warnings": []
+}

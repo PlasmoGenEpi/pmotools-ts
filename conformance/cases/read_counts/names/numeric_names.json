@@ -1,0 +1,96 @@
+{
+ "id": "read_counts/names/numeric_names",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "Python writes 1.0 (iterrows upcasts the row) and does not match reads sample '1'",
+ "divergence": "pmotools-ts writes library sample, target, stage and run names as strings and compares them as strings (AGENTS.md: names are compared and written as strings), so numeric names come out as text and 1 matches '1'.",
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "q"
+   ],
+   "dtypes": {
+    "library_sample_name": "int64",
+    "total_raw_count": "int64",
+    "q": "float64"
+   },
+   "rows": [
+    [
+     1,
+     1,
+     0.5
+    ],
+    [
+     2,
+     2,
+     0.25
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "stage",
+    "read_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "int64",
+    "stage": "int64",
+    "read_count": "int64"
+   },
+   "rows": [
+    [
+     "1",
+     5,
+     1,
+     1
+    ],
+    [
+     2,
+     5,
+     1,
+     2
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_library_sample_cols": [
+   "q"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": 1.0,
+      "total_raw_count": 1,
+      "q": 0.5
+     },
+     {
+      "library_sample_name": 2.0,
+      "total_raw_count": 2,
+      "q": 0.25,
+      "read_counts_for_targets": [
+       {
+        "target_name": 5,
+        "stages": [
+         {
+          "stage": 1,
+          "reads": 2
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

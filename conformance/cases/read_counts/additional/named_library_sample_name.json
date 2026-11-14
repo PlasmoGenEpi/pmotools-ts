@@ -1,0 +1,47 @@
+{
+ "id": "read_counts/additional/named_library_sample_name",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "An additional column named library_sample_name replaces the name in place",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "sid",
+    "total_raw_count",
+    "library_sample_name"
+   ],
+   "dtypes": {
+    "sid": "object",
+    "total_raw_count": "int64",
+    "library_sample_name": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     5,
+     "other"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "sid",
+  "additional_library_sample_cols": [
+   "library_sample_name"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "other",
+      "total_raw_count": 5
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

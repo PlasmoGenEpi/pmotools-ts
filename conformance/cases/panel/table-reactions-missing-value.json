@@ -1,0 +1,104 @@
+{
+ "id": "panel/table-reactions-missing-value",
+ "function": "panel_info_table_to_pmo",
+ "note": "A missing (None) reaction cell makes a reaction named null with no targets.",
+ "divergence": "pmotools-ts leaves the target out of every reaction and adds no reaction for the missing cell; Python adds a reaction named null, which the schema rejects (reaction_name must be a string) and which is NaN, not valid JSON, when the table comes from read_csv.",
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "pool"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "pool": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "p1"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     null
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "p2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reaction_name_col": "pool",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "p1",
+       "panel_targets": [
+        0
+       ]
+      },
+      {
+       "reaction_name": null,
+       "panel_targets": []
+      },
+      {
+       "reaction_name": "p2",
+       "panel_targets": [
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

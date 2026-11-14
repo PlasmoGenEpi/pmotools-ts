@@ -1,0 +1,146 @@
+{
+ "id": "merge/warnings-then-error",
+ "function": "merge_to_pmo",
+ "note": "A specimen warning is raised (samp_B gets a bare specimen record) before the merge fails because that record has no project_name.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "specimen_info": [
+   {
+    "specimen_name": "samp_A",
+    "collection_country": "Kenya",
+    "project_name": "nope"
+   }
+  ],
+  "project_info": [
+   {
+    "project_name": "PRJNA1040019",
+    "project_description": "Mozambique surveillance",
+    "project_contributors": [
+     "Nanna Brokhattingen"
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "The following warnings were encountered during merging:\nproject_info provided but there are specimens missing project_name field"
+ },
+ "warnings": [
+  {
+   "category": "UserWarning",
+   "message": "library_sample_names found in the detected_microhaplotypes that don't have corresponding supplied specimen_names: ['samp_B'], will be added to specimen_info with no meta"
+  }
+ ]
+}

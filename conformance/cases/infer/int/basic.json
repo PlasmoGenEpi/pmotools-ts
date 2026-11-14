@@ -1,0 +1,60 @@
+{
+ "id": "infer/int/basic",
+ "function": "read_csv_typed",
+ "note": "Whole numbers make int64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1,r0\n22,r1\n333,r2\n0,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "int64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1",
+     "r0"
+    ],
+    [
+     "22",
+     "r1"
+    ],
+    [
+     "333",
+     "r2"
+    ],
+    [
+     "0",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     1,
+     "r0"
+    ],
+    [
+     22,
+     "r1"
+    ],
+    [
+     333,
+     "r2"
+    ],
+    [
+     0,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

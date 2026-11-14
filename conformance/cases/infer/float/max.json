@@ -1,0 +1,52 @@
+{
+ "id": "infer/float/max",
+ "function": "read_csv_typed",
+ "note": "The largest doubles still parse.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n1.7976931348623157e308,r0\n1e308,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "1.7976931348623157e308",
+     "r0"
+    ],
+    [
+     "1e308",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     1.7976931348623157e+308,
+     "r0"
+    ],
+    [
+     1e+308,
+     "r1"
+    ],
+    [
+     1.0,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

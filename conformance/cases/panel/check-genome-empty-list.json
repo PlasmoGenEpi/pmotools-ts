@@ -1,0 +1,16 @@
+{
+ "id": "panel/check-genome-empty-list",
+ "function": "check_genome_info",
+ "note": "An empty list raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "genome_info": []
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "genome_info list cannot be empty"
+ },
+ "warnings": []
+}

@@ -1,0 +1,227 @@
+{
+ "id": "merge/errors-detected-missing-run-name",
+ "function": "merge_to_pmo",
+ "note": "Run info given but detected microhaplotypes have no run name.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "specimen_info": [
+   {
+    "specimen_name": "samp_A",
+    "collection_country": "Kenya",
+    "project_name": "PRJNA1040019"
+   },
+   {
+    "specimen_name": "samp_B",
+    "collection_country": "Kenya",
+    "project_name": "PRJNA1040019"
+   }
+  ],
+  "library_sample_info": [
+   {
+    "library_sample_name": "samp_A",
+    "specimen_name": "samp_A",
+    "panel_name": "panel1",
+    "sequencing_info_name": "run1"
+   },
+   {
+    "library_sample_name": "samp_B",
+    "specimen_name": "samp_B",
+    "panel_name": "panel1",
+    "sequencing_info_name": "run1"
+   }
+  ],
+  "sequencing_info": [
+   {
+    "sequencing_info_name": "run1",
+    "seq_platform": "ILLUMINA",
+    "seq_instrument_model": "NextSeq 2000",
+    "library_layout": "PAIRED",
+    "library_strategy": "AMPLICON",
+    "library_source": "GENOMIC",
+    "library_selection": "PCR",
+    "seq_date": "2023-05-01"
+   }
+  ],
+  "bioinfo_method_info": [
+   {
+    "bioinformatics_method_name": "mad4hatter",
+    "methods": [
+     {
+      "program": "mad4hatter",
+      "program_version": "v0.1.8"
+     }
+    ]
+   }
+  ],
+  "bioinfo_run_info": [
+   {
+    "bioinformatics_run_name": "run1",
+    "bioinformatics_methods_id": 0,
+    "run_date": "2023-06-01"
+   }
+  ],
+  "project_info": [
+   {
+    "project_name": "PRJNA1040019",
+    "project_description": "Mozambique surveillance",
+    "project_contributors": [
+     "Nanna Brokhattingen"
+    ]
+   }
+  ],
+  "read_counts_by_stage_info": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "samp_A",
+      "total_raw_count": 100,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 50
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "library_sample_name": "samp_B",
+      "total_raw_count": 100,
+      "read_counts_for_targets": [
+       {
+        "target_name": "target1",
+        "stages": [
+         {
+          "stage": "demultiplexed",
+          "reads": 50
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_name": "run1"
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "The following warnings were encountered during merging:\nbioinformatics_run_info provided but there are detected microhaplotypes missing bioinformatics_run_name field"
+ },
+ "warnings": []
+}

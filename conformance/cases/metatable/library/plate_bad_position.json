@@ -1,0 +1,53 @@
+{
+ "id": "metatable/library/plate_bad_position",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "An invalid library prep plate position",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "well"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "well": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "A1"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "Z1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "library_prep_plate_position_col": "well"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Values in 'well' must start with a single letter A-H/a-h followed by number 1-12."
+ },
+ "warnings": []
+}

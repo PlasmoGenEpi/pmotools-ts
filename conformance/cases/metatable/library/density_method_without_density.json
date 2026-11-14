@@ -1,0 +1,53 @@
+{
+ "id": "metatable/library/density_method_without_density",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Method without density",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "m1"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "m1": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "a"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     "b"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "parasite_density_method_col": "m1"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "parasite_density_method_col is set but parasite_density_col is None. Cannot proceed."
+ },
+ "warnings": []
+}

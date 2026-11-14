@@ -1,0 +1,29 @@
+{
+ "id": "validate/null/v1.0.0/ReactionInfo",
+ "function": "validate_pmo",
+ "note": "each property of ReactionInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/panel_info/0/reactions/0/panel_targets",
+    "value": null
+   },
+   {
+    "set": "/panel_info/0/reactions/0/reaction_name",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /panel_info/0/reactions/0/panel_targets",
+   "invalid: type at /panel_info/0/reactions/0/reaction_name"
+  ]
+ },
+ "warnings": []
+}

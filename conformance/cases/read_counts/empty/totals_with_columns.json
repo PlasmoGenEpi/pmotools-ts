@@ -1,0 +1,32 @@
+{
+ "id": "read_counts/empty/totals_with_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": null,
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "float64",
+    "total_raw_count": "float64"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "r1"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [],
+    "bioinformatics_run_name": "r1"
+   }
+  ]
+ },
+ "warnings": []
+}

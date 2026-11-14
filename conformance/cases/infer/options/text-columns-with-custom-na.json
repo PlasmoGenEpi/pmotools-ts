@@ -1,0 +1,51 @@
+{
+ "id": "infer/options/text-columns-with-custom-na",
+ "function": "read_csv_typed",
+ "note": "Text columns use the custom NA list too.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,b\n001,1\nmissing,NA\n",
+  "na_values": [
+   "missing"
+  ],
+  "keep_default_na": false,
+  "text_columns": [
+   "a"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "b"
+   ],
+   "dtypes": {
+    "a": "object",
+    "b": "object"
+   },
+   "raw": [
+    [
+     "001",
+     "1"
+    ],
+    [
+     "missing",
+     "NA"
+    ]
+   ],
+   "rows": [
+    [
+     "001",
+     "1"
+    ],
+    [
+     null,
+     "NA"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,49 @@
+{
+ "id": "validate/null/v1.0.0/GenomeInfo",
+ "function": "validate_pmo",
+ "note": "each property of GenomeInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "valid",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/url"
+  ]
+ },
+ "warnings": []
+}

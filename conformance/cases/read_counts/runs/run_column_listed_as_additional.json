@@ -1,0 +1,48 @@
+{
+ "id": "read_counts/runs/run_column_listed_as_additional",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "The run column is dropped before additional columns are read",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count",
+    "r"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64",
+    "r": "object"
+   },
+   "rows": [
+    [
+     "a",
+     1,
+     "x"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "r",
+  "additional_library_sample_cols": [
+   "r"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "a",
+      "total_raw_count": 1
+     }
+    ],
+    "bioinformatics_run_name": "x"
+   }
+  ]
+ },
+ "warnings": []
+}

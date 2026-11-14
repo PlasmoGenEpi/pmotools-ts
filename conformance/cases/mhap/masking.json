@@ -1,0 +1,401 @@
+{
+ "id": "mhap/masking",
+ "function": "mhap_table_to_pmo",
+ "note": "Python test masking: delimited strings, missing for target3 so no masking key.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "bioinf_run",
+    "masking_seq_start",
+    "masking_seq_segment_size",
+    "masking_replacement_size"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "bioinf_run": "object",
+    "masking_seq_start": "object",
+    "masking_seq_segment_size": "object",
+    "masking_replacement_size": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     "target1",
+     "ACTG",
+     10,
+     "run1",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample1",
+     "target2",
+     "TTTT",
+     100,
+     "run1",
+     "4",
+     "6",
+     "6"
+    ],
+    [
+     "sample1",
+     "target3",
+     "GGG",
+     10,
+     "run1",
+     null,
+     null,
+     null
+    ],
+    [
+     "sample2",
+     "target1",
+     "ACTG",
+     1,
+     "run2",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTT",
+     12,
+     "run2",
+     "4",
+     "6",
+     "6"
+    ],
+    [
+     "sample2",
+     "target2",
+     "TTTA",
+     53,
+     "run2",
+     "4",
+     "6",
+     "6"
+    ],
+    [
+     "sample2",
+     "target3",
+     "AAG",
+     73,
+     "run2",
+     null,
+     null,
+     null
+    ],
+    [
+     "sample3",
+     "target1",
+     "ATTG",
+     76,
+     "run1",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample3",
+     "target2",
+     "TTTA",
+     6,
+     "run1",
+     "4",
+     "6",
+     "6"
+    ],
+    [
+     "sample4",
+     "target1",
+     "ACTG",
+     297,
+     "run2",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTG",
+     123,
+     "run3",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample5",
+     "target1",
+     "ATTA",
+     1,
+     "run3",
+     "5,92",
+     "30,12",
+     "30,13"
+    ],
+    [
+     "sample5",
+     "target3",
+     "GGG",
+     17,
+     "run3",
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "masking_seq_start_col": "masking_seq_start",
+  "masking_seq_segment_size_col": "masking_seq_segment_size",
+  "masking_replacement_size_col": "masking_replacement_size"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "ACTG",
+        "masking": [
+         {
+          "seq_start": 5,
+          "seq_segment_size": 30,
+          "replacement_size": 30
+         },
+         {
+          "seq_start": 92,
+          "seq_segment_size": 12,
+          "replacement_size": 13
+         }
+        ]
+       },
+       {
+        "seq": "ATTG",
+        "masking": [
+         {
+          "seq_start": 5,
+          "seq_segment_size": 30,
+          "replacement_size": 30
+         },
+         {
+          "seq_start": 92,
+          "seq_segment_size": 12,
+          "replacement_size": 13
+         }
+        ]
+       },
+       {
+        "seq": "ATTA",
+        "masking": [
+         {
+          "seq_start": 5,
+          "seq_segment_size": 30,
+          "replacement_size": 30
+         },
+         {
+          "seq_start": 92,
+          "seq_segment_size": 12,
+          "replacement_size": 13
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "TTTT",
+        "masking": [
+         {
+          "seq_start": 4,
+          "seq_segment_size": 6,
+          "replacement_size": 6
+         }
+        ]
+       },
+       {
+        "seq": "TTTA",
+        "masking": [
+         {
+          "seq_start": 4,
+          "seq_segment_size": 6,
+          "replacement_size": 6
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "target_name": "target3",
+      "microhaplotypes": [
+       {
+        "seq": "GGG"
+       },
+       {
+        "seq": "AAG"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "sample1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 100
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 12
+          },
+          {
+           "mhap_id": 1,
+           "reads": 53
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 73
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample3",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 76
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 6
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample4",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 297
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "sample5",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 123
+          },
+          {
+           "mhap_id": 2,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 17
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

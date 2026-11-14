@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/uint64-with-float",
+ "function": "read_csv_typed",
+ "note": "uint64 with floats: float64, the big value parsed the pandas way.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n9223372036854775808,r0\n1.5,r1\n-2.5,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "9223372036854775808",
+     "r0"
+    ],
+    [
+     "1.5",
+     "r1"
+    ],
+    [
+     "-2.5",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     9.223372036854778e+18,
+     "r0"
+    ],
+    [
+     1.5,
+     "r1"
+    ],
+    [
+     -2.5,
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

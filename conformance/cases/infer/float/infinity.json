@@ -1,0 +1,116 @@
+{
+ "id": "infer/float/infinity",
+ "function": "read_csv_typed",
+ "note": "Infinity spellings, any case, are numbers.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\ninf,r0\nINF,r1\n+inf,r2\n-Inf,r3\nInfinity,r4\n+Infinity,r5\ninfinity,r6\n-INFINITY,r7\n1,r8\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "inf",
+     "r0"
+    ],
+    [
+     "INF",
+     "r1"
+    ],
+    [
+     "+inf",
+     "r2"
+    ],
+    [
+     "-Inf",
+     "r3"
+    ],
+    [
+     "Infinity",
+     "r4"
+    ],
+    [
+     "+Infinity",
+     "r5"
+    ],
+    [
+     "infinity",
+     "r6"
+    ],
+    [
+     "-INFINITY",
+     "r7"
+    ],
+    [
+     "1",
+     "r8"
+    ]
+   ],
+   "rows": [
+    [
+     {
+      "float": "inf"
+     },
+     "r0"
+    ],
+    [
+     {
+      "float": "inf"
+     },
+     "r1"
+    ],
+    [
+     {
+      "float": "inf"
+     },
+     "r2"
+    ],
+    [
+     {
+      "float": "-inf"
+     },
+     "r3"
+    ],
+    [
+     {
+      "float": "inf"
+     },
+     "r4"
+    ],
+    [
+     {
+      "float": "inf"
+     },
+     "r5"
+    ],
+    [
+     {
+      "float": "inf"
+     },
+     "r6"
+    ],
+    [
+     {
+      "float": "-inf"
+     },
+     "r7"
+    ],
+    [
+     1.0,
+     "r8"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

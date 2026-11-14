@@ -1,0 +1,60 @@
+{
+ "id": "metatable/specimen/density_nan",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A missing density in a float column is not None, so Python writes NaN",
+ "divergence": "pmotools-ts omits the density entry when the density is missing. Python writes parasite_density: NaN, which is not valid JSON.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "d",
+    "m"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "d": "float64",
+    "m": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     10.5,
+     "qPCR"
+    ],
+    [
+     "sample2",
+     null,
+     "qPCR"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "d",
+  "parasite_density_method_col": "m"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 10.5,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": "__NaN__",
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,1111 @@
+{
+ "id": "validate/types/v1.1.0/PortableMicrohaplotypeObject",
+ "function": "validate_pmo",
+ "note": "each property of PortableMicrohaplotypeObject (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": "1"
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": ""
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 1
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 0
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": -1
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 1.0
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 1.5
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": true
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": false
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": []
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": {}
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": null
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": "1"
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": ""
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 1
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 0
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": -1
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 1.0
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 1.5
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 1e+300
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": true
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": false
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": []
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": {}
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/library_sample_info",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info",
+    "value": "1"
+   },
+   {
+    "set": "/library_sample_info",
+    "value": ""
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 1
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 0
+   },
+   {
+    "set": "/library_sample_info",
+    "value": -1
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 1.0
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 1.5
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/library_sample_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/library_sample_info",
+    "value": true
+   },
+   {
+    "set": "/library_sample_info",
+    "value": false
+   },
+   {
+    "set": "/library_sample_info",
+    "value": []
+   },
+   {
+    "set": "/library_sample_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/library_sample_info",
+    "value": {}
+   },
+   {
+    "set": "/library_sample_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/panel_info",
+    "value": null
+   },
+   {
+    "set": "/panel_info",
+    "value": "1"
+   },
+   {
+    "set": "/panel_info",
+    "value": ""
+   },
+   {
+    "set": "/panel_info",
+    "value": 1
+   },
+   {
+    "set": "/panel_info",
+    "value": 0
+   },
+   {
+    "set": "/panel_info",
+    "value": -1
+   },
+   {
+    "set": "/panel_info",
+    "value": 1.0
+   },
+   {
+    "set": "/panel_info",
+    "value": 1.5
+   },
+   {
+    "set": "/panel_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/panel_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/panel_info",
+    "value": true
+   },
+   {
+    "set": "/panel_info",
+    "value": false
+   },
+   {
+    "set": "/panel_info",
+    "value": []
+   },
+   {
+    "set": "/panel_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/panel_info",
+    "value": {}
+   },
+   {
+    "set": "/panel_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/pmo_header",
+    "value": null
+   },
+   {
+    "set": "/pmo_header",
+    "value": "1"
+   },
+   {
+    "set": "/pmo_header",
+    "value": ""
+   },
+   {
+    "set": "/pmo_header",
+    "value": 1
+   },
+   {
+    "set": "/pmo_header",
+    "value": 0
+   },
+   {
+    "set": "/pmo_header",
+    "value": -1
+   },
+   {
+    "set": "/pmo_header",
+    "value": 1.0
+   },
+   {
+    "set": "/pmo_header",
+    "value": 1.5
+   },
+   {
+    "set": "/pmo_header",
+    "value": 1e+300
+   },
+   {
+    "set": "/pmo_header",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/pmo_header",
+    "value": true
+   },
+   {
+    "set": "/pmo_header",
+    "value": false
+   },
+   {
+    "set": "/pmo_header",
+    "value": []
+   },
+   {
+    "set": "/pmo_header",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/pmo_header",
+    "value": {}
+   },
+   {
+    "set": "/pmo_header",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/project_info",
+    "value": null
+   },
+   {
+    "set": "/project_info",
+    "value": "1"
+   },
+   {
+    "set": "/project_info",
+    "value": ""
+   },
+   {
+    "set": "/project_info",
+    "value": 1
+   },
+   {
+    "set": "/project_info",
+    "value": 0
+   },
+   {
+    "set": "/project_info",
+    "value": -1
+   },
+   {
+    "set": "/project_info",
+    "value": 1.0
+   },
+   {
+    "set": "/project_info",
+    "value": 1.5
+   },
+   {
+    "set": "/project_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/project_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/project_info",
+    "value": true
+   },
+   {
+    "set": "/project_info",
+    "value": false
+   },
+   {
+    "set": "/project_info",
+    "value": []
+   },
+   {
+    "set": "/project_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/project_info",
+    "value": {}
+   },
+   {
+    "set": "/project_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": "1"
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": ""
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 1
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 0
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": -1
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 1.0
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 1.5
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 1e+300
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": true
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": false
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": []
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": {}
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/sequencing_info",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info",
+    "value": "1"
+   },
+   {
+    "set": "/sequencing_info",
+    "value": ""
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 1
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 0
+   },
+   {
+    "set": "/sequencing_info",
+    "value": -1
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 1.0
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 1.5
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/sequencing_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/sequencing_info",
+    "value": true
+   },
+   {
+    "set": "/sequencing_info",
+    "value": false
+   },
+   {
+    "set": "/sequencing_info",
+    "value": []
+   },
+   {
+    "set": "/sequencing_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/sequencing_info",
+    "value": {}
+   },
+   {
+    "set": "/sequencing_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/specimen_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info",
+    "value": "1"
+   },
+   {
+    "set": "/specimen_info",
+    "value": ""
+   },
+   {
+    "set": "/specimen_info",
+    "value": 1
+   },
+   {
+    "set": "/specimen_info",
+    "value": 0
+   },
+   {
+    "set": "/specimen_info",
+    "value": -1
+   },
+   {
+    "set": "/specimen_info",
+    "value": 1.0
+   },
+   {
+    "set": "/specimen_info",
+    "value": 1.5
+   },
+   {
+    "set": "/specimen_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/specimen_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/specimen_info",
+    "value": true
+   },
+   {
+    "set": "/specimen_info",
+    "value": false
+   },
+   {
+    "set": "/specimen_info",
+    "value": []
+   },
+   {
+    "set": "/specimen_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/specimen_info",
+    "value": {}
+   },
+   {
+    "set": "/specimen_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/target_info",
+    "value": null
+   },
+   {
+    "set": "/target_info",
+    "value": "1"
+   },
+   {
+    "set": "/target_info",
+    "value": ""
+   },
+   {
+    "set": "/target_info",
+    "value": 1
+   },
+   {
+    "set": "/target_info",
+    "value": 0
+   },
+   {
+    "set": "/target_info",
+    "value": -1
+   },
+   {
+    "set": "/target_info",
+    "value": 1.0
+   },
+   {
+    "set": "/target_info",
+    "value": 1.5
+   },
+   {
+    "set": "/target_info",
+    "value": 1e+300
+   },
+   {
+    "set": "/target_info",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/target_info",
+    "value": true
+   },
+   {
+    "set": "/target_info",
+    "value": false
+   },
+   {
+    "set": "/target_info",
+    "value": []
+   },
+   {
+    "set": "/target_info",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/target_info",
+    "value": {}
+   },
+   {
+    "set": "/target_info",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "valid",
+   "invalid: type at /bioinformatics_methods_info/0",
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_methods_info",
+   "valid",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "valid",
+   "invalid: type at /bioinformatics_run_info/0",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "valid",
+   "invalid: type at /detected_microhaplotypes/0",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "valid",
+   "invalid: type at /library_sample_info/0",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "valid",
+   "invalid: type at /panel_info/0",
+   "invalid: type at /panel_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: type at /pmo_header",
+   "invalid: required at /pmo_header",
+   "invalid: required at /pmo_header",
+   "valid",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "valid",
+   "invalid: type at /project_info/0",
+   "invalid: type at /project_info",
+   "invalid: type at /project_info",
+   "valid",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "valid",
+   "invalid: type at /read_counts_by_stage/0",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /read_counts_by_stage",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: required at /representative_microhaplotypes",
+   "invalid: required at /representative_microhaplotypes",
+   "valid",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "valid",
+   "invalid: type at /sequencing_info/0",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "valid",
+   "invalid: type at /specimen_info/0",
+   "invalid: type at /specimen_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "valid",
+   "invalid: type at /target_info/0",
+   "invalid: type at /target_info",
+   "invalid: type at /target_info",
+   "valid",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes",
+   "valid",
+   "invalid: type at /targeted_genomes/0",
+   "invalid: type at /targeted_genomes",
+   "invalid: type at /targeted_genomes"
+  ]
+ },
+ "warnings": []
+}

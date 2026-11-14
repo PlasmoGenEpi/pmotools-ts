@@ -1,0 +1,60 @@
+{
+ "id": "infer/na/one-number-among-missing",
+ "function": "read_csv_typed",
+ "note": "One number in an otherwise missing column: float64.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n,r0\nNA,r1\n007,r2\n,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "float64",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "007",
+     "r2"
+    ],
+    [
+     "",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     7.0,
+     "r2"
+    ],
+    [
+     null,
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

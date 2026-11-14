@@ -1,0 +1,60 @@
+{
+ "id": "infer/int/mixed-with-text",
+ "function": "read_csv_typed",
+ "note": "One non-numeric cell keeps the whole column as the original strings.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n001,r0\n 2,r1\nx,r2\n3,r3\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "001",
+     "r0"
+    ],
+    [
+     " 2",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ],
+    [
+     "3",
+     "r3"
+    ]
+   ],
+   "rows": [
+    [
+     "001",
+     "r0"
+    ],
+    [
+     " 2",
+     "r1"
+    ],
+    [
+     "x",
+     "r2"
+    ],
+    [
+     "3",
+     "r3"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

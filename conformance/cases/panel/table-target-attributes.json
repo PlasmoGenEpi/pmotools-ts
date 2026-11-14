@@ -1,0 +1,157 @@
+{
+ "id": "panel/table-target-attributes",
+ "function": "panel_info_table_to_pmo",
+ "note": "Attributes split on the delimiter without stripping or dedupe; missing and blank cells are dropped.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "attrs"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "attrs": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "diversity,drug"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     " a , b "
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     null
+    ],
+    [
+     "target1b",
+     "CTTA",
+     "GTT",
+     ""
+    ],
+    [
+     "target2b",
+     "CTAA",
+     "TGG",
+     "   "
+    ],
+    [
+     "target3b",
+     "TTGA",
+     "ATT",
+     "x,,x"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "target_attributes_col": "attrs",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "target_attributes": [
+      "diversity",
+      "drug"
+     ],
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "target_attributes": [
+      " a ",
+      " b "
+     ],
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    },
+    {
+     "target_name": "target1b",
+     "forward_primer": {
+      "seq": "CTTA"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2b",
+     "forward_primer": {
+      "seq": "CTAA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3b",
+     "target_attributes": [
+      "x",
+      "",
+      "x"
+     ],
+     "forward_primer": {
+      "seq": "TTGA"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

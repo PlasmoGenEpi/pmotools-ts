@@ -1,0 +1,16 @@
+{
+ "id": "validate/files/combined_pmo_example.json__v1.0.0",
+ "function": "validate_pmo",
+ "note": "example file combined_pmo_example.json against schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "file": "combined_pmo_example.json"
+ },
+ "result": {
+  "kind": "ok",
+  "value": "valid"
+ },
+ "warnings": []
+}

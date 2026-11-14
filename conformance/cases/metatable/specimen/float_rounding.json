@@ -1,0 +1,116 @@
+{
+ "id": "metatable/specimen/float_rounding",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Values pass through to_json, which rounds floats to 10 decimals and uses %.10g outside [1e-15, 1e16]",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name",
+    "age",
+    "extra"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "specimen_taxon_id": "int64",
+    "host_taxon_id": "int64",
+    "collection_date": "object",
+    "collection_country": "object",
+    "project_name": "object",
+    "age": "float64",
+    "extra": "float64"
+   },
+   "rows": [
+    [
+     "sample1",
+     5833,
+     9606,
+     "01/02/2023",
+     "Mozambique",
+     "project1",
+     0.3333333333333333,
+     0.6666666666666666
+    ],
+    [
+     "sample2",
+     5833,
+     9606,
+     "01/02/2023",
+     "Ghana",
+     "project2",
+     12345.123456789011,
+     1.5e-10
+    ],
+    [
+     "sample3",
+     5833,
+     9606,
+     "01/02/2023",
+     "Kenya",
+     "project3",
+     1e-11,
+     1.234e+17
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name",
+  "host_age_col": "age",
+  "additional_specimen_cols": [
+   "extra"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Mozambique",
+    "project_name": "project1",
+    "host_age": 0.3333333333,
+    "extra": 0.6666666667
+   },
+   {
+    "specimen_name": "sample2",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Ghana",
+    "project_name": "project2",
+    "host_age": 12345.123456789,
+    "extra": 2e-10
+   },
+   {
+    "specimen_name": "sample3",
+    "specimen_taxon_id": [
+     5833
+    ],
+    "host_taxon_id": 9606,
+    "collection_date": "01/02/2023",
+    "collection_country": "Kenya",
+    "project_name": "project3",
+    "host_age": 0.0,
+    "extra": 1.234e+17
+   }
+  ]
+ },
+ "warnings": []
+}

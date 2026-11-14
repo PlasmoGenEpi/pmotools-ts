@@ -1,0 +1,16 @@
+{
+ "id": "validate/inline/root-null__v1.0.0",
+ "function": "validate_pmo",
+ "note": "root-null against schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "instance": null
+ },
+ "result": {
+  "kind": "ok",
+  "value": "invalid: type at (root)"
+ },
+ "warnings": []
+}

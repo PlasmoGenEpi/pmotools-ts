@@ -1,0 +1,84 @@
+{
+ "id": "validate/null/v1.0.0/PortableMicrohaplotypeObject",
+ "function": "validate_pmo",
+ "note": "each property of PortableMicrohaplotypeObject set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/bioinformatics_methods_info",
+    "value": null
+   },
+   {
+    "set": "/bioinformatics_run_info",
+    "value": null
+   },
+   {
+    "set": "/detected_microhaplotypes",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info",
+    "value": null
+   },
+   {
+    "set": "/panel_info",
+    "value": null
+   },
+   {
+    "set": "/pmo_header",
+    "value": null
+   },
+   {
+    "set": "/project_info",
+    "value": null
+   },
+   {
+    "set": "/read_counts_by_stage",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes",
+    "value": null
+   },
+   {
+    "set": "/sequencing_info",
+    "value": null
+   },
+   {
+    "set": "/specimen_info",
+    "value": null
+   },
+   {
+    "set": "/target_info",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: type at /bioinformatics_methods_info",
+   "invalid: type at /bioinformatics_run_info",
+   "invalid: type at /detected_microhaplotypes",
+   "invalid: type at /library_sample_info",
+   "invalid: type at /panel_info",
+   "invalid: type at /pmo_header",
+   "invalid: type at /project_info",
+   "valid",
+   "invalid: type at /representative_microhaplotypes",
+   "invalid: type at /sequencing_info",
+   "invalid: type at /specimen_info",
+   "invalid: type at /target_info",
+   "invalid: type at /targeted_genomes"
+  ]
+ },
+ "warnings": []
+}

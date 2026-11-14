@@ -1,0 +1,54 @@
+{
+ "id": "merge/errors-multi-panel-no-metadata",
+ "function": "merge_to_pmo",
+ "note": "Python test_merge_to_pmo_minimum_info_raise_multi_panel_no_lib.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1"
+    },
+    {
+     "panel_name": "panel2"
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1"
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": []
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": []
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "If multiple panels are included in the panel information,specimen_info and library_sample_info must also be provided to indicate which panel was used for each specimen. Otherwise, provide only a single panel. Panels found: 2"
+ },
+ "warnings": []
+}

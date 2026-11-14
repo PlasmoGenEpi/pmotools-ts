@@ -1,0 +1,35 @@
+{
+ "id": "validate/required/v1.1.0/GenomeInfo",
+ "function": "validate_pmo",
+ "note": "each required property of GenomeInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/targeted_genomes/0/name"
+   },
+   {
+    "remove": "/targeted_genomes/0/genome_version"
+   },
+   {
+    "remove": "/targeted_genomes/0/taxon_id"
+   },
+   {
+    "remove": "/targeted_genomes/0/url"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /targeted_genomes/0",
+   "invalid: required at /targeted_genomes/0",
+   "invalid: required at /targeted_genomes/0",
+   "invalid: required at /targeted_genomes/0"
+  ]
+ },
+ "warnings": []
+}

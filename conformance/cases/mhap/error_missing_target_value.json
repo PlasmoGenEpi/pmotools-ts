@@ -1,0 +1,49 @@
+{
+ "id": "mhap/error_missing_target_value",
+ "function": "mhap_table_to_pmo",
+ "note": "A row with no target name raises 'Missing target_name(s)'.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1
+    ],
+    [
+     "s1",
+     null,
+     "C",
+     2
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing target_name(s) in representative microhaplotype table: [nan]"
+ },
+ "warnings": []
+}

@@ -1,0 +1,88 @@
+{
+ "id": "metatable/library/alternate_identifiers_blank",
+ "function": "library_sample_info_table_to_pmo",
+ "note": "Blank alternate identifiers become [\"\"] in Python",
+ "divergence": "pmotools-ts omits alternate_identifiers when the cell is blank. Python writes [\"\"], which fails the schema item pattern.",
+ "tables": {
+  "contents": {
+   "columns": [
+    "library_sample_name",
+    "sequencing_info_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "sequencing_info_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object"
+   },
+   "rows": [
+    [
+     "sample1_MH_run1",
+     "run1",
+     "sample1",
+     "MH",
+     "a,b"
+    ],
+    [
+     "sample2_MH_run1",
+     "run1",
+     "sample2",
+     "MH",
+     null
+    ],
+    [
+     "sample3_MH_run1",
+     "run1",
+     "sample3",
+     "MH",
+     ""
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "library_sample_name_col": "library_sample_name",
+  "sequencing_info_name_col": "sequencing_info_name",
+  "specimen_name_col": "specimen_name",
+  "panel_name_col": "panel_name",
+  "alternate_identifiers_col": "alternate_identifiers"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "library_sample_name": "sample1_MH_run1",
+    "specimen_name": "sample1",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     "a",
+     "b"
+    ]
+   },
+   {
+    "library_sample_name": "sample2_MH_run1",
+    "specimen_name": "sample2",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     ""
+    ]
+   },
+   {
+    "library_sample_name": "sample3_MH_run1",
+    "specimen_name": "sample3",
+    "panel_name": "MH",
+    "sequencing_info_name": "run1",
+    "alternate_identifiers": [
+     ""
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

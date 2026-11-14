@@ -1,0 +1,370 @@
+{
+ "bioinformatics_methods_info": [
+  {
+   "methods": [
+    {
+     "additional_argument": [
+      "arg_1 (x)/y{z}"
+     ],
+     "program": "Name 1.0_x-y",
+     "program_description": "store (a),b/c",
+     "program_url": "store (a),b/c",
+     "program_version": "Name 1.0_x-y"
+    }
+   ]
+  }
+ ],
+ "bioinformatics_run_info": [
+  {
+   "bioinformatics_methods_id": 0,
+   "bioinformatics_run_name": "Name 1.0_x-y",
+   "run_date": "2024-03-15"
+  }
+ ],
+ "detected_microhaplotypes": [
+  {
+   "bioinformatics_run_id": 0,
+   "library_samples": [
+    {
+     "library_sample_id": 0,
+     "target_results": [
+      {
+       "mhaps": [
+        {
+         "mhap_id": 0,
+         "reads": 0,
+         "umis": 0
+        }
+       ],
+       "mhaps_target_id": 0
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "library_sample_info": [
+  {
+   "alternate_identifiers": [
+    "Name 1.0_x-y"
+   ],
+   "experiment_accession": "chr_1.2-a",
+   "fastqs_loc": "a.fq;b.fq,c (1)/d",
+   "library_prep_plate_info": {
+    "plate_col": 0,
+    "plate_name": "Name 1.0_x-y",
+    "plate_row": "A"
+   },
+   "library_sample_name": "Name 1.0_x-y",
+   "panel_id": 0,
+   "qpcr_parasite_density_info": [
+    {
+     "date_measured": "2024-03",
+     "density_method_comments": "store (a),b/c",
+     "parasite_density": 0.5,
+     "parasite_density_method": "Name 1.0_x-y"
+    }
+   ],
+   "run_accession": "chr_1.2-a",
+   "sequencing_info_id": 0,
+   "specimen_id": 0
+  }
+ ],
+ "panel_info": [
+  {
+   "panel_name": "chr_1.2-a",
+   "reactions": [
+    {
+     "panel_targets": [
+      0
+     ],
+     "reaction_name": "chr_1.2-a"
+    }
+   ]
+  }
+ ],
+ "pmo_header": {
+  "creation_date": "2024-03-15",
+  "generation_method": {
+   "program_name": "Name 1.0_x-y",
+   "program_version": "Name 1.0_x-y"
+  },
+  "pmo_version": "Name 1.0_x-y"
+ },
+ "project_info": [
+  {
+   "BioProject_accession": "Name 1.0_x-y",
+   "project_collector_chief_scientist": "drug a;b|c (d),e/f",
+   "project_contributors": [
+    "Name 1.0_x-y"
+   ],
+   "project_description": "free text",
+   "project_name": "Name 1.0_x-y",
+   "project_type": "Name 1.0_x-y"
+  }
+ ],
+ "read_counts_by_stage": [
+  {
+   "bioinformatics_run_id": 0,
+   "read_counts_by_library_sample_by_stage": [
+    {
+     "library_sample_id": 0,
+     "read_counts_for_targets": [
+      {
+       "stages": [
+        {
+         "reads": 0,
+         "stage": "Name 1.0_x-y"
+        }
+       ],
+       "target_id": 0
+      }
+     ],
+     "total_raw_count": 0
+    }
+   ]
+  }
+ ],
+ "representative_microhaplotypes": {
+  "targets": [
+   {
+    "mhap_location": {
+     "alt_seq": "ACGT-",
+     "chrom": "chr_1.2-a",
+     "end": 0,
+     "genome_id": 0,
+     "ref_seq": "ACGT-",
+     "start": 0,
+     "strand": "+"
+    },
+    "microhaplotypes": [
+     {
+      "alt_annotations": [
+       "free text"
+      ],
+      "associated_protein_variants": [
+       {
+        "alternative_gene_name": "chr_1.2-a",
+        "codon_genomic_location": {
+         "alt_seq": "ACGT-",
+         "chrom": "chr_1.2-a",
+         "end": 0,
+         "genome_id": 0,
+         "ref_seq": "ACGT-",
+         "start": 0,
+         "strand": "+"
+        },
+        "gene_name": "gene:PF3D7_1",
+        "protein_location": {
+         "alt_seq": "ACGT-",
+         "chrom": "chr_1.2-a",
+         "end": 0,
+         "genome_id": 0,
+         "ref_seq": "ACGT-",
+         "start": 0,
+         "strand": "+"
+        }
+       }
+      ],
+      "associated_seq_variants": [
+       {
+        "alt_seq": "ACGT-",
+        "chrom": "chr_1.2-a",
+        "end": 0,
+        "genome_id": 0,
+        "ref_seq": "ACGT-",
+        "start": 0,
+        "strand": "+"
+       }
+      ],
+      "masking": [
+       {
+        "masking_generation_description": "store (a),b/c",
+        "replacement_size": 0,
+        "seq_segment_size": 0,
+        "seq_start": 0
+       }
+      ],
+      "microhaplotype_name": "chr_1.2-a",
+      "pseudocigar": {
+       "pseudocigar_generation_description": "store (a),b/c",
+       "pseudocigar_seq": "10A.1",
+       "ref_loc": {
+        "alt_seq": "ACGT-",
+        "chrom": "chr_1.2-a",
+        "end": 0,
+        "genome_id": 0,
+        "ref_seq": "ACGT-",
+        "start": 0,
+        "strand": "+"
+       }
+      },
+      "quality": "chr_1.2-a",
+      "seq": "ACGT"
+     }
+    ],
+    "target_id": 0
+   }
+  ]
+ },
+ "sequencing_info": [
+  {
+   "library_kit": "store (a),b/c",
+   "library_layout": "Name 1.0_x-y",
+   "library_screen": "store (a),b/c",
+   "library_selection": "Name 1.0_x-y",
+   "library_source": "Name 1.0_x-y",
+   "library_strategy": "Name 1.0_x-y",
+   "nucl_acid_amp": "https://example.org/x",
+   "nucl_acid_amp_date": "2024-03-15",
+   "nucl_acid_ext": "https://example.org/x",
+   "nucl_acid_ext_date": "2024-03-15",
+   "pcr_cond": "store (a),b/c",
+   "seq_center": "store (a),b/c",
+   "seq_date": "2024-03-15",
+   "seq_instrument_model": "Name 1.0_x-y",
+   "seq_platform": "Name 1.0_x-y",
+   "sequencing_info_name": "Name 1.0_x-y"
+  }
+ ],
+ "specimen_info": [
+  {
+   "alternate_identifiers": [
+    "Name 1.0_x-y"
+   ],
+   "blood_meal": true,
+   "collection_country": "Kenya",
+   "collection_date": "2024-03",
+   "drug_usage": [
+    "drug a;b|c (d),e/f"
+   ],
+   "env_broad_scale": "drug a;b|c (d),e/f",
+   "env_local_scale": "drug a;b|c (d),e/f",
+   "env_medium": "drug a;b|c (d),e/f",
+   "geo_admin1": "free text",
+   "geo_admin2": "free text",
+   "geo_admin3": "free text",
+   "gravid": true,
+   "gravidity": 0,
+   "has_travel_out_six_month": true,
+   "host_age": 0.5,
+   "host_sex": "Name 1.0_x-y",
+   "host_subject_name": "free text",
+   "host_taxon_id": 0,
+   "lat_lon": "-1.5,36.8",
+   "parasite_density_info": [
+    {
+     "date_measured": "2024-03",
+     "density_method_comments": "store (a),b/c",
+     "parasite_density": 0.5,
+     "parasite_density_method": "Name 1.0_x-y"
+    }
+   ],
+   "project_id": 0,
+   "specimen_accession": "Name 1.0_x-y",
+   "specimen_collect_device": "store (a),b/c",
+   "specimen_comments": [
+    "store (a),b/c"
+   ],
+   "specimen_name": "store (a),b/c",
+   "specimen_store_loc": "store (a),b/c",
+   "specimen_taxon_id": [
+    0
+   ],
+   "specimen_type": "store (a),b/c",
+   "storage_plate_info": {
+    "plate_col": 0,
+    "plate_name": "Name 1.0_x-y",
+    "plate_row": "A"
+   },
+   "travel_out_six_month": [
+    {
+     "bed_net_usage": 0.5,
+     "geo_admin1": "free text",
+     "geo_admin2": "free text",
+     "geo_admin3": "free text",
+     "lat_lon": "-1.5,36.8",
+     "travel_country": "Kenya",
+     "travel_end_date": "2024-03-15",
+     "travel_start_date": "2024-03-15"
+    }
+   ],
+   "treatment_status": [
+    "drug a;b|c (d),e/f"
+   ],
+   "host_subject_id": 0
+  }
+ ],
+ "target_info": [
+  {
+   "forward_primer": {
+    "location": {
+     "alt_seq": "ACGT-",
+     "chrom": "chr_1.2-a",
+     "end": 0,
+     "genome_id": 0,
+     "ref_seq": "ACGT-",
+     "start": 0,
+     "strand": "+"
+    },
+    "seq": "ACGT"
+   },
+   "gene_name": "gene:PF3D7_1",
+   "insert_location": {
+    "alt_seq": "ACGT-",
+    "chrom": "chr_1.2-a",
+    "end": 0,
+    "genome_id": 0,
+    "ref_seq": "ACGT-",
+    "start": 0,
+    "strand": "+"
+   },
+   "markers_of_interest": [
+    {
+     "associations": [
+      "chr_1.2-a"
+     ],
+     "marker_location": {
+      "alt_seq": "ACGT-",
+      "chrom": "chr_1.2-a",
+      "end": 0,
+      "genome_id": 0,
+      "ref_seq": "ACGT-",
+      "start": 0,
+      "strand": "+"
+     }
+    }
+   ],
+   "reverse_primer": {
+    "location": {
+     "alt_seq": "ACGT-",
+     "chrom": "chr_1.2-a",
+     "end": 0,
+     "genome_id": 0,
+     "ref_seq": "ACGT-",
+     "start": 0,
+     "strand": "+"
+    },
+    "seq": "ACGT"
+   },
+   "target_attributes": [
+    "free text"
+   ],
+   "target_name": "chr_1.2-a"
+  }
+ ],
+ "targeted_genomes": [
+  {
+   "chromosomes": [
+    "chr_1.2-a"
+   ],
+   "genome_version": "chr_1.2-a",
+   "gff_url": "https://example.org/x",
+   "name": "chr_1.2-a",
+   "taxon_id": [
+    0
+   ],
+   "url": "https://example.org/g.fa"
+  }
+ ]
+}

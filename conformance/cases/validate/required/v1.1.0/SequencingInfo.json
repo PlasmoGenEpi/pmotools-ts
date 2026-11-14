@@ -1,0 +1,47 @@
+{
+ "id": "validate/required/v1.1.0/SequencingInfo",
+ "function": "validate_pmo",
+ "note": "each required property of SequencingInfo removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/sequencing_info/0/sequencing_info_name"
+   },
+   {
+    "remove": "/sequencing_info/0/seq_platform"
+   },
+   {
+    "remove": "/sequencing_info/0/seq_instrument_model"
+   },
+   {
+    "remove": "/sequencing_info/0/library_layout"
+   },
+   {
+    "remove": "/sequencing_info/0/library_strategy"
+   },
+   {
+    "remove": "/sequencing_info/0/library_source"
+   },
+   {
+    "remove": "/sequencing_info/0/library_selection"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0",
+   "invalid: required at /sequencing_info/0"
+  ]
+ },
+ "warnings": []
+}

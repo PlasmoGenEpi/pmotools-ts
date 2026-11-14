@@ -1,0 +1,39 @@
+{
+ "id": "validate/null/v1.0.0/MaskingInfo",
+ "function": "validate_pmo",
+ "note": "each property of MaskingInfo set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start"
+  ]
+ },
+ "warnings": []
+}

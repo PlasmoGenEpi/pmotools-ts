@@ -1,0 +1,56 @@
+{
+ "id": "infer/options/custom-only-numeric",
+ "function": "read_csv_typed",
+ "note": "A custom list without '' keeps empty cells as text.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\nmissing,r0\n,r1\n1,r2\n",
+  "na_values": [
+   "missing"
+  ],
+  "keep_default_na": false
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "missing",
+     "r0"
+    ],
+    [
+     "",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     null,
+     "r0"
+    ],
+    [
+     "",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

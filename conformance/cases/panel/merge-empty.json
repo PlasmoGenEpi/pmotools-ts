@@ -1,0 +1,16 @@
+{
+ "id": "panel/merge-empty",
+ "function": "merge_panel_info_dicts",
+ "note": "No panels raise.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": []
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "panel_info_dicts must contain at least one entry."
+ },
+ "warnings": []
+}

@@ -1,0 +1,16 @@
+{
+ "id": "validate/inline/root-empty__v1.1.0",
+ "function": "validate_pmo",
+ "note": "root-empty against schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "instance": {}
+ },
+ "result": {
+  "kind": "ok",
+  "value": "invalid: required at (root)"
+ },
+ "warnings": []
+}

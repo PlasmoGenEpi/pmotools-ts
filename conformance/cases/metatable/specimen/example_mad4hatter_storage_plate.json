@@ -1,0 +1,1412 @@
+{
+ "id": "metatable/specimen/example_mad4hatter_storage_plate",
+ "function": "specimen_info_table_to_pmo",
+ "note": "The plate columns used as storage plate info.",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_id",
+    "collection_date",
+    "collection_country",
+    "samp_collect_device",
+    "lat_lon",
+    "collector",
+    "geo_admin3",
+    "host_taxon_id",
+    "project_name",
+    "samp_store_loc",
+    "samp_taxon_id",
+    "experiment_sample_id",
+    "panel_id",
+    "plate_name",
+    "plate_row",
+    "plate_col",
+    "sequencing_info_id"
+   ],
+   "dtypes": {
+    "specimen_id": "object",
+    "collection_date": "object",
+    "collection_country": "object",
+    "samp_collect_device": "object",
+    "lat_lon": "object",
+    "collector": "object",
+    "geo_admin3": "object",
+    "host_taxon_id": "int64",
+    "project_name": "object",
+    "samp_store_loc": "object",
+    "samp_taxon_id": "int64",
+    "experiment_sample_id": "object",
+    "panel_id": "object",
+    "plate_name": "object",
+    "plate_row": "object",
+    "plate_col": "int64",
+    "sequencing_info_id": "object"
+   },
+   "rows": [
+    [
+     "SAMN38241219",
+     "2019-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819135",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     1,
+     "run1"
+    ],
+    [
+     "SAMN38241215",
+     "2017-02",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819139",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     2,
+     "run1"
+    ],
+    [
+     "SAMN38241214",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819141",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     3,
+     "run1"
+    ],
+    [
+     "SAMN38241052",
+     "2015-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819151",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     4,
+     "run1"
+    ],
+    [
+     "SAMN38241112",
+     "2019-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819200",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     5,
+     "run1"
+    ],
+    [
+     "SAMN38241110",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819202",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     6,
+     "run1"
+    ],
+    [
+     "SAMN38241106",
+     "2018-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819206",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     7,
+     "run1"
+    ],
+    [
+     "SAMN38241543",
+     "2017-02",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819207",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     8,
+     "run1"
+    ],
+    [
+     "SAMN38241542",
+     "2015-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819208",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     9,
+     "run1"
+    ],
+    [
+     "SAMN38241539",
+     "2015-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819211",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     10,
+     "run1"
+    ],
+    [
+     "SAMN38241538",
+     "2017-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819212",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     11,
+     "run1"
+    ],
+    [
+     "SAMN38241537",
+     "2017-03",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819213",
+     "Mad4hatter",
+     "plate1",
+     "A",
+     12,
+     "run1"
+    ],
+    [
+     "SAMN38241536",
+     "2018-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819214",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     1,
+     "run1"
+    ],
+    [
+     "SAMN38241535",
+     "2017-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819215",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     2,
+     "run1"
+    ],
+    [
+     "SAMN38241532",
+     "2017-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819220",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     3,
+     "run1"
+    ],
+    [
+     "SAMN38241084",
+     "2019-08",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819228",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     4,
+     "run1"
+    ],
+    [
+     "SAMN38241470",
+     "2017-02",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819240",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     5,
+     "run1"
+    ],
+    [
+     "SAMN38241078",
+     "2018-10",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819246",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     6,
+     "run1"
+    ],
+    [
+     "SAMN38241222",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819300",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     7,
+     "run1"
+    ],
+    [
+     "SAMN38241154",
+     "2017-12",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819303",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     8,
+     "run1"
+    ],
+    [
+     "SAMN38241046",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819313",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     9,
+     "run1"
+    ],
+    [
+     "SAMN38241045",
+     "2019-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819324",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     10,
+     "run1"
+    ],
+    [
+     "SAMN38241061",
+     "2018-10",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819345",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     11,
+     "run1"
+    ],
+    [
+     "SAMN38241060",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819356",
+     "Mad4hatter",
+     "plate1",
+     "B",
+     12,
+     "run1"
+    ],
+    [
+     "SAMN38241057",
+     "2018-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819365",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     1,
+     "run1"
+    ],
+    [
+     "SAMN38241572",
+     "2019-03",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819397",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     2,
+     "run1"
+    ],
+    [
+     "SAMN38241571",
+     "2017-11",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819398",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     3,
+     "run1"
+    ],
+    [
+     "SAMN38241569",
+     "2016-12",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819400",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     4,
+     "run1"
+    ],
+    [
+     "SAMN38241058",
+     "2019-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819474",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     5,
+     "run1"
+    ],
+    [
+     "SAMN38241105",
+     "2018-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819501",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     6,
+     "run1"
+    ],
+    [
+     "SAMN38241102",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819505",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     7,
+     "run1"
+    ],
+    [
+     "SAMN38241101",
+     "2018-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819506",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     8,
+     "run1"
+    ],
+    [
+     "SAMN38241100",
+     "2015-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819507",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     9,
+     "run1"
+    ],
+    [
+     "SAMN38241099",
+     "2016-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819508",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     10,
+     "run1"
+    ],
+    [
+     "SAMN38241094",
+     "2015-05",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819514",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     11,
+     "run1"
+    ],
+    [
+     "SAMN38241564",
+     "2017-02",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819526",
+     "Mad4hatter",
+     "plate1",
+     "C",
+     12,
+     "run1"
+    ],
+    [
+     "SAMN38241563",
+     "2017-12",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819527",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     1,
+     "run1"
+    ],
+    [
+     "SAMN38241562",
+     "2017-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819528",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     2,
+     "run1"
+    ],
+    [
+     "SAMN38241560",
+     "2018-02",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819530",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     3,
+     "run1"
+    ],
+    [
+     "SAMN38241559",
+     "2018-10",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819531",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     4,
+     "run1"
+    ],
+    [
+     "SAMN38241558",
+     "2018-10",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819532",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     5,
+     "run1"
+    ],
+    [
+     "SAMN38241553",
+     "2018-11",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819538",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     6,
+     "run1"
+    ],
+    [
+     "SAMN38241551",
+     "2018-04",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819540",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     7,
+     "run1"
+    ],
+    [
+     "SAMN38241550",
+     "2017-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819541",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     8,
+     "run1"
+    ],
+    [
+     "SAMN38241546",
+     "2019-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819545",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     9,
+     "run1"
+    ],
+    [
+     "SAMN38241545",
+     "2018-09",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819546",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     10,
+     "run1"
+    ],
+    [
+     "SAMN38241518",
+     "2017-01",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819553",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     11,
+     "run1"
+    ],
+    [
+     "SAMN38241503",
+     "2016-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819570",
+     "Mad4hatter",
+     "plate1",
+     "D",
+     12,
+     "run1"
+    ],
+    [
+     "SAMN38241081",
+     "2018-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819595",
+     "Mad4hatter",
+     "plate1",
+     "E",
+     1,
+     "run1"
+    ],
+    [
+     "SAMN38241080",
+     "2019-06",
+     "Mozambique",
+     "dried blood spot",
+     "25.58,32.35",
+     "Brokhattingen, Nanna",
+     "Maputo",
+     1758,
+     "PRJNA1040019",
+     "UCSF Greenhouse Lab",
+     5833,
+     "SRR26819606",
+     "Mad4hatter",
+     "plate1",
+     "E",
+     2,
+     "run1"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_id",
+  "storage_plate_name_col": "plate_name",
+  "storage_plate_row_col": "plate_row",
+  "storage_plate_col_col": "plate_col"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "SAMN38241219",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "SAMN38241215",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 2
+    }
+   },
+   {
+    "specimen_name": "SAMN38241214",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 3
+    }
+   },
+   {
+    "specimen_name": "SAMN38241052",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 4
+    }
+   },
+   {
+    "specimen_name": "SAMN38241112",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 5
+    }
+   },
+   {
+    "specimen_name": "SAMN38241110",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 6
+    }
+   },
+   {
+    "specimen_name": "SAMN38241106",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 7
+    }
+   },
+   {
+    "specimen_name": "SAMN38241543",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 8
+    }
+   },
+   {
+    "specimen_name": "SAMN38241542",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 9
+    }
+   },
+   {
+    "specimen_name": "SAMN38241539",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 10
+    }
+   },
+   {
+    "specimen_name": "SAMN38241538",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 11
+    }
+   },
+   {
+    "specimen_name": "SAMN38241537",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "A",
+     "plate_col": 12
+    }
+   },
+   {
+    "specimen_name": "SAMN38241536",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "SAMN38241535",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 2
+    }
+   },
+   {
+    "specimen_name": "SAMN38241532",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 3
+    }
+   },
+   {
+    "specimen_name": "SAMN38241084",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 4
+    }
+   },
+   {
+    "specimen_name": "SAMN38241470",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 5
+    }
+   },
+   {
+    "specimen_name": "SAMN38241078",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 6
+    }
+   },
+   {
+    "specimen_name": "SAMN38241222",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 7
+    }
+   },
+   {
+    "specimen_name": "SAMN38241154",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 8
+    }
+   },
+   {
+    "specimen_name": "SAMN38241046",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 9
+    }
+   },
+   {
+    "specimen_name": "SAMN38241045",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 10
+    }
+   },
+   {
+    "specimen_name": "SAMN38241061",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 11
+    }
+   },
+   {
+    "specimen_name": "SAMN38241060",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "B",
+     "plate_col": 12
+    }
+   },
+   {
+    "specimen_name": "SAMN38241057",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "SAMN38241572",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 2
+    }
+   },
+   {
+    "specimen_name": "SAMN38241571",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 3
+    }
+   },
+   {
+    "specimen_name": "SAMN38241569",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 4
+    }
+   },
+   {
+    "specimen_name": "SAMN38241058",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 5
+    }
+   },
+   {
+    "specimen_name": "SAMN38241105",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 6
+    }
+   },
+   {
+    "specimen_name": "SAMN38241102",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 7
+    }
+   },
+   {
+    "specimen_name": "SAMN38241101",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 8
+    }
+   },
+   {
+    "specimen_name": "SAMN38241100",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 9
+    }
+   },
+   {
+    "specimen_name": "SAMN38241099",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 10
+    }
+   },
+   {
+    "specimen_name": "SAMN38241094",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 11
+    }
+   },
+   {
+    "specimen_name": "SAMN38241564",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "C",
+     "plate_col": 12
+    }
+   },
+   {
+    "specimen_name": "SAMN38241563",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "SAMN38241562",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 2
+    }
+   },
+   {
+    "specimen_name": "SAMN38241560",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 3
+    }
+   },
+   {
+    "specimen_name": "SAMN38241559",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 4
+    }
+   },
+   {
+    "specimen_name": "SAMN38241558",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 5
+    }
+   },
+   {
+    "specimen_name": "SAMN38241553",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 6
+    }
+   },
+   {
+    "specimen_name": "SAMN38241551",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 7
+    }
+   },
+   {
+    "specimen_name": "SAMN38241550",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 8
+    }
+   },
+   {
+    "specimen_name": "SAMN38241546",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 9
+    }
+   },
+   {
+    "specimen_name": "SAMN38241545",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 10
+    }
+   },
+   {
+    "specimen_name": "SAMN38241518",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 11
+    }
+   },
+   {
+    "specimen_name": "SAMN38241503",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "D",
+     "plate_col": 12
+    }
+   },
+   {
+    "specimen_name": "SAMN38241081",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "E",
+     "plate_col": 1
+    }
+   },
+   {
+    "specimen_name": "SAMN38241080",
+    "storage_plate_info": {
+     "plate_name": "plate1",
+     "plate_row": "E",
+     "plate_col": 2
+    }
+   }
+  ]
+ },
+ "warnings": []
+}

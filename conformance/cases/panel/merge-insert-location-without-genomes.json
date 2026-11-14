@@ -1,0 +1,37 @@
+{
+ "id": "panel/merge-insert-location-without-genomes",
+ "function": "merge_panel_info_dicts",
+ "note": "An insert location without targeted_genomes raises.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_info_dicts": [
+   {
+    "panel_info": [],
+    "target_info": [
+     {
+      "target_name": "x",
+      "forward_primer": {
+       "seq": "A"
+      },
+      "reverse_primer": {
+       "seq": "C"
+      },
+      "insert_location": {
+       "genome_id": 0,
+       "chrom": "chr1",
+       "start": 1,
+       "end": 2
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "targetx has insert_location but no targeted_genomes information is included"
+ },
+ "warnings": []
+}

@@ -1,0 +1,40 @@
+{
+ "id": "metatable/specimen/empty_table",
+ "function": "specimen_info_table_to_pmo",
+ "note": "A table with no rows gives no records",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "specimen_taxon_id",
+    "host_taxon_id",
+    "collection_date",
+    "collection_country",
+    "project_name"
+   ],
+   "dtypes": {
+    "specimen_name": "float64",
+    "specimen_taxon_id": "float64",
+    "host_taxon_id": "float64",
+    "collection_date": "float64",
+    "collection_country": "float64",
+    "project_name": "float64"
+   },
+   "rows": []
+  }
+ },
+ "kwargs": {
+  "specimen_name_col": "specimen_name",
+  "specimen_taxon_id_col": "specimen_taxon_id",
+  "host_taxon_id_col": "host_taxon_id",
+  "collection_date_col": "collection_date",
+  "collection_country_col": "collection_country",
+  "project_name_col": "project_name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": []
+ },
+ "warnings": []
+}

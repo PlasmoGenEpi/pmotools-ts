@@ -1,0 +1,60 @@
+{
+ "id": "metatable/specimen/density_single",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_parasite_density_info_single_value",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name",
+    "parasite_density",
+    "parasite_density_method"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "parasite_density": "int64",
+    "parasite_density_method": "object"
+   },
+   "rows": [
+    [
+     "sample1",
+     10,
+     "qPCR"
+    ],
+    [
+     "sample2",
+     100,
+     "microscopy"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": "parasite_density",
+  "parasite_density_method_col": "parasite_density_method"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1",
+    "parasite_density_info": [
+     {
+      "parasite_density": 10,
+      "parasite_density_method": "qPCR"
+     }
+    ]
+   },
+   {
+    "specimen_name": "sample2",
+    "parasite_density_info": [
+     {
+      "parasite_density": 100,
+      "parasite_density_method": "microscopy"
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

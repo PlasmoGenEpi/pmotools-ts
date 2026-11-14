@@ -1,0 +1,27 @@
+{
+ "id": "validate/required/v1.1.0/MicrohaplotypeForTarget",
+ "function": "validate_pmo",
+ "note": "each required property of MicrohaplotypeForTarget removed, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/detected_microhaplotypes/0/library_samples/0/target_results/0/mhaps/0/mhap_id"
+   },
+   {
+    "remove": "/detected_microhaplotypes/0/library_samples/0/target_results/0/mhaps/0/reads"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /detected_microhaplotypes/0/library_samples/0/target_results/0/mhaps/0",
+   "invalid: required at /detected_microhaplotypes/0/library_samples/0/target_results/0/mhaps/0"
+  ]
+ },
+ "warnings": []
+}

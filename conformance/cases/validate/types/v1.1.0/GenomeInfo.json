@@ -1,0 +1,523 @@
+{
+ "id": "validate/types/v1.1.0/GenomeInfo",
+ "function": "validate_pmo",
+ "note": "each property of GenomeInfo (first occurrence) set to values of every JSON type, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/chromosomes",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/genome_version",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/gff_url",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/name",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/taxon_id",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": null
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": "1"
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": ""
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 1
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 0
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": -1
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 1.0
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 1.5
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 1e+300
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": true
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": false
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": []
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": {}
+   },
+   {
+    "set": "/targeted_genomes/0/url",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "valid",
+   "invalid: type at /targeted_genomes/0/chromosomes/0",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/chromosomes",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "valid",
+   "invalid: pattern at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "invalid: type at /targeted_genomes/0/genome_version",
+   "valid",
+   "invalid: pattern at /targeted_genomes/0/gff_url",
+   "invalid: pattern at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/gff_url",
+   "invalid: type at /targeted_genomes/0/name",
+   "valid",
+   "invalid: pattern at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/name",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "valid",
+   "valid",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/taxon_id",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: pattern at /targeted_genomes/0/url",
+   "invalid: pattern at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url",
+   "invalid: type at /targeted_genomes/0/url"
+  ]
+ },
+ "warnings": []
+}

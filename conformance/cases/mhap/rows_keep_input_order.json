@@ -1,0 +1,125 @@
+{
+ "id": "mhap/rows_keep_input_order",
+ "function": "mhap_table_to_pmo",
+ "note": "Microhaplotypes and detected rows inside a group keep first-appearance order, not seq order.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "ZZ",
+     1
+    ],
+    [
+     "s1",
+     "t1",
+     "AA",
+     2
+    ],
+    [
+     "s1",
+     "t1",
+     "MM",
+     3
+    ],
+    [
+     "s2",
+     "t1",
+     "AA",
+     4
+    ],
+    [
+     "s2",
+     "t1",
+     "ZZ",
+     5
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "ZZ"
+       },
+       {
+        "seq": "AA"
+       },
+       {
+        "seq": "MM"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          },
+          {
+           "mhap_id": 1,
+           "reads": 2
+          },
+          {
+           "mhap_id": 2,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 4
+          },
+          {
+           "mhap_id": 0,
+           "reads": 5
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

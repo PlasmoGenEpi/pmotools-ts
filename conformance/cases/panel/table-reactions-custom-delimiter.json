@@ -1,0 +1,108 @@
+{
+ "id": "panel/table-reactions-custom-delimiter",
+ "function": "panel_info_table_to_pmo",
+ "note": "A custom reaction delimiter.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "pool"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "pool": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     "p1;p2"
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     "p2"
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "p1,p3"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "reaction_name_col": "pool",
+  "reaction_name_col_delimiter": ";",
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "p1",
+       "panel_targets": [
+        0
+       ]
+      },
+      {
+       "reaction_name": "p2",
+       "panel_targets": [
+        0,
+        1
+       ]
+      },
+      {
+       "reaction_name": "p1,p3",
+       "panel_targets": [
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,132 @@
+{
+ "id": "mhap/quality_and_name",
+ "function": "mhap_table_to_pmo",
+ "note": "quality and microhaplotype_name, each left out where missing.",
+ "divergence": null,
+ "tables": {
+  "microhaplotype_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "reads",
+    "q",
+    "name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "reads": "int64",
+    "q": "object",
+    "name": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "t1",
+     "A",
+     1,
+     "I",
+     "mA"
+    ],
+    [
+     "s1",
+     "t2",
+     "C",
+     2,
+     null,
+     "mC"
+    ],
+    [
+     "s2",
+     "t1",
+     "G",
+     3,
+     "#",
+     null
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "quality_col": "q",
+  "microhaplotype_name_col": "name"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "t1",
+      "microhaplotypes": [
+       {
+        "seq": "A",
+        "microhaplotype_name": "mA",
+        "quality": "I"
+       },
+       {
+        "seq": "G",
+        "quality": "#"
+       }
+      ]
+     },
+     {
+      "target_name": "t2",
+      "microhaplotypes": [
+       {
+        "seq": "C",
+        "microhaplotype_name": "mC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "s1",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "s2",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "warnings": []
+}

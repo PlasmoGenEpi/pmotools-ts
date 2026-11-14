@@ -1,0 +1,31 @@
+{
+ "id": "validate/required/v1.0.0/MaskingInfo",
+ "function": "validate_pmo",
+ "note": "each required property of MaskingInfo removed, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "remove": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start"
+   },
+   {
+    "remove": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size"
+   },
+   {
+    "remove": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size"
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "invalid: required at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0",
+   "invalid: required at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0",
+   "invalid: required at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0"
+  ]
+ },
+ "warnings": []
+}

@@ -1,0 +1,37 @@
+{
+ "id": "read_counts/pytest/missing_total_columns",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "test_missing_columns: no library_sample_name column",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "wrong_col",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "wrong_col": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "sample1",
+     1000
+    ],
+    [
+     "sample2",
+     2000
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "bioinformatics_run_name": "test_run"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "Missing required columns in total_raw_count_table: ['library_sample_name']"
+ },
+ "warnings": []
+}

@@ -1,0 +1,59 @@
+{
+ "id": "validate/null/v1.0.0/ParasiteDensity",
+ "function": "validate_pmo",
+ "note": "each property of ParasiteDensity set to null, everywhere it occurs, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/date_measured",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/density_method_comments",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info/0/date_measured",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info/0/density_method_comments",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info/0/parasite_density",
+    "value": null
+   },
+   {
+    "set": "/specimen_info/0/parasite_density_info/0/parasite_density_method",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density",
+   "invalid: type at /library_sample_info/0/qpcr_parasite_density_info/0/parasite_density_method",
+   "valid",
+   "valid",
+   "invalid: type at /specimen_info/0/parasite_density_info/0/parasite_density",
+   "invalid: type at /specimen_info/0/parasite_density_info/0/parasite_density_method"
+  ]
+ },
+ "warnings": []
+}

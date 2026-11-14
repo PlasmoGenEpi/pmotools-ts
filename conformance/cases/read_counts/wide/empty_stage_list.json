@@ -1,0 +1,83 @@
+{
+ "id": "read_counts/wide/empty_stage_list",
+ "function": "read_count_by_stage_table_to_pmo",
+ "note": "An empty stage list melts to no rows",
+ "divergence": null,
+ "tables": {
+  "total_raw_count_table": {
+   "columns": [
+    "library_sample_name",
+    "total_raw_count"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "total_raw_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     10
+    ],
+    [
+     "s2",
+     20
+    ]
+   ]
+  },
+  "reads_by_stage_table": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "b",
+    "a"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "b": "int64",
+    "a": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "t2",
+     1,
+     4
+    ],
+    [
+     "s1",
+     "t1",
+     2,
+     5
+    ],
+    [
+     "s2",
+     "t1",
+     3,
+     6
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "stage_col": []
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "read_counts_by_library_sample_by_stage": [
+     {
+      "library_sample_name": "s1",
+      "total_raw_count": 10
+     },
+     {
+      "library_sample_name": "s2",
+      "total_raw_count": 20
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": []
+}

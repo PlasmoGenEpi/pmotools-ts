@@ -1,0 +1,52 @@
+{
+ "id": "infer/int/above-uint64",
+ "function": "read_csv_typed",
+ "note": "Above uint64 max: text fallback, NA becomes missing.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "text": "a,z\n18446744073709551616,r0\nNA,r1\n1,r2\n"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "a",
+    "z"
+   ],
+   "dtypes": {
+    "a": "object",
+    "z": "object"
+   },
+   "raw": [
+    [
+     "18446744073709551616",
+     "r0"
+    ],
+    [
+     "NA",
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ],
+   "rows": [
+    [
+     "18446744073709551616",
+     "r0"
+    ],
+    [
+     null,
+     "r1"
+    ],
+    [
+     "1",
+     "r2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

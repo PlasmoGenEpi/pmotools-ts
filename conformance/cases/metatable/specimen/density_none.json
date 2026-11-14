@@ -1,0 +1,37 @@
+{
+ "id": "metatable/specimen/density_none",
+ "function": "specimen_info_table_to_pmo",
+ "note": "test_add_parasite_density_adds_nothing",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object"
+   },
+   "rows": [
+    [
+     "sample1"
+    ],
+    [
+     "sample2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {},
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1"
+   },
+   {
+    "specimen_name": "sample2"
+   }
+  ]
+ },
+ "warnings": []
+}

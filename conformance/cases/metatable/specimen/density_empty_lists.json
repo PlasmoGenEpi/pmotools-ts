@@ -1,0 +1,40 @@
+{
+ "id": "metatable/specimen/density_empty_lists",
+ "function": "specimen_info_table_to_pmo",
+ "note": "Empty density and method lists add nothing",
+ "divergence": null,
+ "tables": {
+  "contents": {
+   "columns": [
+    "specimen_name"
+   ],
+   "dtypes": {
+    "specimen_name": "object"
+   },
+   "rows": [
+    [
+     "sample1"
+    ],
+    [
+     "sample2"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "parasite_density_col": [],
+  "parasite_density_method_col": []
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "specimen_name": "sample1"
+   },
+   {
+    "specimen_name": "sample2"
+   }
+  ]
+ },
+ "warnings": []
+}

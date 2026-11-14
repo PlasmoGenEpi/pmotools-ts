@@ -1,0 +1,355 @@
+{
+ "id": "validate/types/v1.0.0/MaskingInfo",
+ "function": "validate_pmo",
+ "note": "each property of MaskingInfo (first occurrence) set to values of every JSON type, schema 1.0.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.0.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+    "value": {
+     "x": 1
+    }
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": null
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": "1"
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": ""
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": -1
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 1.0
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 1.5
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 1e+300
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": 18446744073709551616
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": true
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": false
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": []
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": [
+     1
+    ]
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": {}
+   },
+   {
+    "set": "/representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+    "value": {
+     "x": 1
+    }
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "invalid: pattern at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/masking_generation_description",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/replacement_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_segment_size",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "valid",
+   "valid",
+   "invalid: minimum at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "valid",
+   "valid",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start",
+   "invalid: type at /representative_microhaplotypes/targets/0/microhaplotypes/0/masking/0/seq_start"
+  ]
+ },
+ "warnings": []
+}

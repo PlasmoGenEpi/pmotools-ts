@@ -1,0 +1,69 @@
+{
+ "id": "validate/null/v1.1.0/LibrarySampleInfo",
+ "function": "validate_pmo",
+ "note": "each property of LibrarySampleInfo set to null, everywhere it occurs, schema 1.1.0",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "schema_version": "1.1.0",
+  "base": "full_pmo",
+  "edits": [
+   {
+    "set": "/library_sample_info/0/alternate_identifiers",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/experiment_accession",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/fastqs_loc",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_prep_plate_info",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/library_sample_name",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/panel_id",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/qpcr_parasite_density_info",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/run_accession",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/sequencing_info_id",
+    "value": null
+   },
+   {
+    "set": "/library_sample_info/0/specimen_id",
+    "value": null
+   }
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "valid",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/library_sample_name",
+   "invalid: type at /library_sample_info/0/panel_id",
+   "valid",
+   "valid",
+   "valid",
+   "invalid: type at /library_sample_info/0/specimen_id"
+  ]
+ },
+ "warnings": []
+}

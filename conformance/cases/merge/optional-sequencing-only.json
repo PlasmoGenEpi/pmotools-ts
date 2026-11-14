@@ -1,0 +1,137 @@
+{
+ "id": "merge/optional-sequencing-only",
+ "function": "merge_to_pmo",
+ "note": "Sequencing info alone: the created library samples have no sequencing_info_name, which Python reports as a merging 'warning' exception.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "panel_target_info": {
+   "panel_info": [
+    {
+     "panel_name": "panel1",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "forward_primer": {
+      "seq": "ACGT"
+     },
+     "reverse_primer": {
+      "seq": "TGCA"
+     }
+    },
+    {
+     "target_name": "target2",
+     "forward_primer": {
+      "seq": "ACGTA"
+     },
+     "reverse_primer": {
+      "seq": "TGCAT"
+     }
+    }
+   ]
+  },
+  "mhap_info": {
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "target_name": "target1",
+      "microhaplotypes": [
+       {
+        "seq": "AAAA"
+       }
+      ]
+     },
+     {
+      "target_name": "target2",
+      "microhaplotypes": [
+       {
+        "seq": "CCCC"
+       }
+      ]
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_name": "samp_A",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_name": "samp_B",
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 21
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "sequencing_info": [
+   {
+    "sequencing_info_name": "run1",
+    "seq_platform": "ILLUMINA",
+    "seq_instrument_model": "NextSeq 2000",
+    "library_layout": "PAIRED",
+    "library_strategy": "AMPLICON",
+    "library_source": "GENOMIC",
+    "library_selection": "PCR",
+    "seq_date": "2023-05-01"
+   }
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "The following warnings were encountered during merging:\nsequencing_info provided but there are library samples missing sequencing_info_name field"
+ },
+ "warnings": []
+}

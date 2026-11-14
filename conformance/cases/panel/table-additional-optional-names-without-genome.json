@@ -1,0 +1,108 @@
+{
+ "id": "panel/table-additional-optional-names-without-genome",
+ "function": "panel_info_table_to_pmo",
+ "note": "Additional columns named like optional keys: markers_of_interest blanks are dropped; gff_url blanks stay without genome info.",
+ "divergence": null,
+ "tables": {
+  "target_table": {
+   "columns": [
+    "target_name",
+    "fwd_primer",
+    "rev_primer",
+    "markers_of_interest",
+    "gff_url"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "fwd_primer": "object",
+    "rev_primer": "object",
+    "markers_of_interest": "object",
+    "gff_url": "object"
+   },
+   "rows": [
+    [
+     "target1",
+     "CTT",
+     "GTT",
+     null,
+     null
+    ],
+    [
+     "target2",
+     "CTA",
+     "TGG",
+     "",
+     ""
+    ],
+    [
+     "target3",
+     "TTG",
+     "ATT",
+     "PfK13",
+     "x.gff"
+    ]
+   ]
+  }
+ },
+ "kwargs": {
+  "additional_target_info_cols": [
+   "markers_of_interest",
+   "gff_url"
+  ],
+  "panel_name": "test_panel"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "panel_info": [
+    {
+     "panel_name": "test_panel",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "target1",
+     "gff_url": null,
+     "forward_primer": {
+      "seq": "CTT"
+     },
+     "reverse_primer": {
+      "seq": "GTT"
+     }
+    },
+    {
+     "target_name": "target2",
+     "gff_url": "",
+     "forward_primer": {
+      "seq": "CTA"
+     },
+     "reverse_primer": {
+      "seq": "TGG"
+     }
+    },
+    {
+     "target_name": "target3",
+     "markers_of_interest": "PfK13",
+     "gff_url": "x.gff",
+     "forward_primer": {
+      "seq": "TTG"
+     },
+     "reverse_primer": {
+      "seq": "ATT"
+     }
+    }
+   ]
+  }
+ },
+ "warnings": []
+}
