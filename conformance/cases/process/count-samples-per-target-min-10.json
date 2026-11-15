@@ -1,0 +1,49 @@
+{
+ "id": "process/count-samples-per-target-min-10",
+ "function": "count_library_samples_per_target",
+ "note": "A sample counts when the target has 10 reads or more in all.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "min_reads": 10
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "target_name",
+    "sample_count"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "int64",
+    "target_name": "object",
+    "sample_count": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "t1",
+     1
+    ],
+    [
+     0,
+     "t2",
+     2
+    ],
+    [
+     1,
+     "t2",
+     1
+    ],
+    [
+     1,
+     "t4",
+     1
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+ "id": "process/allele-freq-nothing-chosen",
+ "function": "extract_allele_counts_freq_from_pmo",
+ "note": "A filter that matches nothing.",
+ "divergence": "With nothing to count, Python builds an empty DataFrame with no columns and then fails sorting it by a column it does not have (KeyError). pmotools-ts returns the table with its columns and no rows.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "target_names": [
+   "nope"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'bioinformatics_run_id'"
+ },
+ "warnings": []
+}

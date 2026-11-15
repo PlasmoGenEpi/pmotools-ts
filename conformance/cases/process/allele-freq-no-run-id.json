@@ -1,0 +1,16 @@
+{
+ "id": "process/allele-freq-no-run-id",
+ "function": "extract_allele_counts_freq_from_pmo",
+ "note": "A run without a bioinformatics_run_id.",
+ "divergence": "extract_allele_counts_freq_from_pmo reads bioinformatics_run_id unconditionally and fails with a KeyError when a run has none. The two count_* functions name such a run detected_microhaplotypes_count_idx_<n>; pmotools-ts does the same here.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small-no-run-id"
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'bioinformatics_run_id'"
+ },
+ "warnings": []
+}

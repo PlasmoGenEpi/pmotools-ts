@@ -1,0 +1,82 @@
+{
+ "id": "process/allele-freq-small",
+ "function": "extract_allele_counts_freq_from_pmo",
+ "note": "How many library samples carry each microhaplotype of each target, per run, and its share of the target's detections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "target_name",
+    "mhap_id",
+    "count",
+    "freq",
+    "total_haps_per_target"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "int64",
+    "target_name": "object",
+    "mhap_id": "int64",
+    "count": "int64",
+    "freq": "float64",
+    "total_haps_per_target": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "t1",
+     0,
+     1,
+     0.3333333333333333,
+     3
+    ],
+    [
+     0,
+     "t1",
+     1,
+     2,
+     0.6666666666666666,
+     3
+    ],
+    [
+     0,
+     "t2",
+     0,
+     1,
+     0.5,
+     2
+    ],
+    [
+     0,
+     "t2",
+     1,
+     1,
+     0.5,
+     2
+    ],
+    [
+     1,
+     "t2",
+     0,
+     1,
+     1.0,
+     1
+    ],
+    [
+     1,
+     "t4",
+     0,
+     2,
+     1.0,
+     2
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

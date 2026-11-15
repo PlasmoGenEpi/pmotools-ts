@@ -1,0 +1,68 @@
+{
+ "id": "process/allele-freq-collapsed-small",
+ "function": "extract_allele_counts_freq_from_pmo",
+ "note": "The same, summed across runs.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "collapse_across_runs": true
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "target_name",
+    "mhap_id",
+    "count",
+    "freq",
+    "target_total"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "mhap_id": "int64",
+    "count": "int64",
+    "freq": "float64",
+    "target_total": "int64"
+   },
+   "rows": [
+    [
+     "t1",
+     0,
+     1,
+     0.3333333333333333,
+     3
+    ],
+    [
+     "t1",
+     1,
+     2,
+     0.6666666666666666,
+     3
+    ],
+    [
+     "t2",
+     0,
+     2,
+     0.6666666666666666,
+     3
+    ],
+    [
+     "t2",
+     1,
+     1,
+     0.3333333333333333,
+     3
+    ],
+    [
+     "t4",
+     0,
+     2,
+     1.0,
+     2
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

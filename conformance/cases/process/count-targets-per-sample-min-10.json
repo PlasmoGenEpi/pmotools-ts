@@ -1,0 +1,49 @@
+{
+ "id": "process/count-targets-per-sample-min-10",
+ "function": "count_targets_per_library_sample",
+ "note": "A target counts when its microhaplotypes have 10 reads or more in all.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "min_reads": 10
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "library_sample_name",
+    "target_number"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "int64",
+    "library_sample_name": "object",
+    "target_number": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "L1",
+     2
+    ],
+    [
+     0,
+     "L2",
+     1
+    ],
+    [
+     1,
+     "L3",
+     1
+    ],
+    [
+     1,
+     "L4",
+     1
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

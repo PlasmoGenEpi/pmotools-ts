@@ -1,0 +1,48 @@
+{
+ "id": "process/count-targets-per-sample-small",
+ "function": "count_targets_per_library_sample",
+ "note": "Targets with any reads in each library sample, per run.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "library_sample_name",
+    "target_number"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "int64",
+    "library_sample_name": "object",
+    "target_number": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "L1",
+     2
+    ],
+    [
+     0,
+     "L2",
+     2
+    ],
+    [
+     1,
+     "L3",
+     2
+    ],
+    [
+     1,
+     "L4",
+     1
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

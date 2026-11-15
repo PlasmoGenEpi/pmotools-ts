@@ -25,7 +25,8 @@ Status: unreleased. The package is marked private and nothing is published.
 | `PMOWriter`, `read_in_pmo` | `stringifyPmo`, `gzipPmo`, `parsePmo` |
 | `pd.read_csv` type inference | `inferColumnTypes` |
 | `PMOProcessor.filter_pmo_by_*`, `extract_from_pmo_with_read_filter`, `extract_from_pmo_samples_with_meta_groupings` | `filterPmoBy…`, `extractFromPmoWithReadFilter`, `extractFromPmoSamplesWithMetaGroupings` |
-| `PMOProcessor.get_*_names`, `count_*` | `get…Names`, `countSpecimenPerMetaFields`, `countTargetsPerPanel`, `countSpecimenByFieldValue` |
+| `PMOProcessor.get_*_names`, `count_*` | `get…Names`, `countSpecimenPerMetaFields`, `countTargetsPerPanel`, `countSpecimenByFieldValue`, `countTargetsPerLibrarySample`, `countLibrarySamplesPerTarget` |
+| `PMOProcessor.extract_allele_counts_freq_from_pmo` | `extractAlleleCountsFreqFromPmo` |
 | `PMOExporter.export_*_table`, `extract_alleles_per_sample_table`, `list_library_sample_names_per_specimen_name` | `export…Table`, `extractAllelesPerSampleTable`, `listLibrarySampleNamesPerSpecimenName` |
 | `DataFrame.to_csv` | `formatDelimited` |
 | no equivalent | `checkPmoIntegrity` |
@@ -33,8 +34,7 @@ Status: unreleased. The package is marked private and nothing is published.
 The exporters return a `ColumnTable` (`columns` and `rows`) laid out as the
 pandas DataFrame would be.
 
-Not ported: combining PMOs (`PMOReader.combine_multiple_pmos`), allele counts
-and frequencies, BED exports, the Excel export, `PMOUpdater`, and the CLI.
+Not ported: combining PMOs (`PMOReader.combine_multiple_pmos`), BED exports, the Excel export, `PMOUpdater`, and the CLI.
 
 ## Example
 
@@ -121,6 +121,11 @@ number with its text form. Each difference is recorded in an oracle case with a
 - An unknown name throws a `PmoError` listing every unknown name.
 - The methods table joins a list field such as `additional_argument`. Python
   leaves the list in one cell.
+- A count with nothing to count returns the table's columns and no rows.
+  Python fails sorting an empty table.
+- `extractAlleleCountsFreqFromPmo` names a run without a
+  `bioinformatics_run_id` by its position, as the `count…` functions do.
+  Python fails.
 
 `validatePmo` reaches the same verdict as Python's `jsonschema` on all 19,486
 recorded checks. The vendored schemas are untouched. A build step rewrites

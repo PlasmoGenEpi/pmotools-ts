@@ -1,0 +1,68 @@
+{
+ "id": "process/allele-freq-filtered",
+ "function": "extract_allele_counts_freq_from_pmo",
+ "note": "Only some runs, library samples and targets.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "bioinformatics_run_ids": [
+   0
+  ],
+  "library_sample_names": [
+   "L1"
+  ],
+  "target_names": [
+   "t1",
+   "t2"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "target_name",
+    "mhap_id",
+    "count",
+    "freq",
+    "total_haps_per_target"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "int64",
+    "target_name": "object",
+    "mhap_id": "int64",
+    "count": "int64",
+    "freq": "float64",
+    "total_haps_per_target": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "t1",
+     0,
+     1,
+     0.5,
+     2
+    ],
+    [
+     0,
+     "t1",
+     1,
+     1,
+     0.5,
+     2
+    ],
+    [
+     0,
+     "t2",
+     0,
+     1,
+     1.0,
+     1
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,39 @@
+{
+ "id": "process/count-samples-per-target-collapsed-small-no-run-id",
+ "function": "count_library_samples_per_target",
+ "note": "Library samples per target, summed across runs.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small-no-run-id",
+  "collapse_across_runs": true
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "target_name",
+    "sample_count"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "sample_count": "int64"
+   },
+   "rows": [
+    [
+     "t1",
+     2
+    ],
+    [
+     "t2",
+     3
+    ],
+    [
+     "t4",
+     2
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

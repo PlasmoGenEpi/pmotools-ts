@@ -64,6 +64,17 @@ SET_ORDER = (
     "file (here 0, 33, 3, 36, ...). pmotools-ts keeps the file's order. The same "
     "records are kept."
 )
+EMPTY_SORT = (
+    "With nothing to count, Python builds an empty DataFrame with no columns and "
+    "then fails sorting it by a column it does not have (KeyError). pmotools-ts "
+    "returns the table with its columns and no rows."
+)
+NO_RUN_ID_ALLELES = (
+    "extract_allele_counts_freq_from_pmo reads bioinformatics_run_id "
+    "unconditionally and fails with a KeyError when a run has none. The two "
+    "count_* functions name such a run detected_microhaplotypes_count_idx_<n>; "
+    "pmotools-ts does the same here."
+)
 UNKNOWN_NAME = (
     "Python looks names up in a dict and fails with a KeyError naming the first "
     "unknown one. pmotools-ts throws a PmoError listing every unknown name."
@@ -690,6 +701,91 @@ def main() -> None:
         "The example data by country.",
         pmo="full",
         meta_fields_values="collection_country=Kenya",
+    )
+
+    # ---- counts over the detected microhaplotypes ---------------------------------------
+    for pmo in ("small", "full", "small-no-run-id"):
+        case(
+            f"count-targets-per-sample-{pmo}",
+            P.count_targets_per_library_sample,
+            "Targets with any reads in each library sample, per run.",
+            pmo=pmo,
+        )
+        case(
+            f"count-samples-per-target-{pmo}",
+            P.count_library_samples_per_target,
+            "Library samples with reads at each target, per run.",
+            pmo=pmo,
+        )
+        case(
+            f"count-samples-per-target-collapsed-{pmo}",
+            P.count_library_samples_per_target,
+            "Library samples per target, summed across runs.",
+            pmo=pmo,
+            collapse_across_runs=True,
+        )
+    for reads in (10, 100):
+        case(
+            f"count-targets-per-sample-min-{reads}",
+            P.count_targets_per_library_sample,
+            f"A target counts when its microhaplotypes have {reads} reads or more in all.",
+            pmo="small",
+            min_reads=reads,
+        )
+        case(
+            f"count-samples-per-target-min-{reads}",
+            P.count_library_samples_per_target,
+            f"A sample counts when the target has {reads} reads or more in all.",
+            pmo="small",
+            min_reads=reads,
+        )
+    case(
+        "count-samples-per-target-none-left",
+        P.count_library_samples_per_target,
+        "No target reaches the minimum.",
+        divergence=EMPTY_SORT,
+        pmo="small",
+        min_reads=100_000,
+    )
+    allele = P.extract_allele_counts_freq_from_pmo
+    for pmo in ("small", "full"):
+        case(
+            f"allele-freq-{pmo}",
+            allele,
+            "How many library samples carry each microhaplotype of each target, per run, "
+            "and its share of the target's detections.",
+            pmo=pmo,
+        )
+        case(
+            f"allele-freq-collapsed-{pmo}",
+            allele,
+            "The same, summed across runs.",
+            pmo=pmo,
+            collapse_across_runs=True,
+        )
+    case(
+        "allele-freq-filtered",
+        allele,
+        "Only some runs, library samples and targets.",
+        pmo="small",
+        bioinformatics_run_ids=[0],
+        library_sample_names=["L1"],
+        target_names=["t1", "t2"],
+    )
+    case(
+        "allele-freq-nothing-chosen",
+        allele,
+        "A filter that matches nothing.",
+        divergence=EMPTY_SORT,
+        pmo="small",
+        target_names=["nope"],
+    )
+    case(
+        "allele-freq-no-run-id",
+        allele,
+        "A run without a bioinformatics_run_id.",
+        divergence=NO_RUN_ID_ALLELES,
+        pmo="small-no-run-id",
     )
 
     # ---- tables --------------------------------------------------------------------------

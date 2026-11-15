@@ -6,7 +6,10 @@ import { describe, expect, it } from "vitest";
 
 import { PmoError } from "../src/errors.js";
 import {
+  countLibrarySamplesPerTarget,
   countSpecimenByFieldValue,
+  countTargetsPerLibrarySample,
+  extractAlleleCountsFreqFromPmo,
   countSpecimenPerMetaFields,
   countTargetsPerPanel,
   extractFromPmoSamplesWithMetaGroupings,
@@ -91,6 +94,8 @@ const strings = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter((item) => typeof item === "string") : [];
 const numbers = (value: unknown): number[] =>
   Array.isArray(value) ? value.filter((item) => typeof item === "number") : [];
+const numberOr = (value: unknown): number | undefined =>
+  typeof value === "number" ? value : undefined;
 const maybeStrings = (value: unknown): string[] | undefined =>
   value === undefined || value === null ? undefined : strings(value);
 
@@ -114,6 +119,22 @@ function call(oracleCase: OracleCase, pmo: PmoData): unknown {
       return countSpecimenPerMetaFields(pmo);
     case "count_targets_per_panel":
       return countTargetsPerPanel(pmo);
+    case "count_targets_per_library_sample":
+      return countTargetsPerLibrarySample(pmo, { minReads: numberOr(kwargs["min_reads"]) });
+    case "count_library_samples_per_target":
+      return countLibrarySamplesPerTarget(pmo, {
+        minReads: numberOr(kwargs["min_reads"]),
+        collapseAcrossRuns: kwargs["collapse_across_runs"] === true,
+      });
+    case "extract_allele_counts_freq_from_pmo":
+      return extractAlleleCountsFreqFromPmo(pmo, {
+        bioinformaticsRunIds: Array.isArray(kwargs["bioinformatics_run_ids"])
+          ? numbers(kwargs["bioinformatics_run_ids"])
+          : undefined,
+        librarySampleNames: maybeStrings(kwargs["library_sample_names"]),
+        targetNames: maybeStrings(kwargs["target_names"]),
+        collapseAcrossRuns: kwargs["collapse_across_runs"] === true,
+      });
     case "count_specimen_by_field_value":
       return countSpecimenByFieldValue(pmo, strings(kwargs["meta_fields"]));
     case "filter_pmo_by_library_sample_ids":
@@ -210,6 +231,9 @@ const HANDLED = new Set([
   "process/read-filter-no-run-id",
   "process/table-bioinformatics-methods-small",
   "process/filter-specimen-names-set-order",
+  "process/count-samples-per-target-none-left",
+  "process/allele-freq-nothing-chosen",
+  "process/allele-freq-no-run-id",
 ]);
 
 describe("process: oracle cases", () => {
@@ -283,6 +307,24 @@ describe("process: deliberate differences from pmotools-python", () => {
     const names = getSpecimenNames(out);
     expect(names.toSorted()).toEqual(getSpecimenNames(recorded.result.value).toSorted());
     expect(names).toEqual(getSpecimenNames(full).filter((name) => chosen.includes(name)));
+  });
+
+  it("gives an empty table with its columns when nothing is left to count, where Python fails", () => {
+    expect(countLibrarySamplesPerTarget(small, { minReads: 100_000 })).toEqual({
+      columns: ["bioinformatics_run_id", "target_name", "sample_count"],
+      rows: [],
+    });
+    expect(extractAlleleCountsFreqFromPmo(small, { targetNames: ["nope"] })).toEqual({
+      columns: ["bioinformatics_run_id", "target_name", "mhap_id", "count", "freq", "total_haps_per_target"],
+      rows: [],
+    });
+  });
+
+  it("names a run without an id by position in the allele counts, where Python fails", () => {
+    const pmo = FIXTURES["small-no-run-id"];
+    if (pmo === undefined) throw new Error("no fixture");
+    const runs = new Set(extractAlleleCountsFreqFromPmo(pmo).rows.map((row) => row[0]));
+    expect(runs).toEqual(new Set([0, "detected_microhaplotypes_count_idx_1"]));
   });
 
   it("lists every unknown name, where Python names the first", () => {

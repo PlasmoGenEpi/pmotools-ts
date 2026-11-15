@@ -1,0 +1,17 @@
+{
+ "id": "process/count-samples-per-target-none-left",
+ "function": "count_library_samples_per_target",
+ "note": "No target reaches the minimum.",
+ "divergence": "With nothing to count, Python builds an empty DataFrame with no columns and then fails sorting it by a column it does not have (KeyError). pmotools-ts returns the table with its columns and no rows.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "min_reads": 100000
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'bioinformatics_run_id'"
+ },
+ "warnings": []
+}

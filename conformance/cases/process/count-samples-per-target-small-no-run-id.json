@@ -1,0 +1,48 @@
+{
+ "id": "process/count-samples-per-target-small-no-run-id",
+ "function": "count_library_samples_per_target",
+ "note": "Library samples with reads at each target, per run.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small-no-run-id"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_run_id",
+    "target_name",
+    "sample_count"
+   ],
+   "dtypes": {
+    "bioinformatics_run_id": "object",
+    "target_name": "object",
+    "sample_count": "int64"
+   },
+   "rows": [
+    [
+     0,
+     "t1",
+     2
+    ],
+    [
+     0,
+     "t2",
+     2
+    ],
+    [
+     "detected_microhaplotypes_count_idx_1",
+     "t2",
+     1
+    ],
+    [
+     "detected_microhaplotypes_count_idx_1",
+     "t4",
+     2
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}
