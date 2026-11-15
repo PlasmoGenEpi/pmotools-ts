@@ -1,0 +1,17 @@
+{
+ "id": "process/meta-unknown-field",
+ "function": "extract_from_pmo_samples_with_meta_groupings",
+ "note": "A field no specimen has.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "meta_fields_values": "nope=1"
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "missing the field: nope in pmo"
+ },
+ "warnings": []
+}

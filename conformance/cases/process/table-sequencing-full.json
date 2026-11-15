@@ -1,0 +1,48 @@
+{
+ "id": "process/table-sequencing-full",
+ "function": "export_sequencing_info_meta_table",
+ "note": "The sequencing table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "sequencing_info_name",
+    "seq_platform",
+    "seq_instrument_model",
+    "library_layout",
+    "library_strategy",
+    "library_source",
+    "library_selection",
+    "seq_date"
+   ],
+   "dtypes": {
+    "sequencing_info_name": "object",
+    "seq_platform": "object",
+    "seq_instrument_model": "object",
+    "library_layout": "object",
+    "library_strategy": "object",
+    "library_source": "object",
+    "library_selection": "object",
+    "seq_date": "object"
+   },
+   "rows": [
+    [
+     "run1",
+     "ILLUMINA",
+     "NextSeq 2000",
+     "PAIRED",
+     "AMPLICON",
+     "GENOMIC",
+     "PCR",
+     "2023-05-01"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,83 @@
+{
+ "id": "process/table-alleles-renamed-columns",
+ "function": "extract_alleles_per_sample_table",
+ "note": "Other names for the three base columns.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "default_base_col_names": [
+   "sample",
+   "locus",
+   "allele"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "sample",
+    "locus",
+    "allele",
+    "bioinformatics_run_name"
+   ],
+   "dtypes": {
+    "sample": "object",
+    "locus": "object",
+    "allele": "object",
+    "bioinformatics_run_name": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "t1",
+     "AAAA",
+     "runA"
+    ],
+    [
+     "L1",
+     "t1",
+     "AAAT",
+     "runA"
+    ],
+    [
+     "L1",
+     "t2",
+     "CCCC",
+     "runA"
+    ],
+    [
+     "L2",
+     "t1",
+     "AAAT",
+     "runA"
+    ],
+    [
+     "L2",
+     "t2",
+     "CCCG",
+     "runA"
+    ],
+    [
+     "L3",
+     "t2",
+     "CCCC",
+     "runB"
+    ],
+    [
+     "L3",
+     "t4",
+     "GGGG",
+     "runB"
+    ],
+    [
+     "L4",
+     "t4",
+     "GGGG",
+     "runB"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

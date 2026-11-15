@@ -1,0 +1,20 @@
+{
+ "id": "process/table-alleles-two-base-columns",
+ "function": "extract_alleles_per_sample_table",
+ "note": "Only two base column names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "default_base_col_names": [
+   "sample",
+   "locus"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "Must have 3 default columns for allele counts, not 2"
+ },
+ "warnings": []
+}

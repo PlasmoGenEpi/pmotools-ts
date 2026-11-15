@@ -1,0 +1,60 @@
+{
+ "id": "process/table-target-minimal",
+ "function": "export_target_info_meta_table",
+ "note": "The target table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "target_name",
+    "forward_primer_seq",
+    "reverse_primer_seq",
+    "gene_name",
+    "target_attributes"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "forward_primer_seq": "object",
+    "reverse_primer_seq": "object",
+    "gene_name": "object",
+    "target_attributes": "object"
+   },
+   "rows": [
+    [
+     "t1",
+     "ACGTAC",
+     "TTGACA",
+     "crt",
+     null
+    ],
+    [
+     "t2",
+     "ACGTAC",
+     "TTGACA",
+     null,
+     "drug,diversity"
+    ],
+    [
+     "t3",
+     "ACGTAC",
+     "TTGACA",
+     null,
+     null
+    ],
+    [
+     "t4",
+     "ACGTAC",
+     "TTGACA",
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

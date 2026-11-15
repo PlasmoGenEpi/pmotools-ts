@@ -1,0 +1,39 @@
+{
+ "id": "process/count-field-values-full",
+ "function": "count_specimen_by_field_value",
+ "note": "Specimens per country on the example data.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full",
+  "meta_fields": [
+   "collection_country"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "collection_country",
+    "specimens_count",
+    "specimens_freq",
+    "total_specimen_count"
+   ],
+   "dtypes": {
+    "collection_country": "object",
+    "specimens_count": "int64",
+    "specimens_freq": "float64",
+    "total_specimen_count": "int64"
+   },
+   "rows": [
+    [
+     "Mozambique",
+     50,
+     1.0,
+     50
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

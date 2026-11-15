@@ -1,0 +1,39 @@
+{
+ "id": "process/table-specimen-travel-small",
+ "function": "export_specimen_travel_meta_table",
+ "note": "The specimen-travel table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "specimen_name",
+    "travel_country",
+    "travel_start_date",
+    "travel_end_date",
+    "bed_net_usage"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "travel_country": "object",
+    "travel_start_date": "object",
+    "travel_end_date": "object",
+    "bed_net_usage": "float64"
+   },
+   "rows": [
+    [
+     "s2",
+     "Togo",
+     "2024-01-01",
+     "2024-01-10",
+     0.5
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

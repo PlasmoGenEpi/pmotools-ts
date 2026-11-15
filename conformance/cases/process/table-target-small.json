@@ -1,0 +1,114 @@
+{
+ "id": "process/table-target-small",
+ "function": "export_target_info_meta_table",
+ "note": "The target table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "target_name",
+    "forward_primer_seq",
+    "reverse_primer_seq",
+    "forward_primer_chrom",
+    "forward_primer_end",
+    "forward_primer_genome_id",
+    "forward_primer_start",
+    "gene_name",
+    "insert_chrom",
+    "insert_end",
+    "insert_genome_id",
+    "insert_start",
+    "insert_strand",
+    "target_attributes"
+   ],
+   "dtypes": {
+    "target_name": "object",
+    "forward_primer_seq": "object",
+    "reverse_primer_seq": "object",
+    "forward_primer_chrom": "object",
+    "forward_primer_end": "int64",
+    "forward_primer_genome_id": "int64",
+    "forward_primer_start": "int64",
+    "gene_name": "object",
+    "insert_chrom": "object",
+    "insert_end": "int64",
+    "insert_genome_id": "int64",
+    "insert_start": "int64",
+    "insert_strand": "object",
+    "target_attributes": "object"
+   },
+   "rows": [
+    [
+     "t1",
+     "ACGTAC",
+     "TTGACA",
+     "chr1",
+     106,
+     0,
+     100,
+     "crt",
+     "chr1",
+     160,
+     0,
+     106,
+     "+",
+     null
+    ],
+    [
+     "t2",
+     "ACGTAC",
+     "TTGACA",
+     "chr1",
+     206,
+     0,
+     200,
+     null,
+     "chr1",
+     260,
+     0,
+     206,
+     "+",
+     "drug,diversity"
+    ],
+    [
+     "t3",
+     "ACGTAC",
+     "TTGACA",
+     "chr1",
+     306,
+     0,
+     300,
+     null,
+     "chr1",
+     360,
+     0,
+     306,
+     "+",
+     null
+    ],
+    [
+     "t4",
+     "ACGTAC",
+     "TTGACA",
+     "chr1",
+     406,
+     0,
+     400,
+     null,
+     "chr1",
+     460,
+     0,
+     406,
+     "+",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

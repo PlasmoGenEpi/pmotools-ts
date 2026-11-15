@@ -1,0 +1,19 @@
+{
+ "id": "process/table-specimen-travel-full",
+ "function": "export_specimen_travel_meta_table",
+ "note": "The specimen-travel table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [],
+   "dtypes": {},
+   "rows": []
+  }
+ },
+ "warnings": []
+}

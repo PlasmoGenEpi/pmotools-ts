@@ -1,0 +1,306 @@
+{
+ "id": "process/meta-no-match",
+ "function": "extract_from_pmo_samples_with_meta_groupings",
+ "note": "A group no specimen matches: an empty PMO and a count of 0.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "meta_fields_values": "collection_country=Peru"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   {
+    "pmo_header": {
+     "pmo_version": "1.1.0",
+     "creation_date": "2025-01-01",
+     "generation_method": {
+      "program_name": "hand",
+      "program_version": "1"
+     }
+    },
+    "panel_info": [
+     {
+      "panel_name": "panelA",
+      "reactions": [
+       {
+        "reaction_name": "r1",
+        "panel_targets": [
+         0,
+         1
+        ]
+       },
+       {
+        "reaction_name": "r2",
+        "panel_targets": [
+         2
+        ]
+       }
+      ]
+     },
+     {
+      "panel_name": "panelB",
+      "reactions": [
+       {
+        "reaction_name": "r1",
+        "panel_targets": [
+         1,
+         3
+        ]
+       }
+      ]
+     }
+    ],
+    "target_info": [
+     {
+      "target_name": "t1",
+      "forward_primer": {
+       "seq": "ACGTAC",
+       "location": {
+        "chrom": "chr1",
+        "start": 100,
+        "end": 106,
+        "genome_id": 0
+       }
+      },
+      "reverse_primer": {
+       "seq": "TTGACA"
+      },
+      "insert_location": {
+       "chrom": "chr1",
+       "start": 106,
+       "end": 160,
+       "genome_id": 0,
+       "strand": "+"
+      },
+      "gene_name": "crt"
+     },
+     {
+      "target_name": "t2",
+      "forward_primer": {
+       "seq": "ACGTAC",
+       "location": {
+        "chrom": "chr1",
+        "start": 200,
+        "end": 206,
+        "genome_id": 0
+       }
+      },
+      "reverse_primer": {
+       "seq": "TTGACA"
+      },
+      "insert_location": {
+       "chrom": "chr1",
+       "start": 206,
+       "end": 260,
+       "genome_id": 0,
+       "strand": "+"
+      },
+      "target_attributes": [
+       "drug",
+       "diversity"
+      ]
+     },
+     {
+      "target_name": "t3",
+      "forward_primer": {
+       "seq": "ACGTAC",
+       "location": {
+        "chrom": "chr1",
+        "start": 300,
+        "end": 306,
+        "genome_id": 0
+       }
+      },
+      "reverse_primer": {
+       "seq": "TTGACA"
+      },
+      "insert_location": {
+       "chrom": "chr1",
+       "start": 306,
+       "end": 360,
+       "genome_id": 0,
+       "strand": "+"
+      }
+     },
+     {
+      "target_name": "t4",
+      "forward_primer": {
+       "seq": "ACGTAC",
+       "location": {
+        "chrom": "chr1",
+        "start": 400,
+        "end": 406,
+        "genome_id": 0
+       }
+      },
+      "reverse_primer": {
+       "seq": "TTGACA"
+      },
+      "insert_location": {
+       "chrom": "chr1",
+       "start": 406,
+       "end": 460,
+       "genome_id": 0,
+       "strand": "+"
+      }
+     }
+    ],
+    "representative_microhaplotypes": {
+     "targets": [
+      {
+       "target_id": 0,
+       "microhaplotypes": [
+        {
+         "seq": "AAAA"
+        },
+        {
+         "seq": "AAAT",
+         "microhaplotype_name": "t1-b"
+        }
+       ]
+      },
+      {
+       "target_id": 1,
+       "microhaplotypes": [
+        {
+         "seq": "CCCC"
+        },
+        {
+         "seq": "CCCG",
+         "quality": "IIII"
+        }
+       ]
+      },
+      {
+       "target_id": 3,
+       "microhaplotypes": [
+        {
+         "seq": "GGGG"
+        }
+       ]
+      }
+     ]
+    },
+    "specimen_info": [],
+    "library_sample_info": [],
+    "detected_microhaplotypes": [
+     {
+      "library_samples": [],
+      "bioinformatics_run_id": 0
+     },
+     {
+      "library_samples": [],
+      "bioinformatics_run_id": 1
+     }
+    ],
+    "sequencing_info": [
+     {
+      "sequencing_info_name": "seq1",
+      "seq_platform": "ILLUMINA",
+      "seq_instrument_model": "MiSeq",
+      "library_layout": "PAIRED",
+      "library_strategy": "AMPLICON",
+      "library_source": "GENOMIC",
+      "library_selection": "PCR"
+     },
+     {
+      "sequencing_info_name": "seq2",
+      "seq_platform": "ILLUMINA",
+      "seq_instrument_model": "NextSeq",
+      "library_layout": "PAIRED",
+      "library_strategy": "AMPLICON",
+      "library_source": "GENOMIC",
+      "library_selection": "PCR"
+     }
+    ],
+    "project_info": [
+     {
+      "project_name": "P1",
+      "project_description": "First project"
+     },
+     {
+      "project_name": "P2",
+      "project_description": "Second project",
+      "project_contributors": [
+       "Ana",
+       "Ben"
+      ]
+     }
+    ],
+    "bioinformatics_methods_info": [
+     {
+      "methods": [
+       {
+        "program": "cutadapt",
+        "program_version": "4.4",
+        "additional_argument": [
+         "-e",
+         "0"
+        ]
+       },
+       {
+        "program": "dada2",
+        "program_version": "1.26"
+       }
+      ]
+     }
+    ],
+    "bioinformatics_run_info": [
+     {
+      "bioinformatics_run_name": "runA",
+      "bioinformatics_methods_id": 0,
+      "run_date": "2024-06-01"
+     },
+     {
+      "bioinformatics_run_name": "runB",
+      "bioinformatics_methods_id": 0
+     }
+    ],
+    "targeted_genomes": [
+     {
+      "name": "Pf3D7",
+      "genome_version": "2020-09-01",
+      "taxon_id": [
+       5833
+      ],
+      "url": "https://example.org/genome.fasta",
+      "chromosomes": [
+       "chr1",
+       "chr2"
+      ]
+     }
+    ],
+    "read_counts_by_stage": [
+     {
+      "read_counts_by_library_sample_by_stage": [],
+      "bioinformatics_run_id": 0
+     }
+    ]
+   },
+   {
+    "columns": [
+     "collection_country",
+     "count"
+    ],
+    "dtypes": {
+     "collection_country": "object",
+     "count": "int64"
+    },
+    "rows": [
+     [
+      "Peru",
+      0
+     ]
+    ]
+   }
+  ]
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": true,
+  "error": null
+ }
+}

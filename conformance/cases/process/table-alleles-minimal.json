@@ -1,0 +1,78 @@
+{
+ "id": "process/table-alleles-minimal",
+ "function": "extract_alleles_per_sample_table",
+ "note": "Without bioinformatics_run_info the run is named by position.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "bioinformatics_run_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "bioinformatics_run_name": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "t1",
+     "AAAA",
+     "detected_microhaplotypes_count_idx_0"
+    ],
+    [
+     "L1",
+     "t1",
+     "AAAT",
+     "detected_microhaplotypes_count_idx_0"
+    ],
+    [
+     "L1",
+     "t2",
+     "CCCC",
+     "detected_microhaplotypes_count_idx_0"
+    ],
+    [
+     "L2",
+     "t1",
+     "AAAT",
+     "detected_microhaplotypes_count_idx_0"
+    ],
+    [
+     "L2",
+     "t2",
+     "CCCG",
+     "detected_microhaplotypes_count_idx_0"
+    ],
+    [
+     "L3",
+     "t2",
+     "CCCC",
+     "detected_microhaplotypes_count_idx_1"
+    ],
+    [
+     "L3",
+     "t4",
+     "GGGG",
+     "detected_microhaplotypes_count_idx_1"
+    ],
+    [
+     "L4",
+     "t4",
+     "GGGG",
+     "detected_microhaplotypes_count_idx_1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

@@ -1,0 +1,60 @@
+{
+ "id": "process/table-library-sample-small",
+ "function": "export_library_sample_meta_table",
+ "note": "The library-sample table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "library_sample_name",
+    "specimen_name",
+    "panel_name",
+    "sequencing_info_name",
+    "alternate_identifiers"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "sequencing_info_name": "object",
+    "alternate_identifiers": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "s1",
+     "panelA",
+     "seq1",
+     null
+    ],
+    [
+     "L2",
+     "s2",
+     "panelA",
+     "seq1",
+     "L2-a,L2-b"
+    ],
+    [
+     "L3",
+     "s1",
+     "panelB",
+     "seq2",
+     null
+    ],
+    [
+     "L4",
+     "s4",
+     "panelB",
+     "seq2",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

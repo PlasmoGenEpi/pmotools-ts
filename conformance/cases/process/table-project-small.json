@@ -1,0 +1,38 @@
+{
+ "id": "process/table-project-small",
+ "function": "export_project_info_meta_table",
+ "note": "The project table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "project_name",
+    "project_description",
+    "project_contributors"
+   ],
+   "dtypes": {
+    "project_name": "object",
+    "project_description": "object",
+    "project_contributors": "object"
+   },
+   "rows": [
+    [
+     "P1",
+     "First project",
+     null
+    ],
+    [
+     "P2",
+     "Second project",
+     "Ana,Ben"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

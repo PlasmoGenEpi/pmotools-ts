@@ -1,0 +1,16 @@
+{
+ "id": "process/table-targeted-genomes-full",
+ "function": "export_targeted_genomes_meta_table",
+ "note": "The targeted-genomes table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "no targeted_genomes found in input PMO"
+ },
+ "warnings": []
+}

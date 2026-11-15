@@ -1,0 +1,49 @@
+{
+ "id": "process/table-bioinformatics-methods-small",
+ "function": "export_bioinformatics_methods_info_meta_table",
+ "note": "The bioinformatics-methods table.",
+ "divergence": "Python copies each method's fields into the row as they are, so additional_argument (a list) lands in one cell as a list, which a delimited file cannot hold. pmotools-ts joins it with the separator, as every other exporter does with lists.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_methods_id",
+    "method_id",
+    "program",
+    "program_version",
+    "additional_argument"
+   ],
+   "dtypes": {
+    "bioinformatics_methods_id": "int64",
+    "method_id": "int64",
+    "program": "object",
+    "program_version": "object",
+    "additional_argument": "object"
+   },
+   "rows": [
+    [
+     1,
+     1,
+     "cutadapt",
+     "4.4",
+     [
+      "-e",
+      "0"
+     ]
+    ],
+    [
+     1,
+     2,
+     "dada2",
+     "1.26",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

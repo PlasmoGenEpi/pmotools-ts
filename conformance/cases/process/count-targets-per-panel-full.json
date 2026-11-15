@@ -1,0 +1,30 @@
+{
+ "id": "process/count-targets-per-panel-full",
+ "function": "count_targets_per_panel",
+ "note": "Distinct targets per panel.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "panel_name",
+    "panel_target_count"
+   ],
+   "dtypes": {
+    "panel_name": "object",
+    "panel_target_count": "int64"
+   },
+   "rows": [
+    [
+     "Mad4hatter",
+     276
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

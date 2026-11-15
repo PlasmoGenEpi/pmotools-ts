@@ -1,0 +1,36 @@
+{
+ "id": "process/table-bioinformatics-run-full",
+ "function": "export_bioinformatics_run_info_meta_table",
+ "note": "The bioinformatics-run table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "run_id",
+    "bioinformatics_run_name",
+    "bioinformatics_methods_id",
+    "run_date"
+   ],
+   "dtypes": {
+    "run_id": "int64",
+    "bioinformatics_run_name": "object",
+    "bioinformatics_methods_id": "int64",
+    "run_date": "object"
+   },
+   "rows": [
+    [
+     0,
+     "run1",
+     0,
+     "2023-06-01"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

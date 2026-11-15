@@ -1,0 +1,16 @@
+{
+ "id": "process/table-targeted-genomes-minimal",
+ "function": "export_targeted_genomes_meta_table",
+ "note": "The targeted-genomes table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "no targeted_genomes found in input PMO"
+ },
+ "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+ "id": "process/filter-library-ids-out-of-range",
+ "function": "filter_pmo_by_library_sample_ids",
+ "note": "An id past the end.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "library_sample_ids": [
+   9
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "9 id is beyond the length of library_sample_info: 4"
+ },
+ "warnings": []
+}

@@ -1,0 +1,48 @@
+{
+ "id": "process/table-library-per-specimen-small",
+ "function": "list_library_sample_names_per_specimen_name",
+ "note": "Library samples per specimen.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "specimen_name",
+    "library_sample_name",
+    "library_sample_count"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "library_sample_name": "object",
+    "library_sample_count": "int64"
+   },
+   "rows": [
+    [
+     "s1",
+     "L1",
+     2
+    ],
+    [
+     "s1",
+     "L3",
+     2
+    ],
+    [
+     "s2",
+     "L2",
+     1
+    ],
+    [
+     "s4",
+     "L4",
+     1
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

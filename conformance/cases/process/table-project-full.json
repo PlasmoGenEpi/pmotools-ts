@@ -1,0 +1,33 @@
+{
+ "id": "process/table-project-full",
+ "function": "export_project_info_meta_table",
+ "note": "The project table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "project_name",
+    "project_description",
+    "project_contributors"
+   ],
+   "dtypes": {
+    "project_name": "object",
+    "project_description": "object",
+    "project_contributors": "object"
+   },
+   "rows": [
+    [
+     "PRJNA1040019",
+     "Mozambique surveillance",
+     "Nanna Brokhattingen"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

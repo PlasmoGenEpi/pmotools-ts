@@ -1,0 +1,83 @@
+{
+ "id": "process/count-meta-fields-full",
+ "function": "count_specimen_per_meta_fields",
+ "note": "How many specimens have each specimen_info field.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "field",
+    "present_in_specimens_count",
+    "total_specimen_count"
+   ],
+   "dtypes": {
+    "field": "object",
+    "present_in_specimens_count": "int64",
+    "total_specimen_count": "int64"
+   },
+   "rows": [
+    [
+     "specimen_name",
+     50,
+     50
+    ],
+    [
+     "specimen_taxon_id",
+     50,
+     50
+    ],
+    [
+     "host_taxon_id",
+     50,
+     50
+    ],
+    [
+     "collection_date",
+     50,
+     50
+    ],
+    [
+     "collection_country",
+     50,
+     50
+    ],
+    [
+     "geo_admin3",
+     50,
+     50
+    ],
+    [
+     "lat_lon",
+     50,
+     50
+    ],
+    [
+     "specimen_collect_device",
+     50,
+     50
+    ],
+    [
+     "specimen_store_loc",
+     50,
+     50
+    ],
+    [
+     "collector",
+     50,
+     50
+    ],
+    [
+     "project_id",
+     50,
+     50
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

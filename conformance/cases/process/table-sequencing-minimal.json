@@ -1,0 +1,16 @@
+{
+ "id": "process/table-sequencing-minimal",
+ "function": "export_sequencing_info_meta_table",
+ "note": "The sequencing table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "no sequencing_info found in input PMO"
+ },
+ "warnings": []
+}

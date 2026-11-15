@@ -1,0 +1,64 @@
+{
+ "id": "process/count-field-values-small",
+ "function": "count_specimen_by_field_value",
+ "note": "Specimens per combination of values; a missing field counts as 'NA'.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "meta_fields": [
+   "collection_country",
+   "collection_date"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "collection_country",
+    "collection_date",
+    "specimens_count",
+    "specimens_freq",
+    "total_specimen_count"
+   ],
+   "dtypes": {
+    "collection_country": "object",
+    "collection_date": "object",
+    "specimens_count": "int64",
+    "specimens_freq": "float64",
+    "total_specimen_count": "int64"
+   },
+   "rows": [
+    [
+     "Ghana",
+     "2024",
+     1,
+     0.25,
+     4
+    ],
+    [
+     "Ghana",
+     "NA",
+     1,
+     0.25,
+     4
+    ],
+    [
+     "Mali",
+     "2023-05",
+     1,
+     0.25,
+     4
+    ],
+    [
+     "Mali",
+     "2024",
+     1,
+     0.25,
+     4
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

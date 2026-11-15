@@ -1,0 +1,36 @@
+{
+ "id": "process/table-header-small",
+ "function": "export_pmo_header_table",
+ "note": "The header table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "pmo_version",
+    "creation_date",
+    "generation_method.program_name",
+    "generation_method.program_version"
+   ],
+   "dtypes": {
+    "pmo_version": "object",
+    "creation_date": "object",
+    "generation_method.program_name": "object",
+    "generation_method.program_version": "object"
+   },
+   "rows": [
+    [
+     "1.1.0",
+     "2025-01-01",
+     "hand",
+     "1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

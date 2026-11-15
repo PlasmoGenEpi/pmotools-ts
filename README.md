@@ -24,10 +24,17 @@ Status: unreleased. The package is marked private and nothing is published.
 | `PMOChecker.validate_pmo_json` | `validatePmo` (schemas 1.0.0 and 1.1.0) |
 | `PMOWriter`, `read_in_pmo` | `stringifyPmo`, `gzipPmo`, `parsePmo` |
 | `pd.read_csv` type inference | `inferColumnTypes` |
+| `PMOProcessor.filter_pmo_by_*`, `extract_from_pmo_with_read_filter`, `extract_from_pmo_samples_with_meta_groupings` | `filterPmoBy…`, `extractFromPmoWithReadFilter`, `extractFromPmoSamplesWithMetaGroupings` |
+| `PMOProcessor.get_*_names`, `count_*` | `get…Names`, `countSpecimenPerMetaFields`, `countTargetsPerPanel`, `countSpecimenByFieldValue` |
+| `PMOExporter.export_*_table`, `extract_alleles_per_sample_table`, `list_library_sample_names_per_specimen_name` | `export…Table`, `extractAllelesPerSampleTable`, `listLibrarySampleNamesPerSpecimenName` |
+| `DataFrame.to_csv` | `formatDelimited` |
 | no equivalent | `checkPmoIntegrity` |
 
-Not ported: combining and subsetting PMOs (`PMOReader.combine_multiple_pmos`,
-`PMOProcessor`), table exports (`PMOExporter`), `PMOUpdater`, and the CLI.
+The exporters return a `ColumnTable` (`columns` and `rows`) laid out as the
+pandas DataFrame would be.
+
+Not ported: combining PMOs (`PMOReader.combine_multiple_pmos`), allele counts
+and frequencies, BED exports, the Excel export, `PMOUpdater`, and the CLI.
 
 ## Example
 
@@ -104,6 +111,16 @@ number with its text form. Each difference is recorded in an oracle case with a
   about repeated stages and about reads for unknown samples or runs, which
   Python drops without a word.
 - The header's `generation_method` names pmotools-ts.
+- Subsets keep specimens and library samples in the file's order. Python
+  writes them in set order, which scrambles ids of 32 and above.
+- An id outside the list is refused. Python lets an id equal to the length
+  through (then fails, or returns an empty PMO), and reads a negative id from
+  the end.
+- `extractFromPmoWithReadFilter` works when a run has no
+  `bioinformatics_run_id`, which is optional in 1.1.0. Python fails.
+- An unknown name throws a `PmoError` listing every unknown name.
+- The methods table joins a list field such as `additional_argument`. Python
+  leaves the list in one cell.
 
 `validatePmo` reaches the same verdict as Python's `jsonschema` on all 19,486
 recorded checks. The vendored schemas are untouched. A build step rewrites

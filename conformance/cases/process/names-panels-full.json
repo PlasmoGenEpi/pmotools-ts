@@ -1,0 +1,17 @@
+{
+ "id": "process/names-panels-full",
+ "function": "get_panel_names",
+ "note": "Panel names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "Mad4hatter"
+  ]
+ },
+ "warnings": []
+}

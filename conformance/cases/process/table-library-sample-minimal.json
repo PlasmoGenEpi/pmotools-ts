@@ -1,0 +1,54 @@
+{
+ "id": "process/table-library-sample-minimal",
+ "function": "export_library_sample_meta_table",
+ "note": "The library-sample table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "library_sample_name",
+    "specimen_name",
+    "panel_name",
+    "alternate_identifiers"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "specimen_name": "object",
+    "panel_name": "object",
+    "alternate_identifiers": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "s1",
+     "panelA",
+     null
+    ],
+    [
+     "L2",
+     "s2",
+     "panelA",
+     "L2-a,L2-b"
+    ],
+    [
+     "L3",
+     "s1",
+     "panelB",
+     null
+    ],
+    [
+     "L4",
+     "s4",
+     "panelB",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

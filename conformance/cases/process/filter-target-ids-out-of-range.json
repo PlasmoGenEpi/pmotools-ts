@@ -1,0 +1,19 @@
+{
+ "id": "process/filter-target-ids-out-of-range",
+ "function": "filter_pmo_by_target_ids",
+ "note": "A target id past the end.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "target_ids": [
+   7
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "7 out of range of target_info, length is 4\n7 not in pmodata[\"representative_microhaplotypes\"]"
+ },
+ "warnings": []
+}

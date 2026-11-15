@@ -1,0 +1,17 @@
+{
+ "id": "process/names-runs-full",
+ "function": "get_bioinformatics_run_names",
+ "note": "Bioinformatics run names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "run1"
+  ]
+ },
+ "warnings": []
+}

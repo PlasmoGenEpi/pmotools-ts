@@ -1,0 +1,17 @@
+{
+ "id": "process/read-filter-no-run-id",
+ "function": "extract_from_pmo_with_read_filter",
+ "note": "A detected-microhaplotypes run without a bioinformatics_run_id.",
+ "divergence": "Python reads detected_microhaplotypes[...]['bioinformatics_run_id'] unconditionally and fails with a KeyError when a run has none (it is optional in 1.1.0). pmotools-ts copies the id when present and leaves it out otherwise.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small-no-run-id",
+  "read_filter": 10
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'bioinformatics_run_id'"
+ },
+ "warnings": []
+}

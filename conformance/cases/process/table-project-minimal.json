@@ -1,0 +1,16 @@
+{
+ "id": "process/table-project-minimal",
+ "function": "export_project_info_meta_table",
+ "note": "The project table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "error",
+  "type": "ValueError",
+  "message": "no project_info found in input PMO"
+ },
+ "warnings": []
+}

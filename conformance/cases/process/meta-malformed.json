@@ -1,0 +1,17 @@
+{
+ "id": "process/meta-malformed",
+ "function": "extract_from_pmo_samples_with_meta_groupings",
+ "note": "A condition without '='.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "meta_fields_values": "collection_country"
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "('error processing collection_country', ' should be field and values separated by =')"
+ },
+ "warnings": []
+}

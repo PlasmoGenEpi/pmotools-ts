@@ -1,0 +1,5931 @@
+{
+ "id": "process/filter-target-names-full",
+ "function": "filter_pmo_by_target_names",
+ "note": "Twenty detected targets of the example data.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full",
+  "target_names": [
+   "Pf3D7_14_v3-3214249-3214516-1A",
+   "Pf3D7_14_v3-377765-378020-1A",
+   "Pf3D7_14_v3-407306-407542-1A",
+   "Pf3D7_14_v3-421322-421547-1A",
+   "Pf3D7_14_v3-771407-771633-1A",
+   "Pf3D7_14_v3-854128-854427-1B",
+   "Pf3D7_14_v3-860289-860542-1B",
+   "Pf3D7_14_v3-860834-861066-1B",
+   "Pf3D7_14_v3-921176-921432-1A",
+   "PmUG01_12_v1-1397996-1398245-1AB",
+   "PocGH01_12_v1-1106456-1106697-1AB"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "pmo_header": {
+    "pmo_version": "1.1.0",
+    "creation_date": "2026-11-13",
+    "generation_method": {
+     "program_name": "pmotools-python",
+     "program_version": "1.2.2"
+    }
+   },
+   "specimen_info": [
+    {
+     "specimen_name": "SAMN38241219",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241215",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-02",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241214",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241052",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2015-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241112",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241110",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241106",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241543",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-02",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241542",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2015-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241539",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2015-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241538",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241537",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-03",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241536",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241535",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241532",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241084",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-08",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241470",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-02",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241078",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-10",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241222",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241154",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-12",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241046",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241045",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241061",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-10",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241060",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241057",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241572",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-03",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241571",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-11",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241569",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-12",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241058",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241105",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241102",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241101",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241100",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2015-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241099",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241094",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2015-05",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241564",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-02",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241563",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-12",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241562",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241560",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-02",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241559",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-10",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241558",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-10",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241553",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-11",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241551",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-04",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241550",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241546",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241545",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-09",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241518",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2017-01",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241503",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2016-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241081",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2018-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    },
+    {
+     "specimen_name": "SAMN38241080",
+     "specimen_taxon_id": [
+      5833
+     ],
+     "host_taxon_id": 1758,
+     "collection_date": "2019-06",
+     "collection_country": "Mozambique",
+     "geo_admin3": "Maputo",
+     "lat_lon": "25.58,32.35",
+     "specimen_collect_device": "dried blood spot",
+     "specimen_store_loc": "UCSF Greenhouse Lab",
+     "collector": "Brokhattingen, Nanna",
+     "project_id": 0
+    }
+   ],
+   "library_sample_info": [
+    {
+     "library_sample_name": "SRR26819135",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 1
+     },
+     "specimen_id": 0,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819139",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 2
+     },
+     "specimen_id": 1,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819141",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 3
+     },
+     "specimen_id": 2,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819151",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 4
+     },
+     "specimen_id": 3,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819200",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 5
+     },
+     "specimen_id": 4,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819202",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 6
+     },
+     "specimen_id": 5,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819206",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 7
+     },
+     "specimen_id": 6,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819207",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 8
+     },
+     "specimen_id": 7,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819208",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 9
+     },
+     "specimen_id": 8,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819211",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 10
+     },
+     "specimen_id": 9,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819212",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 11
+     },
+     "specimen_id": 10,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819213",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "A",
+      "plate_col": 12
+     },
+     "specimen_id": 11,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819214",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 1
+     },
+     "specimen_id": 12,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819215",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 2
+     },
+     "specimen_id": 13,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819220",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 3
+     },
+     "specimen_id": 14,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819228",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 4
+     },
+     "specimen_id": 15,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819240",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 5
+     },
+     "specimen_id": 16,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819246",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 6
+     },
+     "specimen_id": 17,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819300",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 7
+     },
+     "specimen_id": 18,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819303",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 8
+     },
+     "specimen_id": 19,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819313",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 9
+     },
+     "specimen_id": 20,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819324",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 10
+     },
+     "specimen_id": 21,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819345",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 11
+     },
+     "specimen_id": 22,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819356",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "B",
+      "plate_col": 12
+     },
+     "specimen_id": 23,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819365",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 1
+     },
+     "specimen_id": 24,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819397",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 2
+     },
+     "specimen_id": 25,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819398",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 3
+     },
+     "specimen_id": 26,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819400",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 4
+     },
+     "specimen_id": 27,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819474",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 5
+     },
+     "specimen_id": 28,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819501",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 6
+     },
+     "specimen_id": 29,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819505",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 7
+     },
+     "specimen_id": 30,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819506",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 8
+     },
+     "specimen_id": 31,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819507",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 9
+     },
+     "specimen_id": 32,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819508",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 10
+     },
+     "specimen_id": 33,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819514",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 11
+     },
+     "specimen_id": 34,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819526",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "C",
+      "plate_col": 12
+     },
+     "specimen_id": 35,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819527",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 1
+     },
+     "specimen_id": 36,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819528",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 2
+     },
+     "specimen_id": 37,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819530",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 3
+     },
+     "specimen_id": 38,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819531",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 4
+     },
+     "specimen_id": 39,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819532",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 5
+     },
+     "specimen_id": 40,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819538",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 6
+     },
+     "specimen_id": 41,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819540",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 7
+     },
+     "specimen_id": 42,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819541",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 8
+     },
+     "specimen_id": 43,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819545",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 9
+     },
+     "specimen_id": 44,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819546",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 10
+     },
+     "specimen_id": 45,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819553",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 11
+     },
+     "specimen_id": 46,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819570",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "D",
+      "plate_col": 12
+     },
+     "specimen_id": 47,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819595",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "E",
+      "plate_col": 1
+     },
+     "specimen_id": 48,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    },
+    {
+     "library_sample_name": "SRR26819606",
+     "library_prep_plate_info": {
+      "plate_name": "plate1",
+      "plate_row": "E",
+      "plate_col": 2
+     },
+     "specimen_id": 49,
+     "panel_id": 0,
+     "sequencing_info_id": 0
+    }
+   ],
+   "target_info": [
+    {
+     "target_name": "Pf3D7_14_v3-377765-378020-1A",
+     "forward_primer": {
+      "seq": "ATTCTTGTAGAATATCAAAAGAAATTCGTAACA"
+     },
+     "reverse_primer": {
+      "seq": "TTGCACAATAATGGAAAAAGAAAATGCA"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-407306-407542-1A",
+     "forward_primer": {
+      "seq": "CATAAATCCGTTTTAATGTTTTCCTTTTATACC"
+     },
+     "reverse_primer": {
+      "seq": "CATCTAATACAAACATGAGTAACTTGGTTAATT"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-421322-421547-1A",
+     "forward_primer": {
+      "seq": "CCTTTTCTCGATTTTTCAGTAAATTAAATCCTT"
+     },
+     "reverse_primer": {
+      "seq": "CTTCCTTGTAATGATTCTATAGTATCAAACAAA"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-771407-771633-1A",
+     "forward_primer": {
+      "seq": "TCCCGAAAACATATCACTAGATCCAT"
+     },
+     "reverse_primer": {
+      "seq": "AAAAATTAAACATGATGCCACATTTTAGTAGT"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-921176-921432-1A",
+     "forward_primer": {
+      "seq": "AGGATGAAAAATATAATAATTTGTGTACTTGGA"
+     },
+     "reverse_primer": {
+      "seq": "AAGAATAATACGAAAAATTAACCATAACCATCA"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-3214249-3214516-1A",
+     "forward_primer": {
+      "seq": "AATCTAATTCATTTATGGAATCATACACTTGGT"
+     },
+     "reverse_primer": {
+      "seq": "AATTTCTTATATCATCAATTGATGGTTGCC"
+     }
+    },
+    {
+     "target_name": "PmUG01_12_v1-1397996-1398245-1AB",
+     "forward_primer": {
+      "seq": "CATTTCAATAATAGCAGCAGCTGGA"
+     },
+     "reverse_primer": {
+      "seq": "ATCACAAAAATTAAATGTTTGTCCAAGAGATG"
+     }
+    },
+    {
+     "target_name": "PocGH01_12_v1-1106456-1106697-1AB",
+     "forward_primer": {
+      "seq": "GTGGAGCATATCAAAACCTTTTTCAAA"
+     },
+     "reverse_primer": {
+      "seq": "CATGGCAATAAAATGGTTGTGTTGAA"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-854128-854427-1B",
+     "forward_primer": {
+      "seq": "AAACCATCGTGCTTAGGAAATAAAACT"
+     },
+     "reverse_primer": {
+      "seq": "AGATATTCATTTTAATGACAAGGACATGAATAG"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-860289-860542-1B",
+     "forward_primer": {
+      "seq": "CACAAGGAAACCTGTATGTGTTACAT"
+     },
+     "reverse_primer": {
+      "seq": "ACTATTACTTAATAAACAAGTCGTAGATGTTTT"
+     }
+    },
+    {
+     "target_name": "Pf3D7_14_v3-860834-861066-1B",
+     "forward_primer": {
+      "seq": "GAAATTGGAGATGAAAGTACAGATTCTAGTTC"
+     },
+     "reverse_primer": {
+      "seq": "TTCATAGAAGAGGTAACATCACCATCAT"
+     }
+    }
+   ],
+   "sequencing_info": [
+    {
+     "sequencing_info_name": "run1",
+     "seq_platform": "ILLUMINA",
+     "seq_instrument_model": "NextSeq 2000",
+     "library_layout": "PAIRED",
+     "library_strategy": "AMPLICON",
+     "library_source": "GENOMIC",
+     "library_selection": "PCR",
+     "seq_date": "2023-05-01"
+    }
+   ],
+   "project_info": [
+    {
+     "project_name": "PRJNA1040019",
+     "project_description": "Mozambique surveillance",
+     "project_contributors": [
+      "Nanna Brokhattingen"
+     ]
+    }
+   ],
+   "bioinformatics_methods_info": [
+    {
+     "bioinformatics_method_name": "mad4hatter",
+     "methods": [
+      {
+       "program": "mad4hatter",
+       "program_version": "v0.1.8"
+      }
+     ]
+    }
+   ],
+   "bioinformatics_run_info": [
+    {
+     "bioinformatics_run_name": "run1",
+     "bioinformatics_methods_id": 0,
+     "run_date": "2023-06-01"
+    }
+   ],
+   "panel_info": [
+    {
+     "panel_name": "Mad4hatter",
+     "reactions": [
+      {
+       "reaction_name": "full",
+       "panel_targets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "representative_microhaplotypes": {
+    "targets": [
+     {
+      "microhaplotypes": [
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGTCAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGAATGATTTTGGAATAGCTACAATGAATGAAAACGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGTTAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGAGTGATTTTGGAATAGCTACAATGAATGAAACCGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGTTAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGAATGATTTTGGAATAGCTACAATGAATGAAAACGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGTTAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGAGTGATTTTGGAATAGCTACAATGAATGAAAGCGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATAGTTTTGTATTCTCAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGAGTGATTTTGGAATAGCTACAATGAATGAAACCGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGTTAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGATTGATTTTGGAATAGCTACAATGAATGAAAACGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       },
+       {
+        "seq": "TAAATAAAAAAGGATTAGATGATTTAATAAAAGATTTGTTAAAATATTTTCCAAAGAATTCAATTAGCGATCGTTTTGAATTGACAGAATTTAAAATGACGGAGGATTGTTATACAAAAATGTGGTTTGATTTTATGATTGATTTTGGAATAGCTACAATGAATGAAAACGAACATACTAGATCTTTTTATGGCTTAATCGAA"
+       }
+      ],
+      "target_id": 5
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTTTCTCTTTTACTATTGTTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTTTCTCTTTTACTATTGCTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTCTCTCTTTTACTATTGTTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAATATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTCTCTCTTTTACTATTGTTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAATATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAACATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTTTCTCTTTTACTATTGCTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAACATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTTTCTCTTTTACTATTGCTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAATATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTTTCTCTTTTACTATTGCTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAATATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAACATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTCTCTCTTTTACTATTGTTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAACATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTCTCTCTTTTACTATTGTTTTAATTTGATTAAAATATATAA"
+       },
+       {
+        "seq": "AAAGATATATCAACTGAAAAGATTTTATCAAATAATTGCTTTAATAATAAGTTAAAAAATTGATTTCCAATATCTATCATATTCATATAATCTAATGATTTAAAAATATATAATATACTCTTTGGACTAAATTTTAATTCATCATTTATTATTCTCTCTTTTACTATTGCTTTAATTTGATTAAAATATATAA"
+       }
+      ],
+      "target_id": 0
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTACTACCTTTTTATTCTTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTCTTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTCTTTACTTTATTTCTATTAATACACAATTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTACTACCTTTTCATTCTTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTGTTTTCATTATCCATATAATCTTTTTCTACTACCTTTTCATTCTTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTACTACCTTTTCATTCTTTACTTTATTTCTATTAATACACAATTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTGTTTTCATTATCCATATAATCTTTTTCTACTACCTTTTCATTCTTTACTTTATTTCTATTAATACACAATTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTCTTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATTTTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTATTTACTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTATTTGCTTTATTTCTATTAATACACAACTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTCTGTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTATTTGCTTTATTTCTATTAATACACAATTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       },
+       {
+        "seq": "CTTTCTTTCGTCTTTGTTTTCATTATCCATATAATCTTTTTCTCCTTCCTTTTCATTCTTTACTTTATTTCTATTAATACACAATTCTCCTTGAGTTAAGAGATTTACGATATTATCAATATTGTTTTCTTTCATATACTTCAACTTTTTACTATTCATTTTTAAAAGA"
+       }
+      ],
+      "target_id": 1
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "TAAGAAAGATGAAGTAATAGAAAAAACTGAAGTATCAAAGAAAACATTTTCAGGTATAGGTTTTAATCTTACTGAGAAAGAAGCTAAAGTATTAGGTGTAGGTGTAACCTATCAAGAATATCCAGAAACCATGTTATATAACTGTCCAAACAATTCTA"
+       },
+       {
+        "seq": "TAAGAAAGATGAAGTAATAGAAAAAACTGAAGTATCAAAGAAAACATTTTCAGGTATAGGTTTTAATCTTACTGAAAAAGAAGCTAAAGTATTAGGTGTAGGTGTAACCTATCAAGAATATCCAGAAACCATGTTATATAACTGTCCAAACAATTCTA"
+       },
+       {
+        "seq": "TAAGAAAGATGAAGTAATAGAAAAAACTGAAGTATCAAAGAAAACATTTTCAGGTATAGGTTTTAATCTTACTGACAAAGAAGCTAAAGTATTAGGTGTAGGTGTAACCTATCAAGAATATCCAGAAACCATGTTATATAACTGTCCAAACAATTCTA"
+       }
+      ],
+      "target_id": 2
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCGTTCTCAAATTTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATGGTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCGTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATTATTATCGTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCGTTCTCAAAATTATTATAACCATGAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCGTTCTGAAAATTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATGGTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATATATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCGTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATATATCTATAA"
+       },
+       {
+        "seq": "ACCCACGGGACATTTTAATTTATACCTATTGGAACATTTTTTATTAGGTCTTTCTTTATGATTCTTCTTTAAAATAGGTTCATCATTATTTGAGTAAACTAACAGATCATTATCCTTCTCAAAATTATTATAACCATCAATATTTTTATTTCCATATACATCTATAA"
+       }
+      ],
+      "target_id": 3
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "GGGGTAATATTTCTTTATCCTGAAGTTTCTAAAAAATATAAAAAAAAAAAAAAAAAAAGAATTATATATATATATATATATATATATATTTGTATATAATTAATCTATGTATAATAAATAAAACTAAAATGATAAGTAAATTATATTATATTGTACAAATTTTTTAATATATTGCGTTATTTATTTATTTATTTATTTTATTTTGTCCTTTACGTAATGGTAAGAAAGATA"
+       }
+      ],
+      "target_id": 8
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "GTGAAGTTCAATGTTTGAATGGGAATAACGAGATAATACATAAAAGATGTAATGACGACATAGAAAAGAAATGTAATGGTAATAATAAATGCATATATTTTTTTGAATATGAACTTCGAAAAAAAACACAATCCTTTCGAAATAAGAATAGTATAGAAATAAGTGAATGTGTAGAATCGGAACAGAACGAAGT"
+       },
+       {
+        "seq": "GTGAAGTTCAATGTTTGAATGGGAATAACGAGATAATACATAAAAGATGTAATGATGACATAGAAAAGAAATGTAATGGTAATAATAAATGCATATATTTTTTTGAATATGAACTTCGAAAAAAAACACAATCCTTTCGAAATAAGAATAGTATAGAAATAAGTGAATGTGTAGAATCGGAACAGAACGAAGT"
+       }
+      ],
+      "target_id": 9
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "ATGGAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGGAAATTCAGGATTTTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGAAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGGAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGCTAATGAAAGTGATGATGATGTTAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGGAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGGAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAAGAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       },
+       {
+        "seq": "ATGGAAATTCAGGATTCTACATCTAATGAACAAGATGAAAATGTTAAAGGAATGAGTTCATCACAAGAAATGAATTCTAATAACGACGAAAATAAAAATCAAGATAATGAAAGTGATGATGATGTTAATAATAATAATAATAATAATAATGATGATCAAGATGAACAAGGT"
+       }
+      ],
+      "target_id": 10
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "ATAATATTAATTTTATAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATCAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTATAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATTAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTATAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATCAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTTTAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATCAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTTTAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATTAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTATAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAATACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATTAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTTTAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAATATATAAACATATAAATACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATTAAA"
+       },
+       {
+        "seq": "ACAATATTAATTTTATAAGTTCATTATTTCAATTTTATATTTAGGAGGATCTATATCCATATATTATTCATTTTAAAAATATTAAAATAAATACATATATAAACATATAAAAACAGTCTTTTAAAAATTAATAAGATTTATATAAAATATGGTTATAAATCCTATTTTGTATTATATCAAA"
+       }
+      ],
+      "target_id": 4
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "CAACATATGGTGAAGCATGTAAGTTAACAATTTCCAGTGCTGTATTTACAGTCCTATCAAATATGGCATCCAATTCAGCATCGGTAATTTTTTTATTATTAATAAATTCTTGTAATGGAATACCACCAACAGTTATGTATCTTTTCAAAGGAACCATTTTATTACCATGTGCAGCAACAATAAGTGCATTT"
+       },
+       {
+        "seq": "CAACATATGGTGAAGCATGTAAGTTAACAATTTCCAGTGCTGTATTTACAGTCCTATCAAATATGGCATCCAATTCAGCACCGGTAATTTTTTTATTATTAATAAATTCTTGTAATGGAATACCACCAACAGTTATGTATCTTTTCAAAGGAACCATTTTATTACCATGTGCAGCAACAATAAGTGCATTT"
+       }
+      ],
+      "target_id": 6
+     },
+     {
+      "microhaplotypes": [
+       {
+        "seq": "CTTTAAGATATGATTCGGCCATTTCGATAATAGCAGCAGCAGGGGCTACATATGGAGAGGCATGGTAATTAACAATTTCCAAAGCAGTGTTAACAGTTCTGTCAAAAATAGCATCTAGTTCTGCATCTGTAATTTTTTTATTGTTAACAAATTCTTGTAAGGGAATACCACCTACAGTTATGTACCT"
+       },
+       {
+        "seq": "CTTTGAGATATGATTCGGCCATTTCGATAATAGCAGCAGCAGGGGCTACATATGGAGAGGCATGGTAATTAACAATCTCCAAAGCAGTGTTAACAGTTCTGTCAAAAATGGCATCTAGTTCTGCATCTGTAATTTTTTTATTGTTAATAAATTCTTGTAAGGGAATACCACCTACAGTTATGTACCT"
+       },
+       {
+        "seq": "CTTTGAGATATGATCCGGCCATTTCGATAATAGCAGCAGCAGGGGCTACATATGGAGAGGCATGGTAATTAACAATCTCCAAAGCAGTGTTAACAGTTCTGTCAAAAATGGCATCTAGTTCTGCATCTTTAATTTTTTTATTGTTAATAAATTCTTGTAAGGGAATACCACCTACAGTTATGTACCT"
+       },
+       {
+        "seq": "CTTTGAGATATGATTCGGCCATTTCGATAATAGCAGCAGCAGGGGCTACGTATGGAGAGGCATGGTAATTAACAATCTCCAAAGCAGTGTTAACAGTTCTGTCAAAAATGGCATCTAGTTCTGCATCTGTAATTTTTTTATTGTTAATAAATTCTTGTAAGGGAATACCACCTACAGTTATGTACCT"
+       }
+      ],
+      "target_id": 7
+     }
+    ]
+   },
+   "detected_microhaplotypes": [
+    {
+     "library_samples": [
+      {
+       "library_sample_id": 0,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 377
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 166
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 288
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 194
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 365
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 125
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 263
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 117
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 1,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 269
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 208
+          },
+          {
+           "mhap_id": 1,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 323
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 294
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 389
+          },
+          {
+           "mhap_id": 0,
+           "reads": 2
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 174
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 290
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 143
+          },
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 2,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 246
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 18
+          },
+          {
+           "mhap_id": 6,
+           "reads": 110
+          },
+          {
+           "mhap_id": 1,
+           "reads": 5
+          },
+          {
+           "mhap_id": 7,
+           "reads": 58
+          },
+          {
+           "mhap_id": 3,
+           "reads": 1
+          },
+          {
+           "mhap_id": 8,
+           "reads": 8
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 27
+          },
+          {
+           "mhap_id": 3,
+           "reads": 83
+          },
+          {
+           "mhap_id": 6,
+           "reads": 86
+          },
+          {
+           "mhap_id": 4,
+           "reads": 2
+          },
+          {
+           "mhap_id": 5,
+           "reads": 54
+          },
+          {
+           "mhap_id": 8,
+           "reads": 88
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 349
+          },
+          {
+           "mhap_id": 1,
+           "reads": 25
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 63
+          },
+          {
+           "mhap_id": 3,
+           "reads": 294
+          },
+          {
+           "mhap_id": 0,
+           "reads": 135
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 5,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 4
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 90
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 102
+          },
+          {
+           "mhap_id": 2,
+           "reads": 71
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 80
+          },
+          {
+           "mhap_id": 3,
+           "reads": 5
+          },
+          {
+           "mhap_id": 4,
+           "reads": 54
+          },
+          {
+           "mhap_id": 1,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 3,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 201
+          },
+          {
+           "mhap_id": 0,
+           "reads": 5
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 30
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 6
+          },
+          {
+           "mhap_id": 2,
+           "reads": 69
+          },
+          {
+           "mhap_id": 4,
+           "reads": 344
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 400
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 598
+          },
+          {
+           "mhap_id": 2,
+           "reads": 10
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 11
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 4,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 323
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 9,
+           "reads": 96
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 300
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 256
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 409
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 58
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 5,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 315
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 146
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 128
+          },
+          {
+           "mhap_id": 3,
+           "reads": 88
+          },
+          {
+           "mhap_id": 2,
+           "reads": 14
+          },
+          {
+           "mhap_id": 5,
+           "reads": 42
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 76
+          },
+          {
+           "mhap_id": 1,
+           "reads": 144
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 155
+          },
+          {
+           "mhap_id": 2,
+           "reads": 201
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 63
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 6,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 274
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 7,
+           "reads": 87
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 380
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 296
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 39
+          },
+          {
+           "mhap_id": 3,
+           "reads": 512
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 7
+          },
+          {
+           "mhap_id": 4,
+           "reads": 36
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 7,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 138
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 21
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 259
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 180
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 500
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 62
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 410
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 8,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 102
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 20
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 226
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 175
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 388
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 71
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 547
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 8
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 9,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 296
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 58
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 183
+          },
+          {
+           "mhap_id": 2,
+           "reads": 17
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 145
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 4
+          },
+          {
+           "mhap_id": 4,
+           "reads": 251
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 133
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 299
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 50
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 10,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 233
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 32
+          },
+          {
+           "mhap_id": 1,
+           "reads": 26
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 86
+          },
+          {
+           "mhap_id": 3,
+           "reads": 141
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 82
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 153
+          },
+          {
+           "mhap_id": 3,
+           "reads": 126
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 111
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 277
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 28
+          },
+          {
+           "mhap_id": 3,
+           "reads": 22
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 11,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 232
+          },
+          {
+           "mhap_id": 5,
+           "reads": 24
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 58
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 27
+          },
+          {
+           "mhap_id": 3,
+           "reads": 200
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 123
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 105
+          },
+          {
+           "mhap_id": 3,
+           "reads": 12
+          },
+          {
+           "mhap_id": 0,
+           "reads": 263
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 122
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 377
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 25
+          },
+          {
+           "mhap_id": 4,
+           "reads": 4
+          },
+          {
+           "mhap_id": 1,
+           "reads": 2
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 10,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 2
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 12,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 294
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 63
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 145
+          },
+          {
+           "mhap_id": 3,
+           "reads": 1
+          },
+          {
+           "mhap_id": 4,
+           "reads": 55
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 40
+          },
+          {
+           "mhap_id": 1,
+           "reads": 79
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 330
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 129
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 328
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 43
+          },
+          {
+           "mhap_id": 3,
+           "reads": 6
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 13,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 231
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 49
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 259
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 143
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 7,
+           "reads": 315
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 108
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 519
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 22
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 14,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 172
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 27
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 234
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 103
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 405
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 86
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 420
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 13
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 15,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 346
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 80
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 285
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 262
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 7,
+           "reads": 471
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 57
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 16,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 290
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 24
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 32
+          },
+          {
+           "mhap_id": 2,
+           "reads": 261
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 195
+          },
+          {
+           "mhap_id": 2,
+           "reads": 46
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 302
+          },
+          {
+           "mhap_id": 2,
+           "reads": 12
+          },
+          {
+           "mhap_id": 3,
+           "reads": 75
+          },
+          {
+           "mhap_id": 0,
+           "reads": 99
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 12
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 17,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 206
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 69
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 319
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 312
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 554
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 125
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 413
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 35
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 18,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 230
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 100
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 374
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 286
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 490
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 93
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 449
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 90
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 19,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 243
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 47
+          },
+          {
+           "mhap_id": 3,
+           "reads": 38
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 173
+          },
+          {
+           "mhap_id": 5,
+           "reads": 71
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 150
+          },
+          {
+           "mhap_id": 1,
+           "reads": 64
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 227
+          },
+          {
+           "mhap_id": 2,
+           "reads": 33
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 183
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 199
+          },
+          {
+           "mhap_id": 3,
+           "reads": 183
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 43
+          },
+          {
+           "mhap_id": 4,
+           "reads": 53
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 20,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 177
+          },
+          {
+           "mhap_id": 2,
+           "reads": 24
+          },
+          {
+           "mhap_id": 3,
+           "reads": 52
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 38
+          },
+          {
+           "mhap_id": 4,
+           "reads": 2
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 62
+          },
+          {
+           "mhap_id": 3,
+           "reads": 171
+          },
+          {
+           "mhap_id": 4,
+           "reads": 33
+          },
+          {
+           "mhap_id": 9,
+           "reads": 81
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 193
+          },
+          {
+           "mhap_id": 1,
+           "reads": 30
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 190
+          },
+          {
+           "mhap_id": 2,
+           "reads": 19
+          },
+          {
+           "mhap_id": 3,
+           "reads": 16
+          },
+          {
+           "mhap_id": 0,
+           "reads": 170
+          },
+          {
+           "mhap_id": 5,
+           "reads": 223
+          },
+          {
+           "mhap_id": 8,
+           "reads": 49
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 23
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 9,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 2
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 10,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 21,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 107
+          },
+          {
+           "mhap_id": 3,
+           "reads": 179
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 32
+          },
+          {
+           "mhap_id": 5,
+           "reads": 51
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 384
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 154
+          },
+          {
+           "mhap_id": 1,
+           "reads": 102
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 504
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 66
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 22,
+       "target_results": [
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 53
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 305
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 265
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 457
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 40
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 23,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 177
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 48
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 7,
+           "reads": 350
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 339
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 650
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 20
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 24,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 311
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 69
+          },
+          {
+           "mhap_id": 4,
+           "reads": 2
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 2
+          },
+          {
+           "mhap_id": 10,
+           "reads": 332
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 247
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 38
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 84
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 25,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 373
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 176
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 276
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 233
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 263
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 136
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 137
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 161
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 26,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 344
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 113
+          },
+          {
+           "mhap_id": 4,
+           "reads": 24
+          },
+          {
+           "mhap_id": 1,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 85
+          },
+          {
+           "mhap_id": 2,
+           "reads": 22
+          },
+          {
+           "mhap_id": 5,
+           "reads": 105
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 104
+          },
+          {
+           "mhap_id": 1,
+           "reads": 25
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 20
+          },
+          {
+           "mhap_id": 3,
+           "reads": 148
+          },
+          {
+           "mhap_id": 7,
+           "reads": 62
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 165
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 178
+          },
+          {
+           "mhap_id": 2,
+           "reads": 20
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 17
+          },
+          {
+           "mhap_id": 3,
+           "reads": 17
+          },
+          {
+           "mhap_id": 5,
+           "reads": 88
+          },
+          {
+           "mhap_id": 6,
+           "reads": 27
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 27,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 191
+          },
+          {
+           "mhap_id": 5,
+           "reads": 4
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 40
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 203
+          },
+          {
+           "mhap_id": 3,
+           "reads": 14
+          },
+          {
+           "mhap_id": 2,
+           "reads": 5
+          },
+          {
+           "mhap_id": 5,
+           "reads": 13
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 8
+          },
+          {
+           "mhap_id": 1,
+           "reads": 80
+          },
+          {
+           "mhap_id": 2,
+           "reads": 6
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 197
+          },
+          {
+           "mhap_id": 3,
+           "reads": 65
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 72
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 289
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 4
+          },
+          {
+           "mhap_id": 3,
+           "reads": 23
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 10,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 28,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 211
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 34
+          },
+          {
+           "mhap_id": 3,
+           "reads": 3
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 325
+          },
+          {
+           "mhap_id": 11,
+           "reads": 51
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 321
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 75
+          },
+          {
+           "mhap_id": 2,
+           "reads": 608
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 25
+          },
+          {
+           "mhap_id": 1,
+           "reads": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 29,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 17
+          },
+          {
+           "mhap_id": 2,
+           "reads": 233
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 64
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 303
+          },
+          {
+           "mhap_id": 5,
+           "reads": 26
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 293
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 554
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 47
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 30,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 360
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 94
+          },
+          {
+           "mhap_id": 5,
+           "reads": 1
+          },
+          {
+           "mhap_id": 8,
+           "reads": 9
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 21
+          },
+          {
+           "mhap_id": 3,
+           "reads": 158
+          },
+          {
+           "mhap_id": 2,
+           "reads": 115
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 262
+          },
+          {
+           "mhap_id": 1,
+           "reads": 5
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 5
+          },
+          {
+           "mhap_id": 2,
+           "reads": 67
+          },
+          {
+           "mhap_id": 3,
+           "reads": 232
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 45
+          },
+          {
+           "mhap_id": 4,
+           "reads": 44
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 31,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 282
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 48
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 309
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 286
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 562
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 32
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 32,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 115
+          },
+          {
+           "mhap_id": 2,
+           "reads": 2
+          },
+          {
+           "mhap_id": 3,
+           "reads": 179
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 8
+          },
+          {
+           "mhap_id": 5,
+           "reads": 39
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 8
+          },
+          {
+           "mhap_id": 3,
+           "reads": 13
+          },
+          {
+           "mhap_id": 2,
+           "reads": 6
+          },
+          {
+           "mhap_id": 4,
+           "reads": 225
+          },
+          {
+           "mhap_id": 5,
+           "reads": 92
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 280
+          },
+          {
+           "mhap_id": 1,
+           "reads": 9
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 169
+          },
+          {
+           "mhap_id": 3,
+           "reads": 19
+          },
+          {
+           "mhap_id": 5,
+           "reads": 379
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 27
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 33,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 211
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 32
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 406
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 7
+          },
+          {
+           "mhap_id": 1,
+           "reads": 279
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 661
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 13
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 34,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 228
+          },
+          {
+           "mhap_id": 0,
+           "reads": 45
+          },
+          {
+           "mhap_id": 2,
+           "reads": 16
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 46
+          },
+          {
+           "mhap_id": 4,
+           "reads": 6
+          },
+          {
+           "mhap_id": 1,
+           "reads": 1
+          },
+          {
+           "mhap_id": 7,
+           "reads": 2
+          },
+          {
+           "mhap_id": 5,
+           "reads": 6
+          },
+          {
+           "mhap_id": 8,
+           "reads": 4
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 167
+          },
+          {
+           "mhap_id": 3,
+           "reads": 104
+          },
+          {
+           "mhap_id": 2,
+           "reads": 16
+          },
+          {
+           "mhap_id": 4,
+           "reads": 2
+          },
+          {
+           "mhap_id": 5,
+           "reads": 16
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 150
+          },
+          {
+           "mhap_id": 1,
+           "reads": 53
+          },
+          {
+           "mhap_id": 2,
+           "reads": 57
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 108
+          },
+          {
+           "mhap_id": 2,
+           "reads": 198
+          },
+          {
+           "mhap_id": 3,
+           "reads": 104
+          },
+          {
+           "mhap_id": 0,
+           "reads": 36
+          },
+          {
+           "mhap_id": 5,
+           "reads": 69
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 9
+          },
+          {
+           "mhap_id": 1,
+           "reads": 4
+          },
+          {
+           "mhap_id": 7,
+           "reads": 9
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 9,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 12
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 10,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 6
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 35,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 157
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 18
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 220
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 168
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 7,
+           "reads": 326
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 95
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 435
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 8
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 36,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 146
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 10
+          },
+          {
+           "mhap_id": 3,
+           "reads": 6
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 5
+          },
+          {
+           "mhap_id": 3,
+           "reads": 5
+          },
+          {
+           "mhap_id": 2,
+           "reads": 92
+          },
+          {
+           "mhap_id": 4,
+           "reads": 121
+          },
+          {
+           "mhap_id": 5,
+           "reads": 22
+          },
+          {
+           "mhap_id": 0,
+           "reads": 20
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 86
+          },
+          {
+           "mhap_id": 2,
+           "reads": 72
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 384
+          },
+          {
+           "mhap_id": 2,
+           "reads": 40
+          },
+          {
+           "mhap_id": 3,
+           "reads": 62
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 65
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 406
+          },
+          {
+           "mhap_id": 2,
+           "reads": 232
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 37,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 174
+          },
+          {
+           "mhap_id": 5,
+           "reads": 2
+          },
+          {
+           "mhap_id": 6,
+           "reads": 109
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 33
+          },
+          {
+           "mhap_id": 1,
+           "reads": 24
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 60
+          },
+          {
+           "mhap_id": 2,
+           "reads": 2
+          },
+          {
+           "mhap_id": 5,
+           "reads": 141
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 101
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 154
+          },
+          {
+           "mhap_id": 0,
+           "reads": 140
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 109
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 280
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 26
+          },
+          {
+           "mhap_id": 0,
+           "reads": 27
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 39,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 217
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 60
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 197
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 105
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 217
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 108
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 195
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 42
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 40,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 232
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 40
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 198
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 108
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 360
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 138
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 355
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 27
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 41,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 276
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 51
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 203
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 111
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 362
+          },
+          {
+           "mhap_id": 6,
+           "reads": 1
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 174
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 362
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 45
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 42,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 2
+          },
+          {
+           "mhap_id": 5,
+           "reads": 289
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 38
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 7
+          },
+          {
+           "mhap_id": 5,
+           "reads": 267
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 108
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 348
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 76
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 314
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 11
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 43,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 200
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 5,
+           "reads": 13
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 322
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 158
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 485
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 42
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 658
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 8
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 44,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 266
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 49
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 186
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 107
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 247
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 118
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 279
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 45
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 45,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 168
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 15
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 1
+          },
+          {
+           "mhap_id": 7,
+           "reads": 213
+          },
+          {
+           "mhap_id": 0,
+           "reads": 7
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 144
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 4
+          },
+          {
+           "mhap_id": 0,
+           "reads": 398
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 79
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 496
+          },
+          {
+           "mhap_id": 4,
+           "reads": 12
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 9
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 46,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 50
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 36
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 46
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 49
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 67
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 34
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 35
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 22
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 47,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 310
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 4,
+           "reads": 45
+          },
+          {
+           "mhap_id": 1,
+           "reads": 89
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 102
+          },
+          {
+           "mhap_id": 3,
+           "reads": 66
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 63
+          },
+          {
+           "mhap_id": 1,
+           "reads": 54
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 134
+          },
+          {
+           "mhap_id": 7,
+           "reads": 93
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 6,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 106
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 7,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 175
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 39
+          },
+          {
+           "mhap_id": 3,
+           "reads": 44
+          },
+          {
+           "mhap_id": 6,
+           "reads": 7
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 48,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 199
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 43
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 421
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 291
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 3,
+           "reads": 684
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 14
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "library_sample_id": 49,
+       "target_results": [
+        {
+         "mhaps_target_id": 0,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 237
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 1,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 53
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 2,
+         "mhaps": [
+          {
+           "mhap_id": 2,
+           "reads": 350
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 3,
+         "mhaps": [
+          {
+           "mhap_id": 0,
+           "reads": 271
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 4,
+         "mhaps": [
+          {
+           "mhap_id": 1,
+           "reads": 612
+          }
+         ]
+        },
+        {
+         "mhaps_target_id": 8,
+         "mhaps": [
+          {
+           "mhap_id": 6,
+           "reads": 18
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "bioinformatics_run_id": 0
+    }
+   ],
+   "read_counts_by_stage": [
+    {
+     "read_counts_by_library_sample_by_stage": [
+      {
+       "library_sample_id": 0,
+       "total_raw_count": 10,
+       "read_counts_for_targets": []
+      },
+      {
+       "library_sample_id": 1,
+       "total_raw_count": 7,
+       "read_counts_for_targets": []
+      },
+      {
+       "library_sample_id": 2,
+       "total_raw_count": 25,
+       "read_counts_for_targets": []
+      }
+     ],
+     "bioinformatics_run_id": 0
+    }
+   ]
+  }
+ },
+ "warnings": [],
+ "schema_validation": {
+  "schema": "1.1.0",
+  "valid": true,
+  "error": null
+ }
+}

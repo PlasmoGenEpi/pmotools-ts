@@ -1,0 +1,39 @@
+{
+ "id": "process/table-bioinformatics-methods-full",
+ "function": "export_bioinformatics_methods_info_meta_table",
+ "note": "The bioinformatics-methods table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "bioinformatics_methods_id",
+    "bioinformatics_method_name",
+    "method_id",
+    "program",
+    "program_version"
+   ],
+   "dtypes": {
+    "bioinformatics_methods_id": "int64",
+    "bioinformatics_method_name": "object",
+    "method_id": "int64",
+    "program": "object",
+    "program_version": "object"
+   },
+   "rows": [
+    [
+     1,
+     "mad4hatter",
+     1,
+     "mad4hatter",
+     "v0.1.8"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

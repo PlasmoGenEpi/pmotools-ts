@@ -1,0 +1,38 @@
+{
+ "id": "process/filter-target-names-full-without-representatives",
+ "function": "filter_pmo_by_target_names",
+ "note": "Twenty panel targets of the example data, some never detected, so with no representative microhaplotypes: Python refuses the whole selection.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "full",
+  "target_names": [
+   "Pf3D7_02_v3-628941-629172-1A",
+   "Pf3D7_02_v3-630641-630907-1A",
+   "Pf3D7_03_v3-85507-85756-1A",
+   "Pf3D7_03_v3-515418-515657-1A",
+   "Pf3D7_03_v3-653961-654206-1A",
+   "Pf3D7_03_v3-855426-855697-1A",
+   "Pf3D7_03_v3-891553-891827-1A",
+   "Pf3D7_04_v3-109939-110184-1A",
+   "Pf3D7_04_v3-115455-115684-1A",
+   "Pf3D7_04_v3-133581-133830-1A",
+   "Pf3D7_04_v3-133928-134154-1A",
+   "Pf3D7_04_v3-140317-140548-1A",
+   "Pf3D7_04_v3-141741-141990-1A",
+   "Pf3D7_04_v3-284121-284364-1A",
+   "Pf3D7_04_v3-316593-316858-1A",
+   "Pf3D7_04_v3-544454-544718-1A",
+   "Pf3D7_04_v3-648065-648332-1A",
+   "Pf3D7_04_v3-900526-900759-1A",
+   "Pf3D7_04_v3-1005938-1006187-1A",
+   "Pf3D7_04_v3-1037644-1037891-1A"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "10 not in pmodata[\"representative_microhaplotypes\"]\n11 not in pmodata[\"representative_microhaplotypes\"]\n12 not in pmodata[\"representative_microhaplotypes\"]\n13 not in pmodata[\"representative_microhaplotypes\"]\n14 not in pmodata[\"representative_microhaplotypes\"]\n15 not in pmodata[\"representative_microhaplotypes\"]\n16 not in pmodata[\"representative_microhaplotypes\"]\n17 not in pmodata[\"representative_microhaplotypes\"]\n18 not in pmodata[\"representative_microhaplotypes\"]\n19 not in pmodata[\"representative_microhaplotypes\"]\n20 not in pmodata[\"representative_microhaplotypes\"]\n21 not in pmodata[\"representative_microhaplotypes\"]\n22 not in pmodata[\"representative_microhaplotypes\"]\n23 not in pmodata[\"representative_microhaplotypes\"]\n24 not in pmodata[\"representative_microhaplotypes\"]\n25 not in pmodata[\"representative_microhaplotypes\"]\n26 not in pmodata[\"representative_microhaplotypes\"]\n27 not in pmodata[\"representative_microhaplotypes\"]\n28 not in pmodata[\"representative_microhaplotypes\"]\n29 not in pmodata[\"representative_microhaplotypes\"]"
+ },
+ "warnings": []
+}

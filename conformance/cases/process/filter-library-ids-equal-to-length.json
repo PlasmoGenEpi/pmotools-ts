@@ -1,0 +1,19 @@
+{
+ "id": "process/filter-library-ids-equal-to-length",
+ "function": "filter_pmo_by_library_sample_ids",
+ "note": "An id equal to the number of library samples.",
+ "divergence": "Python checks ids with `id > len(...)`, so an id equal to the length passes the check and then fails with an IndexError, and a negative id silently picks a record from the end. pmotools-ts refuses any id outside 0..length-1 with a PmoError.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "library_sample_ids": [
+   4
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "IndexError",
+  "message": "list index out of range"
+ },
+ "warnings": []
+}

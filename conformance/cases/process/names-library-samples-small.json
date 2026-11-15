@@ -1,0 +1,20 @@
+{
+ "id": "process/names-library-samples-small",
+ "function": "get_library_sample_names",
+ "note": "Library sample names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ]
+ },
+ "warnings": []
+}

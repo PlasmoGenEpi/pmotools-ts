@@ -1,0 +1,20 @@
+{
+ "id": "process/names-specimens-small",
+ "function": "get_specimen_names",
+ "note": "Specimen names in order.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "s1",
+   "s2",
+   "s3",
+   "s4"
+  ]
+ },
+ "warnings": []
+}

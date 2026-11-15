@@ -1,0 +1,34 @@
+{
+ "id": "process/count-targets-per-panel-small",
+ "function": "count_targets_per_panel",
+ "note": "Distinct targets per panel.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "panel_name",
+    "panel_target_count"
+   ],
+   "dtypes": {
+    "panel_name": "object",
+    "panel_target_count": "int64"
+   },
+   "rows": [
+    [
+     "panelA",
+     3
+    ],
+    [
+     "panelB",
+     2
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

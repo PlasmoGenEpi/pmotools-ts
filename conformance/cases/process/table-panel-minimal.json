@@ -1,0 +1,53 @@
+{
+ "id": "process/table-panel-minimal",
+ "function": "export_panel_info_meta_table",
+ "note": "The panel table of a PMO without optional sections.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "minimal"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "panel_name",
+    "target_name",
+    "reaction_name"
+   ],
+   "dtypes": {
+    "panel_name": "object",
+    "target_name": "object",
+    "reaction_name": "object"
+   },
+   "rows": [
+    [
+     "panelA",
+     "t1",
+     "r1"
+    ],
+    [
+     "panelA",
+     "t2",
+     "r1"
+    ],
+    [
+     "panelA",
+     "t3",
+     "r2"
+    ],
+    [
+     "panelB",
+     "t2",
+     "r1"
+    ],
+    [
+     "panelB",
+     "t4",
+     "r1"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

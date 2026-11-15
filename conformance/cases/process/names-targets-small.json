@@ -1,0 +1,20 @@
+{
+ "id": "process/names-targets-small",
+ "function": "get_target_names",
+ "note": "Target names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "t1",
+   "t2",
+   "t3",
+   "t4"
+  ]
+ },
+ "warnings": []
+}

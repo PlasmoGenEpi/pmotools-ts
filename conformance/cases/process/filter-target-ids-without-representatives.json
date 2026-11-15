@@ -1,0 +1,19 @@
+{
+ "id": "process/filter-target-ids-without-representatives",
+ "function": "filter_pmo_by_target_ids",
+ "note": "Target 2 has no representative microhaplotypes.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "target_ids": [
+   2
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "2 not in pmodata[\"representative_microhaplotypes\"]"
+ },
+ "warnings": []
+}

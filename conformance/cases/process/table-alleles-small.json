@@ -1,0 +1,78 @@
+{
+ "id": "process/table-alleles-small",
+ "function": "extract_alleles_per_sample_table",
+ "note": "Library sample, target and sequence for each detected microhaplotype, with the run name.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "bioinformatics_run_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "bioinformatics_run_name": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "t1",
+     "AAAA",
+     "runA"
+    ],
+    [
+     "L1",
+     "t1",
+     "AAAT",
+     "runA"
+    ],
+    [
+     "L1",
+     "t2",
+     "CCCC",
+     "runA"
+    ],
+    [
+     "L2",
+     "t1",
+     "AAAT",
+     "runA"
+    ],
+    [
+     "L2",
+     "t2",
+     "CCCG",
+     "runA"
+    ],
+    [
+     "L3",
+     "t2",
+     "CCCC",
+     "runB"
+    ],
+    [
+     "L3",
+     "t4",
+     "GGGG",
+     "runB"
+    ],
+    [
+     "L4",
+     "t4",
+     "GGGG",
+     "runB"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

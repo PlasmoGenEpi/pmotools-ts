@@ -1,0 +1,19 @@
+{
+ "id": "process/table-alleles-unknown-field",
+ "function": "extract_alleles_per_sample_table",
+ "note": "An extra specimen field no specimen has.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "additional_specimen_info_fields": [
+   "nope"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "Exception",
+  "message": "No specimen_info have data for fields: nope"
+ },
+ "warnings": []
+}

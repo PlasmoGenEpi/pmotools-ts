@@ -1,0 +1,18 @@
+{
+ "id": "process/names-runs-small",
+ "function": "get_bioinformatics_run_names",
+ "note": "Bioinformatics run names.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": [
+   "runA",
+   "runB"
+  ]
+ },
+ "warnings": []
+}

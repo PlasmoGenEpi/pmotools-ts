@@ -1,0 +1,73 @@
+{
+ "id": "process/table-specimen-separator",
+ "function": "export_specimen_meta_table",
+ "note": "List values joined with ';'.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "separator": ";"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "specimen_name",
+    "project_name",
+    "collection_country",
+    "collection_date",
+    "host_taxon_id",
+    "specimen_taxon_id",
+    "drug_usage"
+   ],
+   "dtypes": {
+    "specimen_name": "object",
+    "project_name": "object",
+    "collection_country": "object",
+    "collection_date": "object",
+    "host_taxon_id": "int64",
+    "specimen_taxon_id": "object",
+    "drug_usage": "object"
+   },
+   "rows": [
+    [
+     "s1",
+     "P1",
+     "Mali",
+     "2023-05",
+     9606,
+     "5833",
+     "AL;SP"
+    ],
+    [
+     "s2",
+     "P2",
+     "Ghana",
+     "2024",
+     9606,
+     "5833",
+     null
+    ],
+    [
+     "s3",
+     "P1",
+     "Mali",
+     "2024",
+     9606,
+     "5833",
+     null
+    ],
+    [
+     "s4",
+     "P2",
+     "Ghana",
+     null,
+     9606,
+     "5833",
+     null
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

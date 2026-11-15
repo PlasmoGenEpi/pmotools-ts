@@ -1,0 +1,152 @@
+{
+ "id": "process/table-alleles-extra-fields",
+ "function": "extract_alleles_per_sample_table",
+ "note": "With extra fields from each level; a missing one is 'NA'.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "additional_specimen_info_fields": [
+   "collection_country",
+   "collection_date"
+  ],
+  "additional_library_sample_info_fields": [
+   "sequencing_info_id"
+  ],
+  "additional_microhap_fields": [
+   "reads",
+   "umis"
+  ],
+  "additional_representative_info_fields": [
+   "microhaplotype_name"
+  ]
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "library_sample_name",
+    "target_name",
+    "seq",
+    "bioinformatics_run_name",
+    "sequencing_info_id",
+    "collection_country",
+    "collection_date",
+    "reads",
+    "umis",
+    "microhaplotype_name"
+   ],
+   "dtypes": {
+    "library_sample_name": "object",
+    "target_name": "object",
+    "seq": "object",
+    "bioinformatics_run_name": "object",
+    "sequencing_info_id": "int64",
+    "collection_country": "object",
+    "collection_date": "object",
+    "reads": "int64",
+    "umis": "object",
+    "microhaplotype_name": "object"
+   },
+   "rows": [
+    [
+     "L1",
+     "t1",
+     "AAAA",
+     "runA",
+     0,
+     "Mali",
+     "2023-05",
+     120,
+     "NA",
+     "NA"
+    ],
+    [
+     "L1",
+     "t1",
+     "AAAT",
+     "runA",
+     0,
+     "Mali",
+     "2023-05",
+     8,
+     "NA",
+     "t1-b"
+    ],
+    [
+     "L1",
+     "t2",
+     "CCCC",
+     "runA",
+     0,
+     "Mali",
+     "2023-05",
+     45,
+     "NA",
+     "NA"
+    ],
+    [
+     "L2",
+     "t1",
+     "AAAT",
+     "runA",
+     0,
+     "Ghana",
+     "2024",
+     3,
+     2,
+     "t1-b"
+    ],
+    [
+     "L2",
+     "t2",
+     "CCCG",
+     "runA",
+     0,
+     "Ghana",
+     "2024",
+     300,
+     "NA",
+     "NA"
+    ],
+    [
+     "L3",
+     "t2",
+     "CCCC",
+     "runB",
+     1,
+     "Mali",
+     "2023-05",
+     60,
+     "NA",
+     "NA"
+    ],
+    [
+     "L3",
+     "t4",
+     "GGGG",
+     "runB",
+     1,
+     "Mali",
+     "2023-05",
+     9,
+     "NA",
+     "NA"
+    ],
+    [
+     "L4",
+     "t4",
+     "GGGG",
+     "runB",
+     1,
+     "Ghana",
+     "NA",
+     75,
+     "NA",
+     "NA"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

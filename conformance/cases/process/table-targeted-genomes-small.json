@@ -1,0 +1,42 @@
+{
+ "id": "process/table-targeted-genomes-small",
+ "function": "export_targeted_genomes_meta_table",
+ "note": "The targeted-genomes table.",
+ "divergence": null,
+ "tables": {},
+ "kwargs": {
+  "pmo": "small"
+ },
+ "result": {
+  "kind": "ok",
+  "value": {
+   "columns": [
+    "name",
+    "genome_version",
+    "taxon_id",
+    "genome_id",
+    "url",
+    "chromosomes"
+   ],
+   "dtypes": {
+    "name": "object",
+    "genome_version": "object",
+    "taxon_id": "object",
+    "genome_id": "int64",
+    "url": "object",
+    "chromosomes": "object"
+   },
+   "rows": [
+    [
+     "Pf3D7",
+     "2020-09-01",
+     "5833",
+     0,
+     "https://example.org/genome.fasta",
+     "chr1,chr2"
+    ]
+   ]
+  }
+ },
+ "warnings": []
+}

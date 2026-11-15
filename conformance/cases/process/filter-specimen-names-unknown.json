@@ -1,0 +1,19 @@
+{
+ "id": "process/filter-specimen-names-unknown",
+ "function": "filter_pmo_by_specimen_names",
+ "note": "An unknown name.",
+ "divergence": "Python looks names up in a dict and fails with a KeyError naming the first unknown one. pmotools-ts throws a PmoError listing every unknown name.",
+ "tables": {},
+ "kwargs": {
+  "pmo": "small",
+  "specimen_names": [
+   "nope"
+  ]
+ },
+ "result": {
+  "kind": "error",
+  "type": "KeyError",
+  "message": "'nope'"
+ },
+ "warnings": []
+}

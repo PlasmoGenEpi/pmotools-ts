@@ -16,6 +16,7 @@ v1.2.2, which acts as the oracle.
 | `src/merge/` | `mergeToPmo`: assembles builder outputs into one PMO |
 | `src/validate/` | JSON Schema validation and reference-integrity checks |
 | `src/io/` | Reading and writing PMO JSON, plain or gzipped |
+| `src/process/` | Working with a PMO: names, counts, subsets (`PMOProcessor`), flat tables (`PMOExporter`), CSV/TSV text |
 | `src/types/` | PMO types generated from the JSON Schema |
 | `schemas/` | JSON Schemas vendored from pmotools-python, unmodified |
 | `conformance/oracle/` | Python generators that record what pmotools-python does |

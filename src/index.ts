@@ -11,6 +11,14 @@
  * 3. `mergeToPmo` assembles the fragments into one PMO.
  * 4. `validatePmo` and `checkPmoIntegrity` check it.
  * 5. `stringifyPmo` or `gzipPmo` writes it out.
+ *
+ * Working with a PMO you have:
+ *
+ * - `filterPmoBySpecimenNames`, `filterPmoByLibrarySampleNames`,
+ *   `filterPmoByTargetNames`, `extractFromPmoWithReadFilter` and
+ *   `extractFromPmoSamplesWithMetaGroupings` make a smaller PMO.
+ * - `extractAllelesPerSampleTable` and the `export…MetaTable` functions give
+ *   flat tables; `formatDelimited` writes one as CSV or TSV.
  */
 export * from "./errors.js";
 
@@ -35,5 +43,6 @@ export type {
 
 export * from "./validate/index.js";
 export * from "./io/pmo.js";
+export * from "./process/index.js";
 
 export type * from "./types/pmo.js";
