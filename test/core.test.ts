@@ -63,6 +63,19 @@ describe("table core", () => {
     expect(dropDuplicates(table, ["a"])).toHaveLength(3);
   });
 
+  it("matches cells as cellKey does, column by column", () => {
+    // NaN is missing like null; true is 1, as cellKey writes both `n1`; -0 is 0.
+    const cells = [{ a: Number.NaN }, { a: null }, { a: true }, { a: 1 }, { a: -0 }, { a: 0 }, { a: "true" }];
+    expect(duplicatedMask(cells, ["a"])).toEqual([false, true, false, true, false, true, false]);
+    // Texts that would run together if joined still differ per column.
+    const pairs = [
+      { a: "x,1", b: "y" },
+      { a: "x", b: "1,y" },
+      { a: "x,1", b: "y" },
+    ];
+    expect(duplicatedMask(pairs, ["a", "b"])).toEqual([false, false, true]);
+  });
+
   it("lists columns across ragged rows", () => {
     expect(columnNames([{ a: 1 }, { b: 2, a: 3 }])).toEqual(["a", "b"]);
   });

@@ -231,6 +231,35 @@ describe("mhapTableToPmo", () => {
     expect(table).toStrictEqual(snapshot);
   });
 
+  it("reads a renamed column over an existing column of the canonical name", () => {
+    // `reads` is an unrelated column here; the count column is renamed to `reads` and wins.
+    const result = mhapTableToPmo(
+      [{ SampleID: "s", Locus: "t", ASV: "A", count: 7, reads: 99, note: "x" }],
+      {
+        librarySampleNameCol: "SampleID",
+        targetNameCol: "Locus",
+        seqCol: "ASV",
+        readsCol: "count",
+        additionalMhapDetectedCols: ["note"],
+      },
+    );
+    const mhap = result.detected_microhaplotypes[0]?.library_samples[0]?.target_results[0]?.mhaps[0];
+    expect(mhap).toStrictEqual({ mhap_id: 0, reads: 7, note: "x" });
+    expect(Object.keys(mhap ?? {})).toEqual(["mhap_id", "reads", "note"]);
+  });
+
+  it("no longer finds a renamed column under its own name", () => {
+    expect(() =>
+      mhapTableToPmo([{ SampleID: "s", Locus: "t", ASV: "A", count: 7 }], {
+        librarySampleNameCol: "SampleID",
+        targetNameCol: "Locus",
+        seqCol: "ASV",
+        readsCol: "count",
+        additionalMhapDetectedCols: ["count"],
+      }),
+    ).toThrow(expect.objectContaining({ code: "mhap/missing-additional-columns" }));
+  });
+
   it("keeps reads with their own target when targets are unsorted in the input", () => {
     const result = mhapTableToPmo([
       { library_sample_name: "s", target_name: "zeta", seq: "Z", reads: 26 },

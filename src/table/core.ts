@@ -138,6 +138,17 @@ export function cellKey(cells: readonly Cell[]): string {
     .join("|");
 }
 
+/**
+ * A `Map` key that two cells share exactly when their {@link cellKey}s are
+ * equal: missing values become `null`, booleans their number (`cellKey`
+ * writes `true` as `n1`), and strings and numbers stay as they are, so `1`
+ * and `"1"` still differ.
+ */
+export function cellMapKey(cell: Cell): string | number | null {
+  if (!isPresent(cell)) return null;
+  return typeof cell === "boolean" ? Number(cell) : cell;
+}
+
 /** Distinct values in first-seen order, like `Series.unique()`. Missing is kept once, as `null`. */
 export function uniqueInOrder(values: readonly Cell[]): (PresentCell | null)[] {
   const seen = new Set<string>();
@@ -213,8 +224,26 @@ export function duplicatedMask(
   columns: readonly string[],
   keep: "first" | "none" = "first",
 ): boolean[] {
+  // Each distinct cell of a column gets a number, and a row's key is its
+  // numbers, such as "3,0,12". Keys stay short however long the cells are:
+  // a key holding each cell's text would hold every sequence of a large
+  // allele table a second time.
+  const numbering = columns.map(() => new Map<string | number | null, number>());
+  const keys = table.map((row) =>
+    columns
+      .map((column, index) => {
+        const numbers = numbering[index] ?? new Map<string | number | null, number>();
+        const value = cellMapKey(row[column]);
+        let number = numbers.get(value);
+        if (number === undefined) {
+          number = numbers.size;
+          numbers.set(value, number);
+        }
+        return number;
+      })
+      .join(","),
+  );
   const counts = new Map<string, number>();
-  const keys = table.map((row) => cellKey(columns.map((column) => row[column])));
   for (const key of keys) counts.set(key, (counts.get(key) ?? 0) + 1);
   const seen = new Set<string>();
   return keys.map((key) => {
