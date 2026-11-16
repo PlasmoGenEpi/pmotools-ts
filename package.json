@@ -1,8 +1,24 @@
 {
   "name": "pmotools-ts",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "Build, validate, read and write Portable Microhaplotype Object (PMO) files in TypeScript",
+  "keywords": [
+    "pmo",
+    "portable microhaplotype object",
+    "microhaplotype",
+    "malaria",
+    "plasmodium",
+    "genomics",
+    "amplicon sequencing"
+  ],
+  "homepage": "https://github.com/PlasmoGenEpi/pmotools-ts#readme",
+  "bugs": {
+    "url": "https://github.com/PlasmoGenEpi/pmotools-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlasmoGenEpi/pmotools-ts.git"
+  },
   "license": "GPL-3.0-only",
   "type": "module",
   "sideEffects": false,
@@ -11,20 +27,23 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./schemas/*": "./schemas/*"
+    "./schemas/*": "./schemas/*",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
     "schemas"
   ],
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
+  "packageManager": "pnpm@12.11.2",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "oracle": "cd conformance && .venv/bin/python -m oracle.run_all"
+    "oracle": "cd conformance && .venv/bin/python -m oracle.run_all",
+    "prepack": "pnpm build"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

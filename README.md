@@ -2,7 +2,7 @@
 
 Build, validate, read and write
 [Portable Microhaplotype Object](https://github.com/PlasmoGenEpi/portable-microhaplotype-object)
-(PMO) files in TypeScript. It runs in browsers and in Node 20+, and it has no
+(PMO) files in TypeScript. It runs in browsers and in Node 22+, and it has no
 runtime dependencies.
 
 This is a port of the builder half of
@@ -10,7 +10,12 @@ This is a port of the builder half of
 function is tested against recorded calls to the Python library, so the same
 tables give the same PMO.
 
-Status: unreleased. The package is marked private and nothing is published.
+```bash
+npm install pmotools-ts
+```
+
+Versions before 1.0 may change the API in a minor release. See
+[CHANGELOG.md](CHANGELOG.md).
 
 ## What it covers
 
@@ -135,7 +140,7 @@ their regular expressions so JavaScript matches what Python's `re` matches.
 
 ```bash
 pnpm install
-pnpm test        # 951 tests, most replaying Python oracle cases
+pnpm test        # 1,082 tests, most replaying Python oracle cases
 pnpm typecheck
 pnpm build
 ```
@@ -148,6 +153,17 @@ pnpm oracle
 ```
 
 `AGENTS.md` describes the layout, the conventions and how to add oracle cases.
+
+## Releasing
+
+1. Update `version` in `package.json` and `PMOTOOLS_TS_VERSION` in
+   `src/merge/mergeToPmo.ts` (a test checks they agree), and add an entry to
+   `CHANGELOG.md`.
+2. Commit, then tag and push: `git tag v0.2.0 && git push origin main v0.2.0`.
+
+The Release workflow checks that the tag matches `package.json`, runs the
+tests, and publishes to npm with provenance through npm trusted publishing. A
+prerelease version such as `0.2.0-beta.1` is published under the `next` tag.
 
 ## License
 
