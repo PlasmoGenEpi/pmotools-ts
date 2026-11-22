@@ -12,9 +12,7 @@ import { PmoError, warn, type WarningOptions, type WarningSink } from "../errors
 import {
   cellKey,
   cellMapKey,
-  columnNames,
   compareCells,
-  dropDuplicates,
   isPresent,
   type Cell,
   type PresentCell,
@@ -196,11 +194,6 @@ function groupByName<T>(rows: readonly T[], keyOf: (item: T) => Cell): NamedGrou
   return [...groups.values()].sort((a, b) => compareCells(a.first, b.first));
 }
 
-function requireColumns(table: Table, columns: readonly string[]): void {
-  if (table.length === 0) return;
-  requireColumnNames(new Set(columnNames(table)), columns);
-}
-
 function requireColumnNames(present: ReadonlySet<string>, columns: readonly string[]): void {
   const missing = columns.filter((column) => !present.has(column));
   if (missing.length > 0) {
@@ -242,9 +235,45 @@ interface Resolved {
   readonly additionalMhapDetectedCols: readonly string[];
 }
 
-/** `create_representative_microhaplotype_dict`. */
+/**
+ * The columns that make a representative microhaplotype distinct: the target,
+ * the seq, every optional column that is set, and the additional columns.
+ */
+function representativeColumns(options: MhapTableToPmoOptions, resolved: Resolved): string[] {
+  const chromCol = options.chromCol ?? undefined;
+  const pseudocigarChromCol = given(options.pseudocigarChromCol) ? options.pseudocigarChromCol : chromCol;
+  const optional = [
+    chromCol,
+    options.startCol,
+    options.endCol,
+    options.refSeqCol,
+    options.strandCol,
+    options.altAnnotationsCol,
+    options.microhaplotypeNameCol,
+    options.pseudocigarCol,
+    pseudocigarChromCol,
+    options.pseudocigarStartCol,
+    options.pseudocigarEndCol,
+    options.pseudocigarRefSeqCol,
+    options.pseudocigarStrandCol,
+    options.pseudocigarGenerationDescriptionCol,
+    options.qualityCol,
+    options.maskingSeqStartCol,
+    options.maskingSeqSegmentSizeCol,
+    options.maskingReplacementSizeCol,
+  ].filter(given);
+  return [...new Set([resolved.targetNameCol, resolved.seqCol, ...optional, ...(options.additionalRepresentativeMhapCols ?? [])])];
+}
+
+/**
+ * `create_representative_microhaplotype_dict`, given the table's distinct
+ * rows over {@link representativeColumns} (first-seen order), every column
+ * any row has, and how many rows there were.
+ */
 function buildRepresentative(
-  table: Table,
+  unique: readonly Row[],
+  columns: ReadonlySet<string>,
+  rowCount: number,
   options: MhapTableToPmoOptions,
   resolved: Resolved,
   onWarning: WarningSink | undefined,
@@ -270,7 +299,7 @@ function buildRepresentative(
   const maskingDelim = options.maskingDelim ?? ",";
   const additional = options.additionalRepresentativeMhapCols ?? [];
 
-  if (additional.length > 0) requireAdditionalColumns(new Set(columnNames(table)), additional);
+  if (additional.length > 0) requireAdditionalColumns(columns, additional);
 
   const pseudocigarChromCol = given(options.pseudocigarChromCol) ? options.pseudocigarChromCol : chromCol;
   const pseudocigarGenomeId = options.pseudocigarGenomeId ?? genomeId;
@@ -296,28 +325,7 @@ function buildRepresentative(
     );
   }
 
-  const optional = [
-    chromCol,
-    startCol,
-    endCol,
-    refSeqCol,
-    strandCol,
-    altAnnotationsCol,
-    microhaplotypeNameCol,
-    pseudocigarCol,
-    pseudocigarChromCol,
-    pseudocigarStartCol,
-    pseudocigarEndCol,
-    pseudocigarRefSeqCol,
-    pseudocigarStrandCol,
-    pseudocigarDescriptionCol,
-    qualityCol,
-    ...maskingCols,
-  ].filter(given);
-  const allCols = [...new Set([targetNameCol, seqCol, ...optional, ...additional])];
-  requireColumns(table, allCols);
-
-  const unique = dropDuplicates(table, allCols);
+  if (rowCount > 0) requireColumnNames(columns, representativeColumns(options, resolved));
   warnIfDuplicatedSeqs(unique, targetNameCol, seqCol, onWarning);
 
   const extractMasking = (row: Row): MhapMasking[] => {
@@ -503,139 +511,413 @@ function renamedView(resolved: Resolved): RenamedView {
   };
 }
 
-/** `create_detected_microhaplotype_dict` for one run's rows. */
-function buildDetected(
-  rows: readonly Row[],
-  targets: readonly RepresentativeMhapTarget[],
-  runName: string | undefined,
-  resolved: Resolved,
-): DetectedMicrohaplotypesRun {
-  const view = renamedView(resolved);
-  const read = view.read;
-  const renamedColumns = new Set(view.columns(columnNames(rows)));
+/** A growing list of 32-bit integers: 4 bytes a row, where an array of numbers can take 8 or more. */
+class IntColumn {
+  private data = new Int32Array(1024);
+  length = 0;
+
+  push(value: number): void {
+    if (this.length === this.data.length) {
+      const grown = new Int32Array(this.data.length * 2);
+      grown.set(this.data);
+      this.data = grown;
+    }
+    this.data[this.length] = value;
+    this.length += 1;
+  }
+
+  at(index: number): number {
+    return this.data[index] ?? -1;
+  }
+}
+
+/** Numbers distinct keys in first-seen order. */
+class Numbering<K> {
+  private readonly ids = new Map<K, number>();
+  readonly keys: K[] = [];
+
+  /** The key's number, giving it the next one when it is new. */
+  id(key: K): number {
+    let id = this.ids.get(key);
+    if (id === undefined) {
+      id = this.keys.length;
+      this.ids.set(key, id);
+      this.keys.push(key);
+    }
+    return id;
+  }
+
+  find(key: K): number | undefined {
+    return this.ids.get(key);
+  }
+}
+
+/**
+ * Builds the PMO fragment of a microhaplotype table from rows given a chunk
+ * at a time, so a table too large to hold at once can be read in pieces and
+ * dropped as it goes. Made by {@link createMhapTableBuilder}.
+ */
+export interface MhapTableBuilder {
+  /**
+   * Takes the next rows of the table. Rows are read here and not kept,
+   * except the first row of each distinct representative microhaplotype.
+   *
+   * @throws PmoError `mhap/builder-finished` after {@link finish}.
+   */
+  add(rows: Table): void;
+  /**
+   * The fragment for every row added, exactly as {@link mhapTableToPmo}
+   * gives for the whole table. Checks, warnings and errors all happen here,
+   * in the same order as {@link mhapTableToPmo}. Can be called once.
+   *
+   * @throws PmoError as {@link mhapTableToPmo} does, and
+   *   `mhap/builder-finished` when called again.
+   */
+  finish(): MhapTableToPmoResult;
+}
+
+function finishedError(): PmoError {
+  return new PmoError("mhap/builder-finished", "This microhaplotype table builder has already finished");
+}
+
+/**
+ * Starts building the PMO fragment of a microhaplotype table that arrives in
+ * chunks. Pass the rows to `add` as they are read, then call `finish`. The
+ * result is the same as {@link mhapTableToPmo} gives for all the rows at once,
+ * whatever the chunk sizes.
+ *
+ * Memory grows with the result, not the table: per row the builder keeps a
+ * few numbers and the cells of the detected columns, and it keeps the row
+ * itself only when it is the first of a distinct representative
+ * microhaplotype.
+ *
+ * @example
+ * const builder = createMhapTableBuilder({ librarySampleNameCol: "SampleID" });
+ * for await (const rows of chunks) builder.add(rows);
+ * const mhapInfo = builder.finish();
+ */
+export function createMhapTableBuilder(options: MhapTableToPmoOptions = {}): MhapTableBuilder {
+  const resolved = resolveOptions(options);
+  const read = renamedView(resolved).read;
+  const runName = options.bioinformaticsRunName ?? undefined;
+
+  // Representative microhaplotypes: the distinct rows over these columns.
+  const distinctColumns = representativeColumns(options, resolved);
+  const cellNumbers = distinctColumns.map(() => new Numbering<string | number | null>());
+  const seenKeys = new Set<string>();
+  let unique: Row[] = [];
+
+  // Every column some row has, by run (-1 for rows without a run value).
+  let columnsByRun = new Map<number, Set<string>>();
+  let rowCount = 0;
+  let rowsWithoutRun = 0;
+
+  // Detected microhaplotypes: per row, the renamed target, seq, sample and run as numbers.
+  const runs = new Numbering<string>();
+  const targetNames = new Numbering<string>();
+  const samples = new Numbering<string>();
+  const seqs = new Numbering<string | number | null>();
+  let seqCells: Cell[] = [];
+  /** The first cell of each sample's name in each run, for sorting as pandas does. */
+  let firstSampleCells = new Map<number, Map<number, PresentCell>>();
+  let runOf = new IntColumn();
+  let targetOf = new IntColumn();
+  let seqOf = new IntColumn();
+  let sampleOf = new IntColumn();
+
+  // The detected microhaplotype's own columns, as written: mhap_id, reads, umis, then the extras.
   const mhapCols = ["mhap_id", "reads"];
   if (given(resolved.umisCol)) mhapCols.push("umis");
-
-  const additional = resolved.additionalMhapDetectedCols;
-  if (additional.length > 0) {
-    requireAdditionalColumns(renamedColumns, additional);
-    mhapCols.push(...additional);
-  }
+  mhapCols.push(...resolved.additionalMhapDetectedCols);
   const outputCols = [...new Set(mhapCols)];
+  const storedCols = outputCols.filter((column) => column !== "mhap_id" && column !== "mhaps_target_id");
+  let stored: Cell[][] = storedCols.map(() => []);
+  const readsIndex = storedCols.indexOf("reads");
 
-  const required = ["target_name", "seq", "library_sample_name", "reads"];
-  if (given(resolved.umisCol)) required.push("umis");
-  if (rows.length > 0) requireColumnNames(renamedColumns, required);
+  let finished = false;
 
-  // get_target_id_in_representative_mhaps and
-  // get_mhap_index_in_representative_mhaps, in one pass over the rows. Later
-  // copies of a seq overwrite earlier ones. A missing target is reported
-  // before any missing seq, as Python finds them in that order. The ids are
-  // kept by row position, so no object is made per row.
-  const targetIds = new Map(targets.map((target, index) => [target.target_name, index]));
-  const mhapIds = targets.map((target) => {
-    const ids = new Map<string | number | null, number>();
-    target.microhaplotypes.forEach((mhap, index) => ids.set(cellMapKey(mhap.seq), index));
-    return ids;
-  });
-  const targetOf = new Int32Array(rows.length);
-  const mhapOf = new Int32Array(rows.length);
-  const missingTargets: (string | null)[] = [];
-  const missingSeqs: { target_name: string; seq: Cell }[] = [];
-  rows.forEach((row, index) => {
-    const target = read(row, "target_name");
-    const targetId = isPresent(target) ? targetIds.get(nameOf(target)) : undefined;
-    if (targetId === undefined) {
-      const name = isPresent(target) ? nameOf(target) : null;
-      if (!missingTargets.includes(name)) missingTargets.push(name);
-      return;
-    }
-    const seq = read(row, "seq");
-    const mhapId = mhapIds[targetId]?.get(cellMapKey(seq));
-    if (mhapId === undefined) {
-      const targetName = targets[targetId]?.target_name ?? "";
-      if (!missingSeqs.some((m) => m.target_name === targetName && cellKey([m.seq]) === cellKey([seq]))) {
-        missingSeqs.push({ target_name: targetName, seq: isPresent(seq) ? seq : null });
+  function add(rows: Table): void {
+    if (finished) throw finishedError();
+    for (const row of rows) {
+      let runId = -1;
+      if (runName !== undefined) {
+        const value = row[runName];
+        if (isPresent(value)) runId = runs.id(nameOf(value));
+        else rowsWithoutRun += 1;
+        runOf.push(runId);
       }
-      return;
+      let columns = columnsByRun.get(runId);
+      if (columns === undefined) {
+        columns = new Set();
+        columnsByRun.set(runId, columns);
+      }
+      for (const column in row) columns.add(column);
+
+      let key = "";
+      distinctColumns.forEach((column, index) => {
+        const id = cellNumbers[index]?.id(cellMapKey(row[column])) ?? 0;
+        key = index === 0 ? String(id) : `${key},${id}`;
+      });
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        unique.push(row);
+      }
+
+      const target = read(row, "target_name");
+      targetOf.push(isPresent(target) ? targetNames.id(nameOf(target)) : -1);
+      const seq = read(row, "seq");
+      const seqId = seqs.id(cellMapKey(seq));
+      if (seqId === seqCells.length) seqCells.push(seq);
+      seqOf.push(seqId);
+      const sample = read(row, "library_sample_name");
+      if (isPresent(sample)) {
+        const sampleId = samples.id(nameOf(sample));
+        sampleOf.push(sampleId);
+        let firsts = firstSampleCells.get(runId);
+        if (firsts === undefined) {
+          firsts = new Map();
+          firstSampleCells.set(runId, firsts);
+        }
+        if (!firsts.has(sampleId)) firsts.set(sampleId, sample);
+      } else {
+        sampleOf.push(-1);
+      }
+      storedCols.forEach((column, index) => stored[index]?.push(read(row, column)));
+      rowCount += 1;
     }
-    targetOf[index] = targetId;
-    mhapOf[index] = mhapId;
-  });
-  if (missingTargets.length > 0) {
-    throw new PmoError(
-      "mhap/missing-target-names",
-      `Missing target_name(s) in representative microhaplotype table: ${missingTargets.map(String).join(", ")}`,
-      { target_names: missingTargets },
-    );
-  }
-  if (missingSeqs.length > 0) {
-    throw new PmoError(
-      "mhap/missing-seqs",
-      `Some seq values not found in representative microhaplotype table: ${missingSeqs
-        .map((m) => `${m.target_name}/${String(m.seq)}`)
-        .join(", ")}`,
-      { missing: missingSeqs },
-    );
   }
 
-  // build_detected_mhap_dict
-  const positions = Array.from(rows, (_, index) => index);
-  const librarySamples: DetectedLibrarySample[] = [];
-  for (const sample of groupByName(positions, (index) => {
-    const row = rows[index];
-    return row === undefined ? undefined : read(row, "library_sample_name");
-  })) {
-    const byTarget = new Map<number, DetectedMhap[]>();
-    for (const index of sample.rows) {
-      const row = rows[index];
-      const targetId = targetOf[index];
-      const mhapId = mhapOf[index];
-      if (row === undefined || targetId === undefined || mhapId === undefined) continue;
-      const mhaps = byTarget.get(targetId) ?? [];
-      byTarget.set(targetId, mhaps);
-      mhaps.push(detectedMhap({ row, read, targetId, mhapId }, outputCols, sample.name));
+  /** Every column any row has. */
+  function allColumns(): Set<string> {
+    const all = new Set<string>();
+    for (const columns of columnsByRun.values()) for (const column of columns) all.add(column);
+    return all;
+  }
+
+  /** `create_detected_microhaplotype_dict` for one run: its rows by position, and the columns they have. */
+  function buildDetected(
+    positions: Int32Array | null,
+    columns: ReadonlySet<string>,
+    runId: number,
+    name: string | undefined,
+    lookup: { readonly targetIds: Int32Array; readonly mhapIds: readonly Map<number, number>[] },
+    targets: readonly RepresentativeMhapTarget[],
+  ): DetectedMicrohaplotypesRun {
+    const size = positions === null ? rowCount : positions.length;
+    const rowAt = positions === null ? (index: number) => index : (index: number) => positions[index] ?? 0;
+    const renamedColumns = new Set(renamedView(resolved).columns([...columns]));
+    if (resolved.additionalMhapDetectedCols.length > 0) {
+      requireAdditionalColumns(renamedColumns, resolved.additionalMhapDetectedCols);
     }
-    const targetResults = [...byTarget.entries()]
-      .sort(([a], [b]) => a - b)
-      .map(([mhapsTargetId, mhaps]) => ({ mhaps_target_id: mhapsTargetId, mhaps }));
-    librarySamples.push({ library_sample_name: sample.name, target_results: targetResults });
+    const required = ["target_name", "seq", "library_sample_name", "reads"];
+    if (given(resolved.umisCol)) required.push("umis");
+    if (size > 0) requireColumnNames(renamedColumns, required);
+
+    // get_target_id_in_representative_mhaps and
+    // get_mhap_index_in_representative_mhaps, in one pass. Later copies of a
+    // seq overwrite earlier ones. A missing target is reported before any
+    // missing seq, as Python finds them in that order.
+    const mhapOf = new Int32Array(size);
+    const missingTargets: (string | null)[] = [];
+    const missingSeqs: { target_name: string; seq: Cell }[] = [];
+    const missingSeqKeys = new Set<string>();
+    for (let index = 0; index < size; index += 1) {
+      const row = rowAt(index);
+      const nameId = targetOf.at(row);
+      const targetId = nameId < 0 ? -1 : (lookup.targetIds[nameId] ?? -1);
+      if (targetId < 0) {
+        const missing = nameId < 0 ? null : (targetNames.keys[nameId] ?? null);
+        if (!missingTargets.includes(missing)) missingTargets.push(missing);
+        continue;
+      }
+      const seqId = seqOf.at(row);
+      const mhapId = lookup.mhapIds[targetId]?.get(seqId);
+      if (mhapId === undefined) {
+        const key = `${targetId},${seqId}`;
+        if (!missingSeqKeys.has(key)) {
+          missingSeqKeys.add(key);
+          const seq = seqCells[seqId];
+          missingSeqs.push({ target_name: targets[targetId]?.target_name ?? "", seq: isPresent(seq) ? seq : null });
+        }
+        continue;
+      }
+      mhapOf[index] = mhapId;
+    }
+    if (missingTargets.length > 0) {
+      throw new PmoError(
+        "mhap/missing-target-names",
+        `Missing target_name(s) in representative microhaplotype table: ${missingTargets.map(String).join(", ")}`,
+        { target_names: missingTargets },
+      );
+    }
+    if (missingSeqs.length > 0) {
+      throw new PmoError(
+        "mhap/missing-seqs",
+        `Some seq values not found in representative microhaplotype table: ${missingSeqs
+          .map((m) => `${m.target_name}/${String(m.seq)}`)
+          .join(", ")}`,
+        { missing: missingSeqs },
+      );
+    }
+
+    // build_detected_mhap_dict: library samples sorted as pandas sorts their
+    // first cells, rows grouped by sample in their own order. Rows with no
+    // library sample name are dropped.
+    const firsts = firstSampleCells.get(runId) ?? new Map<number, PresentCell>();
+    const counts = new Int32Array(samples.keys.length);
+    for (let index = 0; index < size; index += 1) {
+      const sample = sampleOf.at(rowAt(index));
+      if (sample >= 0) counts[sample] = (counts[sample] ?? 0) + 1;
+    }
+    const order = [...firsts.entries()]
+      .filter(([sample]) => (counts[sample] ?? 0) > 0)
+      .sort(([, a], [, b]) => compareCells(a, b))
+      .map(([sample]) => sample);
+    const starts = new Int32Array(samples.keys.length);
+    let offset = 0;
+    for (const sample of order) {
+      starts[sample] = offset;
+      offset += counts[sample] ?? 0;
+    }
+    const grouped = new Int32Array(offset);
+    const filled = new Int32Array(samples.keys.length);
+    for (let index = 0; index < size; index += 1) {
+      const sample = sampleOf.at(rowAt(index));
+      if (sample < 0) continue;
+      grouped[(starts[sample] ?? 0) + (filled[sample] ?? 0)] = index;
+      filled[sample] = (filled[sample] ?? 0) + 1;
+    }
+
+    const plain = outputCols.length === 2;
+    const librarySamples: DetectedLibrarySample[] = [];
+    for (const sample of order) {
+      const sampleName = samples.keys[sample] ?? "";
+      const start = starts[sample] ?? 0;
+      const end = start + (counts[sample] ?? 0);
+      const byTarget = new Map<number, DetectedMhap[]>();
+      for (let slot = start; slot < end; slot += 1) {
+        const index = grouped[slot] ?? 0;
+        const row = rowAt(index);
+        const targetId = lookup.targetIds[targetOf.at(row)] ?? 0;
+        const mhapId = mhapOf[index] ?? 0;
+        const reads = stored[readsIndex]?.[row];
+        if (!isPresent(reads)) {
+          const seq = seqCells[seqOf.at(row)];
+          throw new PmoError("mhap/missing-reads", `A row for library sample ${sampleName} has no read count`, {
+            library_sample_name: sampleName,
+            target_name: targetNames.keys[targetOf.at(row)] ?? null,
+            seq: seq ?? null,
+          });
+        }
+        let mhaps = byTarget.get(targetId);
+        if (mhaps === undefined) {
+          mhaps = [];
+          byTarget.set(targetId, mhaps);
+        }
+        if (plain) {
+          mhaps.push({ mhap_id: mhapId, reads });
+          continue;
+        }
+        const mhap: Record<string, unknown> = {};
+        for (const column of outputCols) {
+          if (column === "mhap_id") mhap[column] = mhapId;
+          else if (column === "mhaps_target_id") mhap[column] = targetId;
+          else {
+            const value = stored[storedCols.indexOf(column)]?.[row];
+            if (isPresent(value)) mhap[column] = value;
+          }
+        }
+        // `outputCols` holds mhap_id and reads, so they keep their places.
+        mhaps.push(Object.assign(mhap, { mhap_id: mhapId, reads }));
+      }
+      const targetResults = [...byTarget.entries()]
+        .sort(([a], [b]) => a - b)
+        .map(([mhapsTargetId, mhaps]) => ({ mhaps_target_id: mhapsTargetId, mhaps }));
+      librarySamples.push({ library_sample_name: sampleName, target_results: targetResults });
+    }
+    return name === undefined
+      ? { library_samples: librarySamples }
+      : { library_samples: librarySamples, bioinformatics_run_name: name };
   }
-  return runName === undefined
-    ? { library_samples: librarySamples }
-    : { library_samples: librarySamples, bioinformatics_run_name: runName };
-}
 
-/** One row of the detected path, located among the representative microhaplotypes. */
-interface Located {
-  readonly row: Row;
-  readonly read: RenamedView["read"];
-  readonly targetId: number;
-  readonly mhapId: number;
-}
+  function finish(): MhapTableToPmoResult {
+    if (finished) throw finishedError();
+    finished = true;
+    const columns = allColumns();
+    const targets = buildRepresentative(unique, columns, rowCount, options, resolved, options.onWarning);
 
-function detectedMhap({ row, read, targetId, mhapId }: Located, columns: readonly string[], sample: string): DetectedMhap {
-  const reads = read(row, "reads");
-  if (!isPresent(reads)) {
-    const target = read(row, "target_name");
-    throw new PmoError("mhap/missing-reads", `A row for library sample ${sample} has no read count`, {
-      library_sample_name: sample,
-      target_name: isPresent(target) ? nameOf(target) : null,
-      seq: read(row, "seq") ?? null,
+    // Where each renamed target name and seq points among the representative microhaplotypes.
+    const finalIds = new Map(targets.map((target, index) => [target.target_name, index]));
+    const targetIds = Int32Array.from(targetNames.keys, (name) => finalIds.get(name) ?? -1);
+    const mhapIds = targets.map((target) => {
+      const ids = new Map<number, number>();
+      target.microhaplotypes.forEach((mhap, index) => {
+        const seqId = seqs.find(cellMapKey(mhap.seq));
+        if (seqId !== undefined) ids.set(seqId, index);
+      });
+      return ids;
     });
-  }
-  const mhap: Record<string, unknown> = {};
-  for (const column of columns) {
-    if (column === "mhap_id") mhap[column] = mhapId;
-    else if (column === "mhaps_target_id") mhap[column] = targetId;
-    else {
-      const value = read(row, column);
-      if (isPresent(value)) mhap[column] = value;
+    const lookup = { targetIds, mhapIds };
+
+    const detected: DetectedMicrohaplotypesRun[] = [];
+    if (runName !== undefined && columns.has(runName)) {
+      if (rowsWithoutRun > 0) {
+        throw new PmoError("mhap/missing-run-name", `A row has no value in the run column ${runName}`, {
+          column: runName,
+        });
+      }
+      // Each run's rows in table order: a counting sort by run.
+      const runCounts = new Int32Array(runs.keys.length);
+      for (let row = 0; row < rowCount; row += 1) {
+        const run = runOf.at(row);
+        runCounts[run] = (runCounts[run] ?? 0) + 1;
+      }
+      const positions = Array.from(runCounts, (count) => new Int32Array(count));
+      const filled = new Int32Array(runs.keys.length);
+      for (let row = 0; row < rowCount; row += 1) {
+        const run = runOf.at(row);
+        const list = positions[run];
+        if (list !== undefined) list[filled[run] ?? 0] = row;
+        filled[run] = (filled[run] ?? 0) + 1;
+      }
+      runs.keys.forEach((name, run) => {
+        detected.push(
+          buildDetected(positions[run] ?? null, columnsByRun.get(run) ?? new Set(), run, name, lookup, targets),
+        );
+      });
+    } else {
+      detected.push(buildDetected(null, columns, -1, runName, lookup, targets));
     }
+    release();
+    return { representative_microhaplotypes: { targets }, detected_microhaplotypes: detected };
   }
-  // `columns` holds mhap_id and reads, so they keep their places; assigning
-  // rather than spreading saves a copy of every detected microhaplotype.
-  return Object.assign(mhap, { mhap_id: mhapId, reads });
+
+  /** Lets go of what the rows left behind, so only the result stays in memory. */
+  function release(): void {
+    unique = [];
+    columnsByRun = new Map();
+    seqCells = [];
+    firstSampleCells = new Map();
+    runOf = new IntColumn();
+    targetOf = new IntColumn();
+    seqOf = new IntColumn();
+    sampleOf = new IntColumn();
+    stored = [];
+  }
+
+  return { add, finish };
+}
+
+function resolveOptions(options: MhapTableToPmoOptions): Resolved {
+  return {
+    librarySampleNameCol: options.librarySampleNameCol ?? "library_sample_name",
+    targetNameCol: options.targetNameCol ?? "target_name",
+    seqCol: options.seqCol ?? "seq",
+    readsCol: options.readsCol ?? "reads",
+    genomeId: options.genomeId ?? 0,
+    umisCol: options.umisCol ?? undefined,
+    additionalMhapDetectedCols: options.additionalMhapDetectedCols ?? [],
+  };
 }
 
 /**
@@ -654,41 +936,14 @@ function detectedMhap({ row, read, targetId, mhapId }: Located, columns: readonl
  * `mhaps_target_id`, the index into `representative_microhaplotypes.targets`.
  * Rows with no library sample name are dropped, as in Python.
  *
+ * For a table too large to hold at once, use {@link createMhapTableBuilder},
+ * which gives the same result from rows added a chunk at a time.
+ *
  * @throws PmoError for missing columns, incomplete option groups, missing
  *   target names, seqs, read counts or run names, and unparseable masking.
  */
 export function mhapTableToPmo(table: Table, options: MhapTableToPmoOptions = {}): MhapTableToPmoResult {
-  const resolved: Resolved = {
-    librarySampleNameCol: options.librarySampleNameCol ?? "library_sample_name",
-    targetNameCol: options.targetNameCol ?? "target_name",
-    seqCol: options.seqCol ?? "seq",
-    readsCol: options.readsCol ?? "reads",
-    genomeId: options.genomeId ?? 0,
-    umisCol: options.umisCol ?? undefined,
-    additionalMhapDetectedCols: options.additionalMhapDetectedCols ?? [],
-  };
-  const targets = buildRepresentative(table, options, resolved, options.onWarning);
-
-  const runName = options.bioinformaticsRunName ?? undefined;
-  const detected: DetectedMicrohaplotypesRun[] = [];
-  if (runName !== undefined && columnNames(table).includes(runName)) {
-    const runs = new Map<string, Row[]>();
-    for (const row of table) {
-      const value = row[runName];
-      if (!isPresent(value)) {
-        throw new PmoError("mhap/missing-run-name", `A row has no value in the run column ${runName}`, {
-          column: runName,
-        });
-      }
-      const name = nameOf(value);
-      const rows = runs.get(name) ?? [];
-      runs.set(name, rows);
-      rows.push(row);
-    }
-    for (const [name, rows] of runs) detected.push(buildDetected(rows, targets, name, resolved));
-  } else {
-    detected.push(buildDetected(table, targets, runName, resolved));
-  }
-
-  return { representative_microhaplotypes: { targets }, detected_microhaplotypes: detected };
+  const builder = createMhapTableBuilder(options);
+  builder.add(table);
+  return builder.finish();
 }

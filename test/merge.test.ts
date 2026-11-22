@@ -536,3 +536,54 @@ describe("mergeToPmo", () => {
     expect(Object.entries(error.details).filter(([, names]) => Array.isArray(names) && names.length > 0).length).toBe(10);
   });
 });
+
+/** Freezes every object and array in `value`, so any write to it throws. */
+function deepFreeze(value: unknown): void {
+  if (typeof value !== "object" || value === null || Object.isFrozen(value)) return;
+  Object.freeze(value);
+  for (const inner of Object.values(value)) deepFreeze(inner);
+}
+
+describe("mergeToPmo with shareMicrohaplotypes", () => {
+  /** The merge's outcome as text: the PMO's JSON and the warnings, or the error code. */
+  function outcome(parts: MergeParts, share: boolean): string {
+    const warnings: PmoWarning[] = [];
+    try {
+      const pmo = mergeToPmo(parts, { creationDate: DATE, shareMicrohaplotypes: share, onWarning: (w) => warnings.push(w) });
+      return JSON.stringify({ pmo, warnings });
+    } catch (error) {
+      if (error instanceof PmoError) return `error ${error.code}`;
+      throw error;
+    }
+  }
+
+  for (const oracleCase of cases) {
+    it(`gives the same outcome for ${oracleCase.id}, without writing to its input`, () => {
+      const parts = partsOf(oracleCase);
+      const copied = outcome(parts, false);
+      deepFreeze(parts);
+      expect(outcome(parts, true)).toBe(copied);
+    });
+  }
+
+  it("shares the microhaplotype and target result arrays, and copies the records around them", () => {
+    const parts = partsOf(caseById("example-full-nine-inputs"));
+    const pmo = mergeToPmo(parts, { creationDate: DATE, shareMicrohaplotypes: true });
+    const mhapInfo = parts.mhapInfo;
+    if (!isRecord(mhapInfo)) throw new Error("mhapInfo is not a record");
+    const representative = mhapInfo["representative_microhaplotypes"];
+    const detected = mhapInfo["detected_microhaplotypes"];
+    if (!isRecord(representative) || !Array.isArray(representative["targets"]) || !Array.isArray(detected)) {
+      throw new Error("unexpected mhapInfo shape");
+    }
+    const target = representative["targets"][0];
+    const run = detected[0];
+    const sample = isRecord(run) && Array.isArray(run["library_samples"]) ? run["library_samples"][0] : undefined;
+    if (!isRecord(target) || !isRecord(run) || !isRecord(sample)) throw new Error("unexpected mhapInfo shape");
+    expect(pmo.representative_microhaplotypes.targets[0]?.microhaplotypes).toBe(target["microhaplotypes"]);
+    expect(pmo.representative_microhaplotypes.targets[0]).not.toBe(target);
+    expect(pmo.detected_microhaplotypes[0]?.library_samples[0]?.target_results).toBe(sample["target_results"]);
+    expect(pmo.detected_microhaplotypes[0]).not.toBe(run);
+    expect(pmo.detected_microhaplotypes[0]?.library_samples[0]).not.toBe(sample);
+  });
+});

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { mhapTableToPmo, type MhapTableToPmoOptions } from "../src/builders/mhap.js";
-import { collectWarnings, PmoError } from "../src/errors.js";
+import { createMhapTableBuilder, mhapTableToPmo, type MhapTableToPmoOptions } from "../src/builders/mhap.js";
+import { collectWarnings, PmoError, type WarningSink } from "../src/errors.js";
 import type { Row } from "../src/table/core.js";
 import { camelizeKeys, loadCases, toRows, type OracleCase } from "./helpers/conformance.js";
 
@@ -285,5 +285,99 @@ describe("mhapTableToPmo", () => {
     );
     expect(warnings.map((w) => w.code)).toEqual(["mhap/duplicate-target-seq"]);
     expect(warnings[0]?.details).toEqual({ duplicates: [{ target_name: "t", seq: "A", count: 2 }] });
+  });
+});
+
+/** What building gives, as comparable text: the JSON with its key order, the warnings, or the error code. */
+function outcomeOf(build: (onWarning: WarningSink) => unknown): string {
+  try {
+    const { result, warnings } = collectWarnings((onWarning) => build(onWarning));
+    return JSON.stringify({ result, warnings });
+  } catch (error) {
+    if (error instanceof PmoError) return `error ${error.code}`;
+    throw error;
+  }
+}
+
+/** Adds `table` in chunks of `size` rows, with an empty chunk before and after. */
+function inChunks(table: readonly Row[], options: MhapTableToPmoOptions, size: number) {
+  const builder = createMhapTableBuilder(options);
+  builder.add([]);
+  for (let start = 0; start < table.length; start += size) builder.add(table.slice(start, start + size));
+  builder.add([]);
+  return builder.finish();
+}
+
+describe("createMhapTableBuilder", () => {
+  for (const oracle of cases) {
+    const name = oracle.id.replace(/^mhap\//, "");
+    it(`gives what mhapTableToPmo gives for ${name}, in any chunk size`, () => {
+      const table = tableOf(oracle);
+      const options = toOptions(oracle.kwargs);
+      const whole = outcomeOf((onWarning) => mhapTableToPmo(table, { ...options, onWarning }));
+      for (const size of [1, 2, 3, 7]) {
+        expect(outcomeOf((onWarning) => inChunks(table, { ...options, onWarning }, size))).toBe(whole);
+      }
+    });
+  }
+
+  it("gives the same result as one table for random tables in random chunks", () => {
+    let state = 7;
+    const random = (below: number): number => {
+      state = (state * 1_103_515_245 + 12_345) % 2_147_483_648;
+      return state % below;
+    };
+    const pick = <T,>(items: readonly T[]): T => {
+      const item = items[random(items.length)];
+      if (item === undefined) throw new Error("pick from an empty list");
+      return item;
+    };
+    const samples = ["s2", "s10", "s1", 3, 12, "s3"];
+    const targets = ["t2", "t1", 10, "t3"];
+    const seqs = ["A", "C", "G", "T", "AC"];
+    for (let round = 0; round < 60; round += 1) {
+      const rows: Row[] = Array.from({ length: 1 + random(40) }, () => ({
+        sample: random(15) === 0 ? null : pick(samples),
+        target: pick(targets),
+        seq: pick(seqs),
+        reads: round % 6 === 5 && random(12) === 0 ? null : random(500),
+        alt: pick(["x", "y", null]),
+        run: pick(["r2", "r1"]),
+        umis: random(9),
+      }));
+      const options: MhapTableToPmoOptions = {
+        librarySampleNameCol: "sample",
+        targetNameCol: "target",
+        readsCol: "reads",
+        altAnnotationsCol: round % 2 === 0 ? "alt" : null,
+        bioinformaticsRunName: round % 3 === 0 ? "run" : round % 3 === 1 ? "literal" : null,
+        umisCol: round % 4 === 0 ? "umis" : null,
+        additionalMhapDetectedCols: round % 5 === 0 ? ["alt", "target_name"] : null,
+      };
+      const whole = outcomeOf((onWarning) => mhapTableToPmo(rows, { ...options, onWarning }));
+      const size = 1 + random(rows.length);
+      expect(outcomeOf((onWarning) => inChunks(rows, { ...options, onWarning }, size)), `round ${round}`).toBe(whole);
+    }
+  });
+
+  it("refuses rows and a second result once finished", () => {
+    const builder = createMhapTableBuilder();
+    builder.add([{ library_sample_name: "s", target_name: "t", seq: "A", reads: 1 }]);
+    builder.finish();
+    expect(() => builder.add([])).toThrow(expect.objectContaining({ code: "mhap/builder-finished" }));
+    expect(() => builder.finish()).toThrow(expect.objectContaining({ code: "mhap/builder-finished" }));
+  });
+
+  it("points detected rows at the last copy of a seq, even when the copy comes in a later chunk", () => {
+    const options = { altAnnotationsCol: "alt" };
+    const builder = createMhapTableBuilder(options);
+    builder.add([{ library_sample_name: "s", target_name: "t", seq: "A", reads: 1, alt: "x" }]);
+    builder.add([{ library_sample_name: "s", target_name: "t", seq: "A", reads: 2, alt: "y" }]);
+    const result = builder.finish();
+    const mhaps = result.detected_microhaplotypes[0]?.library_samples[0]?.target_results[0]?.mhaps;
+    expect(mhaps).toEqual([
+      { mhap_id: 1, reads: 1 },
+      { mhap_id: 1, reads: 2 },
+    ]);
   });
 });

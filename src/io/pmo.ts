@@ -11,6 +11,7 @@
  */
 
 import { PmoError } from "../errors.js";
+import { jsonChunks } from "./jsonChunks.js";
 
 /** Anything a PMO can be read from. Gzip is detected by its magic bytes. */
 export type PmoInput = string | Uint8Array | ArrayBuffer | Blob;
@@ -25,6 +26,12 @@ export interface StringifyPmoOptions {
    * either way; this only changes the bytes.
    */
   readonly ensureAscii?: boolean;
+}
+
+/** Options for {@link pmoStream} and {@link pmoBlob}. */
+export interface PmoStreamOptions extends StringifyPmoOptions {
+  /** Gzip the bytes, as for a `.json.gz` file. Default `false`. */
+  readonly gzip?: boolean;
 }
 
 /** Options for {@link addPmoExtension}. */
@@ -144,14 +151,25 @@ function escapeNonAscii(json: string): string {
   return json.replace(/[\u007f-￿]/g, (char) => `\\u${char.charCodeAt(0).toString(16).padStart(4, "0")}`);
 }
 
+function notSerialisable(error: unknown): PmoError {
+  if (error instanceof PmoError) return error;
+  const reason = error instanceof Error ? error.message : String(error);
+  return new PmoError("io/not-serialisable", `PMO cannot be written as JSON: ${reason}`, { reason });
+}
+
 /**
  * Serialises a PMO the way `PMOWriter.write_out_pmo` does: two-space indent,
  * keys in insertion order, non-ASCII escaped, no trailing newline.
  * `NaN` and infinities are written as `null` (Python writes bare `NaN`,
  * which is not JSON).
  *
+ * The text must fit in one string, about 512 MB in Chrome and Node. For a
+ * larger PMO use {@link pmoStream}, {@link pmoBlob} or
+ * {@link stringifyPmoChunks}.
+ *
  * @throws {PmoError} `io/not-serialisable` when the value cannot be written
- *   as JSON (undefined, a function, a `BigInt` or a cycle).
+ *   as JSON (undefined, a function, a `BigInt`, a cycle, or too long for a
+ *   string).
  */
 export function stringifyPmo(pmo: unknown, options: StringifyPmoOptions = {}): string {
   const { indent = 2, ensureAscii = true } = options;
@@ -159,8 +177,7 @@ export function stringifyPmo(pmo: unknown, options: StringifyPmoOptions = {}): s
   try {
     json = JSON.stringify(pmo, null, indent);
   } catch (error) {
-    const reason = error instanceof Error ? error.message : String(error);
-    throw new PmoError("io/not-serialisable", `PMO cannot be written as JSON: ${reason}`, { reason });
+    throw notSerialisable(error);
   }
   if (json === undefined) {
     throw new PmoError("io/not-serialisable", "PMO cannot be written as JSON", { found: typeof pmo });
@@ -169,8 +186,81 @@ export function stringifyPmo(pmo: unknown, options: StringifyPmoOptions = {}): s
 }
 
 /**
- * Serialises a PMO with {@link stringifyPmo} and gzips it, giving the bytes
- * of a `.pmo.json.gz` file.
+ * The text of {@link stringifyPmo} in pieces of about a million characters,
+ * so a PMO of any size can be written without holding its whole text. The
+ * pieces joined are exactly what {@link stringifyPmo} gives.
+ *
+ * @throws {PmoError} `io/not-serialisable`, as {@link stringifyPmo} does,
+ *   when a piece is taken.
+ *
+ * @example
+ * for (const piece of stringifyPmoChunks(pmo)) await writer.write(piece);
+ */
+export function* stringifyPmoChunks(
+  pmo: unknown,
+  options: StringifyPmoOptions = {},
+): Generator<string, void, undefined> {
+  const { indent = 2, ensureAscii = true } = options;
+  let any = false;
+  try {
+    for (const piece of jsonChunks(pmo, indent)) {
+      any = true;
+      yield ensureAscii ? escapeNonAscii(piece) : piece;
+    }
+  } catch (error) {
+    throw notSerialisable(error);
+  }
+  if (!any) throw new PmoError("io/not-serialisable", "PMO cannot be written as JSON", { found: typeof pmo });
+}
+
+/**
+ * The bytes of a PMO file as a stream: the UTF-8 text of
+ * {@link stringifyPmo}, gzipped when `gzip` is set. The text is made a piece
+ * at a time as the stream is read, so a PMO too large for one string can
+ * still be written, for example to a file or a download.
+ *
+ * A PMO that cannot be written as JSON errors the stream with a
+ * {@link PmoError} `io/not-serialisable`.
+ *
+ * @example
+ * await pmoStream(pmo, { gzip: true }).pipeTo(writable);
+ */
+export function pmoStream(pmo: unknown, options: PmoStreamOptions = {}): ReadableStream<Uint8Array<ArrayBuffer>> {
+  const pieces = stringifyPmoChunks(pmo, options);
+  const encoder = new TextEncoder();
+  const text = new ReadableStream<Uint8Array<ArrayBuffer>>({
+    pull(controller) {
+      const next = pieces.next();
+      if (next.done === true) controller.close();
+      else controller.enqueue(encoder.encode(next.value));
+    },
+    cancel() {
+      pieces.return(undefined);
+    },
+  });
+  return options.gzip === true ? text.pipeThrough(new CompressionStream("gzip")) : text;
+}
+
+/**
+ * A PMO file as a `Blob`, from {@link pmoStream}. A browser can keep a large
+ * `Blob` on disk, so this suits downloads of PMOs too large for one string.
+ *
+ * @throws {PmoError} `io/not-serialisable` (the promise rejects).
+ *
+ * @example
+ * const url = URL.createObjectURL(await pmoBlob(pmo, { gzip: true }));
+ */
+export async function pmoBlob(pmo: unknown, options: PmoStreamOptions = {}): Promise<Blob> {
+  const type = options.gzip === true ? "application/gzip" : "application/json";
+  return new Response(pmoStream(pmo, options), { headers: { "content-type": type } }).blob();
+}
+
+/**
+ * Serialises a PMO as {@link stringifyPmo} does and gzips it, giving the
+ * bytes of a `.pmo.json.gz` file. The text is never held whole, so this works
+ * for a PMO too large for one string.
+ *
+ * @throws {PmoError} `io/not-serialisable` (the promise rejects).
  *
  * @example
  * const blob = new Blob([await gzipPmo(pmo)], { type: "application/gzip" });
@@ -179,8 +269,7 @@ export async function gzipPmo(
   pmo: unknown,
   options: StringifyPmoOptions = {},
 ): Promise<Uint8Array<ArrayBuffer>> {
-  const stream = new Blob([stringifyPmo(pmo, options)]).stream().pipeThrough(new CompressionStream("gzip"));
-  return new Uint8Array(await new Response(stream).arrayBuffer());
+  return new Uint8Array(await new Response(pmoStream(pmo, { ...options, gzip: true })).arrayBuffer());
 }
 
 /**

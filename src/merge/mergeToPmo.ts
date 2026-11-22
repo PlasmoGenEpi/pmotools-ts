@@ -40,6 +40,15 @@ export interface MergeToPmoOptions extends WarningOptions {
    * local date in that form, as Python's `date.today().isoformat()` writes it.
    */
   readonly creationDate?: string;
+  /**
+   * Share each representative target's `microhaplotypes` and each detected
+   * library sample's `target_results` with `mhapInfo` instead of copying
+   * them. They hold nearly all of a large PMO and the merge never changes
+   * them, so sharing halves the memory a large merge needs. Then treat
+   * `mhapInfo` and the result as read-only, since a change to one shows in
+   * the other. Default `false`: the result shares nothing with the inputs.
+   */
+  readonly shareMicrohaplotypes?: boolean;
 }
 
 type Rec = Record<string, unknown>;
@@ -111,7 +120,8 @@ export type IncompleteNameFieldsDetails = {
  * Every name is then replaced by the index of the record it names. Names that
  * do not resolve are collected across all sections and reported together.
  *
- * The inputs are never modified, and the result shares no objects with them.
+ * The inputs are never modified, and the result shares no objects with them
+ * unless `shareMicrohaplotypes` is set.
  * The merge resolves references; it does not check the rest of the content
  * against the schema. Validate the result for that.
  *
@@ -131,7 +141,9 @@ export type IncompleteNameFieldsDetails = {
 export function mergeToPmo(parts: MergeParts, options: MergeToPmoOptions = {}): PortableMicrohaplotypeObject {
   const { onWarning } = options;
   // Clone up front, as Python deep-copies: everything below edits the copies.
-  const mhapInfo = cloneRecord(parts.mhapInfo, "mhapInfo");
+  const mhapInfo = options.shareMicrohaplotypes === true
+    ? requireRecord(cloneSharing(parts.mhapInfo, SHARED_PATHS), "mhapInfo")
+    : cloneRecord(parts.mhapInfo, "mhapInfo");
   const panelTargetInfo = cloneRecord(parts.panelTargetInfo, "panelTargetInfo");
   let specimenInfo = cloneList(parts.specimenInfo, "specimenInfo");
   let librarySampleInfo = cloneList(parts.librarySampleInfo, "librarySampleInfo");
@@ -661,6 +673,28 @@ function requireContainer(record: Rec, field: string, where: string): unknown {
     throw new PmoError("merge/malformed-input", `${where} has no ${field}`, { field, where });
   }
   return record[field];
+}
+
+/** Where in `mhapInfo` the arrays that `shareMicrohaplotypes` shares are. `*` is every element of an array. */
+const SHARED_PATHS: readonly (readonly string[])[] = [
+  ["representative_microhaplotypes", "targets", "*", "microhaplotypes"],
+  ["detected_microhaplotypes", "*", "library_samples", "*", "target_results"],
+];
+
+/** A deep copy of `value`, except that what each path leads to is the original, not a copy. */
+function cloneSharing(value: unknown, paths: readonly (readonly string[])[]): unknown {
+  if (paths.some((path) => path.length === 0)) return value;
+  if (Array.isArray(value)) {
+    const inner = paths.filter((path) => path[0] === "*").map((path) => path.slice(1));
+    return inner.length === 0 ? structuredClone(value) : value.map((item: unknown) => cloneSharing(item, inner));
+  }
+  if (!isRecord(value) || ![Object.prototype, null].includes(Object.getPrototypeOf(value))) return structuredClone(value);
+  const copy: Rec = {};
+  for (const [key, inner] of Object.entries(value)) {
+    const below = paths.filter((path) => path[0] === key).map((path) => path.slice(1));
+    copy[key] = below.length === 0 ? structuredClone(inner) : cloneSharing(inner, below);
+  }
+  return copy;
 }
 
 function cloneRecord(value: unknown, where: string): Rec {

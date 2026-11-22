@@ -35,6 +35,7 @@ Versions before 1.0 may change the API in a minor release. See
 | `PMOExporter.export_*_table`, `extract_alleles_per_sample_table`, `list_library_sample_names_per_specimen_name` | `export…Table`, `extractAllelesPerSampleTable`, `listLibrarySampleNamesPerSpecimenName` |
 | `DataFrame.to_csv` | `formatDelimited` |
 | no equivalent | `checkPmoIntegrity` |
+| no equivalent | `createMhapTableBuilder`, `stringifyPmoChunks`, `pmoStream`, `pmoBlob`: large tables, see below |
 
 The exporters return a `ColumnTable` (`columns` and `rows`) laid out as the
 pandas DataFrame would be.
@@ -82,6 +83,53 @@ Tables are arrays of plain objects, one per row. Options have the Python
 keyword names in camelCase and the same defaults. Bad input throws a `PmoError`
 with a stable `code`. Softer problems go to an `onWarning` callback, or use
 `collectWarnings` to get them back as a list.
+
+## Large tables
+
+An allele table can run to millions of rows. Two things limit what fits in a
+browser tab: no string can be much longer than 512 MB, and the table and the
+PMO both have to fit in memory. Each has a way around it.
+
+**Build from chunks.** `createMhapTableBuilder` takes the allele table a chunk
+at a time, so the file can be read in pieces and each piece dropped once
+added. It keeps a few numbers per row, not the row, and gives exactly what
+`mhapTableToPmo` gives for the whole table. `mhapTableToPmo` is the same
+builder fed one chunk.
+
+```ts
+const builder = createMhapTableBuilder({ librarySampleNameCol: "SampleID" });
+for await (const rows of readInChunks(file)) builder.add(rows);
+const mhapInfo = builder.finish();
+
+// Share the large arrays with mhapInfo instead of copying them.
+const pmo = mergeToPmo({ mhapInfo, panelTargetInfo }, { shareMicrohaplotypes: true });
+```
+
+**Write in pieces.** `stringifyPmo` returns one string, so it fails once the
+JSON passes about 512 MB, around 4 million detections. `pmoStream` gives the
+file's bytes as a stream, gzipped or not, and `pmoBlob` gives a `Blob`; both
+make the text a piece at a time. `gzipPmo` uses the stream too.
+`stringifyPmoChunks` gives the text pieces themselves. All of them write
+exactly what `stringifyPmo` writes.
+
+```ts
+const blob = await pmoBlob(pmo, { gzip: true });
+```
+
+Measured in Node with the heap capped at 4 GB, about what a Chrome worker
+gets, on generated tables of 250 targets and 150–300 base sequences:
+
+| Allele table | Build, merge, check and gzip | PMO in memory | Peak memory | `.json` | `.json.gz` |
+|---|---|---|---|---|---|
+| 1 million rows, 259 MB | 1.9 s | 0.12 GB | 0.4 GB | 131 MB | 5.5 MB |
+| 10 million rows, 2.6 GB | 17 s | 1.1 GB | 2.2 GB | 1.3 GB | 54 MB |
+| 20 million rows, 5.2 GB | 35 s | 2.3 GB | 3.8 GB | 2.6 GB | 109 MB |
+
+The PMO takes about 115 bytes of memory per detected microhaplotype. The
+generated sequences repeat more than real ones, so real files gzip less well.
+
+`parsePmo` still reads a whole file as one string, so it opens PMO files of
+up to about 512 MB of JSON.
 
 ## Size
 
@@ -140,7 +188,7 @@ their regular expressions so JavaScript matches what Python's `re` matches.
 
 ```bash
 pnpm install
-pnpm test        # 1,082 tests, most replaying Python oracle cases
+pnpm test        # 1,240 tests, most replaying Python oracle cases
 pnpm typecheck
 pnpm build
 ```
