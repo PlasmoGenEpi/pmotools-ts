@@ -54,7 +54,7 @@ export type RawRow = Readonly<Record<string, RawCell>>;
 /** The dtype pandas gives a column read by `read_csv`. */
 export type InferredDtype = "int64" | "uint64" | "float64" | "bool" | "object";
 
-/** Options for {@link inferColumnTypes}. */
+/** Options for {@link inferColumns}, {@link inferColumnTypes} and {@link createColumnTyper}. */
 export interface InferOptions {
   /**
    * Strings that mean "missing". Replaces the defaults; spread
@@ -245,7 +245,22 @@ function buildNaSets(naValues: readonly string[]): NaSets {
   return { strings, numbers };
 }
 
-/** What {@link numericCell} found. */
+/** A cell that is missing: absent, `null`, or one of the NA strings. */
+function isNaText(cell: string | null, na: NaSets): cell is null {
+  return cell === null || na.strings.has(cell);
+}
+
+/**
+ * A row's cell. Only a string is a cell; anything else counts as missing.
+ * That keeps a row from reading what every object inherits: a row without a
+ * `__proto__` or `constructor` column would otherwise yield `Object.prototype`
+ * or the `Object` function.
+ */
+function rawCell(row: RawRow, name: string): string | null {
+  const value = row[name];
+  return typeof value === "string" && (name !== "__proto__" || Object.hasOwn(row, name)) ? value : null;
+}
+
 const NUMERIC_NULL = 0;
 const NUMERIC_FAIL = 1;
 /** Fractional or exponent-bearing: the column can only be `float64`. */
@@ -253,15 +268,19 @@ const NUMERIC_FLOAT = 2;
 /** A whole number: `asInt` in an int column, `value` in a `float64` one. */
 const NUMERIC_INT = 3;
 
+/** What {@link numericCell} found in a cell. */
+type NumericFound = typeof NUMERIC_NULL | typeof NUMERIC_FAIL | typeof NUMERIC_FLOAT | typeof NUMERIC_INT;
+
 /**
- * The number {@link numericCell} last read. One object is reused rather than
- * one made per cell, since a large table has millions of cells.
+ * The number {@link numericCell} last read, valid until its next call. One
+ * object is reused rather than one returned per cell, since a large table has
+ * millions of cells.
  */
 const lastNumber = { value: 0, asInt: 0, signed: false, unsigned: false };
 
 /** pandas' `maybe_convert_numeric`, one cell at a time. Fills {@link lastNumber} for a float or int. */
-function numericCell(cell: string | null, na: NaSets): number {
-  if (cell === null || na.strings.has(cell)) return NUMERIC_NULL;
+function numericCell(cell: string | null, na: NaSets): NumericFound {
+  if (isNaText(cell, na)) return NUMERIC_NULL;
   if (cell === "") return NUMERIC_FAIL;
   const parsed = floatify(cell);
   if (parsed === null) return NUMERIC_FAIL;
@@ -290,7 +309,7 @@ function numericCell(cell: string | null, na: NaSets): number {
 const TRUE_SPELLINGS = new Set(["True", "TRUE", "true"]);
 const FALSE_SPELLINGS = new Set(["False", "FALSE", "false"]);
 
-/** What pass 1 learns about one column. Every flag only ever turns on, so chunks can come in any sizes. */
+/** What is known about a column's cells. Every flag only ever turns on, so cells can come in any order and chunks. */
 interface ColumnStats {
   /** Every cell so far is missing or a number pandas reads. */
   numeric: boolean;
@@ -319,25 +338,27 @@ function newStats(missingBefore: boolean): ColumnStats {
   };
 }
 
-function addCell(stats: ColumnStats, cell: string | null, na: NaSets): void {
-  if (stats.numeric) {
-    const found = numericCell(cell, na);
-    if (found === NUMERIC_FAIL) stats.numeric = false;
-    else if (found === NUMERIC_NULL) stats.sawNull = true;
-    else if (found === NUMERIC_FLOAT) stats.sawFloat = true;
-    else {
-      stats.sawInt = true;
-      if (lastNumber.signed) stats.sawSigned = true;
-      if (lastNumber.unsigned) stats.sawUnsigned = true;
-    }
+/** Records what {@link numericCell} found; reads {@link lastNumber}, so call it straight after. */
+function addNumeric(stats: ColumnStats, found: NumericFound): void {
+  if (found === NUMERIC_FAIL) stats.numeric = false;
+  else if (found === NUMERIC_NULL) stats.sawNull = true;
+  else if (found === NUMERIC_FLOAT) stats.sawFloat = true;
+  else {
+    stats.sawInt = true;
+    if (lastNumber.signed) stats.sawSigned = true;
+    if (lastNumber.unsigned) stats.sawUnsigned = true;
   }
+}
+
+function addCell(stats: ColumnStats, cell: string | null, na: NaSets): void {
+  if (stats.numeric) addNumeric(stats, numericCell(cell, na));
   if (stats.bool) {
-    if (cell === null || na.strings.has(cell)) stats.sawNullText = true;
+    if (isNaText(cell, na)) stats.sawNullText = true;
     else if (!TRUE_SPELLINGS.has(cell) && !FALSE_SPELLINGS.has(cell)) stats.bool = false;
   }
 }
 
-/** How pass 2 writes a column's cells. */
+/** How a column's cells are written once its type is known. */
 type Conversion =
   /** NA strings become missing; other text is kept. */
   | "text"
@@ -347,15 +368,23 @@ type Conversion =
   | "int"
   | "bool";
 
-/** The column's dtype and how its cells are written, from everything pass 1 saw. */
-function decide(stats: ColumnStats, asText: boolean): { readonly dtype: InferredDtype; readonly conversion: Conversion } {
+interface ColumnType {
+  readonly dtype: InferredDtype;
+  readonly conversion: Conversion;
+}
+
+/** pandas' rules for a column every cell of which is missing or a number. */
+function numericColumnType(stats: ColumnStats): ColumnType {
+  if (stats.sawUnsigned && (stats.sawNull || stats.sawSigned)) return { dtype: "object", conversion: "raw" };
+  if (stats.sawFloat || stats.sawNull) return { dtype: "float64", conversion: "float" };
+  if (stats.sawInt) return { dtype: stats.sawUnsigned ? "uint64" : "int64", conversion: "int" };
+  return { dtype: "float64", conversion: "float" };
+}
+
+/** The column's dtype and how its cells are written, from everything known about its cells. */
+function columnTypeOf(stats: ColumnStats, asText: boolean): ColumnType {
   if (asText) return { dtype: "object", conversion: "text" };
-  if (stats.numeric) {
-    if (stats.sawUnsigned && (stats.sawNull || stats.sawSigned)) return { dtype: "object", conversion: "raw" };
-    if (stats.sawFloat || stats.sawNull) return { dtype: "float64", conversion: "float" };
-    if (stats.sawInt) return { dtype: stats.sawUnsigned ? "uint64" : "int64", conversion: "int" };
-    return { dtype: "float64", conversion: "float" };
-  }
+  if (stats.numeric) return numericColumnType(stats);
   if (stats.bool) return { dtype: stats.sawNullText ? "object" : "bool", conversion: "bool" };
   return { dtype: "object", conversion: "text" };
 }
@@ -365,24 +394,67 @@ function convertCell(cell: string | null, conversion: Conversion, na: NaSets): C
     case "raw":
       return cell;
     case "text":
-      return cell === null || na.strings.has(cell) ? null : cell;
+      return isNaText(cell, na) ? null : cell;
     case "bool":
-      if (cell === null || na.strings.has(cell)) return null;
-      return TRUE_SPELLINGS.has(cell);
+      return isNaText(cell, na) ? null : TRUE_SPELLINGS.has(cell);
     case "float": {
       const found = numericCell(cell, na);
+      // lastNumber holds this cell's number for a float or int.
       if (found === NUMERIC_FLOAT || found === NUMERIC_INT) return Number.isNaN(lastNumber.value) ? null : lastNumber.value;
       return null;
     }
     case "int":
+      // lastNumber holds this cell's number for an int.
       return numericCell(cell, na) === NUMERIC_INT ? lastNumber.asInt : null;
   }
 }
 
-/** A row's cell, reading own keys only: a row without a `__proto__` column would otherwise yield `Object.prototype`. */
-function rawCell(row: RawRow, name: string): string | null {
-  if (name === "__proto__") return Object.hasOwn(row, name) ? (row[name] ?? null) : null;
-  return row[name] ?? null;
+/** Column names in first-seen order, learnt row by row. */
+class ColumnNames {
+  readonly names: string[] = [];
+  private readonly seen = new Set<string>();
+  private previous: string[] | undefined;
+
+  /** Notes the row's keys and returns the names it is the first to have. */
+  see(row: RawRow): readonly string[] {
+    const keys = Object.keys(row);
+    // Rows from a CSV parser nearly always share one key list; skip the set
+    // lookups when this row's keys match the previous row's.
+    if (this.previous !== undefined && sameKeys(keys, this.previous)) return [];
+    this.previous = keys;
+    const added: string[] = [];
+    for (const name of keys) {
+      if (this.seen.has(name)) continue;
+      this.seen.add(name);
+      this.names.push(name);
+      added.push(name);
+    }
+    return added;
+  }
+}
+
+function sameKeys(a: readonly string[], b: readonly string[]): boolean {
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return false;
+  return true;
+}
+
+/** A typed row with every column, in column order. */
+function buildRow(columns: readonly string[], cellAt: (index: number) => Cell): Row {
+  // Plain assignment would set the prototype for a "__proto__" column;
+  // Object.fromEntries, which defines it as an own key, handles that rare case.
+  if (columns.includes("__proto__")) return Object.fromEntries(columns.map((name, index) => [name, cellAt(index)]));
+  const row: Record<string, Cell> = {};
+  for (let index = 0; index < columns.length; index += 1) {
+    const name = columns[index];
+    if (name !== undefined) row[name] = cellAt(index);
+  }
+  return row;
+}
+
+/** Throws when a typer is used after it finished. */
+function typerFinished(): PmoError {
+  return new PmoError("infer/typer-finished", "This column typer has already finished");
 }
 
 /**
@@ -441,73 +513,39 @@ export interface ColumnTypes {
 export function createColumnTyper(options: InferOptions = {}): ColumnTyper {
   const na = buildNaSets(options.naValues ?? DEFAULT_NA_VALUES);
   const textColumns = new Set(options.textColumns ?? []);
-  const columns: string[] = [];
-  const stats: ColumnStats[] = [];
-  const seen = new Set<string>();
-  let previousKeys: string[] | undefined;
+  const names = new ColumnNames();
+  const columns: { readonly name: string; readonly stats: ColumnStats }[] = [];
   let rowCount = 0;
   let finished = false;
 
   function add(rows: readonly RawRow[]): void {
-    if (finished) throw new PmoError("infer/typer-finished", "This column typer has already finished");
+    if (finished) throw typerFinished();
     for (const row of rows) {
-      const keys = Object.keys(row);
-      // Rows from a CSV parser nearly always share one key list; skip the set
-      // lookups when this row's keys match the previous row's.
-      if (previousKeys === undefined || !sameKeys(keys, previousKeys)) {
-        previousKeys = keys;
-        for (const name of keys) {
-          if (seen.has(name)) continue;
-          seen.add(name);
-          columns.push(name);
-          // The rows before this one lack the column, so they hold missing cells.
-          stats.push(newStats(rowCount > 0));
-        }
-      }
-      for (let index = 0; index < columns.length; index += 1) {
-        const column = stats[index];
-        const name = columns[index];
-        if (column !== undefined && name !== undefined) addCell(column, rawCell(row, name), na);
-      }
+      // The rows before this one lack a new column, so they hold missing cells.
+      for (const name of names.see(row)) columns.push({ name, stats: newStats(rowCount > 0) });
+      for (const column of columns) addCell(column.stats, rawCell(row, column.name), na);
       rowCount += 1;
     }
   }
 
   function finish(): ColumnTypes {
-    if (finished) throw new PmoError("infer/typer-finished", "This column typer has already finished");
+    if (finished) throw typerFinished();
     finished = true;
-    const settled = columns.map((name, index) => decide(stats[index] ?? newStats(true), textColumns.has(name)));
-    const conversions = settled.map((column) => column.conversion);
+    const typed = columns.map((column) => ({ name: column.name, ...columnTypeOf(column.stats, textColumns.has(column.name)) }));
+    const columnNames = typed.map((column) => column.name);
     const dtypes: Record<string, InferredDtype> = {};
-    columns.forEach((name, index) => {
-      const column = settled[index];
-      if (column !== undefined) dtypes[name] = column.dtype;
-    });
-    const protoColumn = columns.includes("__proto__");
+    for (const column of typed) dtypes[column.name] = column.dtype;
 
     function typeRows(rows: readonly RawRow[]): Row[] {
-      const typed: Row[] = new Array<Row>(rows.length);
-      for (let rowIndex = 0; rowIndex < rows.length; rowIndex += 1) {
-        const row = rows[rowIndex];
-        if (row === undefined) continue;
-        if (protoColumn) {
-          // Plain assignment would set the prototype; Object.fromEntries defines an own key.
-          typed[rowIndex] = Object.fromEntries(
-            columns.map((name, index) => [name, convertCell(rawCell(row, name), conversions[index] ?? "text", na)]),
-          );
-          continue;
-        }
-        const out: Record<string, Cell> = {};
-        for (let index = 0; index < columns.length; index += 1) {
-          const name = columns[index];
-          if (name !== undefined) out[name] = convertCell(rawCell(row, name), conversions[index] ?? "text", na);
-        }
-        typed[rowIndex] = out;
-      }
-      return typed;
+      return rows.map((row) =>
+        buildRow(columnNames, (index) => {
+          const column = typed[index];
+          return column === undefined ? null : convertCell(rawCell(row, column.name), column.conversion, na);
+        }),
+      );
     }
 
-    return { columns: [...columns], dtypes, typeRows };
+    return { columns: columnNames, dtypes, typeRows };
   }
 
   return { add, finish };
@@ -518,8 +556,8 @@ export function createColumnTyper(options: InferOptions = {}): ColumnTyper {
  * settings) would, and reports each column's pandas dtype.
  *
  * For a table read in chunks, {@link createColumnTyper} gives the same result
- * in two passes. The two share how each cell is read; the tests hold them to
- * the same output.
+ * in two passes. Both read cells and settle types through the same functions,
+ * and the tests hold them to the same output; this one reads each column once.
  *
  * @example
  * const { table, dtypes } = inferColumns([{ n: "001", flag: "TRUE" }, { n: "NA", flag: "false" }]);
@@ -529,7 +567,9 @@ export function createColumnTyper(options: InferOptions = {}): ColumnTyper {
 export function inferColumns(rows: readonly RawRow[], options: InferOptions = {}): InferResult {
   const na = buildNaSets(options.naValues ?? DEFAULT_NA_VALUES);
   const textColumns = new Set(options.textColumns ?? []);
-  const columns = rowKeysInOrder(rows);
+  const names = new ColumnNames();
+  for (const row of rows) names.see(row);
+  const columns = names.names;
   const dtypes: Record<string, InferredDtype> = {};
   const typed = columns.map((name) => {
     const cells = rows.map((row) => rawCell(row, name));
@@ -537,129 +577,38 @@ export function inferColumns(rows: readonly RawRow[], options: InferOptions = {}
     dtypes[name] = dtype;
     return values;
   });
-  return { table: assembleRows(rows.length, columns, typed), dtypes };
+  const table = rows.map((_, rowIndex) => buildRow(columns, (index) => typed[index]?.[rowIndex] ?? null));
+  return { table, dtypes };
 }
 
-type NumericOutcome =
-  | { readonly kind: "fail" }
-  | { readonly kind: "uint64-conflict" }
-  | { readonly kind: "ok"; readonly dtype: "int64" | "uint64" | "float64"; readonly values: Cell[] };
+/** One whole column, reading each cell once: the numeric reading as it goes, then booleans or text if that fails. */
+function inferColumn(cells: readonly (string | null)[], na: NaSets, asText: boolean): { dtype: InferredDtype; values: Cell[] } {
+  const sanitize = (): (string | null)[] => cells.map((cell) => (isNaText(cell, na) ? null : cell));
+  if (asText) return { dtype: "object", values: sanitize() };
+  if (cells.length === 0) return { dtype: "object", values: [] };
 
-/** pandas' `maybe_convert_numeric` over one whole column, reading each cell once. */
-function convertNumeric(cells: readonly (string | null)[], na: NaSets): NumericOutcome {
-  let sawNull = false;
-  let sawFloat = false;
-  let sawInt = false;
-  let sawSigned = false;
-  let sawUnsigned = false;
+  const stats = newStats(false);
   const floats: (number | null)[] = [];
   const ints: (number | null)[] = [];
   for (const cell of cells) {
     const found = numericCell(cell, na);
-    if (found === NUMERIC_FAIL) return { kind: "fail" };
-    if (found === NUMERIC_NULL) {
-      sawNull = true;
-      floats.push(null);
-      ints.push(null);
-      continue;
-    }
-    floats.push(Number.isNaN(lastNumber.value) ? null : lastNumber.value);
-    if (found === NUMERIC_FLOAT) {
-      sawFloat = true;
-      ints.push(null);
-      continue;
-    }
-    sawInt = true;
-    if (lastNumber.signed) sawSigned = true;
-    if (lastNumber.unsigned) sawUnsigned = true;
-    ints.push(lastNumber.asInt);
+    addNumeric(stats, found);
+    if (!stats.numeric) break;
+    // lastNumber holds this cell's number for a float or int.
+    floats.push(found === NUMERIC_NULL ? null : Number.isNaN(lastNumber.value) ? null : lastNumber.value);
+    ints.push(found === NUMERIC_INT ? lastNumber.asInt : null);
   }
-  if (sawUnsigned && (sawNull || sawSigned)) return { kind: "uint64-conflict" };
-  if (sawFloat || sawNull) return { kind: "ok", dtype: "float64", values: floats };
-  if (sawInt) return { kind: "ok", dtype: sawUnsigned ? "uint64" : "int64", values: ints };
-  return { kind: "ok", dtype: "float64", values: [] };
-}
-
-/** pandas' `maybe_convert_bool`: all cells boolean spellings or missing, else `null`. */
-function convertBool(cells: readonly (string | null)[]): Cell[] | null {
-  const result: Cell[] = [];
-  for (const cell of cells) {
-    if (cell === null) result.push(null);
-    else if (TRUE_SPELLINGS.has(cell)) result.push(true);
-    else if (FALSE_SPELLINGS.has(cell)) result.push(false);
-    else return null;
+  if (stats.numeric) {
+    const { dtype, conversion } = numericColumnType(stats);
+    if (conversion === "raw") return { dtype, values: [...cells] };
+    return { dtype, values: conversion === "int" ? ints : floats };
   }
-  return result;
-}
 
-function inferColumn(
-  cells: readonly (string | null)[],
-  na: NaSets,
-  asText: boolean,
-): { dtype: InferredDtype; values: Cell[] } {
-  const sanitize = (): (string | null)[] => cells.map((cell) => (cell === null || na.strings.has(cell) ? null : cell));
-  if (asText) return { dtype: "object", values: sanitize() };
-  if (cells.length === 0) return { dtype: "object", values: [] };
-  const numeric = convertNumeric(cells, na);
-  if (numeric.kind === "ok") return { dtype: numeric.dtype, values: numeric.values };
-  if (numeric.kind === "uint64-conflict") return { dtype: "object", values: [...cells] };
+  for (const cell of cells) addCell(stats, cell, na);
+  const { dtype } = columnTypeOf(stats, false);
   const sanitized = sanitize();
-  const booleans = convertBool(sanitized);
-  if (booleans !== null) {
-    return { dtype: sanitized.includes(null) ? "object" : "bool", values: booleans };
-  }
-  return { dtype: "object", values: sanitized };
-}
-
-/** Column names in first-seen order across all rows. */
-function rowKeysInOrder(rows: readonly RawRow[]): string[] {
-  const columns: string[] = [];
-  const seen = new Set<string>();
-  let previous: string[] | undefined;
-  for (const row of rows) {
-    const keys = Object.keys(row);
-    // Rows from a CSV parser nearly always share one key list; skip the set
-    // lookups when this row's keys match the previous row's.
-    if (previous !== undefined && sameKeys(keys, previous)) continue;
-    previous = keys;
-    for (const name of keys) {
-      if (!seen.has(name)) {
-        seen.add(name);
-        columns.push(name);
-      }
-    }
-  }
-  return columns;
-}
-
-/** Builds each output row with its keys in column order; absent cells are `null`. */
-function assembleRows(count: number, columns: readonly string[], typed: readonly (readonly Cell[])[]): Row[] {
-  const table: Row[] = new Array<Row>(count);
-  // Plain assignment would set the prototype for a "__proto__" column; keep
-  // Object.fromEntries, which defines it as an own key, for that rare case.
-  if (columns.includes("__proto__")) {
-    for (let rowIndex = 0; rowIndex < count; rowIndex += 1) {
-      table[rowIndex] = Object.fromEntries(
-        columns.map((name, columnIndex) => [name, typed[columnIndex]?.[rowIndex] ?? null]),
-      );
-    }
-    return table;
-  }
-  for (let rowIndex = 0; rowIndex < count; rowIndex += 1) {
-    const row: Record<string, Cell> = {};
-    for (let columnIndex = 0; columnIndex < columns.length; columnIndex += 1) {
-      const name = columns[columnIndex];
-      if (name !== undefined) row[name] = typed[columnIndex]?.[rowIndex] ?? null;
-    }
-    table[rowIndex] = row;
-  }
-  return table;
-}
-
-function sameKeys(a: readonly string[], b: readonly string[]): boolean {
-  if (a.length !== b.length) return false;
-  for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return false;
-  return true;
+  if (stats.bool) return { dtype, values: sanitized.map((cell) => (cell === null ? null : TRUE_SPELLINGS.has(cell))) };
+  return { dtype, values: sanitized };
 }
 
 /**

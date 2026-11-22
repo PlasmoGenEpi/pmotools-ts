@@ -201,7 +201,7 @@ their regular expressions so JavaScript matches what Python's `re` matches.
 
 ```bash
 pnpm install
-pnpm test        # 1,323 tests, most replaying Python oracle cases
+pnpm test        # 1,333 tests, most replaying Python oracle cases
 pnpm typecheck
 pnpm build
 ```

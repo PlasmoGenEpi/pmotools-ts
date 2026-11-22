@@ -248,6 +248,60 @@ describe("createColumnTyper", () => {
     }
   });
 
+  /** An example case's raw rows: recorded in the case, or split from its file for the large ones. */
+  function exampleRows(testCase: OracleCase): RawRow[] {
+    const value = recorded(testCase);
+    const columns = columnsOf(value);
+    if (value["raw"] !== undefined) return toRawRows(columns, grid(value["raw"]));
+    const file = testCase.kwargs["file"];
+    const delimiter = value["delimiter"];
+    if (typeof file !== "string" || typeof delimiter !== "string") throw new Error("Expected a file and delimiter");
+    const lines = readFileSync(join(TABLES, file), "utf8").split(/\r?\n/);
+    if (lines.at(-1) === "") lines.pop();
+    return toRawRows(columns, lines.slice(1).map((line) => line.split(delimiter)));
+  }
+
+  it.each(loadCases("infer/example").map((c) => [c.id, c] as const))(
+    "types the example table %s exactly as inferColumns, in any chunk size",
+    (_, testCase) => {
+      const rows = exampleRows(testCase);
+      const whole = exactly(inferColumns(rows));
+      for (const [size, secondSize] of [
+        [1, 1],
+        [3, 5],
+        [1000, 7],
+      ] as const) {
+        expect(exactly(typeInChunks(rows, {}, size, secondSize))).toBe(whole);
+      }
+    },
+  );
+
+  it("types a __proto__ column, present or absent, exactly as inferColumns", () => {
+    const tables: RawRow[][] = [
+      [JSON.parse('{"__proto__": "p", "n": "1"}'), { n: "2" }],
+      [{ n: "2" }, JSON.parse('{"__proto__": "1", "n": "1"}')],
+      [JSON.parse('{"__proto__": "1"}'), JSON.parse('{"__proto__": "2"}')],
+    ];
+    for (const rows of tables) {
+      const whole = inferColumns(rows);
+      const chunked = typeInChunks(rows, {}, 1, 1);
+      expect(exactly(chunked)).toBe(exactly(whole));
+      for (const row of chunked.table) expect(Object.hasOwn(row, "__proto__")).toBe(true);
+    }
+  });
+
+  it("reads a column named after an inherited property as missing in rows that lack it", () => {
+    const rows: RawRow[] = [{ a: "1" }, { a: "2", constructor: "5", toString: "x" }, { a: "3" }];
+    const whole = inferColumns(rows);
+    expect(whole.dtypes).toEqual({ a: "int64", constructor: "float64", toString: "object" });
+    expect(whole.table).toEqual([
+      { a: 1, constructor: null, toString: null },
+      { a: 2, constructor: 5, toString: "x" },
+      { a: 3, constructor: null, toString: null },
+    ]);
+    expect(exactly(typeInChunks(rows, {}, 1, 1))).toBe(exactly(whole));
+  });
+
   it("types random tables exactly as inferColumns, in random chunk sizes", () => {
     let state = 3;
     const random = (below: number): number => {
