@@ -25,12 +25,13 @@ jobs:
 
       - uses: pnpm/action-setup@v6
 
-      # Node 24 ships npm 11, which trusted publishing needs.
+      # Node 24 ships npm 11, which trusted publishing needs. No registry-url:
+      # it writes an .npmrc expecting NODE_AUTH_TOKEN, and npm publishes to
+      # registry.npmjs.org by default.
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       - run: pnpm install --frozen-lockfile
 
@@ -49,7 +50,8 @@ jobs:
         run: pnpm test
 
       # prepack builds dist. A prerelease version (0.2.0-beta.1) goes to the
-      # "next" tag so it is not installed by default.
+      # "next" tag so it is not installed by default. npm logs why trusted
+      # publishing failed only at verbose level, so publish verbosely.
       - name: Publish
         run: |
           version=$(node -p 'require("./package.json").version')
@@ -58,6 +60,6 @@ jobs:
             exit 0
           fi
           case "$version" in
-            *-*) npm publish --tag next ;;
-            *) npm publish ;;
+            *-*) npm publish --tag next --loglevel verbose ;;
+            *) npm publish --loglevel verbose ;;
           esac
