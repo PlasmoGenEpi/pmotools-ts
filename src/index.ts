@@ -13,8 +13,9 @@
  * 5. `stringifyPmo` or `gzipPmo` writes it out.
  *
  * For an allele table too large to hold at once, `createColumnTyper` types
- * it in two passes over chunks, `createMhapTableBuilder` builds from them, `mergeToPmo` with `shareMicrohaplotypes` avoids a
- * second copy, and `pmoStream` or `pmoBlob` writes a PMO of any size.
+ * it in two passes over chunks, `createMhapTableBuilder` builds from them,
+ * `mergeToPmo` with `shareMicrohaplotypes` avoids a second copy, and
+ * `pmoStream` or `pmoBlob` writes a PMO of any size.
  *
  * Working with a PMO you have:
  *
