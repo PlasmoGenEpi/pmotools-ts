@@ -251,14 +251,22 @@ function isNaText(cell: string | null, na: NaSets): cell is null {
 }
 
 /**
- * A row's cell. Only a string is a cell; anything else counts as missing.
- * That keeps a row from reading what every object inherits: a row without a
- * `__proto__` or `constructor` column would otherwise yield `Object.prototype`
- * or the `Object` function.
+ * A row's cell: its own string, or `null` when the row has no such key or
+ * holds `null` or `undefined` there. Only own keys count, so a row without a
+ * `__proto__` or `constructor` column does not read what every object
+ * inherits.
+ *
+ * @throws PmoError `infer/non-text-cell` for any other value, such as a
+ *   number from a parser that already typed the cell.
  */
 function rawCell(row: RawRow, name: string): string | null {
-  const value = row[name];
-  return typeof value === "string" && (name !== "__proto__" || Object.hasOwn(row, name)) ? value : null;
+  const value: unknown = row[name];
+  if (typeof value === "string") return name !== "__proto__" || Object.hasOwn(row, name) ? value : null;
+  if (value === null || value === undefined || !Object.hasOwn(row, name)) return null;
+  throw new PmoError("infer/non-text-cell", `Column ${name} holds a ${typeof value}; column typing reads text cells only`, {
+    column: name,
+    found: typeof value,
+  });
 }
 
 const NUMERIC_NULL = 0;
@@ -411,7 +419,8 @@ function convertCell(cell: string | null, conversion: Conversion, na: NaSets): C
 
 /** Column names in first-seen order, learnt row by row. */
 class ColumnNames {
-  readonly names: string[] = [];
+  /** Every name seen so far, in first-seen order. */
+  readonly inOrder: string[] = [];
   private readonly seen = new Set<string>();
   private previous: string[] | undefined;
 
@@ -426,7 +435,7 @@ class ColumnNames {
     for (const name of keys) {
       if (this.seen.has(name)) continue;
       this.seen.add(name);
-      this.names.push(name);
+      this.inOrder.push(name);
       added.push(name);
     }
     return added;
@@ -439,11 +448,13 @@ function sameKeys(a: readonly string[], b: readonly string[]): boolean {
   return true;
 }
 
-/** A typed row with every column, in column order. */
-function buildRow(columns: readonly string[], cellAt: (index: number) => Cell): Row {
-  // Plain assignment would set the prototype for a "__proto__" column;
-  // Object.fromEntries, which defines it as an own key, handles that rare case.
-  if (columns.includes("__proto__")) return Object.fromEntries(columns.map((name, index) => [name, cellAt(index)]));
+/**
+ * A typed row with every column, in column order. `protoColumn` says whether
+ * one column is `__proto__`: plain assignment would set the prototype, so
+ * that rare case uses Object.fromEntries, which defines an own key.
+ */
+function buildRow(columns: readonly string[], protoColumn: boolean, cellAt: (index: number) => Cell): Row {
+  if (protoColumn) return Object.fromEntries(columns.map((name, index) => [name, cellAt(index)]));
   const row: Record<string, Cell> = {};
   for (let index = 0; index < columns.length; index += 1) {
     const name = columns[index];
@@ -452,8 +463,8 @@ function buildRow(columns: readonly string[], cellAt: (index: number) => Cell): 
   return row;
 }
 
-/** Throws when a typer is used after it finished. */
-function typerFinished(): PmoError {
+/** The error for a typer used after it finished. */
+function finishedError(): PmoError {
   return new PmoError("infer/typer-finished", "This column typer has already finished");
 }
 
@@ -519,7 +530,7 @@ export function createColumnTyper(options: InferOptions = {}): ColumnTyper {
   let finished = false;
 
   function add(rows: readonly RawRow[]): void {
-    if (finished) throw typerFinished();
+    if (finished) throw finishedError();
     for (const row of rows) {
       // The rows before this one lack a new column, so they hold missing cells.
       for (const name of names.see(row)) columns.push({ name, stats: newStats(rowCount > 0) });
@@ -529,16 +540,17 @@ export function createColumnTyper(options: InferOptions = {}): ColumnTyper {
   }
 
   function finish(): ColumnTypes {
-    if (finished) throw typerFinished();
+    if (finished) throw finishedError();
     finished = true;
     const typed = columns.map((column) => ({ name: column.name, ...columnTypeOf(column.stats, textColumns.has(column.name)) }));
     const columnNames = typed.map((column) => column.name);
+    const protoColumn = columnNames.includes("__proto__");
     const dtypes: Record<string, InferredDtype> = {};
     for (const column of typed) dtypes[column.name] = column.dtype;
 
     function typeRows(rows: readonly RawRow[]): Row[] {
       return rows.map((row) =>
-        buildRow(columnNames, (index) => {
+        buildRow(columnNames, protoColumn, (index) => {
           const column = typed[index];
           return column === undefined ? null : convertCell(rawCell(row, column.name), column.conversion, na);
         }),
@@ -569,7 +581,7 @@ export function inferColumns(rows: readonly RawRow[], options: InferOptions = {}
   const textColumns = new Set(options.textColumns ?? []);
   const names = new ColumnNames();
   for (const row of rows) names.see(row);
-  const columns = names.names;
+  const columns = names.inOrder;
   const dtypes: Record<string, InferredDtype> = {};
   const typed = columns.map((name) => {
     const cells = rows.map((row) => rawCell(row, name));
@@ -577,38 +589,38 @@ export function inferColumns(rows: readonly RawRow[], options: InferOptions = {}
     dtypes[name] = dtype;
     return values;
   });
-  const table = rows.map((_, rowIndex) => buildRow(columns, (index) => typed[index]?.[rowIndex] ?? null));
+  const protoColumn = columns.includes("__proto__");
+  const table = rows.map((_, rowIndex) => buildRow(columns, protoColumn, (index) => typed[index]?.[rowIndex] ?? null));
   return { table, dtypes };
 }
 
-/** One whole column, reading each cell once: the numeric reading as it goes, then booleans or text if that fails. */
+/** One whole column: the numeric reading as it goes, reading each cell once, then booleans or text if that fails. */
 function inferColumn(cells: readonly (string | null)[], na: NaSets, asText: boolean): { dtype: InferredDtype; values: Cell[] } {
-  const sanitize = (): (string | null)[] => cells.map((cell) => (isNaText(cell, na) ? null : cell));
-  if (asText) return { dtype: "object", values: sanitize() };
-  if (cells.length === 0) return { dtype: "object", values: [] };
-
+  if (cells.length === 0 && !asText) return { dtype: "object", values: [] };
   const stats = newStats(false);
-  const floats: (number | null)[] = [];
-  const ints: (number | null)[] = [];
-  for (const cell of cells) {
-    const found = numericCell(cell, na);
-    addNumeric(stats, found);
-    if (!stats.numeric) break;
-    // lastNumber holds this cell's number for a float or int.
-    floats.push(found === NUMERIC_NULL ? null : Number.isNaN(lastNumber.value) ? null : lastNumber.value);
-    ints.push(found === NUMERIC_INT ? lastNumber.asInt : null);
+  if (!asText) {
+    const floats: (number | null)[] = [];
+    const ints: (number | null)[] = [];
+    for (const cell of cells) {
+      const found = numericCell(cell, na);
+      addNumeric(stats, found);
+      if (!stats.numeric) break;
+      // lastNumber holds this cell's number for a float or int.
+      floats.push(found === NUMERIC_NULL ? null : Number.isNaN(lastNumber.value) ? null : lastNumber.value);
+      ints.push(found === NUMERIC_INT ? lastNumber.asInt : null);
+    }
+    if (stats.numeric) {
+      const { dtype, conversion } = numericColumnType(stats);
+      if (conversion === "raw") return { dtype, values: [...cells] };
+      return { dtype, values: conversion === "int" ? ints : floats };
+    }
+    for (const cell of cells) {
+      if (!stats.bool) break;
+      addCell(stats, cell, na);
+    }
   }
-  if (stats.numeric) {
-    const { dtype, conversion } = numericColumnType(stats);
-    if (conversion === "raw") return { dtype, values: [...cells] };
-    return { dtype, values: conversion === "int" ? ints : floats };
-  }
-
-  for (const cell of cells) addCell(stats, cell, na);
-  const { dtype } = columnTypeOf(stats, false);
-  const sanitized = sanitize();
-  if (stats.bool) return { dtype, values: sanitized.map((cell) => (cell === null ? null : TRUE_SPELLINGS.has(cell))) };
-  return { dtype, values: sanitized };
+  const { dtype, conversion } = columnTypeOf(stats, asText);
+  return { dtype, values: cells.map((cell) => convertCell(cell, conversion, na)) };
 }
 
 /**

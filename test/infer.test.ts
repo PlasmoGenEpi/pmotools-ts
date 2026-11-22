@@ -302,6 +302,13 @@ describe("createColumnTyper", () => {
     expect(exactly(typeInChunks(rows, {}, 1, 1))).toBe(exactly(whole));
   });
 
+  it("refuses a cell that is not text in both paths", () => {
+    const rows: RawRow[] = [JSON.parse('{"a": 5}'), { a: "1" }];
+    const refused = expect.objectContaining({ code: "infer/non-text-cell", details: { column: "a", found: "number" } });
+    expect(() => inferColumns(rows)).toThrow(refused);
+    expect(() => typeInChunks(rows, {}, 1, 1)).toThrow(refused);
+  });
+
   it("types random tables exactly as inferColumns, in random chunk sizes", () => {
     let state = 3;
     const random = (below: number): number => {

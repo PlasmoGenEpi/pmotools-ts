@@ -6,6 +6,10 @@
   each chunk to settle the column types, then `finish()` and `typeRows` each
   chunk of a second read. The result is exactly `inferColumns`'s for the
   whole table, whatever the chunk sizes.
+- Column typing reads a row's own keys only: a row without a column named
+  after an inherited property, such as `constructor`, no longer reads that
+  property as its cell. A cell that is not text, `null` or `undefined` throws
+  `infer/non-text-cell` instead of failing inside the parser.
 
 ## 0.2.0
 
