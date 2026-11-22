@@ -28,7 +28,7 @@ import type { PortableMicrohaplotypeObject } from "../types/pmo.js";
 import type { MergeParts } from "./fragments.js";
 
 /** The version of pmotools-ts written into `pmo_header.generation_method`. */
-export const PMOTOOLS_TS_VERSION = "0.2.0";
+export const PMOTOOLS_TS_VERSION = "0.3.0";
 
 /** The PMO schema version the merge writes as `pmo_header.pmo_version`, as pmotools-python does. */
 export const PMO_SCHEMA_VERSION = "1.1.0";
