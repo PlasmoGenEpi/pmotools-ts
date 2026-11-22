@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
 - `createMhapTableBuilder` builds the allele table's fragment from rows added
   a chunk at a time, for tables too large to hold at once. Its result is
