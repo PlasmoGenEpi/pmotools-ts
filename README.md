@@ -35,7 +35,7 @@ Versions before 1.0 may change the API in a minor release. See
 | `PMOExporter.export_*_table`, `extract_alleles_per_sample_table`, `list_library_sample_names_per_specimen_name` | `export…Table`, `extractAllelesPerSampleTable`, `listLibrarySampleNamesPerSpecimenName` |
 | `DataFrame.to_csv` | `formatDelimited` |
 | no equivalent | `checkPmoIntegrity` |
-| no equivalent | `createMhapTableBuilder`, `stringifyPmoChunks`, `pmoStream`, `pmoBlob`: large tables, see below |
+| no equivalent | `createColumnTyper`, `createMhapTableBuilder`, `stringifyPmoChunks`, `pmoStream`, `pmoBlob`: large tables, see below |
 
 The exporters return a `ColumnTable` (`columns` and `rows`) laid out as the
 pandas DataFrame would be.
@@ -89,6 +89,19 @@ with a stable `code`. Softer problems go to an `onWarning` callback, or use
 An allele table can run to millions of rows. Two things limit what fits in a
 browser tab: no string can be much longer than 512 MB, and the table and the
 PMO both have to fit in memory. Each has a way around it.
+
+**Type in two passes.** pandas types a column from all its values: one word
+in a column of numbers makes the whole column text. `createColumnTyper` reads
+the table in chunks once to settle each column's type, keeping a few flags
+per column, then types each chunk of a second read. The result is exactly
+what `inferColumnTypes` gives for the whole table.
+
+```ts
+const typer = createColumnTyper();
+for await (const rows of readInChunks(file)) typer.add(rows);
+const types = typer.finish(); // types.dtypes: { Reads: "int64", ... }
+for await (const rows of readInChunks(file)) builder.add(types.typeRows(rows));
+```
 
 **Build from chunks.** `createMhapTableBuilder` takes the allele table a chunk
 at a time, so the file can be read in pieces and each piece dropped once
@@ -188,7 +201,7 @@ their regular expressions so JavaScript matches what Python's `re` matches.
 
 ```bash
 pnpm install
-pnpm test        # 1,240 tests, most replaying Python oracle cases
+pnpm test        # 1,323 tests, most replaying Python oracle cases
 pnpm typecheck
 pnpm build
 ```

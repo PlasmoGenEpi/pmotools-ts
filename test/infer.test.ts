@@ -6,6 +6,7 @@ import { describe, expect, it } from "vitest";
 
 import type { Cell, Row } from "../src/table/core.js";
 import {
+  createColumnTyper,
   DEFAULT_NA_VALUES,
   inferColumns,
   inferColumnTypes,
@@ -203,5 +204,116 @@ describe("inferColumnTypes API", () => {
 
   it("returns an empty table for no rows", () => {
     expect(inferColumns([])).toEqual({ table: [], dtypes: {} });
+  });
+});
+
+/** The typed table as text that keeps key order, -0, NaN and infinities apart. */
+function exactly(value: unknown): string {
+  return JSON.stringify(value, (_, inner: unknown) =>
+    typeof inner === "number" && (!Number.isFinite(inner) || Object.is(inner, -0)) ? `number:${String(Object.is(inner, -0) ? "-0" : inner)}` : inner,
+  );
+}
+
+function chunksOf<T>(items: readonly T[], size: number): T[][] {
+  const chunks: T[][] = [];
+  for (let start = 0; start < items.length; start += size) chunks.push(items.slice(start, start + size));
+  return chunks;
+}
+
+/** Both passes in chunks of `size`, the second pass in chunks of `secondSize`. */
+function typeInChunks(rows: readonly RawRow[], options: InferOptions, size: number, secondSize: number) {
+  const typer = createColumnTyper(options);
+  typer.add([]);
+  for (const chunk of chunksOf(rows, size)) typer.add(chunk);
+  const types = typer.finish();
+  const table = chunksOf(rows, secondSize).flatMap((chunk) => types.typeRows(chunk));
+  return { table, dtypes: types.dtypes };
+}
+
+describe("createColumnTyper", () => {
+  const recordedTables = allCases.map((testCase) => {
+    const value = recorded(testCase);
+    return { id: testCase.id, rows: toRawRows(columnsOf(value), grid(value["raw"])), options: optionsFor(testCase.kwargs) };
+  });
+
+  it.each(recordedTables.map((t) => [t.id, t] as const))("types %s exactly as inferColumns, in any chunk size", (_, t) => {
+    const whole = exactly(inferColumns(t.rows, t.options));
+    for (const [size, secondSize] of [
+      [1, 1],
+      [2, 3],
+      [3, 1],
+      [7, 2],
+    ] as const) {
+      expect(exactly(typeInChunks(t.rows, t.options, size, secondSize))).toBe(whole);
+    }
+  });
+
+  it("types random tables exactly as inferColumns, in random chunk sizes", () => {
+    let state = 3;
+    const random = (below: number): number => {
+      state = (state * 1_103_515_245 + 12_345) % 2_147_483_648;
+      return state % below;
+    };
+    // Cells that push a column towards each pandas outcome, and the values that change it.
+    const pools: readonly (readonly (string | null)[])[] = [
+      ["1", "-2", "007", " 3 ", "+4", null, "NA", ""],
+      ["1.5", "2", "1e3", "-0", "-0.0", "inf", "-Infinity", "N/A"],
+      ["18446744073709551615", "9223372036854775808", "12", "-1", "nan", null],
+      ["123456789012345678", "99999999999999999999", "5", "0"],
+      ["True", "FALSE", "true", "NA", null, "maybe"],
+      ["s1", "s2", "10", "NULL", "", "1.0"],
+      ["0", "00", "0.0", "1", "-1"],
+    ];
+    const optionChoices: readonly InferOptions[] = [
+      {},
+      { naValues: [] },
+      { naValues: [...DEFAULT_NA_VALUES, "0", "maybe"] },
+      { textColumns: ["c1", "c4"] },
+    ];
+    for (let round = 0; round < 300; round += 1) {
+      const columnCount = 1 + random(5);
+      const columns = Array.from({ length: columnCount }, (_, index) => `c${index}`);
+      const poolOf = columns.map(() => pools[random(pools.length)] ?? []);
+      const rows: RawRow[] = Array.from({ length: 1 + random(12) }, (_, rowIndex) => {
+        const row: Record<string, string | null | undefined> = {};
+        columns.forEach((column, index) => {
+          // Some columns start late or skip rows, as ragged input does.
+          if (random(10) === 0 || (index === columnCount - 1 && rowIndex < random(3))) return;
+          const pool = poolOf[index] ?? [];
+          row[column] = pool[random(pool.length)];
+        });
+        return row;
+      });
+      const options = optionChoices[random(optionChoices.length)] ?? {};
+      const whole = exactly(inferColumns(rows, options));
+      const size = 1 + random(rows.length);
+      const secondSize = 1 + random(rows.length);
+      expect(exactly(typeInChunks(rows, options, size, secondSize)), `round ${round}`).toBe(whole);
+    }
+  });
+
+  it("refuses rows once finished, and leaves out columns the first pass never saw", () => {
+    const typer = createColumnTyper();
+    typer.add([{ a: "1" }]);
+    const types = typer.finish();
+    expect(types.columns).toEqual(["a"]);
+    expect(types.dtypes).toEqual({ a: "int64" });
+    expect(types.typeRows([{ a: "2" }, {}])).toEqual([{ a: 2 }, { a: null }]);
+    expect(() => typer.add([])).toThrow(expect.objectContaining({ code: "infer/typer-finished" }));
+    expect(() => typer.finish()).toThrow(expect.objectContaining({ code: "infer/typer-finished" }));
+    expect(types.typeRows([{ a: "1", b: "x" }])).toEqual([{ a: 1 }]);
+  });
+
+  it("makes a column first seen in a later chunk missing in the rows before it", () => {
+    const typer = createColumnTyper();
+    typer.add([{ n: "1" }]);
+    typer.add([{ n: "2", late: "5" }]);
+    const types = typer.finish();
+    // The first row lacks `late`, so pandas reads it as NaN and the column is float64.
+    expect(types.dtypes).toEqual({ n: "int64", late: "float64" });
+    expect(types.typeRows([{ n: "1" }, { n: "2", late: "5" }])).toEqual([
+      { n: 1, late: null },
+      { n: 2, late: 5 },
+    ]);
   });
 });

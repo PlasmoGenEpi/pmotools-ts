@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+
+- `createColumnTyper` types a table read in chunks, in two passes: `add`
+  each chunk to settle the column types, then `finish()` and `typeRows` each
+  chunk of a second read. The result is exactly `inferColumns`'s for the
+  whole table, whatever the chunk sizes.
+
 ## 0.2.0
 
 - `createMhapTableBuilder` builds the allele table's fragment from rows added
